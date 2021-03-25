@@ -1,3 +1,3 @@
 # Speed
 
-Issue tracker for CPython speed project.
+Issue tracker for Faster CPython project.
