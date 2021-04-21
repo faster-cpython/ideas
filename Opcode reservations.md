@@ -11,6 +11,14 @@ Before starting any work on adding new bytecodes, whether manually or automatica
 * POP_JUMP_IF_NONE 127
 * POP_JUMP_IF_NOT_NONE 128
 
+Super-instructions, e.g.
+* LOAD_FAST_LOAD_FAST 167
+* STORE_FAST_LOAD_FAST 168
+* LOAD_FAST_LOAD_ATTR 169
+* LOAD_FAST_LOAD_CONST 170
+* LOAD_GLOBAL_LOAD_FAST 171
+* LOAD_FAST_STORE_ATTR 172
+* LOAD_GLOBAL_CALL_FUNCTION 173
 
 ## Mark
 
