@@ -20,6 +20,9 @@ Super-instructions, e.g.
 * LOAD_FAST_STORE_ATTR 172
 * LOAD_GLOBAL_CALL_FUNCTION 173
 
+Constant construction instructions
+* 180-190
+
 ## Mark
 
 * GEN_START 129 (was 99, which is why I've made this file :)
