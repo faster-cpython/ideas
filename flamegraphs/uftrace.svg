@@ -373,620 +373,620 @@
 <text id="matched" x="1090.00" y="197" > </text>
 <g id="frames">
 <g >
-<title>joinpath2 (6 samples, 0.01%)</title><rect x="30.9" y="117" width="0.1" height="15.0" fill="rgb(238,210,30)" rx="2" ry="2" />
-<text  x="33.87" y="127.5" ></text>
+<title>_PyInterpreterState_GET (9 samples, 0.02%)</title><rect x="30.1" y="133" width="0.2" height="15.0" fill="rgb(223,72,39)" rx="2" ry="2" />
+<text  x="33.13" y="143.5" ></text>
 </g>
 <g >
-<title>_Py_DECREF (31 samples, 0.06%)</title><rect x="49.7" y="101" width="0.7" height="15.0" fill="rgb(206,151,43)" rx="2" ry="2" />
-<text  x="52.65" y="111.5" ></text>
+<title>mbstowcs (696 samples, 1.36%)</title><rect x="128.3" y="149" width="16.0" height="15.0" fill="rgb(250,222,42)" rx="2" ry="2" />
+<text  x="131.27" y="159.5" ></text>
 </g>
 <g >
-<title>search_for_prefix (209 samples, 0.41%)</title><rect x="36.3" y="101" width="4.8" height="15.0" fill="rgb(217,169,12)" rx="2" ry="2" />
-<text  x="39.32" y="111.5" ></text>
+<title>joinpath2 (6 samples, 0.01%)</title><rect x="40.8" y="85" width="0.1" height="15.0" fill="rgb(232,79,17)" rx="2" ry="2" />
+<text  x="43.78" y="95.5" ></text>
 </g>
 <g >
-<title>strrchr (5 samples, 0.01%)</title><rect x="77.6" y="117" width="0.2" height="15.0" fill="rgb(250,211,2)" rx="2" ry="2" />
-<text  x="80.64" y="127.5" ></text>
-</g>
-<g >
-<title>wcstombs (98 samples, 0.19%)</title><rect x="36.4" y="53" width="2.3" height="15.0" fill="rgb(251,6,25)" rx="2" ry="2" />
-<text  x="39.44" y="63.5" ></text>
-</g>
-<g >
-<title>_Py_DECREF (13 samples, 0.03%)</title><rect x="82.0" y="133" width="0.3" height="15.0" fill="rgb(226,125,43)" rx="2" ry="2" />
-<text  x="84.98" y="143.5" ></text>
-</g>
-<g >
-<title>wcschr (6 samples, 0.01%)</title><rect x="1101.8" y="149" width="0.1" height="15.0" fill="rgb(221,159,54)" rx="2" ry="2" />
-<text  x="1104.77" y="159.5" ></text>
-</g>
-<g >
-<title>calculate_module_search_path (13 samples, 0.03%)</title><rect x="36.0" y="117" width="0.3" height="15.0" fill="rgb(207,117,34)" rx="2" ry="2" />
-<text  x="38.95" y="127.5" ></text>
-</g>
-<g >
-<title>strcmp (200 samples, 0.39%)</title><rect x="930.8" y="149" width="4.6" height="15.0" fill="rgb(227,137,50)" rx="2" ry="2" />
-<text  x="933.77" y="159.5" ></text>
-</g>
-<g >
-<title>memcpy (14,291 samples, 27.99%)</title><rect x="285.5" y="149" width="330.2" height="15.0" fill="rgb(206,210,5)" rx="2" ry="2" />
-<text  x="288.45" y="159.5" >memcpy</text>
-</g>
-<g >
-<title>open64 (13 samples, 0.03%)</title><rect x="753.7" y="149" width="0.3" height="15.0" fill="rgb(224,70,6)" rx="2" ry="2" />
-<text  x="756.69" y="159.5" ></text>
-</g>
-<g >
-<title>calculate_exec_prefix (121 samples, 0.24%)</title><rect x="33.2" y="117" width="2.8" height="15.0" fill="rgb(251,39,29)" rx="2" ry="2" />
-<text  x="36.15" y="127.5" ></text>
-</g>
-<g >
-<title>memcpy (32 samples, 0.06%)</title><rect x="52.9" y="101" width="0.8" height="15.0" fill="rgb(229,124,11)" rx="2" ry="2" />
-<text  x="55.91" y="111.5" ></text>
-</g>
-<g >
-<title>memset (14 samples, 0.03%)</title><rect x="79.1" y="133" width="0.3" height="15.0" fill="rgb(207,50,19)" rx="2" ry="2" />
-<text  x="82.07" y="143.5" ></text>
-</g>
-<g >
-<title>memrchr (46 samples, 0.09%)</title><rect x="616.0" y="149" width="1.1" height="15.0" fill="rgb(213,213,31)" rx="2" ry="2" />
-<text  x="619.04" y="159.5" ></text>
-</g>
-<g >
-<title>calculate_zip_path (13 samples, 0.03%)</title><rect x="45.6" y="117" width="0.3" height="15.0" fill="rgb(210,112,47)" rx="2" ry="2" />
-<text  x="48.63" y="127.5" ></text>
-</g>
-<g >
-<title>realloc (113 samples, 0.22%)</title><rect x="900.2" y="149" width="2.6" height="15.0" fill="rgb(215,229,41)" rx="2" ry="2" />
-<text  x="903.20" y="159.5" ></text>
-</g>
-<g >
-<title>memcpy (7 samples, 0.01%)</title><rect x="68.3" y="101" width="0.2" height="15.0" fill="rgb(249,133,9)" rx="2" ry="2" />
-<text  x="71.33" y="111.5" ></text>
-</g>
-<g >
-<title>pthread_cond_signal (1,193 samples, 2.34%)</title><rect x="754.1" y="149" width="27.6" height="15.0" fill="rgb(241,52,43)" rx="2" ry="2" />
-<text  x="757.11" y="159.5" >p..</text>
-</g>
-<g >
-<title>set_flags_from_config (33 samples, 0.06%)</title><rect x="82.8" y="133" width="0.8" height="15.0" fill="rgb(246,157,34)" rx="2" ry="2" />
-<text  x="85.79" y="143.5" ></text>
-</g>
-<g >
-<title>memset (5,905 samples, 11.56%)</title><rect x="617.1" y="149" width="136.5" height="15.0" fill="rgb(242,226,39)" rx="2" ry="2" />
-<text  x="620.10" y="159.5" >memset</text>
-</g>
-<g >
-<title>_Py_DECREF (16 samples, 0.03%)</title><rect x="83.2" y="101" width="0.4" height="15.0" fill="rgb(253,217,39)" rx="2" ry="2" />
-<text  x="86.18" y="111.5" ></text>
-</g>
-<g >
-<title>_PySys_SetPreliminaryStderr (10 samples, 0.02%)</title><rect x="77.8" y="133" width="0.3" height="15.0" fill="rgb(216,195,30)" rx="2" ry="2" />
-<text  x="80.82" y="143.5" ></text>
-</g>
-<g >
-<title>memcmp (77 samples, 0.15%)</title><rect x="21.2" y="117" width="1.8" height="15.0" fill="rgb(236,126,49)" rx="2" ry="2" />
-<text  x="24.18" y="127.5" ></text>
-</g>
-<g >
-<title>sem_wait (116 samples, 0.23%)</title><rect x="918.9" y="149" width="2.7" height="15.0" fill="rgb(209,12,7)" rx="2" ry="2" />
-<text  x="921.94" y="159.5" ></text>
-</g>
-<g >
-<title>sys_audit_tstate (82 samples, 0.16%)</title><rect x="46.6" y="133" width="1.9" height="15.0" fill="rgb(227,55,30)" rx="2" ry="2" />
-<text  x="49.60" y="143.5" ></text>
-</g>
-<g >
-<title>setlocale (9 samples, 0.02%)</title><rect x="921.6" y="149" width="0.2" height="15.0" fill="rgb(212,68,21)" rx="2" ry="2" />
-<text  x="924.62" y="159.5" ></text>
-</g>
-<g >
-<title>wcstombs (146 samples, 0.29%)</title><rect x="42.1" y="85" width="3.4" height="15.0" fill="rgb(222,45,24)" rx="2" ry="2" />
-<text  x="45.12" y="95.5" ></text>
-</g>
-<g >
-<title>_PyRuntimeState_GetThreadState (77 samples, 0.15%)</title><rect x="28.3" y="117" width="1.8" height="15.0" fill="rgb(212,124,14)" rx="2" ry="2" />
-<text  x="31.30" y="127.5" ></text>
-</g>
-<g >
-<title>readdir64 (413 samples, 0.81%)</title><rect x="890.7" y="149" width="9.5" height="15.0" fill="rgb(223,43,26)" rx="2" ry="2" />
-<text  x="893.66" y="159.5" ></text>
-</g>
-<g >
-<title>calculate_prefix (213 samples, 0.42%)</title><rect x="36.3" y="117" width="4.9" height="15.0" fill="rgb(238,123,20)" rx="2" ry="2" />
-<text  x="39.25" y="127.5" ></text>
-</g>
-<g >
-<title>strlen (6,611 samples, 12.95%)</title><rect x="935.7" y="149" width="152.8" height="15.0" fill="rgb(247,139,47)" rx="2" ry="2" />
-<text  x="938.72" y="159.5" >strlen</text>
-</g>
-<g >
-<title>sys_audit_tstate (6 samples, 0.01%)</title><rect x="41.5" y="69" width="0.1" height="15.0" fill="rgb(225,31,14)" rx="2" ry="2" />
-<text  x="44.47" y="79.5" ></text>
-</g>
-<g >
-<title>PySys_Audit (6 samples, 0.01%)</title><rect x="33.3" y="69" width="0.1" height="15.0" fill="rgb(205,116,10)" rx="2" ry="2" />
-<text  x="36.27" y="79.5" ></text>
-</g>
-<g >
-<title>_PySys_UpdateConfig (103 samples, 0.20%)</title><rect x="81.8" y="149" width="2.4" height="15.0" fill="rgb(237,76,42)" rx="2" ry="2" />
-<text  x="84.84" y="159.5" ></text>
-</g>
-<g >
-<title>PySys_Audit (12 samples, 0.02%)</title><rect x="41.3" y="85" width="0.3" height="15.0" fill="rgb(238,3,47)" rx="2" ry="2" />
-<text  x="44.33" y="95.5" ></text>
-</g>
-<g >
-<title>_PySys_ClearAuditHooks (6 samples, 0.01%)</title><rect x="48.5" y="149" width="0.1" height="15.0" fill="rgb(241,102,28)" rx="2" ry="2" />
-<text  x="51.50" y="159.5" ></text>
-</g>
-<g >
-<title>mbstowcs (696 samples, 1.36%)</title><rect x="128.4" y="149" width="16.0" height="15.0" fill="rgb(212,82,24)" rx="2" ry="2" />
-<text  x="131.36" y="159.5" ></text>
-</g>
-<g >
-<title>joinpath2 (6 samples, 0.01%)</title><rect x="33.6" y="69" width="0.1" height="15.0" fill="rgb(221,136,26)" rx="2" ry="2" />
-<text  x="36.57" y="79.5" ></text>
-</g>
-<g >
-<title>memcpy (77 samples, 0.15%)</title><rect x="23.0" y="117" width="1.7" height="15.0" fill="rgb(253,106,35)" rx="2" ry="2" />
-<text  x="25.96" y="127.5" ></text>
-</g>
-<g >
-<title>strrchr (216 samples, 0.42%)</title><rect x="1096.3" y="149" width="5.0" height="15.0" fill="rgb(228,0,16)" rx="2" ry="2" />
-<text  x="1099.30" y="159.5" ></text>
-</g>
-<g >
-<title>joinpath2 (6 samples, 0.01%)</title><rect x="40.8" y="85" width="0.1" height="15.0" fill="rgb(254,217,26)" rx="2" ry="2" />
-<text  x="43.80" y="95.5" ></text>
-</g>
-<g >
-<title>strlen (46 samples, 0.09%)</title><rect x="79.6" y="133" width="1.1" height="15.0" fill="rgb(215,39,3)" rx="2" ry="2" />
-<text  x="82.63" y="143.5" ></text>
-</g>
-<g >
-<title>wcslen (14 samples, 0.03%)</title><rect x="83.9" y="133" width="0.3" height="15.0" fill="rgb(223,48,11)" rx="2" ry="2" />
-<text  x="86.90" y="143.5" ></text>
-</g>
-<g >
-<title>memset (5 samples, 0.01%)</title><rect x="82.7" y="133" width="0.1" height="15.0" fill="rgb(239,1,36)" rx="2" ry="2" />
-<text  x="85.68" y="143.5" ></text>
-</g>
-<g >
-<title>wcstombs (72 samples, 0.14%)</title><rect x="31.5" y="85" width="1.6" height="15.0" fill="rgb(207,108,44)" rx="2" ry="2" />
-<text  x="34.47" y="95.5" ></text>
-</g>
-<g >
-<title>strlen (303 samples, 0.59%)</title><rect x="60.7" y="101" width="7.0" height="15.0" fill="rgb(225,47,16)" rx="2" ry="2" />
-<text  x="63.70" y="111.5" ></text>
-</g>
-<g >
-<title>_Py_XDECREF (16 samples, 0.03%)</title><rect x="67.7" y="85" width="0.4" height="15.0" fill="rgb(232,72,34)" rx="2" ry="2" />
-<text  x="70.75" y="95.5" ></text>
-</g>
-<g >
-<title>sem_trywait (220 samples, 0.43%)</title><rect x="913.9" y="149" width="5.0" height="15.0" fill="rgb(248,95,34)" rx="2" ry="2" />
-<text  x="916.86" y="159.5" ></text>
-</g>
-<g >
-<title>strlen (8 samples, 0.02%)</title><rect x="68.6" y="101" width="0.1" height="15.0" fill="rgb(241,141,17)" rx="2" ry="2" />
-<text  x="71.56" y="111.5" ></text>
-</g>
-<g >
-<title>_PyThreadState_GET (110 samples, 0.22%)</title><rect x="11.3" y="133" width="2.5" height="15.0" fill="rgb(217,82,39)" rx="2" ry="2" />
+<title>_PyThreadState_GET (110 samples, 0.22%)</title><rect x="11.3" y="133" width="2.5" height="15.0" fill="rgb(215,139,13)" rx="2" ry="2" />
 <text  x="14.27" y="143.5" ></text>
 </g>
 <g >
-<title>pthread_self (532 samples, 1.04%)</title><rect x="864.6" y="149" width="12.3" height="15.0" fill="rgb(219,195,53)" rx="2" ry="2" />
-<text  x="867.57" y="159.5" ></text>
-</g>
-<g >
-<title>sys_audit_tstate (165 samples, 0.32%)</title><rect x="13.8" y="133" width="3.8" height="15.0" fill="rgb(236,216,29)" rx="2" ry="2" />
-<text  x="16.81" y="143.5" ></text>
-</g>
-<g >
-<title>_Py_XDECREF (32 samples, 0.06%)</title><rect x="82.8" y="117" width="0.8" height="15.0" fill="rgb(243,76,39)" rx="2" ry="2" />
-<text  x="85.81" y="127.5" ></text>
-</g>
-<g >
-<title>strerror (14 samples, 0.03%)</title><rect x="935.4" y="149" width="0.3" height="15.0" fill="rgb(232,204,22)" rx="2" ry="2" />
-<text  x="938.39" y="159.5" ></text>
-</g>
-<g >
-<title>sem_init (71 samples, 0.14%)</title><rect x="904.5" y="149" width="1.6" height="15.0" fill="rgb(246,18,51)" rx="2" ry="2" />
-<text  x="907.45" y="159.5" ></text>
-</g>
-<g >
-<title>sys_getfilesystemencodeerrors_impl (5 samples, 0.01%)</title><rect x="1101.3" y="133" width="0.1" height="15.0" fill="rgb(205,21,15)" rx="2" ry="2" />
-<text  x="1104.31" y="143.5" ></text>
-</g>
-<g >
-<title>calculate_program (5 samples, 0.01%)</title><rect x="41.2" y="117" width="0.1" height="15.0" fill="rgb(239,184,2)" rx="2" ry="2" />
-<text  x="44.17" y="127.5" ></text>
-</g>
-<g >
-<title>read (26 samples, 0.05%)</title><rect x="890.1" y="149" width="0.6" height="15.0" fill="rgb(226,193,31)" rx="2" ry="2" />
-<text  x="893.05" y="159.5" ></text>
-</g>
-<g >
-<title>PyDTrace_AUDIT_ENABLED (55 samples, 0.11%)</title><rect x="16.4" y="101" width="1.2" height="15.0" fill="rgb(232,184,6)" rx="2" ry="2" />
-<text  x="19.35" y="111.5" ></text>
-</g>
-<g >
-<title>_PyInterpreterState_GET (6 samples, 0.01%)</title><rect x="1101.5" y="117" width="0.2" height="15.0" fill="rgb(245,124,1)" rx="2" ry="2" />
-<text  x="1104.52" y="127.5" ></text>
-</g>
-<g >
-<title>make_impl_info (27 samples, 0.05%)</title><rect x="68.1" y="117" width="0.6" height="15.0" fill="rgb(230,217,41)" rx="2" ry="2" />
-<text  x="71.12" y="127.5" ></text>
-</g>
-<g >
-<title>strlen (155 samples, 0.30%)</title><rect x="73.9" y="117" width="3.6" height="15.0" fill="rgb(226,127,35)" rx="2" ry="2" />
-<text  x="76.94" y="127.5" ></text>
-</g>
-<g >
-<title>sys_getfilesystemencoding (12 samples, 0.02%)</title><rect x="1101.4" y="149" width="0.3" height="15.0" fill="rgb(241,147,22)" rx="2" ry="2" />
-<text  x="1104.43" y="159.5" ></text>
-</g>
-<g >
-<title>_Py_XDECREF (6 samples, 0.01%)</title><rect x="30.4" y="117" width="0.2" height="15.0" fill="rgb(218,92,48)" rx="2" ry="2" />
-<text  x="33.43" y="127.5" ></text>
-</g>
-<g >
-<title>memcpy (269 samples, 0.53%)</title><rect x="54.4" y="101" width="6.2" height="15.0" fill="rgb(230,193,11)" rx="2" ry="2" />
-<text  x="57.39" y="111.5" ></text>
-</g>
-<g >
-<title>PySys_SetObject (30 samples, 0.06%)</title><rect x="30.1" y="149" width="0.7" height="15.0" fill="rgb(246,54,46)" rx="2" ry="2" />
-<text  x="33.08" y="159.5" ></text>
-</g>
-<g >
-<title>resolve_symlinks (75 samples, 0.15%)</title><rect x="31.4" y="101" width="1.7" height="15.0" fill="rgb(207,163,43)" rx="2" ry="2" />
-<text  x="34.40" y="111.5" ></text>
-</g>
-<g >
-<title>_Py_DECREF (28 samples, 0.05%)</title><rect x="48.8" y="117" width="0.7" height="15.0" fill="rgb(224,125,44)" rx="2" ry="2" />
-<text  x="51.82" y="127.5" ></text>
-</g>
-<g >
-<title>calculate_init (20 samples, 0.04%)</title><rect x="30.8" y="133" width="0.5" height="15.0" fill="rgb(236,119,13)" rx="2" ry="2" />
-<text  x="33.82" y="143.5" ></text>
-</g>
-<g >
-<title>PySys_Audit (330 samples, 0.65%)</title><rect x="10.0" y="149" width="7.6" height="15.0" fill="rgb(252,128,17)" rx="2" ry="2" />
+<title>PySys_Audit (330 samples, 0.65%)</title><rect x="10.0" y="149" width="7.6" height="15.0" fill="rgb(219,33,52)" rx="2" ry="2" />
 <text  x="13.00" y="159.5" ></text>
 </g>
 <g >
-<title>wcstombs (2,958 samples, 5.79%)</title><rect x="1121.6" y="149" width="68.4" height="15.0" fill="rgb(224,91,48)" rx="2" ry="2" />
-<text  x="1124.65" y="159.5" >wcstombs</text>
+<title>calculate_pybuilddir (116 samples, 0.23%)</title><rect x="33.2" y="85" width="2.7" height="15.0" fill="rgb(214,25,31)" rx="2" ry="2" />
+<text  x="36.23" y="95.5" ></text>
 </g>
 <g >
-<title>_PySys_Create (1,387 samples, 2.72%)</title><rect x="48.6" y="149" width="32.1" height="15.0" fill="rgb(205,61,17)" rx="2" ry="2" />
-<text  x="51.64" y="159.5" >_P..</text>
+<title>_Py_wstat (81 samples, 0.16%)</title><rect x="38.7" y="53" width="1.9" height="15.0" fill="rgb(235,188,31)" rx="2" ry="2" />
+<text  x="41.72" y="63.5" ></text>
 </g>
 <g >
-<title>make_flags (18 samples, 0.04%)</title><rect x="67.7" y="117" width="0.4" height="15.0" fill="rgb(209,138,3)" rx="2" ry="2" />
-<text  x="70.70" y="127.5" ></text>
+<title>sys_getfilesystemencodeerrors_impl (5 samples, 0.01%)</title><rect x="1101.4" y="133" width="0.1" height="15.0" fill="rgb(250,107,33)" rx="2" ry="2" />
+<text  x="1104.38" y="143.5" ></text>
 </g>
 <g >
-<title>strcmp (567 samples, 1.11%)</title><rect x="877.0" y="133" width="13.1" height="15.0" fill="rgb(251,39,43)" rx="2" ry="2" />
-<text  x="879.95" y="143.5" ></text>
+<title>_PyThreadState_GET (6 samples, 0.01%)</title><rect x="30.2" y="117" width="0.1" height="15.0" fill="rgb(245,223,33)" rx="2" ry="2" />
+<text  x="33.20" y="127.5" ></text>
 </g>
 <g >
-<title>joinpath2 (12 samples, 0.02%)</title><rect x="41.7" y="85" width="0.3" height="15.0" fill="rgb(251,179,49)" rx="2" ry="2" />
-<text  x="44.70" y="95.5" ></text>
+<title>ismodule (89 samples, 0.17%)</title><rect x="38.7" y="85" width="2.0" height="15.0" fill="rgb(242,56,40)" rx="2" ry="2" />
+<text  x="41.68" y="95.5" ></text>
 </g>
 <g >
-<title>wcstombs (89 samples, 0.17%)</title><rect x="33.9" y="69" width="2.0" height="15.0" fill="rgb(219,139,35)" rx="2" ry="2" />
-<text  x="36.87" y="79.5" ></text>
+<title>sem_post (5 samples, 0.01%)</title><rect x="79.3" y="133" width="0.2" height="15.0" fill="rgb(229,189,17)" rx="2" ry="2" />
+<text  x="82.34" y="143.5" ></text>
 </g>
 <g >
-<title>strchr (315 samples, 0.62%)</title><rect x="923.5" y="149" width="7.3" height="15.0" fill="rgb(249,95,52)" rx="2" ry="2" />
-<text  x="926.49" y="159.5" ></text>
+<title>close (16 samples, 0.03%)</title><rect x="125.6" y="149" width="0.4" height="15.0" fill="rgb(226,133,0)" rx="2" ry="2" />
+<text  x="128.63" y="159.5" ></text>
 </g>
 <g >
-<title>memcpy (41 samples, 0.08%)</title><rect x="78.1" y="133" width="1.0" height="15.0" fill="rgb(219,89,1)" rx="2" ry="2" />
-<text  x="81.12" y="143.5" ></text>
+<title>memcmp (110 samples, 0.22%)</title><rect x="50.3" y="101" width="2.6" height="15.0" fill="rgb(251,170,18)" rx="2" ry="2" />
+<text  x="53.34" y="111.5" ></text>
 </g>
 <g >
-<title>sem_destroy (71 samples, 0.14%)</title><rect x="902.8" y="149" width="1.7" height="15.0" fill="rgb(245,118,46)" rx="2" ry="2" />
-<text  x="905.81" y="159.5" ></text>
+<title>sys_set_object_str (18 samples, 0.04%)</title><rect x="30.3" y="133" width="0.5" height="15.0" fill="rgb(248,155,17)" rx="2" ry="2" />
+<text  x="33.34" y="143.5" ></text>
 </g>
 <g >
-<title>list_stdlib_module_names (578 samples, 1.13%)</title><rect x="54.3" y="117" width="13.4" height="15.0" fill="rgb(207,227,7)" rx="2" ry="2" />
-<text  x="57.34" y="127.5" ></text>
+<title>_PyThreadState_GET (154 samples, 0.30%)</title><rect x="26.5" y="133" width="3.6" height="15.0" fill="rgb(205,218,10)" rx="2" ry="2" />
+<text  x="29.51" y="143.5" ></text>
 </g>
 <g >
-<title>_PyPathConfig_Calculate (657 samples, 1.29%)</title><rect x="30.8" y="149" width="15.2" height="15.0" fill="rgb(212,83,48)" rx="2" ry="2" />
-<text  x="33.77" y="159.5" ></text>
+<title>calloc (8 samples, 0.02%)</title><rect x="125.4" y="149" width="0.2" height="15.0" fill="rgb(246,118,14)" rx="2" ry="2" />
+<text  x="128.45" y="159.5" ></text>
 </g>
 <g >
-<title>_PySys_GetObject (308 samples, 0.60%)</title><rect x="19.4" y="133" width="7.1" height="15.0" fill="rgb(221,115,44)" rx="2" ry="2" />
-<text  x="22.41" y="143.5" ></text>
+<title>Py_GetBuildInfo (5 samples, 0.01%)</title><rect x="48.7" y="117" width="0.1" height="15.0" fill="rgb(250,92,21)" rx="2" ry="2" />
+<text  x="51.65" y="127.5" ></text>
 </g>
 <g >
-<title>_PyThreadState_GET (8 samples, 0.02%)</title><rect x="80.8" y="133" width="0.2" height="15.0" fill="rgb(211,228,2)" rx="2" ry="2" />
-<text  x="83.78" y="143.5" ></text>
+<title>wcstombs (2,958 samples, 5.79%)</title><rect x="1121.7" y="149" width="68.3" height="15.0" fill="rgb(218,52,20)" rx="2" ry="2" />
+<text  x="1124.70" y="159.5" >wcstombs</text>
 </g>
 <g >
-<title>Py_GetBuildInfo (5 samples, 0.01%)</title><rect x="48.7" y="117" width="0.1" height="15.0" fill="rgb(217,207,30)" rx="2" ry="2" />
-<text  x="51.68" y="127.5" ></text>
+<title>list_builtin_module_names (204 samples, 0.40%)</title><rect x="49.6" y="117" width="4.7" height="15.0" fill="rgb(232,36,19)" rx="2" ry="2" />
+<text  x="52.60" y="127.5" ></text>
 </g>
 <g >
-<title>_PySys_InitCore (1,262 samples, 2.47%)</title><rect x="48.7" y="133" width="29.1" height="15.0" fill="rgb(221,69,32)" rx="2" ry="2" />
-<text  x="51.66" y="143.5" >_P..</text>
+<title>calculate_prefix (213 samples, 0.42%)</title><rect x="36.2" y="117" width="4.9" height="15.0" fill="rgb(235,84,10)" rx="2" ry="2" />
+<text  x="39.23" y="127.5" ></text>
 </g>
 <g >
-<title>_Py_DECREF (5 samples, 0.01%)</title><rect x="68.1" y="101" width="0.2" height="15.0" fill="rgb(232,138,17)" rx="2" ry="2" />
-<text  x="71.14" y="111.5" ></text>
+<title>realloc (113 samples, 0.22%)</title><rect x="900.0" y="149" width="2.6" height="15.0" fill="rgb(251,162,30)" rx="2" ry="2" />
+<text  x="903.02" y="159.5" ></text>
 </g>
 <g >
-<title>memset (77 samples, 0.15%)</title><rect x="72.2" y="117" width="1.7" height="15.0" fill="rgb(210,62,8)" rx="2" ry="2" />
-<text  x="75.16" y="127.5" ></text>
+<title>strlen (6,621 samples, 12.96%)</title><rect x="935.7" y="149" width="152.9" height="15.0" fill="rgb(247,51,33)" rx="2" ry="2" />
+<text  x="938.69" y="159.5" >strlen</text>
 </g>
 <g >
-<title>getenv (29 samples, 0.06%)</title><rect x="126.4" y="149" width="0.7" height="15.0" fill="rgb(254,34,38)" rx="2" ry="2" />
-<text  x="129.44" y="159.5" ></text>
+<title>strlen (155 samples, 0.30%)</title><rect x="73.9" y="117" width="3.6" height="15.0" fill="rgb(245,23,50)" rx="2" ry="2" />
+<text  x="76.89" y="127.5" ></text>
 </g>
 <g >
-<title>isfile (102 samples, 0.20%)</title><rect x="36.3" y="85" width="2.4" height="15.0" fill="rgb(209,217,15)" rx="2" ry="2" />
-<text  x="39.34" y="95.5" ></text>
+<title>memcmp (6,098 samples, 11.93%)</title><rect x="144.4" y="149" width="140.8" height="15.0" fill="rgb(207,213,27)" rx="2" ry="2" />
+<text  x="147.43" y="159.5" >memcmp</text>
 </g>
 <g >
-<title>pthread_mutex_unlock (1,790 samples, 3.51%)</title><rect x="823.2" y="149" width="41.4" height="15.0" fill="rgb(220,226,5)" rx="2" ry="2" />
-<text  x="826.20" y="159.5" >pth..</text>
+<title>strncpy (110 samples, 0.22%)</title><rect x="1093.8" y="149" width="2.6" height="15.0" fill="rgb(222,79,27)" rx="2" ry="2" />
+<text  x="1096.83" y="159.5" ></text>
 </g>
 <g >
-<title>__errno_location (1,695 samples, 3.32%)</title><rect x="84.2" y="149" width="39.2" height="15.0" fill="rgb(216,198,23)" rx="2" ry="2" />
-<text  x="87.22" y="159.5" >__e..</text>
+<title>strerror (14 samples, 0.03%)</title><rect x="935.4" y="149" width="0.3" height="15.0" fill="rgb(217,205,11)" rx="2" ry="2" />
+<text  x="938.37" y="159.5" ></text>
 </g>
 <g >
-<title>mbstowcs (12 samples, 0.02%)</title><rect x="31.0" y="117" width="0.3" height="15.0" fill="rgb(219,217,7)" rx="2" ry="2" />
-<text  x="34.01" y="127.5" ></text>
+<title>memcpy (77 samples, 0.15%)</title><rect x="23.0" y="117" width="1.7" height="15.0" fill="rgb(207,6,22)" rx="2" ry="2" />
+<text  x="25.95" y="127.5" ></text>
 </g>
 <g >
-<title>_PyThreadState_GET (6 samples, 0.01%)</title><rect x="81.3" y="117" width="0.1" height="15.0" fill="rgb(221,198,38)" rx="2" ry="2" />
-<text  x="84.29" y="127.5" ></text>
+<title>sigaction (68 samples, 0.13%)</title><rect x="921.6" y="149" width="1.6" height="15.0" fill="rgb(211,174,28)" rx="2" ry="2" />
+<text  x="924.61" y="159.5" ></text>
 </g>
 <g >
-<title>joinpath2 (6 samples, 0.01%)</title><rect x="40.6" y="69" width="0.2" height="15.0" fill="rgb(209,93,13)" rx="2" ry="2" />
-<text  x="43.62" y="79.5" ></text>
+<title>__fxstat64 (30 samples, 0.06%)</title><rect x="123.3" y="149" width="0.7" height="15.0" fill="rgb(254,16,39)" rx="2" ry="2" />
+<text  x="126.30" y="159.5" ></text>
 </g>
 <g >
-<title>_Py_wstat (81 samples, 0.16%)</title><rect x="38.7" y="53" width="1.9" height="15.0" fill="rgb(222,107,25)" rx="2" ry="2" />
-<text  x="41.75" y="63.5" ></text>
+<title>strlen (77 samples, 0.15%)</title><rect x="24.7" y="117" width="1.8" height="15.0" fill="rgb(239,20,48)" rx="2" ry="2" />
+<text  x="27.73" y="127.5" ></text>
 </g>
 <g >
-<title>_PySys_Audit (110 samples, 0.22%)</title><rect x="46.0" y="149" width="2.5" height="15.0" fill="rgb(217,90,35)" rx="2" ry="2" />
-<text  x="48.96" y="159.5" ></text>
+<title>wcstombs (146 samples, 0.29%)</title><rect x="42.1" y="85" width="3.4" height="15.0" fill="rgb(207,225,43)" rx="2" ry="2" />
+<text  x="45.09" y="95.5" ></text>
 </g>
 <g >
-<title>wcslen (131 samples, 0.26%)</title><rect x="1118.6" y="149" width="3.0" height="15.0" fill="rgb(221,66,21)" rx="2" ry="2" />
-<text  x="1121.62" y="159.5" ></text>
-</g>
-<g >
-<title>sys_set_object_id (18 samples, 0.04%)</title><rect x="81.4" y="133" width="0.4" height="15.0" fill="rgb(205,59,19)" rx="2" ry="2" />
-<text  x="84.43" y="143.5" ></text>
-</g>
-<g >
-<title>joinpath (6 samples, 0.01%)</title><rect x="40.9" y="85" width="0.2" height="15.0" fill="rgb(236,133,6)" rx="2" ry="2" />
-<text  x="43.94" y="95.5" ></text>
-</g>
-<g >
-<title>_PyThreadState_GET (154 samples, 0.30%)</title><rect x="26.5" y="133" width="3.6" height="15.0" fill="rgb(217,176,14)" rx="2" ry="2" />
-<text  x="29.52" y="143.5" ></text>
-</g>
-<g >
-<title>should_audit (54 samples, 0.11%)</title><rect x="47.3" y="117" width="1.2" height="15.0" fill="rgb(247,137,47)" rx="2" ry="2" />
-<text  x="50.25" y="127.5" ></text>
-</g>
-<g >
-<title>wcscat (6 samples, 0.01%)</title><rect x="36.0" y="101" width="0.1" height="15.0" fill="rgb(237,76,19)" rx="2" ry="2" />
-<text  x="38.97" y="111.5" ></text>
-</g>
-<g >
-<title>calculate_path (634 samples, 1.24%)</title><rect x="31.3" y="133" width="14.6" height="15.0" fill="rgb(241,160,33)" rx="2" ry="2" />
-<text  x="34.28" y="143.5" ></text>
-</g>
-<g >
-<title>calculate_open_pyenv (181 samples, 0.35%)</title><rect x="41.3" y="101" width="4.2" height="15.0" fill="rgb(223,192,19)" rx="2" ry="2" />
-<text  x="44.31" y="111.5" ></text>
-</g>
-<g >
-<title>memcpy (105 samples, 0.21%)</title><rect x="69.7" y="117" width="2.5" height="15.0" fill="rgb(231,173,28)" rx="2" ry="2" />
-<text  x="72.73" y="127.5" ></text>
-</g>
-<g >
-<title>_PyInterpreterState_GET (9 samples, 0.02%)</title><rect x="81.2" y="133" width="0.2" height="15.0" fill="rgb(241,173,3)" rx="2" ry="2" />
-<text  x="84.22" y="143.5" ></text>
-</g>
-<g >
-<title>_PyThreadState_GET (6 samples, 0.01%)</title><rect x="30.2" y="117" width="0.2" height="15.0" fill="rgb(209,159,18)" rx="2" ry="2" />
-<text  x="33.22" y="127.5" ></text>
-</g>
-<g >
-<title>should_audit (110 samples, 0.22%)</title><rect x="15.1" y="117" width="2.5" height="15.0" fill="rgb(254,131,54)" rx="2" ry="2" />
-<text  x="18.08" y="127.5" ></text>
-</g>
-<g >
-<title>sys_getfilesystemencodeerrors (6 samples, 0.01%)</title><rect x="1101.3" y="149" width="0.1" height="15.0" fill="rgb(238,109,27)" rx="2" ry="2" />
-<text  x="1104.29" y="159.5" ></text>
-</g>
-<g >
-<title>sem_wait (5 samples, 0.01%)</title><rect x="79.5" y="133" width="0.1" height="15.0" fill="rgb(230,27,52)" rx="2" ry="2" />
-<text  x="82.51" y="143.5" ></text>
-</g>
-<g >
-<title>memcmp (110 samples, 0.22%)</title><rect x="50.4" y="101" width="2.5" height="15.0" fill="rgb(220,123,20)" rx="2" ry="2" />
-<text  x="53.37" y="111.5" ></text>
-</g>
-<g >
-<title>sem_post (336 samples, 0.66%)</title><rect x="906.1" y="149" width="7.8" height="15.0" fill="rgb(212,229,46)" rx="2" ry="2" />
-<text  x="909.09" y="159.5" ></text>
-</g>
-<g >
-<title>strlen (30 samples, 0.06%)</title><rect x="53.7" y="101" width="0.6" height="15.0" fill="rgb(252,58,23)" rx="2" ry="2" />
-<text  x="56.65" y="111.5" ></text>
-</g>
-<g >
-<title>_PyRuntimeState_GetThreadState (55 samples, 0.11%)</title><rect x="12.5" y="117" width="1.3" height="15.0" fill="rgb(251,65,38)" rx="2" ry="2" />
-<text  x="15.54" y="127.5" ></text>
-</g>
-<g >
-<title>lseek64 (29 samples, 0.06%)</title><rect x="127.7" y="149" width="0.7" height="15.0" fill="rgb(247,163,39)" rx="2" ry="2" />
-<text  x="130.69" y="159.5" ></text>
-</g>
-<g >
-<title>wcscmp (723 samples, 1.42%)</title><rect x="1101.9" y="149" width="16.7" height="15.0" fill="rgb(227,112,39)" rx="2" ry="2" />
-<text  x="1104.91" y="159.5" ></text>
-</g>
-<g >
-<title>strlen (14 samples, 0.03%)</title><rect x="83.6" y="133" width="0.3" height="15.0" fill="rgb(212,135,29)" rx="2" ry="2" />
-<text  x="86.55" y="143.5" ></text>
-</g>
-<g >
-<title>calculate_argv0_path (80 samples, 0.16%)</title><rect x="31.3" y="117" width="1.9" height="15.0" fill="rgb(241,196,11)" rx="2" ry="2" />
-<text  x="34.31" y="127.5" ></text>
-</g>
-<g >
-<title>sys_getfilesystemencoding_impl (10 samples, 0.02%)</title><rect x="1101.5" y="133" width="0.2" height="15.0" fill="rgb(254,8,24)" rx="2" ry="2" />
-<text  x="1104.47" y="143.5" ></text>
-</g>
-<g >
-<title>set_flags_from_config (17 samples, 0.03%)</title><rect x="67.7" y="101" width="0.4" height="15.0" fill="rgb(226,68,34)" rx="2" ry="2" />
-<text  x="70.72" y="111.5" ></text>
-</g>
-<g >
-<title>sigaction (68 samples, 0.13%)</title><rect x="921.8" y="149" width="1.6" height="15.0" fill="rgb(249,95,16)" rx="2" ry="2" />
-<text  x="924.83" y="159.5" ></text>
-</g>
-<g >
-<title>calloc (8 samples, 0.02%)</title><rect x="125.5" y="149" width="0.2" height="15.0" fill="rgb(244,178,50)" rx="2" ry="2" />
-<text  x="128.54" y="159.5" ></text>
-</g>
-<g >
-<title>close (16 samples, 0.03%)</title><rect x="125.7" y="149" width="0.4" height="15.0" fill="rgb(250,26,26)" rx="2" ry="2" />
-<text  x="128.73" y="159.5" ></text>
-</g>
-<g >
-<title>strncmp (228 samples, 0.45%)</title><rect x="1088.5" y="149" width="5.3" height="15.0" fill="rgb(253,102,32)" rx="2" ry="2" />
-<text  x="1091.49" y="159.5" ></text>
-</g>
-<g >
-<title>isatty (19 samples, 0.04%)</title><rect x="127.2" y="149" width="0.4" height="15.0" fill="rgb(248,83,13)" rx="2" ry="2" />
-<text  x="130.21" y="159.5" ></text>
-</g>
-<g >
-<title>sem_post (5 samples, 0.01%)</title><rect x="79.4" y="133" width="0.1" height="15.0" fill="rgb(236,28,37)" rx="2" ry="2" />
-<text  x="82.39" y="143.5" ></text>
-</g>
-<g >
-<title>calculate_pybuilddir (116 samples, 0.23%)</title><rect x="33.2" y="85" width="2.7" height="15.0" fill="rgb(243,13,24)" rx="2" ry="2" />
-<text  x="36.25" y="95.5" ></text>
-</g>
-<g >
-<title>ismodule (89 samples, 0.17%)</title><rect x="38.7" y="85" width="2.1" height="15.0" fill="rgb(254,3,14)" rx="2" ry="2" />
-<text  x="41.70" y="95.5" ></text>
-</g>
-<g >
-<title>strncmp (5 samples, 0.01%)</title><rect x="77.5" y="117" width="0.1" height="15.0" fill="rgb(224,211,48)" rx="2" ry="2" />
-<text  x="80.52" y="127.5" ></text>
-</g>
-<g >
-<title>wcstombs (78 samples, 0.15%)</title><rect x="38.8" y="37" width="1.8" height="15.0" fill="rgb(236,180,48)" rx="2" ry="2" />
-<text  x="41.82" y="47.5" ></text>
-</g>
-<g >
-<title>memmove (15 samples, 0.03%)</title><rect x="615.7" y="149" width="0.3" height="15.0" fill="rgb(206,49,23)" rx="2" ry="2" />
-<text  x="618.69" y="159.5" ></text>
-</g>
-<g >
-<title>search_for_exec_prefix (117 samples, 0.23%)</title><rect x="33.2" y="101" width="2.7" height="15.0" fill="rgb(216,43,36)" rx="2" ry="2" />
-<text  x="36.22" y="111.5" ></text>
-</g>
-<g >
-<title>joinpath2 (12 samples, 0.02%)</title><rect x="45.7" y="101" width="0.2" height="15.0" fill="rgb(221,106,16)" rx="2" ry="2" />
-<text  x="48.66" y="111.5" ></text>
-</g>
-<g >
-<title>PyDTrace_AUDIT_ENABLED (27 samples, 0.05%)</title><rect x="47.9" y="101" width="0.6" height="15.0" fill="rgb(243,161,29)" rx="2" ry="2" />
-<text  x="50.87" y="111.5" ></text>
-</g>
-<g >
-<title>_Py_wstat (101 samples, 0.20%)</title><rect x="36.4" y="69" width="2.3" height="15.0" fill="rgb(252,228,6)" rx="2" ry="2" />
-<text  x="39.37" y="79.5" ></text>
-</g>
-<g >
-<title>qsort (570 samples, 1.12%)</title><rect x="876.9" y="149" width="13.2" height="15.0" fill="rgb(250,10,25)" rx="2" ry="2" />
-<text  x="879.88" y="159.5" ></text>
-</g>
-<g >
-<title>memcpy (15 samples, 0.03%)</title><rect x="82.3" y="133" width="0.4" height="15.0" fill="rgb(238,158,2)" rx="2" ry="2" />
-<text  x="85.33" y="143.5" ></text>
-</g>
-<g >
-<title>_PyInterpreterState_GET (9 samples, 0.02%)</title><rect x="30.2" y="133" width="0.2" height="15.0" fill="rgb(245,209,6)" rx="2" ry="2" />
-<text  x="33.15" y="143.5" ></text>
-</g>
-<g >
-<title>isfile (82 samples, 0.16%)</title><rect x="38.7" y="69" width="1.9" height="15.0" fill="rgb(231,221,7)" rx="2" ry="2" />
-<text  x="41.72" y="79.5" ></text>
-</g>
-<g >
-<title>strncpy (110 samples, 0.22%)</title><rect x="1093.8" y="149" width="2.5" height="15.0" fill="rgb(234,41,50)" rx="2" ry="2" />
-<text  x="1096.75" y="159.5" ></text>
-</g>
-<g >
-<title>calculate_read_pyenv (182 samples, 0.36%)</title><rect x="41.3" y="117" width="4.2" height="15.0" fill="rgb(239,29,49)" rx="2" ry="2" />
-<text  x="44.29" y="127.5" ></text>
-</g>
-<g >
-<title>list_builtin_module_names (204 samples, 0.40%)</title><rect x="49.6" y="117" width="4.7" height="15.0" fill="rgb(251,13,6)" rx="2" ry="2" />
-<text  x="52.63" y="127.5" ></text>
-</g>
-<g >
-<title>__xstat64 (61 samples, 0.12%)</title><rect x="124.1" y="149" width="1.4" height="15.0" fill="rgb(232,9,8)" rx="2" ry="2" />
-<text  x="127.13" y="159.5" ></text>
-</g>
-<g >
-<title>PySys_GetObject (539 samples, 1.06%)</title><rect x="17.6" y="149" width="12.5" height="15.0" fill="rgb(252,18,9)" rx="2" ry="2" />
-<text  x="20.63" y="159.5" ></text>
-</g>
-<g >
-<title>memcmp (37 samples, 0.07%)</title><rect x="68.9" y="117" width="0.8" height="15.0" fill="rgb(254,127,20)" rx="2" ry="2" />
-<text  x="71.88" y="127.5" ></text>
-</g>
-<g >
-<title>pthread_mutex_lock (1,790 samples, 3.51%)</title><rect x="781.8" y="149" width="41.4" height="15.0" fill="rgb(233,111,14)" rx="2" ry="2" />
-<text  x="784.84" y="159.5" >pth..</text>
-</g>
-<g >
-<title>strlen (77 samples, 0.15%)</title><rect x="24.7" y="117" width="1.8" height="15.0" fill="rgb(208,122,14)" rx="2" ry="2" />
-<text  x="27.74" y="127.5" ></text>
-</g>
-<g >
-<title>memcmp (6,098 samples, 11.94%)</title><rect x="144.5" y="149" width="141.0" height="15.0" fill="rgb(249,157,35)" rx="2" ry="2" />
-<text  x="147.54" y="159.5" >memcmp</text>
-</g>
-<g >
-<title>_PySys_SetObjectId (30 samples, 0.06%)</title><rect x="81.2" y="149" width="0.6" height="15.0" fill="rgb(253,96,44)" rx="2" ry="2" />
-<text  x="84.15" y="159.5" ></text>
-</g>
-<g >
-<title>all (51,064 samples, 100%)</title><rect x="10.0" y="165" width="1180.0" height="15.0" fill="rgb(243,131,0)" rx="2" ry="2" />
+<title>all (51,105 samples, 100%)</title><rect x="10.0" y="165" width="1180.0" height="15.0" fill="rgb(254,70,32)" rx="2" ry="2" />
 <text  x="13.00" y="175.5" ></text>
 </g>
 <g >
-<title>sys_set_object_str (18 samples, 0.04%)</title><rect x="30.4" y="133" width="0.4" height="15.0" fill="rgb(210,49,3)" rx="2" ry="2" />
-<text  x="33.36" y="143.5" ></text>
+<title>wcschr (6 samples, 0.01%)</title><rect x="1101.8" y="149" width="0.2" height="15.0" fill="rgb(254,211,13)" rx="2" ry="2" />
+<text  x="1104.84" y="159.5" ></text>
 </g>
 <g >
-<title>_PySys_GetObjectId (16 samples, 0.03%)</title><rect x="80.7" y="149" width="0.4" height="15.0" fill="rgb(206,183,49)" rx="2" ry="2" />
-<text  x="83.69" y="159.5" ></text>
+<title>memcpy (7 samples, 0.01%)</title><rect x="68.3" y="101" width="0.1" height="15.0" fill="rgb(235,77,14)" rx="2" ry="2" />
+<text  x="71.28" y="111.5" ></text>
 </g>
 <g >
-<title>__fxstat64 (30 samples, 0.06%)</title><rect x="123.4" y="149" width="0.7" height="15.0" fill="rgb(225,150,4)" rx="2" ry="2" />
-<text  x="126.39" y="159.5" ></text>
+<title>_PySys_SetPreliminaryStderr (10 samples, 0.02%)</title><rect x="77.8" y="133" width="0.2" height="15.0" fill="rgb(223,146,5)" rx="2" ry="2" />
+<text  x="80.77" y="143.5" ></text>
+</g>
+<g >
+<title>_Py_DECREF (16 samples, 0.03%)</title><rect x="83.1" y="101" width="0.4" height="15.0" fill="rgb(216,103,13)" rx="2" ry="2" />
+<text  x="86.13" y="111.5" ></text>
+</g>
+<g >
+<title>memset (5 samples, 0.01%)</title><rect x="82.6" y="133" width="0.1" height="15.0" fill="rgb(216,97,0)" rx="2" ry="2" />
+<text  x="85.62" y="143.5" ></text>
+</g>
+<g >
+<title>_Py_DECREF (5 samples, 0.01%)</title><rect x="68.1" y="101" width="0.1" height="15.0" fill="rgb(228,67,30)" rx="2" ry="2" />
+<text  x="71.09" y="111.5" ></text>
+</g>
+<g >
+<title>wcslen (131 samples, 0.26%)</title><rect x="1118.7" y="149" width="3.0" height="15.0" fill="rgb(225,56,42)" rx="2" ry="2" />
+<text  x="1121.68" y="159.5" ></text>
+</g>
+<g >
+<title>strncmp (5 samples, 0.01%)</title><rect x="77.5" y="117" width="0.1" height="15.0" fill="rgb(235,225,26)" rx="2" ry="2" />
+<text  x="80.47" y="127.5" ></text>
+</g>
+<g >
+<title>calculate_program (5 samples, 0.01%)</title><rect x="41.1" y="117" width="0.2" height="15.0" fill="rgb(245,104,18)" rx="2" ry="2" />
+<text  x="44.15" y="127.5" ></text>
+</g>
+<g >
+<title>_PyInterpreterState_GET (6 samples, 0.01%)</title><rect x="1101.6" y="117" width="0.1" height="15.0" fill="rgb(220,172,20)" rx="2" ry="2" />
+<text  x="1104.59" y="127.5" ></text>
+</g>
+<g >
+<title>PySys_GetObject (539 samples, 1.05%)</title><rect x="17.6" y="149" width="12.5" height="15.0" fill="rgb(238,83,41)" rx="2" ry="2" />
+<text  x="20.62" y="159.5" ></text>
+</g>
+<g >
+<title>sem_init (71 samples, 0.14%)</title><rect x="904.3" y="149" width="1.6" height="15.0" fill="rgb(207,0,49)" rx="2" ry="2" />
+<text  x="907.26" y="159.5" ></text>
+</g>
+<g >
+<title>calculate_zip_path (13 samples, 0.03%)</title><rect x="45.6" y="117" width="0.3" height="15.0" fill="rgb(216,79,11)" rx="2" ry="2" />
+<text  x="48.60" y="127.5" ></text>
+</g>
+<g >
+<title>_Py_XDECREF (6 samples, 0.01%)</title><rect x="30.4" y="117" width="0.1" height="15.0" fill="rgb(249,168,11)" rx="2" ry="2" />
+<text  x="33.41" y="127.5" ></text>
+</g>
+<g >
+<title>_PySys_Audit (110 samples, 0.22%)</title><rect x="45.9" y="149" width="2.6" height="15.0" fill="rgb(220,177,30)" rx="2" ry="2" />
+<text  x="48.93" y="159.5" ></text>
+</g>
+<g >
+<title>sem_destroy (71 samples, 0.14%)</title><rect x="902.6" y="149" width="1.7" height="15.0" fill="rgb(220,182,14)" rx="2" ry="2" />
+<text  x="905.63" y="159.5" ></text>
+</g>
+<g >
+<title>sem_wait (116 samples, 0.23%)</title><rect x="918.7" y="149" width="2.7" height="15.0" fill="rgb(226,6,3)" rx="2" ry="2" />
+<text  x="921.74" y="159.5" ></text>
+</g>
+<g >
+<title>wcslen (14 samples, 0.03%)</title><rect x="83.8" y="133" width="0.4" height="15.0" fill="rgb(225,222,40)" rx="2" ry="2" />
+<text  x="86.84" y="143.5" ></text>
+</g>
+<g >
+<title>setlocale (8 samples, 0.02%)</title><rect x="921.4" y="149" width="0.2" height="15.0" fill="rgb(216,26,50)" rx="2" ry="2" />
+<text  x="924.42" y="159.5" ></text>
+</g>
+<g >
+<title>_Py_DECREF (13 samples, 0.03%)</title><rect x="81.9" y="133" width="0.3" height="15.0" fill="rgb(231,198,16)" rx="2" ry="2" />
+<text  x="84.92" y="143.5" ></text>
+</g>
+<g >
+<title>_PySys_SetObjectId (30 samples, 0.06%)</title><rect x="81.1" y="149" width="0.7" height="15.0" fill="rgb(206,32,1)" rx="2" ry="2" />
+<text  x="84.09" y="159.5" ></text>
+</g>
+<g >
+<title>_PyThreadState_GET (6 samples, 0.01%)</title><rect x="81.2" y="117" width="0.2" height="15.0" fill="rgb(205,206,6)" rx="2" ry="2" />
+<text  x="84.23" y="127.5" ></text>
+</g>
+<g >
+<title>sys_audit_tstate (165 samples, 0.32%)</title><rect x="13.8" y="133" width="3.8" height="15.0" fill="rgb(224,118,45)" rx="2" ry="2" />
+<text  x="16.81" y="143.5" ></text>
+</g>
+<g >
+<title>resolve_symlinks (75 samples, 0.15%)</title><rect x="31.4" y="101" width="1.7" height="15.0" fill="rgb(248,166,53)" rx="2" ry="2" />
+<text  x="34.38" y="111.5" ></text>
+</g>
+<g >
+<title>joinpath2 (12 samples, 0.02%)</title><rect x="45.6" y="101" width="0.3" height="15.0" fill="rgb(244,74,23)" rx="2" ry="2" />
+<text  x="48.63" y="111.5" ></text>
+</g>
+<g >
+<title>memset (5,907 samples, 11.56%)</title><rect x="617.1" y="149" width="136.4" height="15.0" fill="rgb(237,54,19)" rx="2" ry="2" />
+<text  x="620.10" y="159.5" >memset</text>
+</g>
+<g >
+<title>lseek64 (29 samples, 0.06%)</title><rect x="127.6" y="149" width="0.7" height="15.0" fill="rgb(215,149,5)" rx="2" ry="2" />
+<text  x="130.60" y="159.5" ></text>
+</g>
+<g >
+<title>readdir64 (413 samples, 0.81%)</title><rect x="890.5" y="149" width="9.5" height="15.0" fill="rgb(222,216,45)" rx="2" ry="2" />
+<text  x="893.48" y="159.5" ></text>
+</g>
+<g >
+<title>_PyPathConfig_Calculate (657 samples, 1.29%)</title><rect x="30.8" y="149" width="15.1" height="15.0" fill="rgb(206,95,44)" rx="2" ry="2" />
+<text  x="33.76" y="159.5" ></text>
+</g>
+<g >
+<title>_Py_XDECREF (16 samples, 0.03%)</title><rect x="67.7" y="85" width="0.4" height="15.0" fill="rgb(240,183,29)" rx="2" ry="2" />
+<text  x="70.70" y="95.5" ></text>
+</g>
+<g >
+<title>memset (14 samples, 0.03%)</title><rect x="79.0" y="133" width="0.3" height="15.0" fill="rgb(231,173,23)" rx="2" ry="2" />
+<text  x="82.02" y="143.5" ></text>
+</g>
+<g >
+<title>PyDTrace_AUDIT_ENABLED (55 samples, 0.11%)</title><rect x="16.3" y="101" width="1.3" height="15.0" fill="rgb(249,84,16)" rx="2" ry="2" />
+<text  x="19.35" y="111.5" ></text>
+</g>
+<g >
+<title>set_flags_from_config (17 samples, 0.03%)</title><rect x="67.7" y="101" width="0.4" height="15.0" fill="rgb(225,50,45)" rx="2" ry="2" />
+<text  x="70.68" y="111.5" ></text>
+</g>
+<g >
+<title>_PySys_ClearAuditHooks (6 samples, 0.01%)</title><rect x="48.5" y="149" width="0.1" height="15.0" fill="rgb(237,20,51)" rx="2" ry="2" />
+<text  x="51.47" y="159.5" ></text>
+</g>
+<g >
+<title>strrchr (5 samples, 0.01%)</title><rect x="77.6" y="117" width="0.1" height="15.0" fill="rgb(239,123,6)" rx="2" ry="2" />
+<text  x="80.58" y="127.5" ></text>
+</g>
+<g >
+<title>_PySys_InitCore (1,262 samples, 2.47%)</title><rect x="48.6" y="133" width="29.2" height="15.0" fill="rgb(234,83,28)" rx="2" ry="2" />
+<text  x="51.63" y="143.5" >_P..</text>
+</g>
+<g >
+<title>memcpy (41 samples, 0.08%)</title><rect x="78.1" y="133" width="0.9" height="15.0" fill="rgb(246,81,33)" rx="2" ry="2" />
+<text  x="81.07" y="143.5" ></text>
+</g>
+<g >
+<title>isfile (82 samples, 0.16%)</title><rect x="38.7" y="69" width="1.9" height="15.0" fill="rgb(208,119,51)" rx="2" ry="2" />
+<text  x="41.70" y="79.5" ></text>
+</g>
+<g >
+<title>isfile (102 samples, 0.20%)</title><rect x="36.3" y="85" width="2.4" height="15.0" fill="rgb(225,62,32)" rx="2" ry="2" />
+<text  x="39.32" y="95.5" ></text>
+</g>
+<g >
+<title>_PyRuntimeState_GetThreadState (77 samples, 0.15%)</title><rect x="28.3" y="117" width="1.8" height="15.0" fill="rgb(249,192,25)" rx="2" ry="2" />
+<text  x="31.29" y="127.5" ></text>
+</g>
+<g >
+<title>memcmp (77 samples, 0.15%)</title><rect x="21.2" y="117" width="1.8" height="15.0" fill="rgb(234,143,34)" rx="2" ry="2" />
+<text  x="24.18" y="127.5" ></text>
+</g>
+<g >
+<title>sem_post (336 samples, 0.66%)</title><rect x="905.9" y="149" width="7.8" height="15.0" fill="rgb(226,190,6)" rx="2" ry="2" />
+<text  x="908.90" y="159.5" ></text>
+</g>
+<g >
+<title>calculate_exec_prefix (121 samples, 0.24%)</title><rect x="33.1" y="117" width="2.8" height="15.0" fill="rgb(235,28,22)" rx="2" ry="2" />
+<text  x="36.14" y="127.5" ></text>
+</g>
+<g >
+<title>joinpath2 (6 samples, 0.01%)</title><rect x="40.6" y="69" width="0.1" height="15.0" fill="rgb(209,15,34)" rx="2" ry="2" />
+<text  x="43.59" y="79.5" ></text>
+</g>
+<g >
+<title>pthread_cond_signal (1,193 samples, 2.33%)</title><rect x="754.0" y="149" width="27.6" height="15.0" fill="rgb(246,136,37)" rx="2" ry="2" />
+<text  x="757.04" y="159.5" >p..</text>
+</g>
+<g >
+<title>sem_wait (5 samples, 0.01%)</title><rect x="79.5" y="133" width="0.1" height="15.0" fill="rgb(221,158,36)" rx="2" ry="2" />
+<text  x="82.45" y="143.5" ></text>
+</g>
+<g >
+<title>_Py_DECREF (28 samples, 0.05%)</title><rect x="48.8" y="117" width="0.6" height="15.0" fill="rgb(208,57,40)" rx="2" ry="2" />
+<text  x="51.79" y="127.5" ></text>
+</g>
+<g >
+<title>joinpath2 (6 samples, 0.01%)</title><rect x="30.9" y="117" width="0.1" height="15.0" fill="rgb(230,52,29)" rx="2" ry="2" />
+<text  x="33.85" y="127.5" ></text>
+</g>
+<g >
+<title>pthread_mutex_unlock (1,790 samples, 3.50%)</title><rect x="823.1" y="149" width="41.3" height="15.0" fill="rgb(206,40,13)" rx="2" ry="2" />
+<text  x="826.08" y="159.5" >pth..</text>
+</g>
+<g >
+<title>PySys_SetObject (30 samples, 0.06%)</title><rect x="30.1" y="149" width="0.7" height="15.0" fill="rgb(212,106,50)" rx="2" ry="2" />
+<text  x="33.06" y="159.5" ></text>
+</g>
+<g >
+<title>memcpy (15 samples, 0.03%)</title><rect x="82.3" y="133" width="0.3" height="15.0" fill="rgb(221,99,37)" rx="2" ry="2" />
+<text  x="85.27" y="143.5" ></text>
+</g>
+<g >
+<title>strlen (46 samples, 0.09%)</title><rect x="79.6" y="133" width="1.0" height="15.0" fill="rgb(218,174,43)" rx="2" ry="2" />
+<text  x="82.57" y="143.5" ></text>
+</g>
+<g >
+<title>joinpath (6 samples, 0.01%)</title><rect x="40.9" y="85" width="0.2" height="15.0" fill="rgb(249,55,52)" rx="2" ry="2" />
+<text  x="43.92" y="95.5" ></text>
+</g>
+<g >
+<title>memcpy (269 samples, 0.53%)</title><rect x="54.4" y="101" width="6.2" height="15.0" fill="rgb(240,38,16)" rx="2" ry="2" />
+<text  x="57.36" y="111.5" ></text>
+</g>
+<g >
+<title>wcstombs (72 samples, 0.14%)</title><rect x="31.5" y="85" width="1.6" height="15.0" fill="rgb(245,67,14)" rx="2" ry="2" />
+<text  x="34.45" y="95.5" ></text>
+</g>
+<g >
+<title>should_audit (54 samples, 0.11%)</title><rect x="47.2" y="117" width="1.3" height="15.0" fill="rgb(216,66,49)" rx="2" ry="2" />
+<text  x="50.22" y="127.5" ></text>
+</g>
+<g >
+<title>sem_trywait (220 samples, 0.43%)</title><rect x="913.7" y="149" width="5.0" height="15.0" fill="rgb(222,16,3)" rx="2" ry="2" />
+<text  x="916.66" y="159.5" ></text>
+</g>
+<g >
+<title>memmove (15 samples, 0.03%)</title><rect x="615.7" y="149" width="0.3" height="15.0" fill="rgb(213,197,36)" rx="2" ry="2" />
+<text  x="618.69" y="159.5" ></text>
+</g>
+<g >
+<title>strlen (8 samples, 0.02%)</title><rect x="68.5" y="101" width="0.2" height="15.0" fill="rgb(213,107,54)" rx="2" ry="2" />
+<text  x="71.51" y="111.5" ></text>
+</g>
+<g >
+<title>calculate_argv0_path (80 samples, 0.16%)</title><rect x="31.3" y="117" width="1.8" height="15.0" fill="rgb(238,109,3)" rx="2" ry="2" />
+<text  x="34.29" y="127.5" ></text>
+</g>
+<g >
+<title>memrchr (46 samples, 0.09%)</title><rect x="616.0" y="149" width="1.1" height="15.0" fill="rgb(227,20,36)" rx="2" ry="2" />
+<text  x="619.04" y="159.5" ></text>
+</g>
+<g >
+<title>__errno_location (1,695 samples, 3.32%)</title><rect x="84.2" y="149" width="39.1" height="15.0" fill="rgb(209,65,25)" rx="2" ry="2" />
+<text  x="87.16" y="159.5" >__e..</text>
+</g>
+<g >
+<title>wcstombs (78 samples, 0.15%)</title><rect x="38.8" y="37" width="1.8" height="15.0" fill="rgb(206,52,1)" rx="2" ry="2" />
+<text  x="41.79" y="47.5" ></text>
+</g>
+<g >
+<title>_PyInterpreterState_GET (9 samples, 0.02%)</title><rect x="81.2" y="133" width="0.2" height="15.0" fill="rgb(248,21,9)" rx="2" ry="2" />
+<text  x="84.16" y="143.5" ></text>
+</g>
+<g >
+<title>_PySys_Create (1,387 samples, 2.71%)</title><rect x="48.6" y="149" width="32.0" height="15.0" fill="rgb(218,172,43)" rx="2" ry="2" />
+<text  x="51.61" y="159.5" >_P..</text>
+</g>
+<g >
+<title>make_impl_info (27 samples, 0.05%)</title><rect x="68.1" y="117" width="0.6" height="15.0" fill="rgb(250,75,22)" rx="2" ry="2" />
+<text  x="71.07" y="127.5" ></text>
+</g>
+<g >
+<title>memcpy (14,312 samples, 28.01%)</title><rect x="285.2" y="149" width="330.5" height="15.0" fill="rgb(225,203,2)" rx="2" ry="2" />
+<text  x="288.23" y="159.5" >memcpy</text>
+</g>
+<g >
+<title>calculate_module_search_path (13 samples, 0.03%)</title><rect x="35.9" y="117" width="0.3" height="15.0" fill="rgb(226,118,18)" rx="2" ry="2" />
+<text  x="38.93" y="127.5" ></text>
+</g>
+<g >
+<title>calculate_path (634 samples, 1.24%)</title><rect x="31.3" y="133" width="14.6" height="15.0" fill="rgb(241,46,18)" rx="2" ry="2" />
+<text  x="34.27" y="143.5" ></text>
+</g>
+<g >
+<title>pthread_mutex_lock (1,790 samples, 3.50%)</title><rect x="781.8" y="149" width="41.3" height="15.0" fill="rgb(210,42,50)" rx="2" ry="2" />
+<text  x="784.75" y="159.5" >pth..</text>
+</g>
+<g >
+<title>should_audit (110 samples, 0.22%)</title><rect x="15.1" y="117" width="2.5" height="15.0" fill="rgb(241,205,25)" rx="2" ry="2" />
+<text  x="18.08" y="127.5" ></text>
+</g>
+<g >
+<title>wcstombs (89 samples, 0.17%)</title><rect x="33.9" y="69" width="2.0" height="15.0" fill="rgb(210,139,24)" rx="2" ry="2" />
+<text  x="36.85" y="79.5" ></text>
+</g>
+<g >
+<title>isatty (19 samples, 0.04%)</title><rect x="127.1" y="149" width="0.4" height="15.0" fill="rgb(253,48,32)" rx="2" ry="2" />
+<text  x="130.11" y="159.5" ></text>
+</g>
+<g >
+<title>pthread_self (532 samples, 1.04%)</title><rect x="864.4" y="149" width="12.3" height="15.0" fill="rgb(211,3,7)" rx="2" ry="2" />
+<text  x="867.41" y="159.5" ></text>
+</g>
+<g >
+<title>sys_audit_tstate (6 samples, 0.01%)</title><rect x="41.4" y="69" width="0.2" height="15.0" fill="rgb(234,117,2)" rx="2" ry="2" />
+<text  x="44.45" y="79.5" ></text>
+</g>
+<g >
+<title>list_stdlib_module_names (578 samples, 1.13%)</title><rect x="54.3" y="117" width="13.4" height="15.0" fill="rgb(244,198,44)" rx="2" ry="2" />
+<text  x="57.31" y="127.5" ></text>
+</g>
+<g >
+<title>wcstombs (98 samples, 0.19%)</title><rect x="36.4" y="53" width="2.3" height="15.0" fill="rgb(239,226,50)" rx="2" ry="2" />
+<text  x="39.41" y="63.5" ></text>
+</g>
+<g >
+<title>strlen (30 samples, 0.06%)</title><rect x="53.6" y="101" width="0.7" height="15.0" fill="rgb(213,225,16)" rx="2" ry="2" />
+<text  x="56.62" y="111.5" ></text>
+</g>
+<g >
+<title>wcscat (6 samples, 0.01%)</title><rect x="36.0" y="101" width="0.1" height="15.0" fill="rgb(209,46,42)" rx="2" ry="2" />
+<text  x="38.95" y="111.5" ></text>
+</g>
+<g >
+<title>sys_audit_tstate (82 samples, 0.16%)</title><rect x="46.6" y="133" width="1.9" height="15.0" fill="rgb(249,29,27)" rx="2" ry="2" />
+<text  x="49.57" y="143.5" ></text>
+</g>
+<g >
+<title>memset (77 samples, 0.15%)</title><rect x="72.1" y="117" width="1.8" height="15.0" fill="rgb(232,192,47)" rx="2" ry="2" />
+<text  x="75.11" y="127.5" ></text>
+</g>
+<g >
+<title>read (26 samples, 0.05%)</title><rect x="889.9" y="149" width="0.6" height="15.0" fill="rgb(239,1,19)" rx="2" ry="2" />
+<text  x="892.88" y="159.5" ></text>
+</g>
+<g >
+<title>memcpy (32 samples, 0.06%)</title><rect x="52.9" y="101" width="0.7" height="15.0" fill="rgb(221,145,20)" rx="2" ry="2" />
+<text  x="55.88" y="111.5" ></text>
+</g>
+<g >
+<title>joinpath2 (6 samples, 0.01%)</title><rect x="33.6" y="69" width="0.1" height="15.0" fill="rgb(215,142,22)" rx="2" ry="2" />
+<text  x="36.55" y="79.5" ></text>
+</g>
+<g >
+<title>PySys_Audit (6 samples, 0.01%)</title><rect x="33.3" y="69" width="0.1" height="15.0" fill="rgb(230,76,16)" rx="2" ry="2" />
+<text  x="36.25" y="79.5" ></text>
+</g>
+<g >
+<title>strlen (14 samples, 0.03%)</title><rect x="83.5" y="133" width="0.3" height="15.0" fill="rgb(205,224,38)" rx="2" ry="2" />
+<text  x="86.49" y="143.5" ></text>
+</g>
+<g >
+<title>_PySys_UpdateConfig (103 samples, 0.20%)</title><rect x="81.8" y="149" width="2.4" height="15.0" fill="rgb(211,97,7)" rx="2" ry="2" />
+<text  x="84.79" y="159.5" ></text>
+</g>
+<g >
+<title>strrchr (216 samples, 0.42%)</title><rect x="1096.4" y="149" width="5.0" height="15.0" fill="rgb(251,23,34)" rx="2" ry="2" />
+<text  x="1099.37" y="159.5" ></text>
+</g>
+<g >
+<title>__xstat64 (61 samples, 0.12%)</title><rect x="124.0" y="149" width="1.4" height="15.0" fill="rgb(248,189,40)" rx="2" ry="2" />
+<text  x="127.04" y="159.5" ></text>
+</g>
+<g >
+<title>qsort (570 samples, 1.12%)</title><rect x="876.7" y="149" width="13.2" height="15.0" fill="rgb(215,122,27)" rx="2" ry="2" />
+<text  x="879.72" y="159.5" ></text>
+</g>
+<g >
+<title>make_flags (18 samples, 0.04%)</title><rect x="67.7" y="117" width="0.4" height="15.0" fill="rgb(249,85,17)" rx="2" ry="2" />
+<text  x="70.66" y="127.5" ></text>
+</g>
+<g >
+<title>set_flags_from_config (33 samples, 0.06%)</title><rect x="82.7" y="133" width="0.8" height="15.0" fill="rgb(236,178,3)" rx="2" ry="2" />
+<text  x="85.73" y="143.5" ></text>
+</g>
+<g >
+<title>mbstowcs (12 samples, 0.02%)</title><rect x="31.0" y="117" width="0.3" height="15.0" fill="rgb(243,211,51)" rx="2" ry="2" />
+<text  x="33.99" y="127.5" ></text>
+</g>
+<g >
+<title>joinpath2 (12 samples, 0.02%)</title><rect x="41.7" y="85" width="0.3" height="15.0" fill="rgb(208,86,20)" rx="2" ry="2" />
+<text  x="44.68" y="95.5" ></text>
+</g>
+<g >
+<title>_Py_DECREF (31 samples, 0.06%)</title><rect x="49.6" y="101" width="0.7" height="15.0" fill="rgb(231,114,16)" rx="2" ry="2" />
+<text  x="52.62" y="111.5" ></text>
+</g>
+<g >
+<title>getenv (29 samples, 0.06%)</title><rect x="126.3" y="149" width="0.7" height="15.0" fill="rgb(226,163,5)" rx="2" ry="2" />
+<text  x="129.35" y="159.5" ></text>
+</g>
+<g >
+<title>_Py_XDECREF (32 samples, 0.06%)</title><rect x="82.8" y="117" width="0.7" height="15.0" fill="rgb(233,3,32)" rx="2" ry="2" />
+<text  x="85.76" y="127.5" ></text>
+</g>
+<g >
+<title>_Py_wstat (101 samples, 0.20%)</title><rect x="36.3" y="69" width="2.4" height="15.0" fill="rgb(209,85,29)" rx="2" ry="2" />
+<text  x="39.35" y="79.5" ></text>
+</g>
+<g >
+<title>strchr (325 samples, 0.64%)</title><rect x="923.3" y="149" width="7.5" height="15.0" fill="rgb(223,192,52)" rx="2" ry="2" />
+<text  x="926.27" y="159.5" ></text>
+</g>
+<g >
+<title>PySys_Audit (12 samples, 0.02%)</title><rect x="41.3" y="85" width="0.3" height="15.0" fill="rgb(238,193,50)" rx="2" ry="2" />
+<text  x="44.31" y="95.5" ></text>
+</g>
+<g >
+<title>strncmp (228 samples, 0.45%)</title><rect x="1088.6" y="149" width="5.2" height="15.0" fill="rgb(254,140,17)" rx="2" ry="2" />
+<text  x="1091.57" y="159.5" ></text>
+</g>
+<g >
+<title>strcmp (567 samples, 1.11%)</title><rect x="876.8" y="133" width="13.1" height="15.0" fill="rgb(206,171,37)" rx="2" ry="2" />
+<text  x="879.79" y="143.5" ></text>
+</g>
+<g >
+<title>sys_getfilesystemencoding_impl (10 samples, 0.02%)</title><rect x="1101.5" y="133" width="0.3" height="15.0" fill="rgb(208,203,38)" rx="2" ry="2" />
+<text  x="1104.54" y="143.5" ></text>
+</g>
+<g >
+<title>memcpy (105 samples, 0.21%)</title><rect x="69.7" y="117" width="2.4" height="15.0" fill="rgb(246,198,8)" rx="2" ry="2" />
+<text  x="72.69" y="127.5" ></text>
+</g>
+<g >
+<title>open64 (13 samples, 0.03%)</title><rect x="753.6" y="149" width="0.3" height="15.0" fill="rgb(238,136,42)" rx="2" ry="2" />
+<text  x="756.63" y="159.5" ></text>
+</g>
+<g >
+<title>_PyRuntimeState_GetThreadState (55 samples, 0.11%)</title><rect x="12.5" y="117" width="1.3" height="15.0" fill="rgb(216,8,43)" rx="2" ry="2" />
+<text  x="15.54" y="127.5" ></text>
+</g>
+<g >
+<title>_PySys_GetObjectId (16 samples, 0.03%)</title><rect x="80.6" y="149" width="0.4" height="15.0" fill="rgb(237,52,29)" rx="2" ry="2" />
+<text  x="83.63" y="159.5" ></text>
+</g>
+<g >
+<title>calculate_read_pyenv (182 samples, 0.36%)</title><rect x="41.3" y="117" width="4.2" height="15.0" fill="rgb(219,101,34)" rx="2" ry="2" />
+<text  x="44.26" y="127.5" ></text>
+</g>
+<g >
+<title>_PySys_GetObject (308 samples, 0.60%)</title><rect x="19.4" y="133" width="7.1" height="15.0" fill="rgb(237,182,12)" rx="2" ry="2" />
+<text  x="22.40" y="143.5" ></text>
+</g>
+<g >
+<title>search_for_prefix (209 samples, 0.41%)</title><rect x="36.3" y="101" width="4.8" height="15.0" fill="rgb(217,198,12)" rx="2" ry="2" />
+<text  x="39.30" y="111.5" ></text>
+</g>
+<g >
+<title>memcmp (37 samples, 0.07%)</title><rect x="68.8" y="117" width="0.9" height="15.0" fill="rgb(206,52,12)" rx="2" ry="2" />
+<text  x="71.83" y="127.5" ></text>
+</g>
+<g >
+<title>PyDTrace_AUDIT_ENABLED (27 samples, 0.05%)</title><rect x="47.8" y="101" width="0.7" height="15.0" fill="rgb(246,183,26)" rx="2" ry="2" />
+<text  x="50.84" y="111.5" ></text>
+</g>
+<g >
+<title>_PyThreadState_GET (8 samples, 0.02%)</title><rect x="80.7" y="133" width="0.2" height="15.0" fill="rgb(209,32,28)" rx="2" ry="2" />
+<text  x="83.72" y="143.5" ></text>
+</g>
+<g >
+<title>calculate_open_pyenv (181 samples, 0.35%)</title><rect x="41.3" y="101" width="4.2" height="15.0" fill="rgb(211,108,3)" rx="2" ry="2" />
+<text  x="44.29" y="111.5" ></text>
+</g>
+<g >
+<title>sys_set_object_id (18 samples, 0.04%)</title><rect x="81.4" y="133" width="0.4" height="15.0" fill="rgb(206,34,40)" rx="2" ry="2" />
+<text  x="84.37" y="143.5" ></text>
+</g>
+<g >
+<title>sys_getfilesystemencodeerrors (6 samples, 0.01%)</title><rect x="1101.4" y="149" width="0.1" height="15.0" fill="rgb(238,162,51)" rx="2" ry="2" />
+<text  x="1104.36" y="159.5" ></text>
+</g>
+<g >
+<title>wcscmp (723 samples, 1.41%)</title><rect x="1102.0" y="149" width="16.7" height="15.0" fill="rgb(231,193,26)" rx="2" ry="2" />
+<text  x="1104.98" y="159.5" ></text>
+</g>
+<g >
+<title>search_for_exec_prefix (117 samples, 0.23%)</title><rect x="33.2" y="101" width="2.7" height="15.0" fill="rgb(250,116,37)" rx="2" ry="2" />
+<text  x="36.21" y="111.5" ></text>
+</g>
+<g >
+<title>calculate_init (20 samples, 0.04%)</title><rect x="30.8" y="133" width="0.5" height="15.0" fill="rgb(216,160,5)" rx="2" ry="2" />
+<text  x="33.80" y="143.5" ></text>
+</g>
+<g >
+<title>strcmp (199 samples, 0.39%)</title><rect x="930.8" y="149" width="4.6" height="15.0" fill="rgb(235,74,39)" rx="2" ry="2" />
+<text  x="933.77" y="159.5" ></text>
+</g>
+<g >
+<title>strlen (303 samples, 0.59%)</title><rect x="60.7" y="101" width="7.0" height="15.0" fill="rgb(215,174,9)" rx="2" ry="2" />
+<text  x="63.66" y="111.5" ></text>
+</g>
+<g >
+<title>sys_getfilesystemencoding (12 samples, 0.02%)</title><rect x="1101.5" y="149" width="0.3" height="15.0" fill="rgb(252,119,52)" rx="2" ry="2" />
+<text  x="1104.50" y="159.5" ></text>
 </g>
 </g>
 </svg>
