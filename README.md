@@ -1,8 +1,10 @@
 # Faster CPython Ideas
 
-New ideas should be created in the discussions section: https://github.com/faster-cpython/ideas/discussions
+Discussion and work tracker for Faster CPython project.
 
-Issue tracker for Faster CPython project.
+New ideas and discussions of existing ideas should be done in the [discussions](https://github.com/faster-cpython/ideas/discussions) section.
+
+Please reserve [issues](https://github.com/faster-cpython/ideas/issues) for actual work-in-progress. 
 
 Some links to presentations and other preliminary documentation:
 
