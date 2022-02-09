@@ -4,7 +4,7 @@
 <summary> execution counts for all instructions </summary>
 
 | Name | Count | Self | Cumulative | Miss ratio |
-| --- | --- | --- | --- | --- |
+| --- | --: | --: | --: | --: |
 | LOAD_FAST | 9931880481 | 14.1% | 14.1% |  |
 | LOAD_CONST | 3415423066 | 4.8% | 18.9% |  |
 | STORE_FAST__STORE_FAST | 3329530318 | 4.7% | 23.6% |  |
@@ -168,7 +168,7 @@
 <summary> specialization stats for BINARY_SUBSCR family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |      3225611 | 0.1% |
 |     deferred |   1132454138 | 46.1% |
 |        deopt |       276810 | 0.0% |
@@ -178,12 +178,12 @@
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 585730 | 3.2% |
 | Failure | 17502502 | 96.8% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | array int | 10680434 | 61.0% |
 | list slice | 3528624 | 20.2% |
 | buffer int | 1631426 | 9.3% |
@@ -204,7 +204,7 @@
 <summary> specialization stats for STORE_SUBSCR family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |       931304 | 0.1% |
 |     deferred |    541088579 | 57.2% |
 |          hit |    403131315 | 42.7% |
@@ -212,12 +212,12 @@
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 194458 | 2.2% |
 | Failure | 8468370 | 97.8% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | array int | 4347625 | 51.3% |
 | list slice | 2486943 | 29.4% |
 | bytearray int | 996227 | 11.8% |
@@ -237,18 +237,18 @@
 <summary> specialization stats for UNPACK_SEQUENCE family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |   1077768771 | 100.0% |
 
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 0 | 0.0% |
 | Failure | 1077768771 | 100.0% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | tuple | 755442381 | 70.1% |
 | list | 322116829 | 29.9% |
 | other | 209561 | 0.0% |
@@ -262,18 +262,18 @@
 <summary> specialization stats for FOR_ITER family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |   1511056684 | 100.0% |
 
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 0 | 0.0% |
 | Failure | 1511056684 | 100.0% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | list | 557496871 | 36.9% |
 | range | 525211601 | 34.8% |
 | other | 109241059 | 7.2% |
@@ -297,7 +297,7 @@
 <summary> specialization stats for STORE_ATTR family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |      4956068 | 0.7% |
 |     deferred |     35238016 | 4.9% |
 |        deopt |       171455 | 0.0% |
@@ -307,12 +307,12 @@
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 636527 | 55.8% |
 | Failure | 503893 | 44.2% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | overriding descriptor | 159794 | 31.7% |
 | overridden | 151324 | 30.0% |
 | out of range | 97855 | 19.4% |
@@ -331,7 +331,7 @@
 <summary> specialization stats for LOAD_ATTR family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |     20401561 | 0.5% |
 |     deferred |    645245423 | 16.1% |
 |        deopt |      1564892 | 0.0% |
@@ -341,12 +341,12 @@
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 2795656 | 23.8% |
 | Failure | 8941143 | 76.2% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | overridden | 2763933 | 30.9% |
 | out of range | 1993033 | 22.3% |
 | overriding descriptor | 1684893 | 18.8% |
@@ -366,7 +366,7 @@
 <summary> specialization stats for COMPARE_OP family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |    177245203 | 10.6% |
 |     deferred |    142018893 | 8.5% |
 |        deopt |        15831 | 0.0% |
@@ -376,12 +376,12 @@
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 265207 | 10.0% |
 | Failure | 2375174 | 90.0% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | float long | 931206 | 39.2% |
 | set | 579290 | 24.4% |
 | different types | 201994 | 8.5% |
@@ -405,7 +405,7 @@
 <summary> specialization stats for LOAD_GLOBAL family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |     46505770 | 1.8% |
 |     deferred |      5059176 | 0.2% |
 |        deopt |       100209 | 0.0% |
@@ -415,12 +415,12 @@
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 2855760 | 100.0% |
 | Failure | 0 | 0.0% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 
 
 </details>
@@ -431,7 +431,7 @@
 <summary> specialization stats for BINARY_OP family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |    688981854 | 13.8% |
 |     deferred |    281599667 | 5.7% |
 |        deopt |       594196 | 0.0% |
@@ -441,12 +441,12 @@
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 845389 | 17.5% |
 | Failure | 3971815 | 82.5% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | other | 2185998 | 55.0% |
 | different types | 1785817 | 45.0% |
 
@@ -459,7 +459,7 @@
 <summary> specialization stats for LOAD_METHOD family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |     35148385 | 2.1% |
 |     deferred |    276106725 | 16.3% |
 |        deopt |       571209 | 0.0% |
@@ -469,12 +469,12 @@
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 1471905 | 27.6% |
 | Failure | 3860534 | 72.4% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | has managed dict | 1273472 | 33.0% |
 | has dict | 1091610 | 28.3% |
 | instance attribute | 697359 | 18.1% |
@@ -501,7 +501,7 @@
 <summary> specialization stats for CALL family </summary>
 
 | Kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 |  unquickened |     51401318 | 2.0% |
 |     deferred |    589564882 | 23.1% |
 |        deopt |       886362 | 0.0% |
@@ -511,12 +511,12 @@
 #### Specialization attempts
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | Success | 2909906 | 24.3% |
 | Failure | 9048562 | 75.7% |
 
 | Failure kind | Count | Ratio |
-| --- | --- | --- |
+| --: | --: | --: |
 | bound method | 2136721 | 23.6% |
 | python class | 1245467 | 13.8% |
 | complex parameters | 1242451 | 13.7% |
@@ -546,7 +546,7 @@
 <summary> specialization effectiveness </summary>
 
 | Instructions | Count | Ratio |
-| --- | --- | --- |
+| :-- | --: | --: |
 | Basic | 43766320202 | 62.0% |
 | Not specialized | 7565202361 | 10.7% |
 | Specialized | 19234386704 | 27.3% |
@@ -560,7 +560,7 @@
 <summary> Inlined calls and frame stats </summary>
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| :-- | --: | --: |
 | Calls to PyEval_EvalDefault | 626328986 | 27.8% |
 | Calls to Python functions inlined | 1628007250 | 72.2% |
 | Frames pushed | 2003478149 | 88.9% |
@@ -575,7 +575,7 @@
 <summary> allocations, frees and dict materializatons </summary>
 
 |  | Count | Ratio |
-| --- | --- | --- |
+| :-- | --: | --: |
 | Allocations | 3981673359 |  |
 | Frees | 3899741124 |  |
 | New values | 70587937 |  |
