@@ -5,152 +5,159 @@
 
 |Name | Count | Self | Cumulative | Miss ratio | 
 |---|---:|---:|---:|---:|
-| LOAD_FAST | 9397634393 | 14.0% | 14.0% |  |
-| LOAD_CONST | 3357684166 | 5.0% | 19.1% |  |
-| LOAD_FAST__LOAD_FAST | 3043493930 | 4.5% | 23.6% |  |
-| STORE_FAST__LOAD_FAST | 2993756763 | 4.5% | 28.1% |  |
-| LOAD_ATTR_INSTANCE_VALUE | 2616382910 | 3.9% | 32.0% | 1.6% |
-| RESUME_QUICK | 2144151787 | 3.2% | 35.2% |  |
-| PRECALL_FUNCTION | 1974413057 | 2.9% | 38.1% |  |
-| RETURN_VALUE | 1947073675 | 2.9% | 41.0% |  |
-| STORE_FAST__STORE_FAST | 1917861514 | 2.9% | 43.9% |  |
-| POP_JUMP_IF_FALSE | 1682768707 | 2.5% | 46.4% |  |
-| PRECALL_METHOD | 1658175834 | 2.5% | 48.9% |  |
-| LOAD_FAST__LOAD_CONST | 1553531288 | 2.3% | 51.2% |  |
-| FOR_ITER | 1481907364 | 2.2% | 53.4% |  |
-| BINARY_OP_ADD_INT | 1369827408 | 2.0% | 55.5% | 0.0% |
-| JUMP_ABSOLUTE_QUICK | 1264698841 | 1.9% | 57.4% |  |
-| LOAD_GLOBAL_BUILTIN | 1246342389 | 1.9% | 59.2% | 0.6% |
-| COMPARE_OP_INT_JUMP | 1208655371 | 1.8% | 61.0% | 0.0% |
-| LOAD_GLOBAL_MODULE | 1172596656 | 1.8% | 62.8% | 0.3% |
-| POP_TOP | 1129664016 | 1.7% | 64.5% |  |
-| BINARY_SUBSCR_ADAPTIVE | 1115330162 | 1.7% | 66.1% |  |
-| BINARY_SUBSCR_LIST_INT | 1089080791 | 1.6% | 67.8% | 1.1% |
-| CALL_PY_EXACT_ARGS | 1082909883 | 1.6% | 69.4% | 4.2% |
-| STORE_FAST | 1055165559 | 1.6% | 71.0% |  |
-| SWAP | 999671597 | 1.5% | 72.4% |  |
-| COPY | 987061690 | 1.5% | 73.9% |  |
-| BINARY_OP_MULTIPLY_FLOAT | 879473260 | 1.3% | 75.2% | 1.0% |
-| LOAD_METHOD_CACHED | 819758011 | 1.2% | 76.5% | 3.0% |
-| UNPACK_SEQUENCE | 797323401 | 1.2% | 77.7% |  |
-| BINARY_OP | 688967418 | 1.0% | 78.7% |  |
-| LOAD_ATTR_ADAPTIVE | 613187119 | 0.9% | 79.6% |  |
-| CALL_ADAPTIVE | 600366354 | 0.9% | 80.5% |  |
-| LOAD_CONST__LOAD_FAST | 567105342 | 0.8% | 81.3% |  |
-| POP_JUMP_IF_TRUE | 553718845 | 0.8% | 82.2% |  |
-| BINARY_OP_ADD_FLOAT | 550543182 | 0.8% | 83.0% | 1.3% |
-| STORE_SUBSCR_ADAPTIVE | 532257567 | 0.8% | 83.8% |  |
-| STORE_ATTR_INSTANCE_VALUE | 488440412 | 0.7% | 84.5% | 1.4% |
-| LOAD_METHOD_NO_DICT | 469661281 | 0.7% | 85.2% | 1.2% |
-| BINARY_OP_SUBTRACT_INT | 459976987 | 0.7% | 85.9% | 0.6% |
-| BUILD_SLICE | 434950911 | 0.6% | 86.6% |  |
-| LOAD_DEREF | 400987152 | 0.6% | 87.2% |  |
-| STORE_SUBSCR_LIST_INT | 365828327 | 0.5% | 87.7% |  |
-| CALL_NO_KW_BUILTIN_O | 362529512 | 0.5% | 88.2% | 0.5% |
-| BINARY_OP_SUBTRACT_FLOAT | 354201993 | 0.5% | 88.8% | 2.9% |
-| JUMP_FORWARD | 339359492 | 0.5% | 89.3% |  |
-| CALL_NO_KW_ISINSTANCE | 298063791 | 0.4% | 89.7% |  |
-| LOAD_ATTR_WITH_HINT | 282351111 | 0.4% | 90.1% | 4.9% |
-| LOAD_METHOD_ADAPTIVE | 281395467 | 0.4% | 90.6% |  |
-| BINARY_OP_ADAPTIVE | 277769823 | 0.4% | 91.0% |  |
-| BUILD_TUPLE | 254622207 | 0.4% | 91.4% |  |
-| CALL_NO_KW_LEN | 248644078 | 0.4% | 91.7% |  |
-| LOAD_ATTR_SLOT | 238614015 | 0.4% | 92.1% | 11.3% |
-| CONTAINS_OP | 238021087 | 0.4% | 92.4% |  |
-| GET_ITER | 237805189 | 0.4% | 92.8% |  |
-| IS_OP | 234748527 | 0.4% | 93.1% |  |
-| BINARY_OP_MULTIPLY_INT | 232359203 | 0.3% | 93.5% | 0.8% |
-| CALL_NO_KW_BUILTIN_FAST | 223548733 | 0.3% | 93.8% | 0.1% |
-| CALL_NO_KW_METHOD_DESCRIPTOR_FAST | 219074236 | 0.3% | 94.2% |  |
-| NOP | 210550295 | 0.3% | 94.5% |  |
-| EXTENDED_ARG | 204919177 | 0.3% | 94.8% |  |
-| YIELD_VALUE | 204871052 | 0.3% | 95.1% |  |
-| POP_JUMP_IF_NONE | 181062828 | 0.3% | 95.4% |  |
-| COMPARE_OP | 176267541 | 0.3% | 95.6% |  |
-| POP_JUMP_IF_NOT_NONE | 162709192 | 0.2% | 95.9% |  |
-| BINARY_SUBSCR_GETITEM | 144773529 | 0.2% | 96.1% | 0.0% |
-| COMPARE_OP_ADAPTIVE | 127264701 | 0.2% | 96.3% |  |
-| CALL_NO_KW_LIST_APPEND | 122853949 | 0.2% | 96.4% |  |
-| BINARY_SUBSCR_DICT | 115189641 | 0.2% | 96.6% |  |
-| BINARY_SUBSCR_TUPLE_INT | 112801384 | 0.2% | 96.8% | 2.0% |
-| LOAD_ATTR_MODULE | 111958266 | 0.2% | 97.0% | 2.0% |
-| STORE_ATTR_SLOT | 103822693 | 0.2% | 97.1% | 1.7% |
-| CALL_NO_KW_METHOD_DESCRIPTOR_NOARGS | 97659910 | 0.1% | 97.3% | 0.0% |
-| CALL_BUILTIN_CLASS | 87565738 | 0.1% | 97.4% | 0.0% |
-| COPY_FREE_VARS | 75315105 | 0.1% | 97.5% |  |
-| LIST_APPEND | 64181557 | 0.1% | 97.6% |  |
-| MAKE_FUNCTION | 60755016 | 0.1% | 97.7% |  |
-| BUILD_LIST | 59954186 | 0.1% | 97.8% |  |
-| BUILD_MAP | 59006275 | 0.1% | 97.9% |  |
-| MAKE_CELL | 57646302 | 0.1% | 98.0% |  |
-| CALL_NO_KW_STR_1 | 55962590 | 0.1% | 98.0% |  |
-| JUMP_IF_FALSE_OR_POP | 54972642 | 0.1% | 98.1% |  |
-| BINARY_OP_ADD_UNICODE | 53634003 | 0.1% | 98.2% | 0.1% |
-| KW_NAMES | 52801993 | 0.1% | 98.3% |  |
-| CALL | 51381202 | 0.1% | 98.4% |  |
-| CALL_BUILTIN_FAST_WITH_KEYWORDS | 50670391 | 0.1% | 98.4% | 0.6% |
-| CALL_NO_KW_TYPE_1 | 50573723 | 0.1% | 98.5% |  |
-| COMPARE_OP_STR_JUMP | 49166989 | 0.1% | 98.6% | 0.6% |
-| STORE_ATTR_WITH_HINT | 47522705 | 0.1% | 98.6% | 2.4% |
-| COMPARE_OP_FLOAT_JUMP | 46515631 | 0.1% | 98.7% | 0.1% |
-| LOAD_GLOBAL | 46494483 | 0.1% | 98.8% |  |
-| LOAD_METHOD_CLASS | 43197067 | 0.1% | 98.9% | 0.1% |
-| SEND | 42960515 | 0.1% | 98.9% |  |
-| RETURN_GENERATOR | 42329123 | 0.1% | 99.0% |  |
-| CALL_FUNCTION_EX | 42152450 | 0.1% | 99.0% |  |
-| CALL_NO_KW_METHOD_DESCRIPTOR_O | 40519191 | 0.1% | 99.1% | 0.0% |
-| JUMP_NO_INTERRUPT | 38838896 | 0.1% | 99.2% |  |
-| CALL_PY_WITH_DEFAULTS | 38177010 | 0.1% | 99.2% | 0.1% |
-| STORE_SUBSCR_DICT | 37273873 | 0.1% | 99.3% |  |
-| LOAD_METHOD | 35143623 | 0.1% | 99.3% |  |
-| STORE_ATTR_ADAPTIVE | 34582270 | 0.1% | 99.4% |  |
-| LOAD_CLOSURE | 34245874 | 0.1% | 99.4% |  |
-| JUMP_IF_TRUE_OR_POP | 33970905 | 0.1% | 99.5% |  |
-| DICT_MERGE | 33240102 | 0.0% | 99.5% |  |
-| UNARY_NOT | 33046940 | 0.0% | 99.6% |  |
-| STORE_DEREF | 28772010 | 0.0% | 99.6% |  |
-| STORE_NAME | 21867223 | 0.0% | 99.7% |  |
-| LOAD_ATTR | 20393324 | 0.0% | 99.7% |  |
-| UNARY_NEGATIVE | 14878862 | 0.0% | 99.7% |  |
-| MAP_ADD | 14625783 | 0.0% | 99.7% |  |
-| LOAD_METHOD_MODULE | 14486474 | 0.0% | 99.7% | 0.5% |
-| CALL_NO_KW_TUPLE_1 | 14026647 | 0.0% | 99.8% | 0.0% |
-| UNARY_INVERT | 13700369 | 0.0% | 99.8% |  |
-| LOAD_NAME | 13120427 | 0.0% | 99.8% |  |
-| IMPORT_FROM | 11216235 | 0.0% | 99.8% |  |
-| RESUME | 11192361 | 0.0% | 99.8% |  |
-| IMPORT_NAME | 9952831 | 0.0% | 99.9% |  |
-| STORE_GLOBAL | 8785139 | 0.0% | 99.9% |  |
-| DELETE_SUBSCR | 8674917 | 0.0% | 99.9% |  |
-| LOAD_GLOBAL_ADAPTIVE | 7903347 | 0.0% | 99.9% |  |
-| PUSH_EXC_INFO | 6949101 | 0.0% | 99.9% |  |
-| POP_EXCEPT | 6949101 | 0.0% | 99.9% |  |
-| JUMP_IF_NOT_EXC_MATCH | 6850052 | 0.0% | 99.9% |  |
-| LIST_EXTEND | 6370346 | 0.0% | 99.9% |  |
-| LIST_TO_TUPLE | 5638356 | 0.0% | 99.9% |  |
-| FORMAT_VALUE | 5520587 | 0.0% | 100.0% |  |
-| STORE_ATTR | 4952832 | 0.0% | 100.0% |  |
-| GET_YIELD_FROM_ITER | 3642819 | 0.0% | 100.0% |  |
-| BEFORE_WITH | 3366114 | 0.0% | 100.0% |  |
-| BUILD_STRING | 3301438 | 0.0% | 100.0% |  |
-| BINARY_SUBSCR | 3224020 | 0.0% | 100.0% |  |
-| JUMP_ABSOLUTE | 1848004 | 0.0% | 100.0% |  |
-| DELETE_ATTR | 1832862 | 0.0% | 100.0% |  |
-| DELETE_FAST | 1684402 | 0.0% | 100.0% |  |
-| BUILD_CONST_KEY_MAP | 1224584 | 0.0% | 100.0% |  |
-| LOAD_BUILD_CLASS | 1144304 | 0.0% | 100.0% |  |
-| BUILD_SET | 1115139 | 0.0% | 100.0% |  |
-| STORE_SUBSCR | 930786 | 0.0% | 100.0% |  |
-| RERAISE | 771079 | 0.0% | 100.0% |  |
-| RAISE_VARARGS | 581414 | 0.0% | 100.0% |  |
+| LOAD_FAST | 9606586201 | 14.0% | 14.0% |  |
+| LOAD_CONST | 3405013511 | 5.0% | 19.0% |  |
+| LOAD_FAST__LOAD_FAST | 3123056451 | 4.5% | 23.5% |  |
+| STORE_FAST__LOAD_FAST | 2941547175 | 4.3% | 27.8% |  |
+| LOAD_ATTR_INSTANCE_VALUE | 2654607396 | 3.9% | 31.7% | 1.6% |
+| RESUME_QUICK | 2217711289 | 3.2% | 34.9% |  |
+| PUSH_NULL | 2032414322 | 3.0% | 37.8% |  |
+| RETURN_VALUE | 2016510355 | 2.9% | 40.8% |  |
+| STORE_FAST__STORE_FAST | 1925406803 | 2.8% | 43.6% |  |
+| POP_JUMP_IF_FALSE | 1763469950 | 2.6% | 46.2% |  |
+| LOAD_FAST__LOAD_CONST | 1609551556 | 2.3% | 48.5% |  |
+| FOR_ITER | 1507723925 | 2.2% | 50.7% |  |
+| BINARY_OP_ADD_INT | 1375997974 | 2.0% | 52.7% | 0.0% |
+| PRECALL_PYFUNC | 1336868260 | 1.9% | 54.7% | 0.0% |
+| JUMP_ABSOLUTE_QUICK | 1280493315 | 1.9% | 56.5% |  |
+| LOAD_GLOBAL_BUILTIN | 1277461877 | 1.9% | 58.4% | 0.6% |
+| CALL_PY_EXACT_ARGS | 1247960441 | 1.8% | 60.2% | 3.7% |
+| LOAD_GLOBAL_MODULE | 1237808325 | 1.8% | 62.0% | 0.3% |
+| COMPARE_OP_INT_JUMP | 1215112207 | 1.8% | 63.8% | 0.0% |
+| STORE_FAST | 1183190670 | 1.7% | 65.5% |  |
+| POP_TOP | 1178046142 | 1.7% | 67.2% |  |
+| BINARY_SUBSCR_ADAPTIVE | 1122677399 | 1.6% | 68.8% |  |
+| BINARY_SUBSCR_LIST_INT | 1089681463 | 1.6% | 70.4% | 1.2% |
+| SWAP | 999957156 | 1.5% | 71.9% |  |
+| COPY | 988091131 | 1.4% | 73.3% |  |
+| BINARY_OP_ADAPTIVE | 983390900 | 1.4% | 74.8% |  |
+| BINARY_OP_MULTIPLY_FLOAT | 879473389 | 1.3% | 76.0% | 1.0% |
+| LOAD_METHOD_CACHED | 842141492 | 1.2% | 77.3% | 2.9% |
+| LOAD_ATTR_ADAPTIVE | 645045052 | 0.9% | 78.2% |  |
+| LOAD_CONST__LOAD_FAST | 594689525 | 0.9% | 79.1% |  |
+| POP_JUMP_IF_TRUE | 565664632 | 0.8% | 79.9% |  |
+| BINARY_OP_ADD_FLOAT | 550543080 | 0.8% | 80.7% | 1.3% |
+| STORE_SUBSCR_ADAPTIVE | 532301908 | 0.8% | 81.5% |  |
+| STORE_ATTR_INSTANCE_VALUE | 519570473 | 0.8% | 82.2% | 1.3% |
+| CALL_ADAPTIVE | 494263769 | 0.7% | 83.0% |  |
+| LOAD_METHOD_NO_DICT | 493542548 | 0.7% | 83.7% | 1.2% |
+| BINARY_OP_SUBTRACT_INT | 460119996 | 0.7% | 84.3% | 0.6% |
+| BUILD_SLICE | 441310679 | 0.6% | 85.0% |  |
+| LOAD_DEREF | 407916275 | 0.6% | 85.6% |  |
+| UNPACK_SEQUENCE_TWO_TUPLE | 396140418 | 0.6% | 86.2% |  |
+| PRECALL_NO_KW_BUILTIN_O | 374824729 | 0.5% | 86.7% | 0.5% |
+| STORE_SUBSCR_LIST_INT | 365828124 | 0.5% | 87.2% |  |
+| BINARY_OP_SUBTRACT_FLOAT | 355072592 | 0.5% | 87.8% | 2.9% |
+| JUMP_FORWARD | 349648016 | 0.5% | 88.3% |  |
+| PRECALL_ADAPTIVE | 320776780 | 0.5% | 88.7% |  |
+| PRECALL_NO_KW_ISINSTANCE | 311665658 | 0.5% | 89.2% |  |
+| LOAD_METHOD_ADAPTIVE | 284408540 | 0.4% | 89.6% |  |
+| LOAD_ATTR_WITH_HINT | 283736614 | 0.4% | 90.0% | 5.3% |
+| BUILD_TUPLE | 260013048 | 0.4% | 90.4% |  |
+| CONTAINS_OP | 257050592 | 0.4% | 90.8% |  |
+| PRECALL_NO_KW_LEN | 248702488 | 0.4% | 91.1% |  |
+| GET_ITER | 247782569 | 0.4% | 91.5% |  |
+| LOAD_ATTR_SLOT | 243585754 | 0.4% | 91.8% | 11.1% |
+| IS_OP | 242194970 | 0.4% | 92.2% |  |
+| EXTENDED_ARG | 238554160 | 0.3% | 92.5% |  |
+| BINARY_OP_MULTIPLY_INT | 234008005 | 0.3% | 92.9% | 0.8% |
+| PRECALL_NO_KW_BUILTIN_FAST | 228886984 | 0.3% | 93.2% | 0.0% |
+| NOP | 224761106 | 0.3% | 93.5% |  |
+| UNPACK_SEQUENCE_TUPLE | 222006415 | 0.3% | 93.9% | 0.9% |
+| PRECALL_NO_KW_METHOD_DESCRIPTOR_FAST | 221705526 | 0.3% | 94.2% |  |
+| YIELD_VALUE | 208860266 | 0.3% | 94.5% |  |
+| POP_JUMP_IF_NONE | 187973295 | 0.3% | 94.8% |  |
+| UNPACK_SEQUENCE_LIST | 180709928 | 0.3% | 95.0% | 0.8% |
+| COMPARE_OP | 179446291 | 0.3% | 95.3% |  |
+| POP_JUMP_IF_NOT_NONE | 166803454 | 0.2% | 95.5% |  |
+| BINARY_SUBSCR_GETITEM | 145041380 | 0.2% | 95.7% | 0.0% |
+| COMPARE_OP_ADAPTIVE | 130835122 | 0.2% | 95.9% |  |
+| PRECALL_BOUND_METHOD | 129609178 | 0.2% | 96.1% | 0.8% |
+| LOAD_ATTR_MODULE | 124634097 | 0.2% | 96.3% | 1.8% |
+| PRECALL_NO_KW_LIST_APPEND | 124466770 | 0.2% | 96.5% |  |
+| BINARY_SUBSCR_DICT | 120789736 | 0.2% | 96.7% |  |
+| BINARY_SUBSCR_TUPLE_INT | 113884610 | 0.2% | 96.8% | 2.0% |
+| STORE_ATTR_SLOT | 109403105 | 0.2% | 97.0% | 1.6% |
+| PRECALL_NO_KW_METHOD_DESCRIPTOR_NOARGS | 105886202 | 0.2% | 97.1% | 0.0% |
+| PRECALL_BUILTIN_CLASS | 90843495 | 0.1% | 97.3% | 0.0% |
+| COPY_FREE_VARS | 75765546 | 0.1% | 97.4% |  |
+| LIST_APPEND | 64200852 | 0.1% | 97.5% |  |
+| BUILD_LIST | 61629794 | 0.1% | 97.6% |  |
+| MAKE_FUNCTION | 60916820 | 0.1% | 97.7% |  |
+| BUILD_MAP | 60112172 | 0.1% | 97.7% |  |
+| MAKE_CELL | 57783547 | 0.1% | 97.8% |  |
+| PRECALL_NO_KW_STR_1 | 56850187 | 0.1% | 97.9% |  |
+| KW_NAMES | 56805912 | 0.1% | 98.0% |  |
+| BINARY_OP_ADD_UNICODE | 55934563 | 0.1% | 98.1% | 0.1% |
+| JUMP_IF_FALSE_OR_POP | 55257397 | 0.1% | 98.2% |  |
+| LOAD_METHOD_CLASS | 54454238 | 0.1% | 98.2% | 0.1% |
+| CALL | 54404305 | 0.1% | 98.3% |  |
+| PRECALL | 53989195 | 0.1% | 98.4% |  |
+| PRECALL_BUILTIN_FAST_WITH_KEYWORDS | 53814118 | 0.1% | 98.5% | 0.6% |
+| COMPARE_OP_STR_JUMP | 51675376 | 0.1% | 98.5% | 0.6% |
+| PRECALL_NO_KW_TYPE_1 | 50539128 | 0.1% | 98.6% |  |
+| CALL_PY_WITH_DEFAULTS | 48036908 | 0.1% | 98.7% | 0.0% |
+| STORE_ATTR_WITH_HINT | 47525893 | 0.1% | 98.8% | 2.4% |
+| LOAD_GLOBAL | 46755877 | 0.1% | 98.8% |  |
+| COMPARE_OP_FLOAT_JUMP | 46509791 | 0.1% | 98.9% | 0.1% |
+| SEND | 43247486 | 0.1% | 99.0% |  |
+| CALL_FUNCTION_EX | 43025110 | 0.1% | 99.0% |  |
+| RETURN_GENERATOR | 42658542 | 0.1% | 99.1% |  |
+| PRECALL_NO_KW_METHOD_DESCRIPTOR_O | 42346697 | 0.1% | 99.1% | 0.0% |
+| JUMP_NO_INTERRUPT | 39078969 | 0.1% | 99.2% |  |
+| STORE_SUBSCR_DICT | 37304832 | 0.1% | 99.3% |  |
+| STORE_ATTR_ADAPTIVE | 36390779 | 0.1% | 99.3% |  |
+| LOAD_METHOD | 35381754 | 0.1% | 99.4% |  |
+| LOAD_CLOSURE | 34264272 | 0.0% | 99.4% |  |
+| JUMP_IF_TRUE_OR_POP | 34143116 | 0.0% | 99.5% |  |
+| DICT_MERGE | 34112552 | 0.0% | 99.5% |  |
+| UNARY_NOT | 33047041 | 0.0% | 99.6% |  |
+| STORE_DEREF | 28774422 | 0.0% | 99.6% |  |
+| STORE_NAME | 21881822 | 0.0% | 99.6% |  |
+| LOAD_ATTR | 20483256 | 0.0% | 99.7% |  |
+| LOAD_METHOD_MODULE | 17239638 | 0.0% | 99.7% | 0.5% |
+| UNARY_NEGATIVE | 15175941 | 0.0% | 99.7% |  |
+| MAP_ADD | 14626565 | 0.0% | 99.7% |  |
+| PRECALL_NO_KW_TUPLE_1 | 13990594 | 0.0% | 99.8% | 0.0% |
+| UNARY_INVERT | 13700099 | 0.0% | 99.8% |  |
+| LOAD_NAME | 13125364 | 0.0% | 99.8% |  |
+| IMPORT_FROM | 11216333 | 0.0% | 99.8% |  |
+| RESUME | 11192436 | 0.0% | 99.8% |  |
+| IMPORT_NAME | 9953514 | 0.0% | 99.8% |  |
+| STORE_GLOBAL | 8785208 | 0.0% | 99.9% |  |
+| DELETE_SUBSCR | 8676120 | 0.0% | 99.9% |  |
+| LOAD_GLOBAL_ADAPTIVE | 7923633 | 0.0% | 99.9% |  |
+| PUSH_EXC_INFO | 7350021 | 0.0% | 99.9% |  |
+| POP_EXCEPT | 7350021 | 0.0% | 99.9% |  |
+| JUMP_IF_NOT_EXC_MATCH | 7249872 | 0.0% | 99.9% |  |
+| FORMAT_VALUE | 7247477 | 0.0% | 99.9% |  |
+| LIST_EXTEND | 6370804 | 0.0% | 99.9% |  |
+| LIST_TO_TUPLE | 5638476 | 0.0% | 99.9% |  |
+| STORE_ATTR | 4956075 | 0.0% | 99.9% |  |
+| UNPACK_SEQUENCE_ADAPTIVE | 4517443 | 0.0% | 99.9% |  |
+| BUILD_STRING | 4163830 | 0.0% | 100.0% |  |
+| GET_YIELD_FROM_ITER | 3689717 | 0.0% | 100.0% |  |
+| BINARY_SUBSCR | 3663617 | 0.0% | 100.0% |  |
+| BINARY_OP_INPLACE_ADD_UNICODE | 3403504 | 0.0% | 100.0% | 97.5% |
+| BEFORE_WITH | 3369798 | 0.0% | 100.0% |  |
+| BINARY_OP | 2938203 | 0.0% | 100.0% |  |
+| JUMP_ABSOLUTE | 1855272 | 0.0% | 100.0% |  |
+| DELETE_ATTR | 1833891 | 0.0% | 100.0% |  |
+| DELETE_FAST | 1684404 | 0.0% | 100.0% |  |
+| UNPACK_SEQUENCE | 1291540 | 0.0% | 100.0% |  |
+| BUILD_CONST_KEY_MAP | 1224730 | 0.0% | 100.0% |  |
+| LOAD_BUILD_CLASS | 1145040 | 0.0% | 100.0% |  |
+| BUILD_SET | 1115978 | 0.0% | 100.0% |  |
+| STORE_SUBSCR | 931248 | 0.0% | 100.0% |  |
+| RERAISE | 776915 | 0.0% | 100.0% |  |
+| RAISE_VARARGS | 582034 | 0.0% | 100.0% |  |
 | GET_AWAITABLE | 478800 | 0.0% | 100.0% |  |
-| DICT_UPDATE | 325301 | 0.0% | 100.0% |  |
-| BINARY_OP_INPLACE_ADD_UNICODE | 325202 | 0.0% | 100.0% | 73.7% |
-| DELETE_NAME | 181879 | 0.0% | 100.0% |  |
-| SET_ADD | 154746 | 0.0% | 100.0% |  |
-| IMPORT_STAR | 48998 | 0.0% | 100.0% |  |
-| SET_UPDATE | 18276 | 0.0% | 100.0% |  |
-| WITH_EXCEPT_START | 16079 | 0.0% | 100.0% |  |
+| DICT_UPDATE | 325398 | 0.0% | 100.0% |  |
+| DELETE_NAME | 181954 | 0.0% | 100.0% |  |
+| SET_ADD | 154860 | 0.0% | 100.0% |  |
+| IMPORT_STAR | 49109 | 0.0% | 100.0% |  |
+| SET_UPDATE | 18280 | 0.0% | 100.0% |  |
+| WITH_EXCEPT_START | 16086 | 0.0% | 100.0% |  |
 | LOAD_CLASSDEREF | 1966 | 0.0% | 100.0% |  |
 | DELETE_DEREF | 1680 | 0.0% | 100.0% |  |
 | SETUP_ANNOTATIONS | 1507 | 0.0% | 100.0% |  |
@@ -165,106 +172,106 @@
 
 |Pair | Count | Self | Cumulative | 
 |---|---:|---:|---:|
-| LOAD_FAST LOAD_ATTR_INSTANCE_VALUE | 2083461568 | 3.1% | 3.1% |
-| JUMP_ABSOLUTE_QUICK FOR_ITER | 1184474730 | 1.8% | 4.9% |
-| STORE_FAST__STORE_FAST STORE_FAST__STORE_FAST | 1167296771 | 1.7% | 6.6% |
-| CALL_PY_EXACT_ARGS RESUME_QUICK | 1031921605 | 1.5% | 8.2% |
-| RESUME_QUICK LOAD_FAST | 1001971716 | 1.5% | 9.7% |
-| LOAD_ATTR_INSTANCE_VALUE LOAD_FAST | 991056851 | 1.5% | 11.1% |
-| PRECALL_METHOD CALL_PY_EXACT_ARGS | 864952288 | 1.3% | 12.4% |
-| POP_JUMP_IF_FALSE LOAD_FAST | 763749825 | 1.1% | 13.6% |
-| STORE_FAST__LOAD_FAST LOAD_FAST | 762704583 | 1.1% | 14.7% |
-| LOAD_GLOBAL_BUILTIN LOAD_FAST | 739770631 | 1.1% | 15.8% |
-| UNPACK_SEQUENCE STORE_FAST__STORE_FAST | 716151940 | 1.1% | 16.9% |
-| FOR_ITER STORE_FAST__LOAD_FAST | 671827779 | 1.0% | 17.9% |
-| LOAD_FAST LOAD_METHOD_CACHED | 598450789 | 0.9% | 18.8% |
-| LOAD_CONST RETURN_VALUE | 563903934 | 0.8% | 19.6% |
-| LOAD_FAST PRECALL_METHOD | 559594520 | 0.8% | 20.5% |
-| LOAD_FAST PRECALL_FUNCTION | 548121068 | 0.8% | 21.3% |
-| LOAD_FAST__LOAD_CONST BINARY_OP_ADD_INT | 499957529 | 0.7% | 22.0% |
-| COMPARE_OP_INT_JUMP LOAD_FAST | 493441314 | 0.7% | 22.8% |
-| STORE_FAST__STORE_FAST LOAD_FAST | 467695210 | 0.7% | 23.5% |
-| STORE_FAST__LOAD_FAST LOAD_CONST | 447388629 | 0.7% | 24.1% |
-| LOAD_FAST__LOAD_FAST LOAD_CONST | 423447861 | 0.6% | 24.8% |
-| LOAD_CONST BINARY_OP_ADD_INT | 407973176 | 0.6% | 25.4% |
-| BINARY_OP_MULTIPLY_FLOAT BINARY_OP_ADD_FLOAT | 394993479 | 0.6% | 26.0% |
-| RETURN_VALUE POP_TOP | 366661117 | 0.5% | 26.5% |
-| LOAD_METHOD_CACHED LOAD_FAST | 361668472 | 0.5% | 27.1% |
-| PRECALL_FUNCTION CALL_NO_KW_BUILTIN_O | 351877297 | 0.5% | 27.6% |
-| LOAD_FAST BINARY_OP_ADD_INT | 346265240 | 0.5% | 28.1% |
-| COPY COPY | 344646668 | 0.5% | 28.6% |
-| SWAP SWAP | 344646668 | 0.5% | 29.1% |
-| POP_TOP JUMP_ABSOLUTE_QUICK | 342897810 | 0.5% | 29.6% |
-| LOAD_FAST UNPACK_SEQUENCE | 337318505 | 0.5% | 30.1% |
-| LOAD_FAST__LOAD_FAST BINARY_OP_MULTIPLY_FLOAT | 336777861 | 0.5% | 30.6% |
-| LOAD_FAST LOAD_GLOBAL_MODULE | 330858492 | 0.5% | 31.1% |
-| FOR_ITER STORE_FAST | 319724988 | 0.5% | 31.6% |
-| PRECALL_FUNCTION CALL_ADAPTIVE | 318706013 | 0.5% | 32.1% |
-| LOAD_FAST BINARY_SUBSCR_LIST_INT | 316455342 | 0.5% | 32.6% |
-| LOAD_FAST RETURN_VALUE | 311038995 | 0.5% | 33.0% |
-| LOAD_CONST LOAD_CONST | 302848796 | 0.5% | 33.5% |
-| PRECALL_FUNCTION CALL_NO_KW_ISINSTANCE | 297932589 | 0.4% | 33.9% |
-| FOR_ITER UNPACK_SEQUENCE | 287574402 | 0.4% | 34.4% |
-| POP_TOP LOAD_FAST | 285454010 | 0.4% | 34.8% |
-| LOAD_FAST LOAD_ATTR_ADAPTIVE | 282371978 | 0.4% | 35.2% |
-| BINARY_SUBSCR_LIST_INT STORE_FAST__LOAD_FAST | 276535065 | 0.4% | 35.6% |
-| BUILD_SLICE BINARY_SUBSCR_ADAPTIVE | 274561977 | 0.4% | 36.0% |
-| RESUME_QUICK LOAD_GLOBAL_BUILTIN | 270567569 | 0.4% | 36.4% |
-| LOAD_CONST BINARY_OP | 268443515 | 0.4% | 36.8% |
-| LOAD_FAST LOAD_GLOBAL_BUILTIN | 261305184 | 0.4% | 37.2% |
-| CALL_ADAPTIVE RESUME_QUICK | 255437198 | 0.4% | 37.6% |
-| PRECALL_FUNCTION CALL_NO_KW_LEN | 248530427 | 0.4% | 38.0% |
-| LOAD_METHOD_CACHED PRECALL_METHOD | 248453415 | 0.4% | 38.3% |
-| LOAD_FAST BINARY_SUBSCR_ADAPTIVE | 247528291 | 0.4% | 38.7% |
-| BINARY_SUBSCR_LIST_INT LOAD_CONST | 238381458 | 0.4% | 39.1% |
-| LOAD_FAST COMPARE_OP_INT_JUMP | 229907015 | 0.3% | 39.4% |
-| PRECALL_METHOD CALL_ADAPTIVE | 229804985 | 0.3% | 39.8% |
-| RETURN_VALUE STORE_FAST__LOAD_FAST | 229028802 | 0.3% | 40.1% |
-| LOAD_ATTR_INSTANCE_VALUE COMPARE_OP_INT_JUMP | 228101219 | 0.3% | 40.4% |
-| LOAD_CONST BUILD_SLICE | 226656669 | 0.3% | 40.8% |
-| LOAD_CONST COMPARE_OP_INT_JUMP | 226597896 | 0.3% | 41.1% |
-| CALL_NO_KW_BUILTIN_O POP_TOP | 225198202 | 0.3% | 41.5% |
-| BINARY_OP_ADD_INT STORE_FAST__LOAD_FAST | 224148435 | 0.3% | 41.8% |
-| PRECALL_FUNCTION CALL_NO_KW_BUILTIN_FAST | 222614183 | 0.3% | 42.1% |
-| COPY BINARY_SUBSCR_LIST_INT | 222005113 | 0.3% | 42.5% |
-| SWAP STORE_SUBSCR_LIST_INT | 222005113 | 0.3% | 42.8% |
-| PRECALL_METHOD CALL_NO_KW_METHOD_DESCRIPTOR_FAST | 218933268 | 0.3% | 43.1% |
-| CALL_NO_KW_ISINSTANCE POP_JUMP_IF_FALSE | 218777043 | 0.3% | 43.4% |
-| PRECALL_FUNCTION CALL_PY_EXACT_ARGS | 216538160 | 0.3% | 43.8% |
-| CONTAINS_OP POP_JUMP_IF_FALSE | 215477964 | 0.3% | 44.1% |
-| COMPARE_OP_INT_JUMP LOAD_FAST__LOAD_FAST | 214762432 | 0.3% | 44.4% |
-| LOAD_CONST BINARY_OP_SUBTRACT_INT | 211116572 | 0.3% | 44.7% |
-| STORE_FAST__LOAD_FAST POP_JUMP_IF_TRUE | 209611813 | 0.3% | 45.0% |
-| LOAD_FAST BINARY_OP_MULTIPLY_FLOAT | 207985512 | 0.3% | 45.3% |
-| LOAD_FAST__LOAD_FAST LOAD_ATTR_INSTANCE_VALUE | 204722255 | 0.3% | 45.7% |
-| LOAD_CONST BINARY_SUBSCR_LIST_INT | 204084096 | 0.3% | 46.0% |
-| LOAD_FAST__LOAD_FAST STORE_ATTR_INSTANCE_VALUE | 203037875 | 0.3% | 46.3% |
-| BINARY_SUBSCR_ADAPTIVE LOAD_FAST | 195206427 | 0.3% | 46.6% |
-| RETURN_VALUE LOAD_FAST | 192333400 | 0.3% | 46.8% |
-| GET_ITER FOR_ITER | 192123520 | 0.3% | 47.1% |
-| POP_JUMP_IF_TRUE LOAD_FAST | 191789028 | 0.3% | 47.4% |
-| LOAD_CONST__LOAD_FAST LOAD_FAST | 190034696 | 0.3% | 47.7% |
-| BINARY_OP_ADD_INT BUILD_SLICE | 189785579 | 0.3% | 48.0% |
-| LOAD_FAST__LOAD_FAST LOAD_FAST | 188917136 | 0.3% | 48.3% |
-| LOAD_FAST LOAD_ATTR_SLOT | 188337346 | 0.3% | 48.5% |
-| LOAD_FAST__LOAD_CONST PRECALL_FUNCTION | 186850197 | 0.3% | 48.8% |
-| BINARY_SUBSCR_ADAPTIVE LOAD_FAST__LOAD_FAST | 186619510 | 0.3% | 49.1% |
-| STORE_FAST__LOAD_FAST LOAD_METHOD_NO_DICT | 184115230 | 0.3% | 49.4% |
-| COMPARE_OP_INT_JUMP LOAD_FAST__LOAD_CONST | 182215954 | 0.3% | 49.6% |
-| LOAD_FAST__LOAD_FAST PRECALL_FUNCTION | 179822894 | 0.3% | 49.9% |
-| STORE_FAST JUMP_ABSOLUTE_QUICK | 178600823 | 0.3% | 50.2% |
-| RESUME_QUICK LOAD_CONST__LOAD_FAST | 178187837 | 0.3% | 50.5% |
-| STORE_FAST LOAD_GLOBAL_BUILTIN | 177666020 | 0.3% | 50.7% |
-| STORE_SUBSCR_ADAPTIVE LOAD_FAST__LOAD_CONST | 177593503 | 0.3% | 51.0% |
-| LOAD_FAST LOAD_METHOD_NO_DICT | 177380819 | 0.3% | 51.2% |
-| CALL_NO_KW_METHOD_DESCRIPTOR_FAST STORE_FAST__LOAD_FAST | 177130150 | 0.3% | 51.5% |
-| LOAD_ATTR_INSTANCE_VALUE POP_JUMP_IF_FALSE | 174510668 | 0.3% | 51.8% |
-| LOAD_GLOBAL_BUILTIN PRECALL_FUNCTION | 174157735 | 0.3% | 52.0% |
-| POP_JUMP_IF_FALSE LOAD_CONST | 170392394 | 0.3% | 52.3% |
-| POP_JUMP_IF_TRUE LOAD_FAST__LOAD_FAST | 168722619 | 0.3% | 52.5% |
-| LOAD_FAST LOAD_ATTR_WITH_HINT | 168054806 | 0.3% | 52.8% |
-| POP_JUMP_IF_FALSE LOAD_FAST__LOAD_FAST | 166647270 | 0.2% | 53.0% |
-| BINARY_SUBSCR_LIST_INT LOAD_FAST__LOAD_FAST | 164609437 | 0.2% | 53.3% |
+| LOAD_FAST LOAD_ATTR_INSTANCE_VALUE | 2114664047 | 3.1% | 3.1% |
+| JUMP_ABSOLUTE_QUICK FOR_ITER | 1199487550 | 1.7% | 4.8% |
+| CALL_PY_EXACT_ARGS RESUME_QUICK | 1191796505 | 1.7% | 6.6% |
+| STORE_FAST__STORE_FAST STORE_FAST__STORE_FAST | 1168226818 | 1.7% | 8.3% |
+| PRECALL_PYFUNC CALL_PY_EXACT_ARGS | 1127797972 | 1.6% | 9.9% |
+| RESUME_QUICK LOAD_FAST | 1026830996 | 1.5% | 11.4% |
+| LOAD_ATTR_INSTANCE_VALUE LOAD_FAST | 995602129 | 1.5% | 12.9% |
+| PUSH_NULL LOAD_GLOBAL_BUILTIN | 988621264 | 1.4% | 14.3% |
+| POP_JUMP_IF_FALSE LOAD_FAST | 773557497 | 1.1% | 15.4% |
+| LOAD_GLOBAL_BUILTIN LOAD_FAST | 762001242 | 1.1% | 16.5% |
+| STORE_FAST__LOAD_FAST LOAD_FAST | 748380039 | 1.1% | 17.6% |
+| FOR_ITER STORE_FAST__LOAD_FAST | 636140017 | 0.9% | 18.5% |
+| LOAD_FAST LOAD_METHOD_CACHED | 616305164 | 0.9% | 19.4% |
+| LOAD_CONST RETURN_VALUE | 601807468 | 0.9% | 20.3% |
+| COMPARE_OP_INT_JUMP LOAD_FAST | 495444334 | 0.7% | 21.0% |
+| LOAD_FAST__LOAD_CONST BINARY_OP_ADD_INT | 492342622 | 0.7% | 21.8% |
+| LOAD_FAST PRECALL_PYFUNC | 474942087 | 0.7% | 22.5% |
+| STORE_FAST__STORE_FAST LOAD_FAST | 469136473 | 0.7% | 23.1% |
+| LOAD_FAST__LOAD_FAST LOAD_CONST | 449937562 | 0.7% | 23.8% |
+| PUSH_NULL LOAD_GLOBAL_MODULE | 444911150 | 0.6% | 24.4% |
+| LOAD_CONST BINARY_OP_ADD_INT | 420481112 | 0.6% | 25.1% |
+| STORE_FAST PUSH_NULL | 398998594 | 0.6% | 25.6% |
+| BINARY_OP_MULTIPLY_FLOAT BINARY_OP_ADD_FLOAT | 394993479 | 0.6% | 26.2% |
+| STORE_FAST__LOAD_FAST LOAD_CONST | 394129228 | 0.6% | 26.8% |
+| RETURN_VALUE POP_TOP | 388170316 | 0.6% | 27.3% |
+| LOAD_METHOD_CACHED LOAD_FAST | 375530251 | 0.5% | 27.9% |
+| FOR_ITER STORE_FAST | 368428898 | 0.5% | 28.4% |
+| UNPACK_SEQUENCE_TWO_TUPLE STORE_FAST__STORE_FAST | 365560032 | 0.5% | 29.0% |
+| POP_TOP JUMP_ABSOLUTE_QUICK | 350730725 | 0.5% | 29.5% |
+| LOAD_FAST BINARY_OP_ADD_INT | 346266598 | 0.5% | 30.0% |
+| COPY COPY | 344646492 | 0.5% | 30.5% |
+| SWAP SWAP | 344646492 | 0.5% | 31.0% |
+| RESUME_QUICK PUSH_NULL | 337041209 | 0.5% | 31.5% |
+| LOAD_FAST__LOAD_FAST BINARY_OP_MULTIPLY_FLOAT | 336777861 | 0.5% | 32.0% |
+| LOAD_FAST RETURN_VALUE | 322135117 | 0.5% | 32.4% |
+| LOAD_CONST LOAD_CONST | 317260404 | 0.5% | 32.9% |
+| LOAD_FAST BINARY_SUBSCR_LIST_INT | 316748589 | 0.5% | 33.4% |
+| PRECALL_ADAPTIVE CALL_ADAPTIVE | 312239022 | 0.5% | 33.8% |
+| LOAD_FAST LOAD_ATTR_ADAPTIVE | 305990030 | 0.4% | 34.3% |
+| LOAD_CONST BINARY_OP_ADAPTIVE | 284982239 | 0.4% | 34.7% |
+| BUILD_SLICE BINARY_SUBSCR_ADAPTIVE | 280920744 | 0.4% | 35.1% |
+| BINARY_SUBSCR_LIST_INT STORE_FAST__LOAD_FAST | 276676312 | 0.4% | 35.5% |
+| FOR_ITER UNPACK_SEQUENCE_TWO_TUPLE | 276084973 | 0.4% | 35.9% |
+| POP_TOP LOAD_FAST | 262528515 | 0.4% | 36.3% |
+| LOAD_FAST LOAD_GLOBAL_MODULE | 259140000 | 0.4% | 36.6% |
+| PUSH_NULL LOAD_FAST__LOAD_CONST | 256564105 | 0.4% | 37.0% |
+| LOAD_METHOD_CACHED PRECALL_PYFUNC | 255864307 | 0.4% | 37.4% |
+| LOAD_FAST BINARY_SUBSCR_ADAPTIVE | 247533671 | 0.4% | 37.8% |
+| BINARY_SUBSCR_LIST_INT LOAD_CONST | 238785721 | 0.3% | 38.1% |
+| POP_JUMP_IF_FALSE PUSH_NULL | 236893485 | 0.3% | 38.4% |
+| PRECALL_NO_KW_BUILTIN_O POP_TOP | 236461976 | 0.3% | 38.8% |
+| CONTAINS_OP POP_JUMP_IF_FALSE | 234088247 | 0.3% | 39.1% |
+| RETURN_VALUE STORE_FAST__LOAD_FAST | 232711977 | 0.3% | 39.5% |
+| PRECALL_NO_KW_ISINSTANCE POP_JUMP_IF_FALSE | 232068522 | 0.3% | 39.8% |
+| LOAD_FAST COMPARE_OP_INT_JUMP | 231591400 | 0.3% | 40.1% |
+| LOAD_CONST BUILD_SLICE | 229525076 | 0.3% | 40.5% |
+| LOAD_ATTR_INSTANCE_VALUE COMPARE_OP_INT_JUMP | 229151407 | 0.3% | 40.8% |
+| LOAD_CONST COMPARE_OP_INT_JUMP | 228224880 | 0.3% | 41.1% |
+| BINARY_OP_ADD_INT STORE_FAST__LOAD_FAST | 227477278 | 0.3% | 41.5% |
+| COPY BINARY_SUBSCR_LIST_INT | 222004955 | 0.3% | 41.8% |
+| SWAP STORE_SUBSCR_LIST_INT | 222004955 | 0.3% | 42.1% |
+| STORE_FAST__LOAD_FAST POP_JUMP_IF_TRUE | 212355630 | 0.3% | 42.4% |
+| LOAD_FAST__LOAD_FAST STORE_ATTR_INSTANCE_VALUE | 211351889 | 0.3% | 42.7% |
+| LOAD_CONST BINARY_OP_SUBTRACT_INT | 211122178 | 0.3% | 43.1% |
+| PUSH_NULL LOAD_FAST__LOAD_FAST | 209304335 | 0.3% | 43.4% |
+| LOAD_FAST BINARY_OP_MULTIPLY_FLOAT | 207985512 | 0.3% | 43.7% |
+| LOAD_FAST LOAD_GLOBAL_BUILTIN | 207381209 | 0.3% | 44.0% |
+| LOAD_FAST__LOAD_FAST LOAD_ATTR_INSTANCE_VALUE | 205062313 | 0.3% | 44.3% |
+| LOAD_CONST BINARY_SUBSCR_LIST_INT | 203861132 | 0.3% | 44.6% |
+| GET_ITER FOR_ITER | 202079571 | 0.3% | 44.9% |
+| BINARY_SUBSCR_ADAPTIVE LOAD_FAST | 196226259 | 0.3% | 45.1% |
+| POP_JUMP_IF_TRUE LOAD_FAST | 196120687 | 0.3% | 45.4% |
+| RETURN_VALUE LOAD_FAST | 195079610 | 0.3% | 45.7% |
+| LOAD_FAST LOAD_ATTR_SLOT | 192913037 | 0.3% | 46.0% |
+| LOAD_FAST__LOAD_FAST LOAD_FAST | 191958886 | 0.3% | 46.3% |
+| BINARY_OP_ADD_INT BUILD_SLICE | 191506172 | 0.3% | 46.5% |
+| LOAD_CONST__LOAD_FAST LOAD_FAST | 189103083 | 0.3% | 46.8% |
+| LOAD_FAST LOAD_METHOD_NO_DICT | 187896218 | 0.3% | 47.1% |
+| BINARY_SUBSCR_ADAPTIVE LOAD_FAST__LOAD_FAST | 187506926 | 0.3% | 47.4% |
+| STORE_FAST__LOAD_FAST LOAD_METHOD_NO_DICT | 187376714 | 0.3% | 47.6% |
+| COMPARE_OP_INT_JUMP LOAD_FAST__LOAD_CONST | 183202732 | 0.3% | 47.9% |
+| LOAD_ATTR_INSTANCE_VALUE POP_JUMP_IF_FALSE | 181397948 | 0.3% | 48.2% |
+| UNPACK_SEQUENCE_LIST STORE_FAST__STORE_FAST | 180564539 | 0.3% | 48.4% |
+| STORE_FAST JUMP_ABSOLUTE_QUICK | 179542720 | 0.3% | 48.7% |
+| PRECALL_NO_KW_METHOD_DESCRIPTOR_FAST STORE_FAST__LOAD_FAST | 178787894 | 0.3% | 49.0% |
+| RESUME_QUICK LOAD_CONST__LOAD_FAST | 178469891 | 0.3% | 49.2% |
+| POP_JUMP_IF_FALSE LOAD_CONST | 176951021 | 0.3% | 49.5% |
+| LOAD_FAST__LOAD_FAST PRECALL_PYFUNC | 176782506 | 0.3% | 49.7% |
+| BINARY_OP_ADAPTIVE LOAD_FAST | 175055007 | 0.3% | 50.0% |
+| BINARY_OP_ADAPTIVE STORE_FAST__LOAD_FAST | 174215781 | 0.3% | 50.2% |
+| UNPACK_SEQUENCE_TUPLE STORE_FAST__STORE_FAST | 172161741 | 0.3% | 50.5% |
+| EXTENDED_ARG POP_JUMP_IF_FALSE | 172020843 | 0.3% | 50.7% |
+| PRECALL_PYFUNC CALL_ADAPTIVE | 170229157 | 0.2% | 51.0% |
+| LOAD_FAST LOAD_ATTR_WITH_HINT | 169029193 | 0.2% | 51.2% |
+| LOAD_GLOBAL_BUILTIN PRECALL_NO_KW_ISINSTANCE | 168011571 | 0.2% | 51.5% |
+| LOAD_FAST PRECALL_NO_KW_LEN | 166210882 | 0.2% | 51.7% |
+| BINARY_SUBSCR_LIST_INT LOAD_FAST__LOAD_FAST | 164607015 | 0.2% | 52.0% |
+| LOAD_FAST__LOAD_FAST BINARY_SUBSCR_ADAPTIVE | 164565289 | 0.2% | 52.2% |
+| RETURN_VALUE POP_JUMP_IF_FALSE | 164030741 | 0.2% | 52.4% |
+| BINARY_OP_ADD_INT LOAD_CONST | 163368782 | 0.2% | 52.7% |
 
 
 </details>
@@ -281,79 +288,29 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |      3224020 | 0.1% |
-| pair_count[100] |       283686 | 0.0% |
-| pair_count[101] |         3675 | 0.0% |
-| pair_count[102] |        91133 | 0.0% |
-| pair_count[103] |          641 | 0.0% |
-| pair_count[104] |           84 | 0.0% |
-| pair_count[105] |          147 | 0.0% |
-| pair_count[106] |        36937 | 0.0% |
-| pair_count[107] |        11704 | 0.0% |
-| pair_count[110] |         2793 | 0.0% |
-| pair_count[111] |          154 | 0.0% |
-| pair_count[112] |           22 | 0.0% |
-| pair_count[114] |         5407 | 0.0% |
-| pair_count[115] |          772 | 0.0% |
-| pair_count[116] |        77675 | 0.0% |
-| pair_count[118] |         2602 | 0.0% |
-| pair_count[120] |           42 | 0.0% |
-| pair_count[122] |        98806 | 0.0% |
-| pair_count[124] |       228545 | 0.0% |
-| pair_count[125] |       410436 | 0.0% |
-| pair_count[128] |        34399 | 0.0% |
-| pair_count[129] |          418 | 0.0% |
-| pair_count[12] |            6 | 0.0% |
-| pair_count[136] |           84 | 0.0% |
-| pair_count[137] |        68008 | 0.0% |
-| pair_count[138] |        23351 | 0.0% |
-| pair_count[142] |          737 | 0.0% |
-| pair_count[145] |         4127 | 0.0% |
-| pair_count[146] |          168 | 0.0% |
-| pair_count[147] |        14329 | 0.0% |
-| pair_count[155] |        16130 | 0.0% |
-| pair_count[160] |       426130 | 0.0% |
-| pair_count[162] |           42 | 0.0% |
-| pair_count[167] |       221960 | 0.0% |
-| pair_count[168] |       534448 | 0.0% |
-| pair_count[1] |         7885 | 0.0% |
-| pair_count[25] |         3710 | 0.0% |
-| pair_count[35] |       194747 | 0.0% |
-| pair_count[60] |        24870 | 0.0% |
-| pair_count[64] |          804 | 0.0% |
-| pair_count[65] |        34593 | 0.0% |
-| pair_count[67] |         1890 | 0.0% |
-| pair_count[68] |        24376 | 0.0% |
-| pair_count[69] |          255 | 0.0% |
-| pair_count[78] |        88473 | 0.0% |
-| pair_count[83] |       128624 | 0.0% |
-| pair_count[86] |         8314 | 0.0% |
-| pair_count[90] |        42418 | 0.0% |
-| pair_count[92] |        28668 | 0.0% |
-| pair_count[95] |          736 | 0.0% |
-| pair_count[99] |        33450 | 0.0% |
-|     deferred |   1097784025 | 45.4% |
-|        deopt |       275041 | 0.0% |
-|          hit |   1302401729 | 53.9% |
-|         miss |     14671412 | 0.6% |
+|  unquickened |      3663617 | 0.2% |
+| specialization.deferred |   1105022179 | 45.4% |
+| specialization.deopt |       279083 | 0.0% |
+|          hit |   1309470867 | 53.8% |
+|         miss |     14886267 | 0.6% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 583686 | 3.3% |
-| Failure | 16962451 | 96.7% |
+| Success | 583957 | 3.3% |
+| Failure | 17071263 | 96.7% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| array int | 10149184 | 59.8% |
-| list slice | 3527961 | 20.8% |
-| buffer int | 1631426 | 9.6% |
-| buffer slice | 497262 | 2.9% |
-| other | 471666 | 2.8% |
-| string int | 375364 | 2.2% |
-| string slice | 231845 | 1.4% |
-| tuple slice | 70657 | 0.4% |
+| array int | 10149184 | 59.5% |
+| list slice | 3530706 | 20.7% |
+| buffer int | 1635570 | 9.6% |
+| buffer slice | 537543 | 3.1% |
+| other | 476270 | 2.8% |
+| string int | 375969 | 2.2% |
+| string slice | 287546 | 1.7% |
+| tuple slice | 71389 | 0.4% |
 | sequence int | 7042 | 0.0% |
 | array slice | 44 | 0.0% |
 
@@ -367,41 +324,25 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |       930786 | 0.1% |
-| pair_count[100] |       131881 | 0.0% |
-| pair_count[101] |       174217 | 0.0% |
-| pair_count[103] |         2170 | 0.0% |
-| pair_count[105] |         3794 | 0.0% |
-| pair_count[110] |        17388 | 0.0% |
-| pair_count[113] |        86267 | 0.0% |
-| pair_count[116] |       116677 | 0.0% |
-| pair_count[124] |        95409 | 0.0% |
-| pair_count[125] |        12121 | 0.0% |
-| pair_count[136] |           88 | 0.0% |
-| pair_count[137] |         7236 | 0.0% |
-| pair_count[144] |        32205 | 0.0% |
-| pair_count[1] |         2436 | 0.0% |
-| pair_count[71] |          447 | 0.0% |
-| pair_count[89] |        35422 | 0.0% |
-| pair_count[9] |       213028 | 0.0% |
-|     deferred |    523864052 | 56.5% |
-|          hit |    403102200 | 43.4% |
+|  unquickened |       931248 | 0.1% |
+| specialization.deferred |    523907558 | 56.5% |
+|          hit |    403132956 | 43.4% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 194303 | 2.3% |
-| Failure | 8199212 | 97.7% |
+| Success | 194452 | 2.3% |
+| Failure | 8199898 | 97.7% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
 | array int | 4081958 | 49.8% |
-| list slice | 2486942 | 30.3% |
-| bytearray int | 996202 | 12.1% |
-| dict subclass no override | 323166 | 3.9% |
-| py simple | 185392 | 2.3% |
-| out of range | 114254 | 1.4% |
+| list slice | 2486943 | 30.3% |
+| bytearray int | 996227 | 12.1% |
+| dict subclass no override | 323157 | 3.9% |
+| py simple | 185399 | 2.3% |
+| out of range | 114916 | 1.4% |
 | other | 11129 | 0.1% |
 | array slice | 147 | 0.0% |
 | py other | 22 | 0.0% |
@@ -416,40 +357,23 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |    797323401 | 100.0% |
-| pair_count[101] |          425 | 0.0% |
-| pair_count[124] |      2716558 | 0.3% |
-| pair_count[125] |     10471838 | 1.3% |
-| pair_count[138] |     10446158 | 1.3% |
-| pair_count[143] |      6910689 | 0.9% |
-| pair_count[154] |    716151940 | 89.8% |
-| pair_count[35] |          340 | 0.0% |
-| pair_count[90] |       148859 | 0.0% |
-| pair_count[92] |     50476594 | 6.3% |
+|  unquickened |      1291540 | 0.2% |
+| specialization.deferred |      4269280 | 0.5% |
+| specialization.deopt |        63600 | 0.0% |
+|          hit |    795485961 | 98.9% |
+|         miss |      3370800 | 0.4% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 0 | 0.0% |
-| Failure | 797323401 | 100.0% |
+| Success | 244639 | 98.6% |
+| Failure | 3524 | 1.4% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| tuple 2 | 392328877 | 49.2% |
-| tuple n | 140956715 | 17.7% |
-| list n | 139263600 | 17.5% |
-| tuple 3 | 64406823 | 8.1% |
-| list 3 | 42280420 | 5.3% |
-| tuple 4 | 9833537 | 1.2% |
-| tuple 1 | 6914568 | 0.9% |
-| list 2 | 1113420 | 0.1% |
-| other 2 | 173383 | 0.0% |
-| other 3 | 28033 | 0.0% |
-| list 1 | 14313 | 0.0% |
-| other n | 5977 | 0.0% |
-| other 4 | 1978 | 0.0% |
-| list 4 | 1757 | 0.0% |
+| sequence | 2988 | 84.8% |
+| iterator | 536 | 15.2% |
 
 
 </details>
@@ -461,61 +385,30 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |   1481907364 | 100.0% |
-| pair_count[100] |     43848252 | 3.0% |
-| pair_count[101] |        53616 | 0.0% |
-| pair_count[103] |      2794519 | 0.2% |
-| pair_count[105] |       103317 | 0.0% |
-| pair_count[110] |      1242108 | 0.1% |
-| pair_count[113] |        40316 | 0.0% |
-| pair_count[116] |        37870 | 0.0% |
-| pair_count[124] |     57437244 | 3.9% |
-| pair_count[125] |    319724988 | 21.6% |
-| pair_count[126] |      1350582 | 0.1% |
-| pair_count[136] |         5543 | 0.0% |
-| pair_count[137] |       974477 | 0.1% |
-| pair_count[138] |      7325003 | 0.5% |
-| pair_count[141] |      3778872 | 0.3% |
-| pair_count[143] |    671827779 | 45.3% |
-| pair_count[144] |        50858 | 0.0% |
-| pair_count[150] |     14205275 | 1.0% |
-| pair_count[153] |      2466394 | 0.2% |
-| pair_count[1] |          595 | 0.0% |
-| pair_count[35] |          110 | 0.0% |
-| pair_count[56] |     26735035 | 1.8% |
-| pair_count[64] |        41338 | 0.0% |
-| pair_count[65] |      3388453 | 0.2% |
-| pair_count[66] |     17752325 | 1.2% |
-| pair_count[71] |          192 | 0.0% |
-| pair_count[83] |     16333880 | 1.1% |
-| pair_count[89] |          168 | 0.0% |
-| pair_count[90] |       488314 | 0.0% |
-| pair_count[91] |        18363 | 0.0% |
-| pair_count[92] |    287574402 | 19.4% |
-| pair_count[9] |      2307176 | 0.2% |
+|  unquickened |   1507723925 | 100.0% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
 | Success | 0 | 0.0% |
-| Failure | 1481907364 | 100.0% |
+| Failure | 1507723925 | 100.0% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| list | 551956604 | 37.2% |
-| range | 515992114 | 34.8% |
-| other | 97595485 | 6.6% |
-| enumerate | 90045001 | 6.1% |
-| set | 66299858 | 4.5% |
-| dict items | 61160111 | 4.1% |
-| tuple | 59574084 | 4.0% |
-| generator | 29284016 | 2.0% |
-| itertools | 7139124 | 0.5% |
-| dict keys | 1027714 | 0.1% |
-| string | 960873 | 0.1% |
-| bytes | 647284 | 0.0% |
-| dict values | 225096 | 0.0% |
+| list | 561243613 | 37.2% |
+| range | 516085886 | 34.2% |
+| other | 110252434 | 7.3% |
+| enumerate | 90322645 | 6.0% |
+| set | 66747993 | 4.4% |
+| dict items | 61158155 | 4.1% |
+| tuple | 59649204 | 4.0% |
+| generator | 32126988 | 2.1% |
+| itertools | 7140587 | 0.5% |
+| dict keys | 1029321 | 0.1% |
+| string | 961845 | 0.1% |
+| bytes | 647215 | 0.0% |
+| dict values | 358039 | 0.0% |
 
 
 </details>
@@ -527,49 +420,29 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |      4952832 | 0.7% |
-| pair_count[100] |      1479623 | 0.2% |
-| pair_count[101] |        19107 | 0.0% |
-| pair_count[103] |       144404 | 0.0% |
-| pair_count[105] |        40571 | 0.0% |
-| pair_count[110] |       248394 | 0.0% |
-| pair_count[113] |         9040 | 0.0% |
-| pair_count[116] |       314266 | 0.0% |
-| pair_count[120] |          339 | 0.0% |
-| pair_count[124] |      2464536 | 0.4% |
-| pair_count[125] |         5848 | 0.0% |
-| pair_count[136] |        30128 | 0.0% |
-| pair_count[137] |        26752 | 0.0% |
-| pair_count[139] |          147 | 0.0% |
-| pair_count[1] |         1664 | 0.0% |
-| pair_count[71] |         3637 | 0.0% |
-| pair_count[83] |          483 | 0.0% |
-| pair_count[89] |        12183 | 0.0% |
-| pair_count[90] |           44 | 0.0% |
-| pair_count[92] |          699 | 0.0% |
-| pair_count[9] |       150967 | 0.0% |
-|     deferred |     33469957 | 4.9% |
-|        deopt |       171459 | 0.0% |
-|          hit |    630179211 | 92.9% |
-|         miss |      9606599 | 1.4% |
+|  unquickened |      4956075 | 0.7% |
+| specialization.deferred |     35249841 | 4.9% |
+| specialization.deopt |       171588 | 0.0% |
+|          hit |    666883884 | 93.0% |
+|         miss |      9615587 | 1.3% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 636131 | 57.2% |
-| Failure | 476182 | 42.8% |
+| Success | 637090 | 55.8% |
+| Failure | 503848 | 44.2% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| overridden | 150914 | 31.7% |
-| overriding descriptor | 132743 | 27.9% |
-| out of range | 97649 | 20.5% |
-| not managed dict | 37981 | 8.0% |
-| method | 27240 | 5.7% |
-| mutable class | 18669 | 3.9% |
-| non object slot | 9866 | 2.1% |
-| property | 1120 | 0.2% |
+| overriding descriptor | 159794 | 31.7% |
+| overridden | 151302 | 30.0% |
+| out of range | 97855 | 19.4% |
+| not managed dict | 37991 | 7.5% |
+| method | 27240 | 5.4% |
+| mutable class | 18669 | 3.7% |
+| non object slot | 9872 | 2.0% |
+| property | 1125 | 0.2% |
 
 
 </details>
@@ -581,89 +454,30 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |     20393324 | 0.5% |
-| pair_count[100] |      1521252 | 0.0% |
-| pair_count[101] |       180742 | 0.0% |
-| pair_count[102] |       106111 | 0.0% |
-| pair_count[103] |        80817 | 0.0% |
-| pair_count[104] |        10619 | 0.0% |
-| pair_count[105] |         2835 | 0.0% |
-| pair_count[106] |       792106 | 0.0% |
-| pair_count[107] |        91540 | 0.0% |
-| pair_count[110] |         1590 | 0.0% |
-| pair_count[111] |         3343 | 0.0% |
-| pair_count[112] |        53835 | 0.0% |
-| pair_count[114] |       502432 | 0.0% |
-| pair_count[115] |       185894 | 0.0% |
-| pair_count[116] |       383571 | 0.0% |
-| pair_count[117] |        33682 | 0.0% |
-| pair_count[118] |       469559 | 0.0% |
-| pair_count[11] |        19859 | 0.0% |
-| pair_count[120] |        18753 | 0.0% |
-| pair_count[121] |          132 | 0.0% |
-| pair_count[122] |        90227 | 0.0% |
-| pair_count[124] |      3024859 | 0.1% |
-| pair_count[125] |      7081459 | 0.2% |
-| pair_count[128] |       306643 | 0.0% |
-| pair_count[129] |       394903 | 0.0% |
-| pair_count[12] |         3476 | 0.0% |
-| pair_count[133] |          301 | 0.0% |
-| pair_count[136] |         1589 | 0.0% |
-| pair_count[137] |        69899 | 0.0% |
-| pair_count[138] |        17590 | 0.0% |
-| pair_count[142] |          967 | 0.0% |
-| pair_count[144] |        45993 | 0.0% |
-| pair_count[145] |        21186 | 0.0% |
-| pair_count[146] |          595 | 0.0% |
-| pair_count[147] |         1313 | 0.0% |
-| pair_count[155] |        66337 | 0.0% |
-| pair_count[15] |          420 | 0.0% |
-| pair_count[160] |      1767735 | 0.0% |
-| pair_count[162] |          701 | 0.0% |
-| pair_count[164] |         1811 | 0.0% |
-| pair_count[165] |          170 | 0.0% |
-| pair_count[167] |      1275754 | 0.0% |
-| pair_count[168] |       565128 | 0.0% |
-| pair_count[1] |          557 | 0.0% |
-| pair_count[25] |        17312 | 0.0% |
-| pair_count[35] |       137559 | 0.0% |
-| pair_count[53] |       140910 | 0.0% |
-| pair_count[60] |       142790 | 0.0% |
-| pair_count[61] |           66 | 0.0% |
-| pair_count[68] |       172212 | 0.0% |
-| pair_count[69] |         1323 | 0.0% |
-| pair_count[71] |         1188 | 0.0% |
-| pair_count[83] |       285442 | 0.0% |
-| pair_count[86] |         8454 | 0.0% |
-| pair_count[90] |       230022 | 0.0% |
-| pair_count[92] |         5238 | 0.0% |
-| pair_count[95] |        44108 | 0.0% |
-| pair_count[96] |          296 | 0.0% |
-| pair_count[99] |         7987 | 0.0% |
-| pair_count[9] |          132 | 0.0% |
-|     deferred |    602125610 | 15.6% |
-|        deopt |      1562208 | 0.0% |
-|          hit |   3164385048 | 81.7% |
-|         miss |     84921254 | 2.2% |
+|  unquickened |     20483256 | 0.5% |
+| specialization.deferred |    633493100 | 16.0% |
+| specialization.deopt |      1597423 | 0.0% |
+|          hit |   3219770831 | 81.3% |
+|         miss |     86793030 | 2.2% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 2791722 | 25.2% |
-| Failure | 8269787 | 74.8% |
+| Success | 2827979 | 24.5% |
+| Failure | 8723973 | 75.5% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| overridden | 2763675 | 33.4% |
-| out of range | 1594317 | 19.3% |
-| overriding descriptor | 1412907 | 17.1% |
-| not managed dict | 992066 | 12.0% |
-| property | 631689 | 7.6% |
-| method | 544092 | 6.6% |
-| non object slot | 198271 | 2.4% |
-| mutable class | 125150 | 1.5% |
-| module attr not found | 7620 | 0.1% |
+| overridden | 2765168 | 31.7% |
+| overriding descriptor | 1739287 | 19.9% |
+| out of range | 1621636 | 18.6% |
+| not managed dict | 992068 | 11.4% |
+| property | 670199 | 7.7% |
+| method | 561620 | 6.4% |
+| non object slot | 241211 | 2.8% |
+| mutable class | 125160 | 1.4% |
+| module attr not found | 7624 | 0.1% |
 
 
 </details>
@@ -675,61 +489,32 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |    176267541 | 11.0% |
-| pair_count[100] |          685 | 0.0% |
-| pair_count[107] |          105 | 0.0% |
-| pair_count[110] |       289018 | 0.0% |
-| pair_count[111] |      4041360 | 0.3% |
-| pair_count[112] |       427714 | 0.0% |
-| pair_count[114] |      2123364 | 0.1% |
-| pair_count[115] |       662906 | 0.0% |
-| pair_count[116] |          252 | 0.0% |
-| pair_count[120] |          463 | 0.0% |
-| pair_count[122] |         1438 | 0.0% |
-| pair_count[124] |       267372 | 0.0% |
-| pair_count[125] |       171562 | 0.0% |
-| pair_count[12] |      3631643 | 0.2% |
-| pair_count[141] |      8118738 | 0.5% |
-| pair_count[143] |       304220 | 0.0% |
-| pair_count[144] |     77014532 | 4.8% |
-| pair_count[145] |           42 | 0.0% |
-| pair_count[150] |      3413674 | 0.2% |
-| pair_count[167] |       189644 | 0.0% |
-| pair_count[168] |           84 | 0.0% |
-| pair_count[16] |        43491 | 0.0% |
-| pair_count[20] |        57142 | 0.0% |
-| pair_count[25] |           81 | 0.0% |
-| pair_count[2] |     13094470 | 0.8% |
-| pair_count[64] |           84 | 0.0% |
-| pair_count[66] |      4975647 | 0.3% |
-| pair_count[83] |     55362299 | 3.4% |
-| pair_count[86] |      2032548 | 0.1% |
-| pair_count[90] |        42963 | 0.0% |
-|     deferred |    124892477 | 7.8% |
-|        deopt |        15771 | 0.0% |
-|          hit |   1303420744 | 81.2% |
-|         miss |       917247 | 0.1% |
+|  unquickened |    179446291 | 11.1% |
+| specialization.deferred |    128407531 | 7.9% |
+| specialization.deopt |        15832 | 0.0% |
+|          hit |   1312377174 | 81.0% |
+|         miss |       920200 | 0.1% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 264765 | 11.2% |
-| Failure | 2107459 | 88.8% |
+| Success | 260388 | 10.7% |
+| Failure | 2167203 | 89.3% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| float long | 665581 | 31.6% |
-| set | 579289 | 27.5% |
-| different types | 201867 | 9.6% |
-| other | 125428 | 6.0% |
-| not followed by cond jump | 121152 | 5.7% |
-| bool | 113514 | 5.4% |
-| tuple | 100914 | 4.8% |
-| big int | 95683 | 4.5% |
-| bytes | 44695 | 2.1% |
-| baseobject | 34476 | 1.6% |
-| list | 21009 | 1.0% |
+| float long | 665581 | 30.7% |
+| set | 579290 | 26.7% |
+| different types | 214155 | 9.9% |
+| not followed by cond jump | 126012 | 5.8% |
+| other | 125494 | 5.8% |
+| bool | 115642 | 5.3% |
+| tuple | 101152 | 4.7% |
+| big int | 95754 | 4.4% |
+| bytes | 84557 | 3.9% |
+| baseobject | 34478 | 1.6% |
+| list | 21237 | 1.0% |
 | long float | 3766 | 0.2% |
 | string | 85 | 0.0% |
 
@@ -743,61 +528,17 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |     46494483 | 1.9% |
-| pair_count[100] |      1602164 | 0.1% |
-| pair_count[102] |       259302 | 0.0% |
-| pair_count[103] |         1417 | 0.0% |
-| pair_count[104] |          147 | 0.0% |
-| pair_count[105] |          295 | 0.0% |
-| pair_count[106] |      3899668 | 0.2% |
-| pair_count[107] |       185404 | 0.0% |
-| pair_count[110] |           84 | 0.0% |
-| pair_count[111] |          168 | 0.0% |
-| pair_count[112] |          132 | 0.0% |
-| pair_count[114] |     25446725 | 1.0% |
-| pair_count[115] |         4740 | 0.0% |
-| pair_count[116] |      1229045 | 0.0% |
-| pair_count[117] |       590728 | 0.0% |
-| pair_count[118] |       125808 | 0.0% |
-| pair_count[11] |         4093 | 0.0% |
-| pair_count[120] |          933 | 0.0% |
-| pair_count[121] |       420971 | 0.0% |
-| pair_count[122] |       139974 | 0.0% |
-| pair_count[124] |      8040709 | 0.3% |
-| pair_count[125] |       107733 | 0.0% |
-| pair_count[128] |       128365 | 0.0% |
-| pair_count[129] |        49255 | 0.0% |
-| pair_count[136] |       188438 | 0.0% |
-| pair_count[137] |       237511 | 0.0% |
-| pair_count[138] |         6772 | 0.0% |
-| pair_count[144] |        19430 | 0.0% |
-| pair_count[147] |         1559 | 0.0% |
-| pair_count[155] |         1531 | 0.0% |
-| pair_count[160] |      1592413 | 0.1% |
-| pair_count[167] |      1462305 | 0.1% |
-| pair_count[168] |       447716 | 0.0% |
-| pair_count[25] |        21359 | 0.0% |
-| pair_count[53] |         8601 | 0.0% |
-| pair_count[57] |          576 | 0.0% |
-| pair_count[60] |          320 | 0.0% |
-| pair_count[63] |        31624 | 0.0% |
-| pair_count[68] |        69478 | 0.0% |
-| pair_count[71] |          154 | 0.0% |
-| pair_count[83] |       100955 | 0.0% |
-| pair_count[90] |         1897 | 0.0% |
-| pair_count[95] |        62965 | 0.0% |
-| pair_count[99] |          623 | 0.0% |
-| pair_count[9] |          396 | 0.0% |
-|     deferred |      5050651 | 0.2% |
-|        deopt |       100102 | 0.0% |
-|          hit |   2407687485 | 97.5% |
-|         miss |     11251560 | 0.5% |
+|  unquickened |     46755877 | 1.8% |
+| specialization.deferred |      5072230 | 0.2% |
+| specialization.deopt |       100336 | 0.0% |
+|          hit |   2503999196 | 97.5% |
+|         miss |     11271006 | 0.4% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 2852696 | 100.0% |
+| Success | 2851403 | 100.0% |
 | Failure | 0 | 0.0% |
 
 |Failure kind | Count | Ratio | 
@@ -813,95 +554,40 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |    688967418 | 14.2% |
-| pair_count[100] |     92762458 | 1.9% |
-| pair_count[101] |        32879 | 0.0% |
-| pair_count[102] |        51005 | 0.0% |
-| pair_count[103] |         1343 | 0.0% |
-| pair_count[104] |          165 | 0.0% |
-| pair_count[105] |           84 | 0.0% |
-| pair_count[106] |         1151 | 0.0% |
-| pair_count[107] |       112953 | 0.0% |
-| pair_count[110] |          176 | 0.0% |
-| pair_count[112] |         7919 | 0.0% |
-| pair_count[114] |      7226445 | 0.1% |
-| pair_count[115] |      6017408 | 0.1% |
-| pair_count[116] |        24663 | 0.0% |
-| pair_count[117] |        23899 | 0.0% |
-| pair_count[118] |          154 | 0.0% |
-| pair_count[11] |         8816 | 0.0% |
-| pair_count[120] |          762 | 0.0% |
-| pair_count[121] |           88 | 0.0% |
-| pair_count[122] |      5868150 | 0.1% |
-| pair_count[124] |    112019713 | 2.3% |
-| pair_count[125] |      8062973 | 0.2% |
-| pair_count[12] |        45195 | 0.0% |
-| pair_count[133] |        89062 | 0.0% |
-| pair_count[137] |     26516342 | 0.5% |
-| pair_count[138] |        17254 | 0.0% |
-| pair_count[13] |        13092 | 0.0% |
-| pair_count[141] |     14916097 | 0.3% |
-| pair_count[142] |         3975 | 0.0% |
-| pair_count[143] |    100239674 | 2.1% |
-| pair_count[144] |      1140322 | 0.0% |
-| pair_count[145] |      5067274 | 0.1% |
-| pair_count[146] |         2640 | 0.0% |
-| pair_count[147] |        20859 | 0.0% |
-| pair_count[14] |         1512 | 0.0% |
-| pair_count[150] |      3875279 | 0.1% |
-| pair_count[153] |        26073 | 0.0% |
-| pair_count[154] |        16116 | 0.0% |
-| pair_count[155] |         1056 | 0.0% |
-| pair_count[15] |     13188777 | 0.3% |
-| pair_count[160] |         1072 | 0.0% |
-| pair_count[162] |          345 | 0.0% |
-| pair_count[167] |     30932954 | 0.6% |
-| pair_count[168] |     14042730 | 0.3% |
-| pair_count[16] |       165260 | 0.0% |
-| pair_count[17] |        39587 | 0.0% |
-| pair_count[18] |       168475 | 0.0% |
-| pair_count[1] |        16846 | 0.0% |
-| pair_count[20] |          589 | 0.0% |
-| pair_count[22] |     67687495 | 1.4% |
-| pair_count[25] |        16095 | 0.0% |
-| pair_count[26] |       612224 | 0.0% |
-| pair_count[27] |        14532 | 0.0% |
-| pair_count[28] |         3761 | 0.0% |
-| pair_count[2] |        10663 | 0.0% |
-| pair_count[3] |      5040967 | 0.1% |
-| pair_count[4] |      2651999 | 0.1% |
-| pair_count[5] |         4686 | 0.0% |
-| pair_count[60] |        42021 | 0.0% |
-| pair_count[64] |          345 | 0.0% |
-| pair_count[65] |        38991 | 0.0% |
-| pair_count[66] |           88 | 0.0% |
-| pair_count[67] |         1368 | 0.0% |
-| pair_count[68] |         3654 | 0.0% |
-| pair_count[78] |         5040 | 0.0% |
-| pair_count[7] |         3736 | 0.0% |
-| pair_count[83] |     94817069 | 2.0% |
-| pair_count[86] |        41717 | 0.0% |
-| pair_count[8] |     16799874 | 0.3% |
-| pair_count[90] |        97019 | 0.0% |
-| pair_count[92] |          239 | 0.0% |
-| pair_count[97] |          539 | 0.0% |
-| pair_count[99] |     58301635 | 1.2% |
-|     deferred |    273086169 | 5.6% |
-|        deopt |       594194 | 0.0% |
-|          hit |   3868682743 | 79.6% |
-|         miss |     31658495 | 0.7% |
+|  unquickened |      2938203 | 0.1% |
+| specialization.deferred |    967891021 | 19.8% |
+| specialization.deopt |       652272 | 0.0% |
+|          hit |   3879816249 | 79.4% |
+|         miss |     34736854 | 0.7% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 845037 | 18.0% |
-| Failure | 3838617 | 82.0% |
+| Success | 903311 | 5.8% |
+| Failure | 14596568 | 94.2% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| other | 2185836 | 56.9% |
-| different types | 1652781 | 43.1% |
+| and int | 1980433 | 13.6% |
+| lshift | 1642710 | 11.3% |
+| rshift | 1451292 | 9.9% |
+| true divide different types | 1276641 | 8.7% |
+| add other | 1225468 | 8.4% |
+| remainder | 1088002 | 7.5% |
+| floor divide | 954177 | 6.5% |
+| xor | 897121 | 6.1% |
+| true divide float | 855448 | 5.9% |
+| multiply different types | 757587 | 5.2% |
+| subtract different types | 746485 | 5.1% |
+| subtract other | 651557 | 4.5% |
+| power | 335206 | 2.3% |
+| or | 284487 | 1.9% |
+| add different types | 189544 | 1.3% |
+| multiply other | 165629 | 1.1% |
+| and other | 71935 | 0.5% |
+| true divide other | 16742 | 0.1% |
+| and different types | 6104 | 0.0% |
 
 
 </details>
@@ -913,45 +599,32 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |     35143623 | 2.1% |
-| pair_count[100] |      3108900 | 0.2% |
-| pair_count[101] |       398343 | 0.0% |
-| pair_count[103] |        23017 | 0.0% |
-| pair_count[105] |          148 | 0.0% |
-| pair_count[116] |       553290 | 0.0% |
-| pair_count[124] |      3346623 | 0.2% |
-| pair_count[136] |        61387 | 0.0% |
-| pair_count[137] |       107915 | 0.0% |
-| pair_count[144] |           21 | 0.0% |
-| pair_count[168] |     27508371 | 1.7% |
-| pair_count[35] |        11161 | 0.0% |
-| pair_count[64] |          784 | 0.0% |
-| pair_count[65] |        23663 | 0.0% |
-|     deferred |    276064700 | 16.6% |
-|        deopt |       570034 | 0.0% |
-|          hit |   1316592896 | 79.4% |
-|         miss |     30509937 | 1.8% |
+|  unquickened |     35381754 | 2.1% |
+| specialization.deferred |    279031669 | 16.2% |
+| specialization.deopt |       571165 | 0.0% |
+|          hit |   1376806832 | 80.0% |
+|         miss |     30571084 | 1.8% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 1469793 | 27.6% |
-| Failure | 3860974 | 72.4% |
+| Success | 1470721 | 27.4% |
+| Failure | 3906150 | 72.6% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| has managed dict | 1264475 | 32.8% |
-| has dict | 1091694 | 28.3% |
-| instance attribute | 706791 | 18.3% |
-| overridden | 253224 | 6.6% |
-| class method obj | 216061 | 5.6% |
+| has managed dict | 1271443 | 32.5% |
+| has dict | 1125138 | 28.8% |
+| instance attribute | 709391 | 18.2% |
+| overridden | 255371 | 6.5% |
+| class method obj | 216070 | 5.5% |
 | metaclass attribute | 210112 | 5.4% |
-| non overriding descriptor | 51510 | 1.3% |
-| builtin class method | 23413 | 0.6% |
+| non overriding descriptor | 51505 | 1.3% |
+| builtin class method | 23423 | 0.6% |
 | mutable class | 13843 | 0.4% |
-| not descriptor | 9021 | 0.2% |
-| other | 8448 | 0.2% |
+| not descriptor | 9022 | 0.2% |
+| other | 8450 | 0.2% |
 | property | 7182 | 0.2% |
 | is attr | 2935 | 0.1% |
 | overriding descriptor | 1635 | 0.0% |
@@ -961,96 +634,46 @@
 
 </details>
 
-### PRECALL_FUNCTION
+### PRECALL
 
 <details>
-<summary> specialization stats for PRECALL_FUNCTION family </summary>
+<summary> specialization stats for PRECALL family </summary>
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |   1974413057 | 100.0% |
-| pair_count[171] |     16125925 | 0.8% |
-| pair_count[172] |     39500809 | 2.0% |
-| pair_count[29] |    318706013 | 16.1% |
-| pair_count[34] |     87330669 | 4.4% |
-| pair_count[36] |    351877297 | 17.8% |
-| pair_count[37] |    222614183 | 11.3% |
-| pair_count[38] |     41311672 | 2.1% |
-| pair_count[39] |    248530427 | 12.6% |
-| pair_count[40] |    297932589 | 15.1% |
-| pair_count[41] |    216538160 | 11.0% |
-| pair_count[42] |     11620980 | 0.6% |
-| pair_count[45] |      2174088 | 0.1% |
-| pair_count[46] |     55871267 | 2.8% |
-| pair_count[47] |     13736890 | 0.7% |
-| pair_count[48] |     50542088 | 2.6% |
+|  unquickened |     53989195 | 1.4% |
+| specialization.deferred |    313074991 | 8.3% |
+| specialization.deopt |        53483 | 0.0% |
+|          hit |   3387662084 | 90.1% |
+|         miss |      3337930 | 0.1% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
 | Success | 0 | 0.0% |
-| Failure | 1974413057 | 100.0% |
+| Failure | 370402116 | 100.0% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| pycfunction | 1221852288 | 61.9% |
-| pyfunction | 303996636 | 15.4% |
-| class | 274015126 | 13.9% |
-| bound method | 76575798 | 3.9% |
-| python class | 75091850 | 3.8% |
-| other | 11262861 | 0.6% |
-| cmethod | 9395824 | 0.5% |
-| method descriptor | 2174256 | 0.1% |
-| operator wrapper | 48082 | 0.0% |
-| method wrapper | 336 | 0.0% |
-
-
-</details>
-
-### PRECALL_METHOD
-
-<details>
-<summary> specialization stats for PRECALL_METHOD family </summary>
-
-|Kind | Count | Ratio | 
-|---|---|---|
-|  unquickened |   1658175834 | 100.0% |
-| pair_count[171] |     34368465 | 2.1% |
-| pair_count[172] |     13301184 | 0.8% |
-| pair_count[29] |    229804985 | 13.9% |
-| pair_count[34] |         1191 | 0.0% |
-| pair_count[36] |     10464871 | 0.6% |
-| pair_count[37] |       610397 | 0.0% |
-| pair_count[38] |       289110 | 0.0% |
-| pair_count[41] |    864952288 | 52.2% |
-| pair_count[42] |     26500526 | 1.6% |
-| pair_count[43] |    122771678 | 7.4% |
-| pair_count[44] |     40395615 | 2.4% |
-| pair_count[45] |     95433530 | 5.8% |
-| pair_count[46] |        76812 | 0.0% |
-| pair_count[47] |       271914 | 0.0% |
-| pair_count[55] |    218933268 | 13.2% |
-
-#### Specialization attempts
-
-| | Count | Ratio | 
-|---|---:|---:|
-| Success | 0 | 0.0% |
-| Failure | 1658175834 | 100.0% |
-
-|Failure kind | Count | Ratio | 
-|---|---:|---:|
-| pyfunction | 1015011670 | 61.2% |
-| method descriptor | 543126966 | 32.8% |
-| bound method | 54688612 | 3.3% |
-| pycfunction | 35864256 | 2.2% |
-| other | 2879740 | 0.2% |
-| method wrapper | 1862782 | 0.1% |
-| class | 1725360 | 0.1% |
-| python class | 1565655 | 0.1% |
-| cmethod | 1356110 | 0.1% |
-| operator wrapper | 94683 | 0.0% |
+| pycfunction | 84091484 | 22.7% |
+| python class | 79478052 | 21.5% |
+| method descriptor | 75073643 | 20.3% |
+| class | 69619941 | 18.8% |
+| pyfunction | 34346946 | 9.3% |
+| other | 14135060 | 3.8% |
+| cmethod | 10736574 | 2.9% |
+| bound method | 2848494 | 0.8% |
+| method wrapper | 1868694 | 0.5% |
+| pycfunction with keywords | 914239 | 0.2% |
+| class no vectorcall | 754017 | 0.2% |
+| pycfunction noargs | 462389 | 0.1% |
+| class mutable | 327481 | 0.1% |
+| pycfunction fast with keywords | 204435 | 0.1% |
+| bad call flags | 175898 | 0.0% |
+| operator wrapper | 142486 | 0.0% |
+| str | 79833 | 0.0% |
+| kwnames | 13688 | 0.0% |
 
 
 </details>
@@ -1062,100 +685,32 @@
 
 |Kind | Count | Ratio | 
 |---|---|---|
-|  unquickened |     51381202 | 2.0% |
-| pair_count[100] |       749993 | 0.0% |
-| pair_count[101] |        61129 | 0.0% |
-| pair_count[102] |        54562 | 0.0% |
-| pair_count[103] |        24521 | 0.0% |
-| pair_count[104] |          153 | 0.0% |
-| pair_count[105] |         1605 | 0.0% |
-| pair_count[106] |       103897 | 0.0% |
-| pair_count[107] |       235830 | 0.0% |
-| pair_count[110] |         1257 | 0.0% |
-| pair_count[111] |        49543 | 0.0% |
-| pair_count[112] |        79710 | 0.0% |
-| pair_count[114] |      2078630 | 0.1% |
-| pair_count[115] |       724015 | 0.0% |
-| pair_count[116] |       390202 | 0.0% |
-| pair_count[117] |         1947 | 0.0% |
-| pair_count[118] |        42784 | 0.0% |
-| pair_count[11] |         1480 | 0.0% |
-| pair_count[120] |        17418 | 0.0% |
-| pair_count[122] |       101831 | 0.0% |
-| pair_count[124] |       748534 | 0.0% |
-| pair_count[125] |      2418211 | 0.1% |
-| pair_count[126] |          147 | 0.0% |
-| pair_count[128] |       261904 | 0.0% |
-| pair_count[129] |         1000 | 0.0% |
-| pair_count[12] |         1923 | 0.0% |
-| pair_count[130] |        69631 | 0.0% |
-| pair_count[133] |         4188 | 0.0% |
-| pair_count[135] |       798583 | 0.0% |
-| pair_count[136] |           85 | 0.0% |
-| pair_count[137] |         7264 | 0.0% |
-| pair_count[138] |       110481 | 0.0% |
-| pair_count[142] |         3768 | 0.0% |
-| pair_count[144] |       115108 | 0.0% |
-| pair_count[145] |        85627 | 0.0% |
-| pair_count[146] |          308 | 0.0% |
-| pair_count[147] |         7920 | 0.0% |
-| pair_count[149] |       725937 | 0.0% |
-| pair_count[151] |      4566458 | 0.2% |
-| pair_count[155] |          749 | 0.0% |
-| pair_count[15] |           88 | 0.0% |
-| pair_count[160] |       240971 | 0.0% |
-| pair_count[162] |          532 | 0.0% |
-| pair_count[164] |        16197 | 0.0% |
-| pair_count[167] |       527146 | 0.0% |
-| pair_count[168] |       112475 | 0.0% |
-| pair_count[1] |      2659373 | 0.1% |
-| pair_count[25] |         4963 | 0.0% |
-| pair_count[35] |       124358 | 0.0% |
-| pair_count[53] |       185779 | 0.0% |
-| pair_count[60] |         2706 | 0.0% |
-| pair_count[61] |          147 | 0.0% |
-| pair_count[68] |       207015 | 0.0% |
-| pair_count[69] |         3913 | 0.0% |
-| pair_count[75] |        95309 | 0.0% |
-| pair_count[79] |     28302683 | 1.1% |
-| pair_count[83] |      1070099 | 0.0% |
-| pair_count[86] |        80419 | 0.0% |
-| pair_count[90] |      2808379 | 0.1% |
-| pair_count[92] |       241033 | 0.0% |
-| pair_count[95] |          756 | 0.0% |
-| pair_count[97] |         7904 | 0.0% |
-| pair_count[99] |        40096 | 0.0% |
-| pair_count[9] |          154 | 0.0% |
-|     deferred |    588428307 | 23.5% |
-|        deopt |       885088 | 0.0% |
-|          hit |   1818954416 | 72.6% |
-|         miss |     48052153 | 1.9% |
+|  unquickened |     54404305 | 3.0% |
+| specialization.deferred |    485304293 | 26.4% |
+| specialization.deopt |       860642 | 0.0% |
+|          hit |   1249214356 | 68.1% |
+|         miss |     46782993 | 2.5% |
 
 #### Specialization attempts
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Success | 2906649 | 24.3% |
-| Failure | 9031398 | 75.7% |
+| Success | 3985827 | 23.9% |
+| Failure | 12675438 | 76.1% |
 
 |Failure kind | Count | Ratio | 
 |---|---:|---:|
-| bound method | 2136541 | 23.7% |
-| complex parameters | 1252420 | 13.9% |
-| python class | 1245128 | 13.8% |
-| pycfunction with keywords | 858885 | 9.5% |
-| class no vectorcall | 723498 | 8.0% |
-| kwnames | 634243 | 7.0% |
-| pycfunction | 585771 | 6.5% |
-| pycfunction noargs | 407792 | 4.5% |
-| class mutable | 326914 | 3.6% |
-| other | 232557 | 2.6% |
-| bad call flags | 179698 | 2.0% |
-| cmethod | 168150 | 1.9% |
-| pycfunction fast with keywords | 162653 | 1.8% |
-| str | 79833 | 0.9% |
-| method wrapper | 32546 | 0.4% |
-| operator wrapper | 4769 | 0.1% |
+| pycfunction | 1314170 | 10.4% |
+| complex parameters | 1271944 | 10.0% |
+| python class | 1269568 | 10.0% |
+| method descriptor | 1193970 | 9.4% |
+| class | 1162023 | 9.2% |
+| kwnames | 676433 | 5.3% |
+| other | 464916 | 3.7% |
+| cmethod | 335820 | 2.6% |
+| method wrapper | 65166 | 0.5% |
+| bound method | 40654 | 0.3% |
+| operator wrapper | 9536 | 0.1% |
 
 
 </details>
@@ -1170,9 +725,9 @@
 
 |Instructions | Count | Ratio | 
 |---|---:|---:|
-| Basic | 35293021566 | 52.7% |
-| Not specialized | 10761220352 | 16.1% |
-| Specialized | 20894802117 | 31.2% |
+| Basic | 38183098882 | 55.6% |
+| Not specialized | 6716782362 | 9.8% |
+| Specialized | 23747865049 | 34.6% |
 
 
 </details>
@@ -1184,10 +739,10 @@
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Calls to PyEval_EvalDefault | 611274214 | 27.7% |
-| Calls to Python functions inlined | 1595044920 | 72.3% |
-| Frames pushed | 1959118981 | 88.8% |
-| Frame objects created | 21819568 | 1.0% |
+| Calls to PyEval_EvalDefault | 634613216 | 27.8% |
+| Calls to Python functions inlined | 1645615130 | 72.2% |
+| Frames pushed | 2028709560 | 89.0% |
+| Frame objects created | 23242660 | 1.0% |
 
 
 </details>
@@ -1199,15 +754,15 @@
 
 | | Count | Ratio | 
 |---|---:|---:|
-| Allocations | 3915797004 |  |
-| Frees | 3834121041 |  |
-| New values | 70549638 |  |
-| Materialize dict (on request) | 3021393 | 4.3% |
-| Materialize dict (new key) | 1961029 | 2.8% |
+| Allocations | 3984064646 |  |
+| Frees | 3902351113 |  |
+| New values | 71726493 |  |
+| Materialize dict (on request) | 3891814 | 5.4% |
+| Materialize dict (new key) | 1972788 | 2.8% |
 | Materialize dict (too big) | 0 | 0.0% |
 
 
 </details>
 
 ---
-Stats gathered on: 2022-02-14
+Stats gathered on: 2022-02-22
