@@ -40,6 +40,10 @@ Silencing your machine:
 Getting 3.10 reference benchmark numbers
 ----------------------------------------
 
+(Note: maybe we should build 3.10 from source as well.
+For that, follow instructions below for 3.11 but use
+`git checkout 3.10` to check out the 3.10 branch.)
+
 1. Check that you can run CPython 3.10 using the `py` runner
 ```
 py -3.10 --version
