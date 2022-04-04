@@ -79,7 +79,7 @@ Its argument is one or more CPU numbers (comma-separated).
 
 5. Create the venv(s) for all benchmarks
 ```
-py -3.10 -m pyperformance venv create
+py -3.10 -m pyperformance venv recreate
 ```
 This will also seed the pip cache with all the downloads you need.
 
@@ -158,7 +158,7 @@ Output should be similar as for 3.10.
 
 6. Create the venv(s) for all benchmarks
 ```
-.\installed\python.exe -m pyperformance venv create
+.\installed\python.exe -m pyperformance venv recreate
 ```
 This will also seed the pip cache with all the downloads you need
 (which might be different than for 3.10 in some cases).
