@@ -47,7 +47,7 @@ py -3.10 --version
 
 2. Check that you have the latest version of `pip`
 ```
-py -3.10 -m pip install -U pip
+py -3.10 -m pip install -U pip setuptools
 ```
 
 3. Install pyperformance from source
@@ -141,7 +141,7 @@ we want to use to run PyPerformance.
 3. Ensure we have the latest pip for 3.11
 ```
 .\installed\python.exe -m ensurepip
-.\installed\python.exe -m pip install -U pip
+.\installed\python.exe -m pip install -U pip setuptools
 ```
 If this fails, I've probably forgotten some steps.
 
