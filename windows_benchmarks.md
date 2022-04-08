@@ -57,6 +57,9 @@ py -3.10 -m pip install -U pip setuptools
 ```
 
 3. Install pyperformance from source
+
+This (`~\pyperformance\`) should point to the pyperformance repo you cloned
+during the preliminary steps above (best by absolute path).
 ```
 py -3.10 -m pip install ~\pyperformance\
 ```
@@ -103,7 +106,7 @@ The file must not already exist.
 7. Repeat step 6 a few times with different JSON output files
 
 This is so that we get some idea of how stable these numbers are.
-Let's say we end up with files `310a.json`, `310b.json`, `310c.json`.
+Let's say you end up with files `310a.json`, `310b.json`, `310c.json`.
 
 It might also be interesting to experiment with different values for `--affinity`.
 
@@ -126,7 +129,7 @@ for more about this).
 Getting 3.11 benchmark numbers
 ------------------------------
 
-Here we have to build CPython first.
+Here you have to build CPython first.
 
 1. Build CPython in the cpython repo with PGO+LTO
 
@@ -142,9 +145,9 @@ cd ~\cpython
 .\python.bat .\PC\layout\ --preset-default --copy installed
 ```
 This creates a directory `installed` containing the `python.exe`
-we want to use to run PyPerformance.
+you should use to run PyPerformance.
 
-3. Ensure we have the latest pip for 3.11
+3. Ensure you have the latest pip for 3.11
 ```
 .\installed\python.exe -m ensurepip
 .\installed\python.exe -m pip install -U pip setuptools
@@ -152,6 +155,10 @@ we want to use to run PyPerformance.
 If this fails, I've probably forgotten some steps.
 
 4. Install pyperformance from source
+
+This (`~\pyperformance\`) should point to the pyperformance repo you cloned
+during the preliminary steps above (best by absolute path).
+
 ```
 .\installed\python.exe -m pip install ~\pyperformance\
 ```
