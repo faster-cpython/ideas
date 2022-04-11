@@ -10,7 +10,7 @@ run:
 * `<impl>` - the name of the Python implementation
 * `<release>` - the Python version (or "main")
 * `<commit>` - the git commit hash of the Python build
-* `<host>` - a name that identifies where the benchmarks ran
+* `<host>` - a name that identifies where the benchmarks ran (see hosts.json)
 * `<compat ID>` - a unique string based on the metadata in the results file
 * `<suites>` - identifies the benchmark suites used (if not just the default)
 

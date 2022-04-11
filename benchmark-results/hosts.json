@@ -1,0 +1,9 @@
+{
+    "fc_linux": {
+        "org": "Faster CPython project",
+        "os": "Linux 5.4.0-91-generic (Ubuntu 18.04.5)",
+        "CPU": "Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz",
+        "": ""
+    },
+    "": {}
+}
