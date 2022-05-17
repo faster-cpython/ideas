@@ -40,7 +40,7 @@ Importantly, there isn't currently a connection between the benchmark runner and
 "Results", all of which come from running `pyperformance` in the same configuration, come in the following flavors:
 
 - **Nightly**: Run once a day on the current `main` branch of CPython.
-- **Tag**: Run on tagged releases of Python. The most recent patch release for all supported releases, and all alphas, betas and rcs for the current development release.
+- **Tag**: Run on tagged releases of Python. The most recent tag for all feature branches and all alphas from the current `main` cycle.
 - **Manual**: Run on a specific commit or pull request of CPython. Usually created in response to Github automation or using a CLI tool.
 
 ## Requirements
