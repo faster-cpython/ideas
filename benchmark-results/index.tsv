@@ -1,3 +1,5 @@
 relative path	uploadid	build	baseline	geometric mean
 cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyperformance.json	cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyperformance	PGO,LTO		
 cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyston.json	cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyston	PGO,LTO		
+cpython-3.11.0a3-2e91dba437-fc_linux-b2cf916db80e-pyperformance.json	cpython-3.11.0a3-2e91dba437-fc_linux-b2cf916db80e-pyperformance	PGO,LTO	cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyperformance.json	1.19x faster
+cpython-3.11.0a3-2e91dba437-fc_linux-b2cf916db80e-pyston.json	cpython-3.11.0a3-2e91dba437-fc_linux-b2cf916db80e-pyston	PGO,LTO	cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyston.json	1.19x faster
