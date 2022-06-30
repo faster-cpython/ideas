@@ -13,3 +13,5 @@ cpython-3.11.0a7-2e49bd06c5-fc_linux-b2cf916db80e-pyperformance.json	cpython-3.1
 cpython-3.11.0a7-2e49bd06c5-fc_linux-b2cf916db80e-pyston.json	cpython-3.11.0a7-2e49bd06c5-fc_linux-b2cf916db80e-pyston	PGO,LTO	cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyston.json	1.23x faster
 cpython-3.11.0b1-8d32a5c8c4-fc_linux-b2cf916db80e-pyperformance.json	cpython-3.11.0b1-8d32a5c8c4-fc_linux-b2cf916db80e-pyperformance	PGO,LTO	cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyperformance.json	1.27x faster
 cpython-3.11.0b1-8d32a5c8c4-fc_linux-b2cf916db80e-pyston.json	cpython-3.11.0b1-8d32a5c8c4-fc_linux-b2cf916db80e-pyston	PGO,LTO	cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyston.json	1.27x faster
+cpython-3.11.0b2-72f00f420a-fc_linux-b2cf916db80e-pyperformance.json	cpython-3.11.0b2-72f00f420a-fc_linux-b2cf916db80e-pyperformance	PGO,LTO	cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyperformance.json	1.28x faster
+cpython-3.11.0b2-72f00f420a-fc_linux-b2cf916db80e-pyston.json	cpython-3.11.0b2-72f00f420a-fc_linux-b2cf916db80e-pyston	PGO,LTO	cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyston.json	1.28x faster
