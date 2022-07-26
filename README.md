@@ -2,7 +2,7 @@
 
 Discussion and work tracker for Faster CPython project.
 
-New ideas should be created as new [issues](https://github.com/faster-cpython/ideas/issues/new/choose).  It is acceptable if the idea is not fully formed or actionable -- we treat them as discussions to arrive at something actionable.  (We had previously used discussions for this, but we are deprecating that).
+New ideas should be created as new [issues](https://github.com/faster-cpython/ideas/issues/new/choose).  It is ok if the idea is not fully formed -- we treat them as discussions to arrive at something actionable.  (We had previously used discussions for this, but that is now deprecated).
 
 The [CPython issue tracker](https://github.com/python/cpython/issues) should be used for actual work-in-progress. 
 
