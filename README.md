@@ -24,7 +24,7 @@ pyperformance:
 |  [2022-06-06 (22:23 UTC)](benchmark-results/cpython-3.11.0b3-eb0004c271-fc_linux-b2cf916db80e-pyperformance.json) | cpython 3.11.0b3 | eb0004c271 | fc_linux | 1.29x faster  |
 |  [2022-07-17 (02:20 UTC)](benchmark-results/cpython-3.12.0a0-c20186c397-fc_linux-b2cf916db80e-pyperformance.json) | cpython 3.12.0a0 | c20186c397 | fc_linux | 1.31x faster  |
 
-<!--
+<!-- hidden for now
 pyston:
 
 |  date | release | commit | host | mean  |
@@ -33,7 +33,6 @@ pyston:
 |  [2022-06-06 (22:23 UTC)](benchmark-results/cpython-3.11.0b3-eb0004c271-fc_linux-b2cf916db80e-pyston.json) | cpython 3.11.0b3 | eb0004c271 | fc_linux | 1.29x faster  |
 |  [2022-07-17 (02:20 UTC)](benchmark-results/cpython-3.12.0a0-c20186c397-fc_linux-b2cf916db80e-pyston.json) | cpython 3.12.0a0 | c20186c397 | fc_linux | 1.31x faster  |
 -->
-
 <!-- END results table -->
 
 There is also a [complete list of published results](benchmark-results/README.md#Benchmark-results).
