@@ -192,7 +192,7 @@ This is so that when an instruction deopts, it will return to the correct locati
 
 ## Optimizing traces
 
-Optimizing traces is a well research area. Rather than regurgitate that
+Optimizing traces is a well researched area. Rather than regurgitate that
 research we run through how the above trace would be optimized,
 as an example.
 

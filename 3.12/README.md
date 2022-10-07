@@ -1,5 +1,7 @@
 # What will 3.12 look like?
 
+Author: Mark Shannon
+
 ## Fundamentals
 
 * We can't speedup opaque blobs of C code.
@@ -66,7 +68,7 @@ Long Benchmarks | 1.16 | 2.14 | 1.01 | 2.41 | 1.24 | 3.42 | 1.25 | 5.83
 Key:
 * **T** Tracing
 * **S** Specialization (including redundant type-check elimination)
-* **R** Object elimination and other redundancy elimination
+* **D** Object elimination and other redundancy elimination
 * **C** Compilation to machine code
 
 A few things to note:
@@ -81,7 +83,7 @@ Cffi and argument clinic take a typed description of the arguments to a function
 Ultimately we want to be able to call directly into these functions from JIT compiled code.
 With that ultimate goal in mind, we also want an intermediate calling convention suitable for calling from a specializing interpreter.
 Nicknamed "hasty call" as nod to "fast call", this calling convention would leave parsing and re-ordering the arguments to the caller,
-but handle unboxing and type-checking in the caller.
+but handle unboxing and type-checking in the callee.
 
 For example, consider a function wih the signature `foo(a:int, b:int, *, c:Any=None)->None`
 with the underlying C implementation signature `void foo_impl(Py_ssize_t a, Py_ssize_t b, PyObject *c)`
@@ -130,7 +132,7 @@ unspecialized code or from other C extensions.
 ### Better GC
 
 We currently perform cycle collection too often, and not very effectively.
-We should be able to fix this be using better triggers.
+We should be able to fix this by using better triggers.
 
 We could also reduce the overhead of tracing during GC with a more declarative model, or some parallelism and pre-fetching. This is likely to both harder and less profitable than just doing fewer collections.
 

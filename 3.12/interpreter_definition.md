@@ -119,8 +119,9 @@ The `KIND` must be one of:
 `foo_1` is legal. `$` is not legal, nor is `struct` or `class`.
 
 The optional second name in an `object` is the type. It defaults to `PyObject *`.
-The objects before the "--" are the objects on the stack at the start of the instruction.
-Those after the "--" are the objects on the stack at the end of the instruction.
+The objects before the "--" are the objects on top of the the stack at the start
+of the instruction. Those after the "--" are the objects on top of the the stack
+at the end of the instruction.
 
 The third form of `definition` is a transition form to allow the original C code 
 definitions to be copied. It lacks information to generate anything other than the
