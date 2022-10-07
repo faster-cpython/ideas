@@ -12,7 +12,7 @@
 
 * C code to consist of builtin functions that are well typed and don't call back in Python (much).
 * Everything else in bytecode (99.9% Python, but we might need a few key trampolines in hand written bytecode).
-* To able to execute Python code faster.
+* To be able to execute Python code faster.
 * To remove incidental overhead due to poor memory layout, reference counting and cycle GC.
 
 ## Executing Python faster
