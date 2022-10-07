@@ -19,10 +19,6 @@ These tools would be used to:
 Having a single definition file ensures that there is a single source
 of truth for bytecode semantics.
 
-Generating the interpreter decouples low-level details of dispatching
-and error handling from the semantics of the instructions, resulting
-in more maintainable code and a potentially faster interpreter.
-
 Other tools that operate on bytecodes, like `frame.setlineno`
 and the `dis` module, will be derived from the common semantic
 definition, reducing errors.
@@ -38,9 +34,9 @@ Rather than using an ad-hoc DSL embedded in the C code for the interpreter,
 a custom DSL should be defined and the semantics of the bytecode instructions,
 and the instructions defined in that DSL.
 
-This decouples low-level details of dispatching and error handling from the
-semantics of the instructions, resulting in more maintainable code and a
-potentially faster interpreter.
+Generating the interpreter decouples low-level details of dispatching
+and error handling from the semantics of the instructions, resulting
+in more maintainable code and a potentially faster interpreter.
 
 It also provides the ability to create and check optimizers and optimization
 passes from the semantic definition, reducing errors.
