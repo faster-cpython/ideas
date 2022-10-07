@@ -29,7 +29,7 @@ definition, reducing errors.
 
 ## Motivation
 
-The bytecode interpreter of CPython has traditionally be defined as standard
+The bytecode interpreter of CPython has traditionally been defined as standard
 C code, but with a lot of macros.
 The presence of these macros and the nature of bytecode interpreters means
 that the interpreter is effectively defined in a domain specific language (DSL).
@@ -48,10 +48,10 @@ passes from the semantic definition, reducing errors.
 ## Rationale
 
 As we improve the performance of CPython, we need to optimize larger regions
-of code, use more complex optimizations and, ultimiteley, translate to machine
+of code, use more complex optimizations and, ultimately, translate to machine
 code. 
 
-All of these step introduce the possibility of more bugs, and require more code
+All of these steps introduce the possibility of more bugs, and require more code
 to be written. One way to mitigate this is through the use of code generators.
 Code generators decouple the debugging of the code (the generator) from checking
 the correctness (the DSL input).
@@ -63,7 +63,7 @@ But the instructions it will interpreter will be built from the same building
 blocks as the instructions for the tier 1 (PEP 659) interpreter.
 
 Rewriting all the instructions is tedious and error-prone, and changing the
-instructions is a maintainence haedache as both versions need to be kept in sync.
+instructions is a maintenance headache as both versions need to be kept in sync.
 
 By using a code generator and using a common source for the instructions, or 
 parts of instructions, we can reduce the potential for errors considerably.
@@ -111,18 +111,18 @@ and a piece of C code describing its semantics::
 
 The `KIND` must be one of:
 
-* `inst`: A normal instruction, as curently defined by `TARGET(NAME)` `in ceval.c`.
+* `inst`: A normal instruction, as currently defined by `TARGET(NAME)` in `ceval.c`.
 * `op`: A part instruction from which other ops and instructions can be constructed.
 * `super`: A super-instruction, such as `LOAD_FAST__LOAD_FAST`.
 
-`NAME` can be any ASCII identifier that is a C identifier and not a Python keyword.
+`NAME` can be any ASCII identifier that is a C identifier and not a C or Python keyword.
 `foo_1` is legal. `$` is not legal, nor is `struct` or `class`.
 
 The optional second name in an `object` is the type. It defaults to `PyObject *`.
 The objects before the "--" are the objects on the stack at the start of the instruction.
 Those after the "--" are the objects on the stack at the end of the instruction.
 
-The third form of `definition` is a transistion form to allow the original C code 
+The third form of `definition` is a transition form to allow the original C code 
 definitions to be copied. It lacks information to generate anything other than the
 interpreter, but is useful for initial porting of code.
 
@@ -227,7 +227,7 @@ Some examples:
 Generating the interpreter
 ==========================
 
-The generated C code for a single instruction includes a pre-amble and dispatch at the end
+The generated C code for a single instruction includes a preamble and dispatch at the end
 which can be easily inserted. What is more complex is ensuring the correct stack effects
 and not generating excess pops and pushes.
 

@@ -35,7 +35,7 @@ Initial counter settings will probably be in the low hundreds.
 PEP 659 gives us a worhtwhile speed up over 3.10, but performance is
 still poor compared to node.js and well-engineered JIT compilers.
 
-We can raise performance from 3.11 levels by chosing larger regions
+We can raise performance from 3.11 levels by choosing larger regions
 of code to optimize, allowing redundant computations to be dropped,
 and moving some repeated checks out of the optimized code and adding
 mechanisms to de-optimize these regions when changes occur elsewhere.
@@ -192,7 +192,7 @@ This is so that when an instruction deopts, it will return to the correct locati
 
 ## Optimizing traces
 
-Optimizing traces is a well research area. Rather reguritate that
+Optimizing traces is a well research area. Rather than regurgitate that
 research we run through how the above trace would be optimized,
 as an example.
 

@@ -28,7 +28,7 @@ Traces can be stitched together to form larger regions, or even recompiled as a 
 
 Pyston and Cinder choose single Python functions as their base region of optimization. Even with inlining, this is quite limiting.
 
-My PhD thesis compares a tracing interpreter (HotPy) with a method-at-a-time JIT compiler that did little or no specialization (unladen swallow); the interpreter wins easily.
+My PhD thesis compares a tracing interpreter (HotPy) with a method-at-a-time JIT compiler that did little or no specialization (Unladen Swallow); the interpreter wins easily.
 
 #### Trace selection
 
@@ -41,7 +41,7 @@ Short traces fail to complete much less often, an do not need a custom tracing i
 
 We are greedy and want the advantages of both!
 We will use the mechanisms for creating short traces, but the type information gathered by the adaptive interpreter will allow us
-to lengthen the traces, without loosing the advantages of short traces.
+to lengthen the traces, without losing the advantages of short traces.
 
 #### Trace generation and optimization
 
@@ -124,7 +124,7 @@ unspecialized code or from other C extensions.
 * Better GC:
   * Fewer collections (this shouldn't be too hard to achieve)
   * More effective collections (this is harder)
-* Compact objects headers
+* Compact object headers
 * Better frame layout for faster (Python-to-Python) calls.
 
 ### Better GC
