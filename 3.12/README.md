@@ -6,7 +6,7 @@
     * And we don't want use some elaborate mechanism like PyPy or GraalPython to understand the C code.
 * We can speedup code that runs in the interpreter
 * We can reduce the overhead of memory management, by doing less of it, and by doing it more efficiently.
-* Not doing something at all is always preferable to doing it faster.
+* The fastest way to do something is to not do it all.
 
 ### This means that we want:
 
