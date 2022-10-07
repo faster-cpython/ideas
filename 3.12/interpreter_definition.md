@@ -105,8 +105,8 @@ and a piece of C code describing its semantics::
   family:
     FAMILY NAME = NAME ("," NAME)+ ";"
 
-   file:
-      (definition | family)+
+  file:
+    (definition | family)+
 ```
 
 The `KIND` must be one of:
