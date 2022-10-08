@@ -25,12 +25,14 @@ Remembering that not doing something at all is always preferable to doing it fas
 
 ### Region selection
 
-The simplest region to optimize is a linear trace; all instructions dominate the latter ones, and there are no merge points.
-Traces can be stitched together to form larger regions, or even recompiled as a larger region (see HHVM).
+Traditionally there are two ways to select regions for optimization:
+* Function at a time
+* Tracing
 
-Pyston and Cinder choose single Python functions as their base region of optimization. Even with inlining, this is quite limiting.
+Unladen Swallow, Pyston and Cinder choose whole functions as their base region of optimization.
+PyPy chooses traces.
 
-My PhD thesis compares a tracing interpreter (HotPy) with a method-at-a-time JIT compiler that did little or no specialization (Unladen Swallow); the interpreter wins easily.
+Linear trace are much simpler to optimize; all instructions dominate the latter ones, and there are no merge points.
 
 #### Trace selection
 
@@ -44,6 +46,9 @@ Short traces fail to complete much less often, an do not need a custom tracing i
 We are greedy and want the advantages of both!
 We will use the mechanisms for creating short traces, but the type information gathered by the adaptive interpreter will allow us
 to lengthen the traces, without losing the advantages of short traces.
+
+Traces can be stitched together to form larger regions, or even recompiled as a larger region (see HHVM),
+but that is for later versions of CPython.
 
 #### Trace generation and optimization
 
