@@ -76,13 +76,19 @@ Each op definition has a kind, a name, a stack and instruction stream effect,
 and a piece of C code describing its semantics::
  
 ```
+  file:
+    (definition | family)+
+
   definition:
-    KIND NAME "(" (input ("," input))? "--" (output ("," output)*)? ")" "{" C-code "}"
+    kind NAME "(" (input ("," input)*)? "--" (output ("," output)*)? ")" "{" C-code "}"
     |
-    KIND NAME "=" ( NAME | stream)+ ";"
+    kind NAME "=" ( NAME | stream)+ ";"
     |
-    KIND NAME "{" C-code "}"
+    kind NAME "{" C-code "}"
  
+  kind:
+    "inst" | "op" | "super"
+
   input:
     object | stream | array
 
@@ -90,7 +96,10 @@ and a piece of C code describing its semantics::
     object | array
 
   object:
-    NAME [":" NAME] [ "if" "(" C-expression ")" ]
+    NAME [":" type] [ "if" "(" C-expression ")" ]
+
+  type:
+    NAME
 
   stream:
     (# | ## | ####) NAME
@@ -99,13 +108,10 @@ and a piece of C code describing its semantics::
     object "[" NAME "]"
 
   family:
-    FAMILY NAME = NAME ("," NAME)+ ";"
-
-  file:
-    (definition | family)+
+    "family" NAME = NAME ("," NAME)+ ";"
 ```
 
-The `KIND` must be one of:
+The `kind` must be one of:
 
 * `inst`: A normal instruction, as currently defined by `TARGET(NAME)` in `ceval.c`.
 * `op`: A part instruction from which other ops and instructions can be constructed.
@@ -114,7 +120,7 @@ The `KIND` must be one of:
 `NAME` can be any ASCII identifier that is a C identifier and not a C or Python keyword.
 `foo_1` is legal. `$` is not legal, nor is `struct` or `class`.
 
-The optional second name in an `object` is the type. It defaults to `PyObject *`.
+The optional `type` in an `object` is the C type. It defaults to `PyObject *`.
 The objects before the "--" are the objects on top of the the stack at the start
 of the instruction. Those after the "--" are the objects on top of the the stack
 at the end of the instruction.
@@ -124,7 +130,7 @@ definitions to be copied. It lacks information to generate anything other than t
 interpreter, but is useful for initial porting of code.
 
 The number of `#`s in a `stream` define how many codeunits are consumed from the
-instruction stream.
+instruction stream. It returns a 16, 32 or 64 bit value.
 
 The name `oparg` is pre-defined as a 32 bit value fetched from the instruction stream.
 
@@ -136,11 +142,13 @@ Those functions are:
 * `DEOPT_IF(cond)`. Deoptimize if `cond` is met.
 * `ERROR_IF(cond, handler)`. Jump to error handler if `cond` is true.
 * `PEEK(n)`. The `n`<sup>th</sup> item on the stack, which is not pushed.
+  (`PEEK(1)` is the top of the stack.)
 
 Variables can either be defined in the input, ouput, or in the C code.
 Variables defined in the input may not be assigned in the C code.
 If an `ERROR_IF` occurs, all values will be removed from the stack.
-If a `DEOPT_IF` occurs, no values will be removed from the or the instruction stream.
+If a `DEOPT_IF` occurs, no values will be removed from the stack or
+the instruction stream.
 
 Semantics
 ---------
