@@ -80,11 +80,11 @@ and a piece of C code describing its semantics::
     (definition | family)+
 
   definition:
-    kind NAME "(" (input ("," input)*)? "--" (output ("," output)*)? ")" "{" C-code "}"
+    kind "(" NAME "," (input ("," input)*)? "--" (output ("," output)*)? ")" "{" C-code "}"
     |
-    kind NAME "=" ( NAME | stream)+ ";"
+    kind "(" NAME ")" "=" uop ("+" uop)* ";"
     |
-    kind NAME "{" C-code "}"
+    kind "(" NAME ")" "{" C-code "}"
  
   kind:
     "inst" | "op" | "super"
@@ -95,6 +95,9 @@ and a piece of C code describing its semantics::
   output:
     object | array
 
+  uop:
+    NAME | stream
+
   object:
     NAME [":" type] [ "if" "(" C-expression ")" ]
 
@@ -102,7 +105,10 @@ and a piece of C code describing its semantics::
     NAME
 
   stream:
-    (# | ## | ####) NAME
+    NAME "/" size
+
+  size:
+    "1" | "2" | "4"
 
   array:
     object "[" NAME "]"
