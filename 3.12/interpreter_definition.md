@@ -80,7 +80,7 @@ and a piece of C code describing its semantics::
     (definition | family)+
 
   definition:
-    kind "(" NAME "," (input ("," input)*)? "--" (output ("," output)*)? ")" "{" C-code "}"
+    kind "(" NAME "," stack_effect ")" "{" C-code "}"
     |
     kind "(" NAME ")" "=" uop ("+" uop)* ";"
     |
@@ -88,6 +88,15 @@ and a piece of C code describing its semantics::
  
   kind:
     "inst" | "op" | "super"
+
+  stack_effect:
+    "(" inputs? "--" outputs? ")"
+
+  inputs:
+    input ("," input)*
+
+  outputs:
+    output ("," output)*
 
   input:
     object | stream | array
