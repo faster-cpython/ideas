@@ -42,6 +42,7 @@ pyperformance:
 |  [2022-10-02 (02:15 UTC)](benchmark-results/cpython-3.12.0a0-8baef8ae36-fc_linux-4119a1d33a43-pyperformance.json) | cpython 3.12.0a0 | 8baef8ae36 | fc_linux | 1.31x faster  |
 |  [2022-10-09 (02:15 UTC)](benchmark-results/cpython-3.12.0a0-2d2e01aa4c-fc_linux-4119a1d33a43-pyperformance.json) | cpython 3.12.0a0 | 2d2e01aa4c | fc_linux | 1.30x faster  |
 |  [2022-10-16 (02:15 UTC)](benchmark-results/cpython-3.12.0a0-660f10248b-fc_linux-4119a1d33a43-pyperformance.json) | cpython 3.12.0a0 | 660f10248b | fc_linux | 1.30x faster  |
+|  [2022-10-19 (14:03 UTC)](benchmark-results/cpython-3.12.0a0-50553004fe-fc_linux-4119a1d33a43-pyperformance.json) | cpython 3.12.0a0 | 50553004fe | fc_linux | 1.30x faster  |
 |  [2022-08-07 (02:19 UTC)](benchmark-results/cpython-3.12.0a0-330f1d5828-fc_linux-91a1d1ba98b7-pyperformance.json) | cpython 3.12.0a0 | 330f1d5828 | fc_linux | 1.31x faster  |
 |  [2022-08-14 (02:19 UTC)](benchmark-results/cpython-3.12.0a0-32ac98e899-fc_linux-91a1d1ba98b7-pyperformance.json) | cpython 3.12.0a0 | 32ac98e899 | fc_linux | 1.31x faster  |
 |  [2022-06-12 (02:21 UTC)](benchmark-results/cpython-3.12.0a0-733e15f170-fc_linux-b2cf916db80e-pyperformance.json) | cpython 3.12.0a0 | 733e15f170 | fc_linux | 1.30x faster  |
@@ -67,6 +68,7 @@ pyston:
 |  [2022-10-02 (02:15 UTC)](benchmark-results/cpython-3.12.0a0-8baef8ae36-fc_linux-4119a1d33a43-pyston.json) | cpython 3.12.0a0 | 8baef8ae36 | fc_linux | 1.31x faster  |
 |  [2022-10-09 (02:15 UTC)](benchmark-results/cpython-3.12.0a0-2d2e01aa4c-fc_linux-4119a1d33a43-pyston.json) | cpython 3.12.0a0 | 2d2e01aa4c | fc_linux | 1.30x faster  |
 |  [2022-10-16 (02:15 UTC)](benchmark-results/cpython-3.12.0a0-660f10248b-fc_linux-4119a1d33a43-pyston.json) | cpython 3.12.0a0 | 660f10248b | fc_linux | 1.30x faster  |
+|  [2022-10-19 (14:03 UTC)](benchmark-results/cpython-3.12.0a0-50553004fe-fc_linux-4119a1d33a43-pyston.json) | cpython 3.12.0a0 | 50553004fe | fc_linux | 1.30x faster  |
 |  [2022-08-07 (02:19 UTC)](benchmark-results/cpython-3.12.0a0-330f1d5828-fc_linux-91a1d1ba98b7-pyston.json) | cpython 3.12.0a0 | 330f1d5828 | fc_linux | 1.31x faster  |
 |  [2022-08-14 (02:19 UTC)](benchmark-results/cpython-3.12.0a0-32ac98e899-fc_linux-91a1d1ba98b7-pyston.json) | cpython 3.12.0a0 | 32ac98e899 | fc_linux | 1.31x faster  |
 |  [2022-06-12 (02:21 UTC)](benchmark-results/cpython-3.12.0a0-733e15f170-fc_linux-b2cf916db80e-pyston.json) | cpython 3.12.0a0 | 733e15f170 | fc_linux | 1.30x faster  |
