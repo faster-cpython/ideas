@@ -16,13 +16,15 @@ Some links to presentations and other preliminary documentation:
 
 <!-- START results table -->
 
+<!--
 pyperformance:
 
 |  date | release | commit | host | mean  |
 |  --- | --- | --- | --- | ---  |
 |  [2022-06-07 (20:12 UTC)](benchmark-results/cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyperformance.json) | cpython 3.10.4 | 9d38120e33 | fc_linux | (ref)  |
-|  [2022-06-06 (22:23 UTC)](benchmark-results/cpython-3.11.0b3-eb0004c271-fc_linux-b2cf916db80e-pyperformance.json) | cpython 3.11.0b3 | eb0004c271 | fc_linux | 1.29x faster  |
-|  [2022-07-17 (02:20 UTC)](benchmark-results/cpython-3.12.0a0-c20186c397-fc_linux-b2cf916db80e-pyperformance.json) | cpython 3.12.0a0 | c20186c397 | fc_linux | 1.31x faster  |
+|  [2022-06-06 (22:23 UTC)](benchmark-results/cpython-3.11.0b3-eb0004c271-fc_linux-b2cf916db80e-pyperformance.json) | cpython 3.11.0b3 | eb0004c271 | fc_linux | 1.28x faster  |
+|  [2022-10-23 (02:15 UTC)](benchmark-results/cpython-3.12.0a0-f58631be11-fc_linux-4119a1d33a43-pyperformance.json) | cpython 3.12.0a0 | f58631be11 | fc_linux | 1.30x faster  |
+-->
 
 <!--
 pyston:
@@ -31,7 +33,7 @@ pyston:
 |  --- | --- | --- | --- | ---  |
 |  [2022-06-07 (20:12 UTC)](benchmark-results/cpython-3.10.4-9d38120e33-fc_linux-b2cf916db80e-pyston.json) | cpython 3.10.4 | 9d38120e33 | fc_linux | (ref)  |
 |  [2022-06-06 (22:23 UTC)](benchmark-results/cpython-3.11.0b3-eb0004c271-fc_linux-b2cf916db80e-pyston.json) | cpython 3.11.0b3 | eb0004c271 | fc_linux | 1.29x faster  |
-|  [2022-07-17 (02:20 UTC)](benchmark-results/cpython-3.12.0a0-c20186c397-fc_linux-b2cf916db80e-pyston.json) | cpython 3.12.0a0 | c20186c397 | fc_linux | 1.31x faster  |
+|  [2022-10-23 (02:16 UTC)](benchmark-results/cpython-3.12.0a0-f58631be11-fc_linux-4119a1d33a43-pyston.json) | cpython 3.12.0a0 | f58631be11 | fc_linux | 1.33x faster  |
 -->
 
 <!-- END results table -->
