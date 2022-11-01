@@ -67,7 +67,7 @@ parts of instructions, we can reduce the potential for errors considerably.
 
 ## Specification
 
-> This specification is at an early stage and is likely to change considerably.
+This specification is at an early stage and is likely to change considerably.
 
 Syntax
 ------
@@ -210,6 +210,7 @@ This would generate:
         SETLOCAL(oparg, value);
         DISPATCH();
     }
+```
 
 ### Super-instruction definition
 
