@@ -178,25 +178,92 @@ Examples
 --------
 
 Some examples:
+
+### Output stack effect
 ```
     inst ( LOAD_FAST, (-- value) ) {
         value = frame->f_localsplus[oparg];
         Py_INCREF(value);
     }
+```
+This would generate:
+```
+    TARGET(LOAD_FAST) {
+        PyObject *value;
+        value = frame->f_localsplus[oparg];
+        Py_INCREF(value);
+        PUSH(value);
+        DISPATCH();
+    }
+```
 
-    super ( LOAD_FAST__LOAD_FAST ) = LOAD_FAST LOAD_FAST ;
+### Input stack effect
+```
+    inst ( STORE_FAST, (value --) ) {
+        SETLOCAL(oparg, value);
+    }
+```
+This would generate:
+```
+    TARGET(STORE_FAST) {
+        PyObject *value = POP();
+        SETLOCAL(oparg, value);
+        DISPATCH();
+    }
 
-    op ( CHECK_OBJECT_TYPE, (owner type_version/2 -- owner) ) {
+### Super-instruction definition
+
+```
+    super ( LOAD_FAST__LOAD_FAST ) = LOAD_FAST + LOAD_FAST ;
+```
+This might get translated into the following:
+```
+    {
+        PyObject *value;
+        value = frame->f_localsplus[oparg];
+        Py_INCREF(value);
+        PUSH(value);
+        NEXTOPARG();
+        next_instr++;
+        value = frame->f_localsplus[oparg];
+        Py_INCREF(value);
+        PUSH(value);
+        DISPATCH();
+    }
+```
+
+### Input stack effect and cache effect
+```
+    op ( CHECK_OBJECT_TYPE, (owner, type_version/2 -- owner) ) {
         PyTypeObject *tp = Py_TYPE(owner);
         assert(type_version != 0);
         DEOPT_IF(tp->tp_version_tag != type_version);
     }
+```
+This might become:
+```
+    TARGET(CHECK_OBJECT_TYPE) {
+        PyObject *owner = POP();
+        int32 type_version = READ_CACHE_U32();
+        next_instr += 2;
+        PyTypeObject *tp = Py_TYPE(owner);
+        assert(type_version != 0);
+        DEOPT_IF(tp->tp_version_tag != type_version);
+        PUSH(owner);
+        DISPATCH();
+    }
+```
 
+### More examples
+
+(These need explanations still.)
+```
     op ( CHECK_HAS_INSTANCE_VALUES, (owner -- owner) ) {
         PyDictOrValues dorv = *_PyObject_DictOrValuesPointer(owner);
         DEOPT_IF(!_PyDictOrValues_IsValues(dorv));
     }
-
+```
+```
     op ( LOAD_INSTANCE_VALUE, (owner, index/1 -- null if (oparg & 1), res) ) {
         res = _PyDictOrValues_GetValues(dorv)->values[index];
         DEOPT_IF(res == NULL, LOAD_ATTR);
@@ -204,11 +271,13 @@ Some examples:
         null = NULL;
         Py_DECREF(owner);
     }
-
+```
+```
     inst ( LOAD_ATTR_INSTANCE_VALUE ) = 
         counter/1 CHECK_OBJECT_TYPE CHECK_HAS_INSTANCE_VALUES
         LOAD_INSTANCE_VALUE unused/4 ;
-
+```
+```
     op ( LOAD_SLOT, (owner, index/1 -- null if (oparg & 1), res) ) {
         char *addr = (char *)owner + index;
         res = *(PyObject **)addr;
@@ -217,14 +286,17 @@ Some examples:
         null = NULL;
         Py_DECREF(owner);
     }
-
+```
+```
     inst ( LOAD_ATTR_SLOT ) = counter/1 CHECK_OBJECT_TYPE LOAD_SLOT unused/4;
-
+```
+```
     inst ( BUILD_TUPLE, (items[oparg] -- tuple) ) {
         tuple = _PyTuple_FromArraySteal(items, oparg);
         ERROR_IF(tuple == NULL, error);
     }
-
+```
+```
     inst ( PRINT_EXPR ) {
         PyObject *value = POP();
         PyObject *hook = _PySys_GetAttr(tstate, &_Py_ID(displayhook));
@@ -240,7 +312,11 @@ Some examples:
         ERROR_IF(res == NULL);
         Py_DECREF(res);
     }
+```
 
+### Define an instruction family
+These opcodes all share the same instruction format):
+```
     family(load_attr) = LOAD_ATTR, LOAD_ATTR_INSTANCE_VALUE, LOAD_SLOT ;
 ```
 
