@@ -144,7 +144,7 @@ The third form of `definition` is a transition form to allow the original C code
 definitions to be copied. It lacks information to generate anything other than the
 interpreter, but is useful for initial porting of code.
 
-The number of `#`s in a `stream` define how many codeunits are consumed from the
+The number in a `stream` define how many codeunits are consumed from the
 instruction stream. It returns a 16, 32 or 64 bit value.
 
 The name `oparg` is pre-defined as a 32 bit value fetched from the instruction stream.
@@ -159,7 +159,7 @@ Those functions are:
 * `PEEK(n)`. The `n`<sup>th</sup> item on the stack, which is not pushed.
   (`PEEK(1)` is the top of the stack.)
 
-Variables can either be defined in the input, ouput, or in the C code.
+Variables can either be defined in the input, output, or in the C code.
 Variables defined in the input may not be assigned in the C code.
 If an `ERROR_IF` occurs, all values will be removed from the stack.
 If a `DEOPT_IF` occurs, no values will be removed from the stack or
@@ -245,7 +245,7 @@ This might become:
 ```
     TARGET(CHECK_OBJECT_TYPE) {
         PyObject *owner = POP();
-        int32 type_version = READ_CACHE_U32();
+        uint32 type_version = READ_CACHE_U32();
         next_instr += 2;
         PyTypeObject *tp = Py_TYPE(owner);
         assert(type_version != 0);
@@ -257,7 +257,7 @@ This might become:
 
 ### More examples
 
-(These need explanations still.)
+For explanations see "Generating the interpreter" below.)
 ```
     op ( CHECK_HAS_INSTANCE_VALUES, (owner -- owner) ) {
         PyDictOrValues dorv = *_PyObject_DictOrValuesPointer(owner);
