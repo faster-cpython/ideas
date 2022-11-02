@@ -26,7 +26,6 @@ Also see https://github.com/faster-cpython/tools/tree/main/scripts/add-benchmark
 
 <!-- START results table -->
 
-<!--
 pyperformance:
 
 |  date | release | commit | host | mean  |
@@ -53,9 +52,7 @@ pyperformance:
 |  [2022-10-19 (14:03 UTC)](cpython-3.12.0a0-50553004fe-fc_linux-4119a1d33a43-pyperformance.json) | cpython 3.12.0a0 | 50553004fe | fc_linux | 1.30x faster  |
 |  [2022-10-23 (02:15 UTC)](cpython-3.12.0a0-f58631be11-fc_linux-4119a1d33a43-pyperformance.json) | cpython 3.12.0a0 | f58631be11 | fc_linux | 1.30x faster  |
 |  [2022-10-30 (02:15 UTC)](cpython-3.12.0a0-fc94d55ff4-fc_linux-4119a1d33a43-pyperformance.json) | cpython 3.12.0a0 | fc94d55ff4 | fc_linux | 1.30x faster  |
--->
 
-<!--
 pyston:
 
 |  date | release | commit | host | mean  |
@@ -82,7 +79,6 @@ pyston:
 |  [2022-10-19 (14:03 UTC)](cpython-3.12.0a0-50553004fe-fc_linux-4119a1d33a43-pyston.json) | cpython 3.12.0a0 | 50553004fe | fc_linux | 1.31x faster  |
 |  [2022-10-23 (02:16 UTC)](cpython-3.12.0a0-f58631be11-fc_linux-4119a1d33a43-pyston.json) | cpython 3.12.0a0 | f58631be11 | fc_linux | 1.33x faster  |
 |  [2022-10-30 (02:16 UTC)](cpython-3.12.0a0-fc94d55ff4-fc_linux-4119a1d33a43-pyston.json) | cpython 3.12.0a0 | fc94d55ff4 | fc_linux | 1.32x faster  |
--->
 
 <!-- END results table -->
 
