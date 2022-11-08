@@ -80,15 +80,14 @@ and a piece of C code describing its semantics::
     (definition | family)+
 
   definition:
-    kind "(" NAME "," stack_effect ")" "{" C-code "}"
+    "inst" "(" NAME ("," stack_effect)? ")" "{" C-code "}"
     |
-    kind "(" NAME ")" "=" uop ("+" uop)* ";"
+    "op" "(" NAME "," stack_effect ")" "{" C-code "}"
     |
-    kind "(" NAME ")" "{" C-code "}"
+    "macro" "(" NAME ")" "=" uop ("+" uop)* ";"
+    |
+    "super" "(" NAME ")" "=" NAME ("+" NAME)* ";"
  
-  kind:
-    "inst" | "op" | "super"
-
   stack_effect:
     "(" inputs? "--" outputs? ")"
 
@@ -126,11 +125,13 @@ and a piece of C code describing its semantics::
     "family" "(" NAME ")" = "{" NAME ("," NAME)+ "}" ";"
 ```
 
-The `kind` must be one of:
+The following definitions may occur:
 
 * `inst`: A normal instruction, as previously defined by `TARGET(NAME)` in `ceval.c`.
-* `op`: A part instruction from which other ops and instructions can be constructed.
-* `super`: A super-instruction, such as `LOAD_FAST__LOAD_FAST`.
+* `op`: A part instruction from which macros can be constructed.
+* `macro`: A bytecode instruction constructed from ops and cache effects.
+* `super`: A super-instruction, such as `LOAD_FAST__LOAD_FAST`, constructed from
+  normal or macro instructions.
 
 `NAME` can be any ASCII identifier that is a C identifier and not a C or Python keyword.
 `foo_1` is legal. `$` is not legal, nor is `struct` or `class`.
