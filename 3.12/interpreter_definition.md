@@ -123,12 +123,12 @@ and a piece of C code describing its semantics::
     object "[" NAME "]"
 
   family:
-    "family" NAME = NAME ("," NAME)+ ";"
+    "family" "(" NAME ")" = "{" NAME ("," NAME)+ "}" ";"
 ```
 
 The `kind` must be one of:
 
-* `inst`: A normal instruction, as currently defined by `TARGET(NAME)` in `ceval.c`.
+* `inst`: A normal instruction, as previously defined by `TARGET(NAME)` in `ceval.c`.
 * `op`: A part instruction from which other ops and instructions can be constructed.
 * `super`: A super-instruction, such as `LOAD_FAST__LOAD_FAST`.
 
@@ -146,13 +146,15 @@ interpreter, but is useful for initial porting of code.
 
 The number in a `stream` define how many codeunits are consumed from the
 instruction stream. It returns a 16, 32 or 64 bit value.
+(TODO: Wuld it be better if it gave the size in more common units,
+like bytes or bits?)
 
 The name `oparg` is pre-defined as a 32 bit value fetched from the instruction stream.
 
 The C code may include special functions that are understood by the tools as
 part of the DSL.
 
-Those functions are:
+Those functions include:
 
 * `DEOPT_IF(cond)`. Deoptimize if `cond` is met.
 * `ERROR_IF(cond, handler)`. Jump to error handler if `cond` is true.
@@ -161,9 +163,10 @@ Those functions are:
 
 Variables can either be defined in the input, output, or in the C code.
 Variables defined in the input may not be assigned in the C code.
-If an `ERROR_IF` occurs, all values will be removed from the stack.
+If an `ERROR_IF` occurs, all values will be removed from the stack;
+they must already be `DECREF`'ed by the code block.
 If a `DEOPT_IF` occurs, no values will be removed from the stack or
-the instruction stream.
+the instruction stream; no values must have been `DECREF`'ed or created.
 
 Semantics
 ---------
@@ -180,14 +183,14 @@ Examples
 Some examples:
 
 ### Output stack effect
-```
+```C
     inst ( LOAD_FAST, (-- value) ) {
         value = frame->f_localsplus[oparg];
         Py_INCREF(value);
     }
 ```
 This would generate:
-```
+```C
     TARGET(LOAD_FAST) {
         PyObject *value;
         value = frame->f_localsplus[oparg];
@@ -198,28 +201,29 @@ This would generate:
 ```
 
 ### Input stack effect
-```
+```C
     inst ( STORE_FAST, (value --) ) {
         SETLOCAL(oparg, value);
     }
 ```
 This would generate:
-```
+```C
     TARGET(STORE_FAST) {
-        PyObject *value = POP();
+        PyObject *value = PEEK(1);
         SETLOCAL(oparg, value);
+        STACK_SHRINK(1);
         DISPATCH();
     }
 ```
 
 ### Super-instruction definition
 
-```
+```C
     super ( LOAD_FAST__LOAD_FAST ) = LOAD_FAST + LOAD_FAST ;
 ```
 This might get translated into the following:
-```
-    {
+```C
+    TARGET(LOAD_FAST__LOAD_FAST) {
         PyObject *value;
         value = frame->f_localsplus[oparg];
         Py_INCREF(value);
@@ -234,23 +238,22 @@ This might get translated into the following:
 ```
 
 ### Input stack effect and cache effect
-```
+```C
     op ( CHECK_OBJECT_TYPE, (owner, type_version/2 -- owner) ) {
         PyTypeObject *tp = Py_TYPE(owner);
         assert(type_version != 0);
         DEOPT_IF(tp->tp_version_tag != type_version);
     }
 ```
-This might become:
-```
+This might become (if it was an instruction):
+```C
     TARGET(CHECK_OBJECT_TYPE) {
-        PyObject *owner = POP();
-        uint32 type_version = READ_CACHE_U32();
-        next_instr += 2;
+        PyObject *owner = PEEK(1);
+        uint32 type_version = read32(next_instr);
         PyTypeObject *tp = Py_TYPE(owner);
         assert(type_version != 0);
         DEOPT_IF(tp->tp_version_tag != type_version);
-        PUSH(owner);
+        next_instr += 2;
         DISPATCH();
     }
 ```
@@ -258,46 +261,46 @@ This might become:
 ### More examples
 
 For explanations see "Generating the interpreter" below.)
-```
+```C
     op ( CHECK_HAS_INSTANCE_VALUES, (owner -- owner) ) {
         PyDictOrValues dorv = *_PyObject_DictOrValuesPointer(owner);
         DEOPT_IF(!_PyDictOrValues_IsValues(dorv));
     }
 ```
-```
+```C
     op ( LOAD_INSTANCE_VALUE, (owner, index/1 -- null if (oparg & 1), res) ) {
         res = _PyDictOrValues_GetValues(dorv)->values[index];
-        DEOPT_IF(res == NULL, LOAD_ATTR);
+        DEOPT_IF(res == NULL);
         Py_INCREF(res);
         null = NULL;
         Py_DECREF(owner);
     }
 ```
-```
+```C
     inst ( LOAD_ATTR_INSTANCE_VALUE ) = 
-        counter/1 CHECK_OBJECT_TYPE CHECK_HAS_INSTANCE_VALUES
-        LOAD_INSTANCE_VALUE unused/4 ;
+        counter/1 + CHECK_OBJECT_TYPE + CHECK_HAS_INSTANCE_VALUES +
+        LOAD_INSTANCE_VALUE + unused/4 ;
 ```
-```
+```C
     op ( LOAD_SLOT, (owner, index/1 -- null if (oparg & 1), res) ) {
         char *addr = (char *)owner + index;
         res = *(PyObject **)addr;
-        DEOPT_IF(res == NULL, LOAD_ATTR);
+        DEOPT_IF(res == NULL);
         Py_INCREF(res);
         null = NULL;
         Py_DECREF(owner);
     }
 ```
+```C
+    inst ( LOAD_ATTR_SLOT ) = counter/1 + CHECK_OBJECT_TYPE + LOAD_SLOT + unused/4;
 ```
-    inst ( LOAD_ATTR_SLOT ) = counter/1 CHECK_OBJECT_TYPE LOAD_SLOT unused/4;
-```
-```
+```C
     inst ( BUILD_TUPLE, (items[oparg] -- tuple) ) {
         tuple = _PyTuple_FromArraySteal(items, oparg);
         ERROR_IF(tuple == NULL, error);
     }
 ```
-```
+```C
     inst ( PRINT_EXPR ) {
         PyObject *value = POP();
         PyObject *hook = _PySys_GetAttr(tstate, &_Py_ID(displayhook));
@@ -317,8 +320,8 @@ For explanations see "Generating the interpreter" below.)
 
 ### Define an instruction family
 These opcodes all share the same instruction format):
-```
-    family(load_attr) = LOAD_ATTR, LOAD_ATTR_INSTANCE_VALUE, LOAD_SLOT ;
+```C
+    family(load_attr) = { LOAD_ATTR, LOAD_ATTR_INSTANCE_VALUE, LOAD_SLOT } ;
 ```
 
 Generating the interpreter
@@ -340,8 +343,8 @@ The C code generated for `CHECK_HAS_INSTANCE_VALUES` would look something like:
     }
 ```
 
-When combined ops together to form instructions, temporary values should be used,
-rather than popping and pushing such that `LOAD_ATTR_SLOT` would look something like:
+When combining ops together to form instructions, temporary values should be used,
+rather than popping and pushing, such that `LOAD_ATTR_SLOT` would look something like:
 
 ```C
     case LOAD_ATTR_SLOT: {
@@ -359,13 +362,13 @@ rather than popping and pushing such that `LOAD_ATTR_SLOT` would look something 
             PyObject *owner = s1;
             uint16_t index = *(next_instr + 1 + 2);
             char *addr = (char *)owner + index;
-            res = *(PyObject **)addr;
+            PyObject *null;
+            PyObject *res = *(PyObject **)addr;
             if (res == NULL) goto deopt;
             Py_INCREF(res);
             null = NULL;
             Py_DECREF(owner);
-            if (oparg &1) {
-                PyObject *null = NULL;
+            if (oparg & 1) {
                 stack_pointer[0] = null;
                 stack_pointer += 1;
             }
