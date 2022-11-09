@@ -141,7 +141,7 @@ The objects before the "--" are the objects on top of the the stack at the start
 of the instruction. Those after the "--" are the objects on top of the the stack
 at the end of the instruction.
 
-The third form of `definition` is a transition form to allow the original C code 
+An `inst` without `stack_effect` is a transitional form to allow the original C code
 definitions to be copied. It lacks information to generate anything other than the
 interpreter, but is useful for initial porting of code.
 
