@@ -290,7 +290,7 @@ For explanations see "Generating the interpreter" below.)
     }
 ```
 ```C
-    inst ( LOAD_ATTR_INSTANCE_VALUE ) = 
+    macro ( LOAD_ATTR_INSTANCE_VALUE ) =
         counter/1 + CHECK_OBJECT_TYPE + CHECK_HAS_INSTANCE_VALUES +
         LOAD_INSTANCE_VALUE + unused/4 ;
 ```
@@ -305,7 +305,7 @@ For explanations see "Generating the interpreter" below.)
     }
 ```
 ```C
-    inst ( LOAD_ATTR_SLOT ) = counter/1 + CHECK_OBJECT_TYPE + LOAD_SLOT + unused/4;
+    macro ( LOAD_ATTR_SLOT ) = counter/1 + CHECK_OBJECT_TYPE + LOAD_SLOT + unused/4;
 ```
 ```C
     inst ( BUILD_TUPLE, (items[oparg] -- tuple) ) {
