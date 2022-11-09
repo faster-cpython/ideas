@@ -169,6 +169,18 @@ they must already be `DECREF`'ed by the code block.
 If a `DEOPT_IF` occurs, no values will be removed from the stack or
 the instruction stream; no values must have been `DECREF`'ed or created.
 
+These requirements result in the following constraints on the use of
+`DEOPT_IF` and `ERROR_IF` in any instruction's code block:
+
+1. Until the last `DEOPT_IF`, no objects may be allocated, `INCREF`ed,
+   or `DECREF`ed.
+2. Before the first `ERROR_IF`, all input values must be `DECREF`ed,
+   and no objects may be allocated or `INCREF`ed, with the exception
+   of attempting to create an object and checking for success using
+   `ERROR_IF(result == NULL, label)`. (TODO: Unclear what to do with
+   intermediate results.)
+3. No `DEOPT_IF` may follow an `ERROR_IF` in the same block.
+
 Semantics
 ---------
 
