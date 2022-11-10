@@ -116,7 +116,7 @@ and a piece of C code describing its semantics::
     NAME "/" size
 
   size:
-    "1" | "2" | "4"
+    INTEGER
 
   array:
     object "[" NAME "]"
@@ -147,8 +147,9 @@ interpreter, but is useful for initial porting of code.
 
 The number in a `stream` define how many codeunits are consumed from the
 instruction stream. It returns a 16, 32 or 64 bit value.
-(TODO: Wuld it be better if it gave the size in more common units,
+(TODO: Would it be better if it gave the size in more common units,
 like bytes or bits?)
+(TODO: Need a way to indicate unused cache effect, might be odd size.)
 
 The name `oparg` is pre-defined as a 32 bit value fetched from the instruction stream.
 
