@@ -80,7 +80,7 @@ and a piece of C code describing its semantics::
     (definition | family)+
 
   definition:
-    "inst" "(" NAME ("," stack_effect)? ")" "{" C-code "}"
+    "inst" "(" NAME ["," stack_effect] ")" "{" C-code "}"
     |
     "op" "(" NAME "," stack_effect ")" "{" C-code "}"
     |
@@ -89,7 +89,7 @@ and a piece of C code describing its semantics::
     "super" "(" NAME ")" "=" NAME ("+" NAME)* ";"
  
   stack_effect:
-    "(" inputs? "--" outputs? ")"
+    "(" [inputs] "--" [outputs] ")"
 
   inputs:
     input ("," input)*
