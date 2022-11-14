@@ -80,17 +80,16 @@ and a piece of C code describing its semantics::
     (definition | family)+
 
   definition:
-    kind "(" NAME "," stack_effect ")" "{" C-code "}"
+    "inst" "(" NAME ["," stack_effect] ")" "{" C-code "}"
     |
-    kind "(" NAME ")" "=" uop ("+" uop)* ";"
+    "op" "(" NAME "," stack_effect ")" "{" C-code "}"
     |
-    kind "(" NAME ")" "{" C-code "}"
+    "macro" "(" NAME ")" "=" uop ("+" uop)* ";"
+    |
+    "super" "(" NAME ")" "=" NAME ("+" NAME)* ";"
  
-  kind:
-    "inst" | "op" | "super"
-
   stack_effect:
-    "(" inputs? "--" outputs? ")"
+    "(" [inputs] "--" [outputs] ")"
 
   inputs:
     input ("," input)*
@@ -117,7 +116,7 @@ and a piece of C code describing its semantics::
     NAME "/" size
 
   size:
-    "1" | "2" | "4"
+    INTEGER
 
   array:
     object "[" NAME "]"
@@ -126,11 +125,13 @@ and a piece of C code describing its semantics::
     "family" "(" NAME ")" = "{" NAME ("," NAME)+ "}" ";"
 ```
 
-The `kind` must be one of:
+The following definitions may occur:
 
 * `inst`: A normal instruction, as previously defined by `TARGET(NAME)` in `ceval.c`.
-* `op`: A part instruction from which other ops and instructions can be constructed.
-* `super`: A super-instruction, such as `LOAD_FAST__LOAD_FAST`.
+* `op`: A part instruction from which macros can be constructed.
+* `macro`: A bytecode instruction constructed from ops and cache effects.
+* `super`: A super-instruction, such as `LOAD_FAST__LOAD_FAST`, constructed from
+  normal or macro instructions.
 
 `NAME` can be any ASCII identifier that is a C identifier and not a C or Python keyword.
 `foo_1` is legal. `$` is not legal, nor is `struct` or `class`.
@@ -140,14 +141,15 @@ The objects before the "--" are the objects on top of the the stack at the start
 of the instruction. Those after the "--" are the objects on top of the the stack
 at the end of the instruction.
 
-The third form of `definition` is a transition form to allow the original C code 
+An `inst` without `stack_effect` is a transitional form to allow the original C code
 definitions to be copied. It lacks information to generate anything other than the
 interpreter, but is useful for initial porting of code.
 
 The number in a `stream` define how many codeunits are consumed from the
 instruction stream. It returns a 16, 32 or 64 bit value.
-(TODO: Wuld it be better if it gave the size in more common units,
+(TODO: Would it be better if it gave the size in more common units,
 like bytes or bits?)
+(TODO: Need a way to indicate unused cache effect, might be odd size.)
 
 The name `oparg` is pre-defined as a 32 bit value fetched from the instruction stream.
 
@@ -167,6 +169,18 @@ If an `ERROR_IF` occurs, all values will be removed from the stack;
 they must already be `DECREF`'ed by the code block.
 If a `DEOPT_IF` occurs, no values will be removed from the stack or
 the instruction stream; no values must have been `DECREF`'ed or created.
+
+These requirements result in the following constraints on the use of
+`DEOPT_IF` and `ERROR_IF` in any instruction's code block:
+
+1. Until the last `DEOPT_IF`, no objects may be allocated, `INCREF`ed,
+   or `DECREF`ed.
+2. Before the first `ERROR_IF`, all input values must be `DECREF`ed,
+   and no objects may be allocated or `INCREF`ed, with the exception
+   of attempting to create an object and checking for success using
+   `ERROR_IF(result == NULL, label)`. (TODO: Unclear what to do with
+   intermediate results.)
+3. No `DEOPT_IF` may follow an `ERROR_IF` in the same block.
 
 Semantics
 ---------
@@ -277,7 +291,7 @@ For explanations see "Generating the interpreter" below.)
     }
 ```
 ```C
-    inst ( LOAD_ATTR_INSTANCE_VALUE ) = 
+    macro ( LOAD_ATTR_INSTANCE_VALUE ) =
         counter/1 + CHECK_OBJECT_TYPE + CHECK_HAS_INSTANCE_VALUES +
         LOAD_INSTANCE_VALUE + unused/4 ;
 ```
@@ -292,7 +306,7 @@ For explanations see "Generating the interpreter" below.)
     }
 ```
 ```C
-    inst ( LOAD_ATTR_SLOT ) = counter/1 + CHECK_OBJECT_TYPE + LOAD_SLOT + unused/4;
+    macro ( LOAD_ATTR_SLOT ) = counter/1 + CHECK_OBJECT_TYPE + LOAD_SLOT + unused/4;
 ```
 ```C
     inst ( BUILD_TUPLE, (items[oparg] -- tuple) ) {
