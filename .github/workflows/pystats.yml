@@ -56,8 +56,12 @@ jobs:
 
     - name: Summarize stats
       run: |
+        # It is important to run `git log` in the cpython directory, so the git hash
+        # is the CPython one, not the ideas repo one.
+        cd cpython
         # The file suffix is of the form "githash-isodate", e.g. "abcdef0-2022-11-28"
         export FILE_SUFFIX=`git log --pretty=format:'%h' -n 1`-`date --rfc-3339=date`
+        cd ..
         # Needs to run in same version of Python as build so the opcodes and source files match
         ./cpython/install/bin/python3 ./cpython/Tools/scripts/summarize_stats.py --json-output pystats-${FILE_SUFFIX}.json &> pystats-${FILE_SUFFIX}.md
         cp pystats-${FILE_SUFFIX}.json stats
