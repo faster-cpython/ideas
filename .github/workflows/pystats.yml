@@ -6,11 +6,13 @@ jobs:
   collect-stats:
     runs-on: ubuntu-latest
     steps:
+    # Checkout both the ideas repo and cpython
     - uses: actions/checkout@v3
     - uses: actions/checkout@v3
       with:
         repository: python/cpython
         path: cpython
+
     - name: Install Dependencies
       run: |
         cd cpython
@@ -25,15 +27,16 @@ jobs:
         # If we don't do this, stats are printed to the console
         mkdir /tmp/py_stats
     - name: Compile
-      if: steps.cache.outputs.cache-hit != 'true'
       run: |
         cd cpython
         ./configure --enable-pystats --prefix=$PWD/install
         make -j4
         make install
+
     - name: Install pyperformance into the system python
       run: |
         python -m pip install pyperformance==1.0.6
+
     - name: Collect stats
       run: |
         # Delete py_stats -- the Python build (deepfreeze etc.) itself creates stats
@@ -45,15 +48,18 @@ jobs:
       run: |
         export FILE_SUFFIX=`git log --pretty=format:'%h' -n 1`-`date --rfc-3339=date`
         # Needs to run in same version of Python as build so the opcodes and source files match
-        ./install/bin/python3 Tools/scripts/summarize_stats.py --json-output stats/pystats-${FILE_SUFFIX}-.json &> stats/pystats-${FILE_SUFFIX}.md
+        ./cpython/install/bin/python3 ./cpython/Tools/scripts/summarize_stats.py --json-output pystats-${FILE_SUFFIX}.json &> pystats-${FILE_SUFFIX}.md
+        cp pystats-${FILE_SUFFIX}.json stats
+        cp pystats-${FILE_SUFFIX}.md stats
+
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: pystats
+        name: stats
         path: |
-          *.json
-          *.md
+          stats/*.json
+          stats/*.md
     - name: Add to repo
       uses: EndBug/add-and-commit@v9
       with:
-        add: pystats
+        add: stats
