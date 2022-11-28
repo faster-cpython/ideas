@@ -7,17 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - uses: actions/checkout@v3
       with:
         repository: python/cpython
-        ref: ${{ matrix.sha }}
-    - name: Cache
-      id: cache
-      uses: actions/cache@v3
-      with:
-        path: install
-        key: install-${{ matrix.sha }}
+        path: cpython
     - name: Install Dependencies
-      run: sudo ./.github/workflows/posix-deps-apt.sh
+      run: |
+        cd cpython
+        sudo ./.github/workflows/posix-deps-apt.sh
     - name: Add ccache to PATH
       run: |
         echo "PATH=/usr/lib/ccache:$PATH" >> $GITHUB_ENV
@@ -30,6 +27,7 @@ jobs:
     - name: Compile
       if: steps.cache.outputs.cache-hit != 'true'
       run: |
+        cd cpython
         ./configure --enable-pystats --prefix=$PWD/install
         make -j4
         make install
@@ -42,12 +40,12 @@ jobs:
         rm -rf /tmp/py_stats/*
         # Run pyperformance itself on the system python, so it doesn't collect stats.
         # The benchmarks themselves are run using the python we built here.
-        python -m pyperformance run --output results-${{ matrix.sha }}.json --python ./install/bin/python3 || echo "done"
+        python -m pyperformance run -b deepcopy --output results.json --python ./cpython/install/bin/python3 || echo "done"
     - name: Summarize stats
       run: |
         export FILE_SUFFIX=`git log --pretty=format:'%h' -n 1`-`date --rfc-3339=date`
         # Needs to run in same version of Python as build so the opcodes and source files match
-        ./install/bin/python3 Tools/scripts/summarize_stats.py --json-output pystats-${FILE_SUFFIX}-.json &> pystats-${FILE_SUFFIX}.md
+        ./install/bin/python3 Tools/scripts/summarize_stats.py --json-output stats/pystats-${FILE_SUFFIX}-.json &> stats/pystats-${FILE_SUFFIX}.md
     - name: Upload artifacts
       uses: actions/upload-artifact@v3
       with:
@@ -55,3 +53,7 @@ jobs:
         path: |
           *.json
           *.md
+    - name: Add to repo
+      uses: EndBug/add-and-commit@v9
+      with:
+        add: pystats
