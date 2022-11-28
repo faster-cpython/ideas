@@ -1,6 +1,9 @@
 name: pystats
 
-"on": [pull_request]
+"on":
+  schedule:
+    # Run every Sunday at midnight
+    - cron: '0 0 * * 0'
 
 jobs:
   collect-stats:
@@ -8,6 +11,8 @@ jobs:
     steps:
     # Checkout both the ideas repo and cpython
     - uses: actions/checkout@v3
+      with:
+        ref: ${{ github.event.pull_request.head.ref }}
     - uses: actions/checkout@v3
       with:
         repository: python/cpython
@@ -17,15 +22,19 @@ jobs:
       run: |
         cd cpython
         sudo ./.github/workflows/posix-deps-apt.sh
+
     - name: Add ccache to PATH
       run: |
         echo "PATH=/usr/lib/ccache:$PATH" >> $GITHUB_ENV
+
     - name: Configure ccache action
       uses: hendrikmuhs/ccache-action@v1.2
+
     - name: Create pystats directory
       run: |
         # If we don't do this, stats are printed to the console
         mkdir /tmp/py_stats
+
     - name: Compile
       run: |
         cd cpython
@@ -44,8 +53,10 @@ jobs:
         # Run pyperformance itself on the system python, so it doesn't collect stats.
         # The benchmarks themselves are run using the python we built here.
         python -m pyperformance run -b deepcopy --output results.json --python ./cpython/install/bin/python3 || echo "done"
+
     - name: Summarize stats
       run: |
+        # The file suffix is of the form "githash-isodate", e.g. "abcdef0-2022-11-28"
         export FILE_SUFFIX=`git log --pretty=format:'%h' -n 1`-`date --rfc-3339=date`
         # Needs to run in same version of Python as build so the opcodes and source files match
         ./cpython/install/bin/python3 ./cpython/Tools/scripts/summarize_stats.py --json-output pystats-${FILE_SUFFIX}.json &> pystats-${FILE_SUFFIX}.md
@@ -57,8 +68,9 @@ jobs:
       with:
         name: stats
         path: |
-          stats/*.json
-          stats/*.md
+          *.json
+          *.md
+
     - name: Add to repo
       uses: EndBug/add-and-commit@v9
       with:
