@@ -52,7 +52,7 @@ jobs:
         rm -rf /tmp/py_stats/*
         # Run pyperformance itself on the system python, so it doesn't collect stats.
         # The benchmarks themselves are run using the python we built here.
-        python -m pyperformance run -b deepcopy --output results.json --python ./cpython/install/bin/python3 || echo "done"
+        python -m pyperformance run --output results.json --python ./cpython/install/bin/python3 || echo "done"
 
     - name: Summarize stats
       run: |
