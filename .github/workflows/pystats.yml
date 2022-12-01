@@ -5,7 +5,15 @@ name: pystats
     # Run every Sunday at midnight
     - cron: '0 0 * * 0'
   workflow_dispatch:
-
+    inputs:
+      fork:
+        description: Github user or organization of the CPython fork to analyse
+        default: python
+        required: false
+      branch:
+        description: Branch to analyse
+        default: main
+        required: false
 
 jobs:
   collect-stats:
@@ -17,7 +25,8 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
     - uses: actions/checkout@v3
       with:
-        repository: python/cpython
+        repository: ${{ inputs.fork | 'python' }}/cpython
+        ref: ${{ inputs.branch | 'main' }}
         path: cpython
 
     - name: Install Dependencies
