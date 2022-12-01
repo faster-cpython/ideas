@@ -16,3 +16,9 @@ To manually select a different fork and branch:
 ```bash
 gh workflow run pystats.yml -f fork=mdboom -f branch=my-changes
 ```
+
+Two sets of pystats output can be compared using the [`Tools/scripts/summarize_stats.py`](https://github.com/python/cpython/blob/main/Tools/scripts/summarize_stats.py) script:
+
+```bash
+Tools/scripts/summarize_stats.py pystats-python-abcdef1-2022-01-01.json pystats-python-fedc132-2022-01-03.json
+```
