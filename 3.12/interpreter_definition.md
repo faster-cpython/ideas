@@ -85,8 +85,6 @@ and a piece of C code describing its semantics::
     "op" "(" NAME "," stack_effect ")" "{" C-code "}"
     |
     "macro" "(" NAME ")" "=" uop ("+" uop)* ";"
-    |
-    "super" "(" NAME ")" "=" NAME ("+" NAME)* ";"
  
   stack_effect:
     "(" [inputs] "--" [outputs] ")"
@@ -128,10 +126,12 @@ and a piece of C code describing its semantics::
 The following definitions may occur:
 
 * `inst`: A normal instruction, as previously defined by `TARGET(NAME)` in `ceval.c`.
-* `op`: A part instruction from which macros can be constructed.
+* `op`: A micro-instruction from which macros can be constructed.
 * `macro`: A bytecode instruction constructed from ops and cache effects.
-* `super`: A super-instruction, such as `LOAD_FAST__LOAD_FAST`, constructed from
-  normal or macro instructions.
+  This may be super-instruction, such as `LOAD_FAST__LOAD_FAST`;
+  in this case we write `macro(A__B) = A + JOIN + B;`, where `JOIN` is a special
+  micro-op designed for this use case (its "cache effect" is equivalent to bumping
+  the instruction counter).
 
 `NAME` can be any ASCII identifier that is a C identifier and not a C or Python keyword.
 `foo_1` is legal. `$` is not legal, nor is `struct` or `class`.
@@ -233,7 +233,7 @@ This would generate:
 ### Super-instruction definition
 
 ```C
-    super ( LOAD_FAST__LOAD_FAST ) = LOAD_FAST + LOAD_FAST ;
+    macro ( LOAD_FAST__LOAD_FAST ) = LOAD_FAST + JOIN + LOAD_FAST ;
 ```
 This might get translated into the following:
 ```C
