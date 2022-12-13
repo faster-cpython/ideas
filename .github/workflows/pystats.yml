@@ -19,6 +19,11 @@ jobs:
   collect-stats:
     runs-on: ubuntu-latest
     steps:
+    - name: Display configuration
+      run: |
+        echo fork ${{ inputs.fork }}
+        echo branch ${{ inputs.branch }}
+
     # Checkout both the ideas repo and cpython
     - uses: actions/checkout@v3
       with:
@@ -74,7 +79,7 @@ jobs:
         export FILE_SUFFIX=${{ inputs.fork || 'python' }}-`git log --pretty=format:'%h' -n 1`-`date --rfc-3339=date`
         cd ..
         # Needs to run in same version of Python as build so the opcodes and source files match
-        ./cpython/install/bin/python3 ./cpython/Tools/scripts/summarize_stats.py --json-output pystats-${FILE_SUFFIX}.json &> pystats-${FILE_SUFFIX}.md
+        ./cpython/install/bin/python3 ./cpython/Tools/scripts/summarize_stats.py --json-output pystats-${FILE_SUFFIX}.json > pystats-${FILE_SUFFIX}.md
         cp pystats-${FILE_SUFFIX}.json stats
         cp pystats-${FILE_SUFFIX}.md stats
 
