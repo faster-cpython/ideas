@@ -84,6 +84,7 @@ jobs:
         cp pystats-${FILE_SUFFIX}.md stats
 
     - name: Upload artifacts
+      if: ${{ always() }}
       uses: actions/upload-artifact@v3
       with:
         name: stats
