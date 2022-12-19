@@ -14,7 +14,7 @@ Some links to presentations and other preliminary documentation:
 
 ## Published Results
 
-<!-- START results table -->
+<!-- START table -->
 
 pyperformance:
 
@@ -32,6 +32,6 @@ pyston:
 |  [2022-06-06 (22:26 UTC)](benchmark-results/cpython-3.11.0b3-eb0004c271-fc_linux-b2cf916db80e-pyston.json) | cpython 3.11.0b3 | eb0004c271 | fc_linux | 1.29x faster  |
 |  [2022-11-20 (02:15 UTC)](benchmark-results/cpython-3.12.0a0-b0e1f9c241-fc_linux-4119a1d33a43-pyston.json) | cpython 3.12.0a0 | b0e1f9c241 | fc_linux | 1.30x faster  |
 
-<!-- END results table -->
+<!-- END table -->
 
-There is also a [complete list of published results](benchmark-results/README.md#Benchmark-results).
+There is also a [complete list of published results](results/README.md) (and [legacy results](benchmark-results/README.md)).
