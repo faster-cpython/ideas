@@ -11,4 +11,6 @@
 - [raw results](bm-20220601-darwin-arm64-python-eb0004c27163ec089201-3.11.0b3-eb0004c.json)
 - [table vs. 3.10.4](bm-20220601-darwin-arm64-python-eb0004c27163ec089201-3.11.0b3-eb0004c-vs-3.10.4.md)
 - [plot vs. 3.10.4](bm-20220601-darwin-arm64-python-eb0004c27163ec089201-3.11.0b3-eb0004c-vs-3.10.4.png)
+- [table vs. 3.11.0](bm-20220601-darwin-arm64-python-eb0004c27163ec089201-3.11.0b3-eb0004c-vs-3.11.0.md)
+- [plot vs. 3.11.0](bm-20220601-darwin-arm64-python-eb0004c27163ec089201-3.11.0b3-eb0004c-vs-3.11.0.png)
 

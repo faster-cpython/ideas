@@ -11,6 +11,6 @@
 - [raw results](bm-20220912-darwin-arm64-python-1756ffd66a38755cd45d-3.12.0a0-1756ffd.json)
 - [table vs. 3.10.4](bm-20220912-darwin-arm64-python-1756ffd66a38755cd45d-3.12.0a0-1756ffd-vs-3.10.4.md)
 - [plot vs. 3.10.4](bm-20220912-darwin-arm64-python-1756ffd66a38755cd45d-3.12.0a0-1756ffd-vs-3.10.4.png)
-- [table vs. 3.11.0b3](bm-20220912-darwin-arm64-python-1756ffd66a38755cd45d-3.12.0a0-1756ffd-vs-3.11.0b3.md)
-- [plot vs. 3.11.0b3](bm-20220912-darwin-arm64-python-1756ffd66a38755cd45d-3.12.0a0-1756ffd-vs-3.11.0b3.png)
+- [table vs. 3.11.0](bm-20220912-darwin-arm64-python-1756ffd66a38755cd45d-3.12.0a0-1756ffd-vs-3.11.0.md)
+- [plot vs. 3.11.0](bm-20220912-darwin-arm64-python-1756ffd66a38755cd45d-3.12.0a0-1756ffd-vs-3.11.0.png)
 

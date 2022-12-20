@@ -11,6 +11,6 @@
 - [raw results](bm-20221022-linux-x86_64-python-main-3.12.0a1+-f58631b.json)
 - [table vs. 3.10.4](bm-20221022-linux-x86_64-python-main-3.12.0a1+-f58631b-vs-3.10.4.md)
 - [plot vs. 3.10.4](bm-20221022-linux-x86_64-python-main-3.12.0a1+-f58631b-vs-3.10.4.png)
-- [table vs. 3.11.0b3](bm-20221022-linux-x86_64-python-main-3.12.0a1+-f58631b-vs-3.11.0b3.md)
-- [plot vs. 3.11.0b3](bm-20221022-linux-x86_64-python-main-3.12.0a1+-f58631b-vs-3.11.0b3.png)
+- [table vs. 3.11.0](bm-20221022-linux-x86_64-python-main-3.12.0a1+-f58631b-vs-3.11.0.md)
+- [plot vs. 3.11.0](bm-20221022-linux-x86_64-python-main-3.12.0a1+-f58631b-vs-3.11.0.png)
 

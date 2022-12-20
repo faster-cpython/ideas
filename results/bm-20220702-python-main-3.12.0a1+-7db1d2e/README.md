@@ -11,6 +11,6 @@
 - [raw results](bm-20220702-linux-x86_64-python-main-3.12.0a1+-7db1d2e.json)
 - [table vs. 3.10.4](bm-20220702-linux-x86_64-python-main-3.12.0a1+-7db1d2e-vs-3.10.4.md)
 - [plot vs. 3.10.4](bm-20220702-linux-x86_64-python-main-3.12.0a1+-7db1d2e-vs-3.10.4.png)
-- [table vs. 3.11.0b3](bm-20220702-linux-x86_64-python-main-3.12.0a1+-7db1d2e-vs-3.11.0b3.md)
-- [plot vs. 3.11.0b3](bm-20220702-linux-x86_64-python-main-3.12.0a1+-7db1d2e-vs-3.11.0b3.png)
+- [table vs. 3.11.0](bm-20220702-linux-x86_64-python-main-3.12.0a1+-7db1d2e-vs-3.11.0.md)
+- [plot vs. 3.11.0](bm-20220702-linux-x86_64-python-main-3.12.0a1+-7db1d2e-vs-3.11.0.png)
 
