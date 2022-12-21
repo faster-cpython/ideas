@@ -1,9 +1,9 @@
 # Results
 
 - fork: python
-- ref: main
+- ref: 2e49bd06c5ffab7d1540
 - commit hash: [2e49bd0](https://github.com/python/cpython/commit/2e49bd0)
-- commit date: 2022-04-05T19:54:03+00:00
+- commit date: 2022-04-05T20:54:03+01:00
 - commit merge base: [None](https://github.com/python/cpython/commit/None)
 
 ## linux x86_64

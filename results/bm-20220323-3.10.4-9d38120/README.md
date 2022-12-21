@@ -1,7 +1,7 @@
 # Results
 
 - fork: python
-- ref: main
+- ref: v3.10.4
 - commit hash: [9d38120](https://github.com/python/cpython/commit/9d38120)
 - commit date: 2022-03-23T20:12:04+00:00
 - commit merge base: [None](https://github.com/python/cpython/commit/None)
