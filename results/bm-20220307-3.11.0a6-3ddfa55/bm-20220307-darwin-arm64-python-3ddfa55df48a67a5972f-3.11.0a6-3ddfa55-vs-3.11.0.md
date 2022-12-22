@@ -160,4 +160,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                               | 1.04x slower                                                          |
 
 Benchmark hidden because not significant (8): async_generators, gunicorn, json, json_dumps, json_loads, pathlib, pidigits, unpickle_list
-Ignored benchmarks (1) of public/results/bm-20221024-python-deaf509e8fc6e0363bd6-3.11.0-deaf509/bm-20221024-darwin-arm64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json: mypy
+Ignored benchmarks (1) of ../ideas/results/bm-20221024-3.11.0-deaf509/bm-20221024-darwin-arm64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json: mypy

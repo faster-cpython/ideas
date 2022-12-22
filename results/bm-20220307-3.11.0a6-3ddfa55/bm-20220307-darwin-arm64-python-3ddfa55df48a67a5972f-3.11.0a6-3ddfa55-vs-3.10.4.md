@@ -166,4 +166,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                  | 1.17x faster                                                          |
 
 Benchmark hidden because not significant (2): pickle_list, unpickle
-Ignored benchmarks (1) of public/results/bm-20220323-python-v3.10.4-3.10.4-9d38120/bm-20220323-darwin-arm64-python-v3.10.4-3.10.4-9d38120.json: mypy
+Ignored benchmarks (1) of ../ideas/results/bm-20220323-3.10.4-9d38120/bm-20220323-darwin-arm64-python-v3.10.4-3.10.4-9d38120.json: mypy

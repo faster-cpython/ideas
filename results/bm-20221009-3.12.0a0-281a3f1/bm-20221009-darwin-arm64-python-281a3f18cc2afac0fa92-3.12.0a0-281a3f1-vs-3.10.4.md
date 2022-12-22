@@ -165,4 +165,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                  | 1.20x faster                                                          |
 
 Benchmark hidden because not significant (1): bench_mp_pool
-Ignored benchmarks (3) of public/results/bm-20220323-python-v3.10.4-3.10.4-9d38120/bm-20220323-darwin-arm64-python-v3.10.4-3.10.4-9d38120.json: aiohttp, flaskblogging, gunicorn
+Ignored benchmarks (3) of ../ideas/results/bm-20220323-3.10.4-9d38120/bm-20220323-darwin-arm64-python-v3.10.4-3.10.4-9d38120.json: aiohttp, flaskblogging, gunicorn

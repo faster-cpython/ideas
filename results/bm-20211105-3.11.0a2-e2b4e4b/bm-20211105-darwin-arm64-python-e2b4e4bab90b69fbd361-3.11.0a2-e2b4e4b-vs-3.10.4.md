@@ -164,4 +164,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                  | 1.15x faster                                                          |
 
 Benchmark hidden because not significant (3): bench_mp_pool, regex_dna, unpickle
-Ignored benchmarks (4) of public/results/bm-20220323-python-v3.10.4-3.10.4-9d38120/bm-20220323-darwin-arm64-python-v3.10.4-3.10.4-9d38120.json: aiohttp, mypy, sqlalchemy_declarative, sqlalchemy_imperative
+Ignored benchmarks (4) of ../ideas/results/bm-20220323-3.10.4-9d38120/bm-20220323-darwin-arm64-python-v3.10.4-3.10.4-9d38120.json: aiohttp, mypy, sqlalchemy_declarative, sqlalchemy_imperative

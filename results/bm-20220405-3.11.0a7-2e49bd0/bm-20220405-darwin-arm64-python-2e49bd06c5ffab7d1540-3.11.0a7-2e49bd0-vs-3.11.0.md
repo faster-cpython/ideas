@@ -155,4 +155,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                               | 1.01x slower                                                          |
 
 Benchmark hidden because not significant (13): 2to3, aiohttp, async_tree_memoization, flaskblogging, float, gunicorn, mypy, pickle, pidigits, scimark_monte_carlo, telco, tornado_http, xml_etree_process
-Ignored benchmarks (1) of public/results/bm-20221024-python-deaf509e8fc6e0363bd6-3.11.0-deaf509/bm-20221024-darwin-arm64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json: coverage
+Ignored benchmarks (1) of ../ideas/results/bm-20221024-3.11.0-deaf509/bm-20221024-darwin-arm64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json: coverage

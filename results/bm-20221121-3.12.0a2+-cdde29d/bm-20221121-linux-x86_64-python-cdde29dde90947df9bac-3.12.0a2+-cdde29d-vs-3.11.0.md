@@ -160,4 +160,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                  | 1.03x faster                                                           |
 
 Benchmark hidden because not significant (6): async_generators, async_tree_none, async_tree_cpu_io_mixed, async_tree_memoization, bench_mp_pool, xml_etree_generate
-Ignored benchmarks (4) of public/results/bm-20221024-python-v3.11.0-3.11.0-deaf509/bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509.json: flaskblogging, pylint, sqlalchemy_declarative, sqlalchemy_imperative
+Ignored benchmarks (4) of ../ideas/results/bm-20221024-3.11.0-deaf509/bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509.json: flaskblogging, pylint, sqlalchemy_declarative, sqlalchemy_imperative

@@ -157,4 +157,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                  | 1.02x faster                                           |
 
 Benchmark hidden because not significant (8): async_tree_none, async_tree_io, mako, nbody, pylint, regex_dna, scimark_lu, xml_etree_process
-Ignored benchmarks (7) of public/results/bm-20221024-python-v3.11.0-3.11.0-deaf509/bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509.json: async_generators, bench_mp_pool, bench_thread_pool, docutils, flaskblogging, sqlalchemy_declarative, sqlalchemy_imperative
+Ignored benchmarks (7) of ../ideas/results/bm-20221024-3.11.0-deaf509/bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509.json: async_generators, bench_mp_pool, bench_thread_pool, docutils, flaskblogging, sqlalchemy_declarative, sqlalchemy_imperative

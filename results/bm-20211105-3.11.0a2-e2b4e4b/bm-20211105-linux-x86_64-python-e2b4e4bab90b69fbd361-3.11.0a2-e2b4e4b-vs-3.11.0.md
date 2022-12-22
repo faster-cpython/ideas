@@ -162,4 +162,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                  | 1.09x slower                                                          |
 
 Benchmark hidden because not significant (6): bench_mp_pool, json, logging_simple, pylint, unpack_sequence, xml_etree_parse
-Ignored benchmarks (2) of public/results/bm-20221024-python-v3.11.0-3.11.0-deaf509/bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509.json: aiohttp, mypy
+Ignored benchmarks (2) of ../ideas/results/bm-20221024-3.11.0-deaf509/bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509.json: aiohttp, mypy

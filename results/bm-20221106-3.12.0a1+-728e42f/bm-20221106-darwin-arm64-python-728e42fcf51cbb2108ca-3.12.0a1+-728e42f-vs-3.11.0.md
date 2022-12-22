@@ -161,4 +161,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                               | 1.04x slower                                                           |
 
 Benchmark hidden because not significant (5): crypto_pyaes, mypy, pathlib, pickle_dict, tornado_http
-Ignored benchmarks (5) of public/results/bm-20221024-python-deaf509e8fc6e0363bd6-3.11.0-deaf509/bm-20221024-darwin-arm64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json: aiohttp, flaskblogging, gunicorn, sqlalchemy_declarative, sqlalchemy_imperative
+Ignored benchmarks (5) of ../ideas/results/bm-20221024-3.11.0-deaf509/bm-20221024-darwin-arm64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json: aiohttp, flaskblogging, gunicorn, sqlalchemy_declarative, sqlalchemy_imperative

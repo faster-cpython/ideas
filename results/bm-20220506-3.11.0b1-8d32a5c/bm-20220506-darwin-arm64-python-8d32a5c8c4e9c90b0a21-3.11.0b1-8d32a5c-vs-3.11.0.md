@@ -155,4 +155,4 @@ All benchmarks:
 | Geometric mean          | (ref)                                                               | 1.01x slower                                                          |
 
 Benchmark hidden because not significant (15): bench_mp_pool, deepcopy, deepcopy_reduce, flaskblogging, genshi_text, gunicorn, logging_silent, mako, mypy, pathlib, pidigits, pylint, tornado_http, xml_etree_parse, xml_etree_iterparse
-Ignored benchmarks (1) of public/results/bm-20221024-python-deaf509e8fc6e0363bd6-3.11.0-deaf509/bm-20221024-darwin-arm64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json: coverage
+Ignored benchmarks (1) of ../ideas/results/bm-20221024-3.11.0-deaf509/bm-20221024-darwin-arm64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json: coverage
