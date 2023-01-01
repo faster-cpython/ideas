@@ -43,6 +43,7 @@
 | [2022-12-11](bm-20221211-3.12.0a3+-70be5e4) | python | 70be5e42f6 | 3.12.0a3+ | 70be5e4 | [1.30x faster](bm-20221211-3.12.0a3+-70be5e4/bm-20221211-linux-x86_64-python-70be5e42f6e288de32e0-3.12.0a3+-70be5e4-vs-3.10.4.md) | [1.03x faster](bm-20221211-3.12.0a3+-70be5e4/bm-20221211-linux-x86_64-python-70be5e42f6e288de32e0-3.12.0a3+-70be5e4-vs-3.11.0.md) |  |
 | [2022-12-19](bm-20221219-3.12.0a3+-702a5bc) | python | 702a5bc463 | 3.12.0a3+ | 702a5bc | [1.31x faster](bm-20221219-3.12.0a3+-702a5bc/bm-20221219-linux-x86_64-python-702a5bc4637c82dc011e-3.12.0a3+-702a5bc-vs-3.10.4.md) | [1.04x faster](bm-20221219-3.12.0a3+-702a5bc/bm-20221219-linux-x86_64-python-702a5bc4637c82dc011e-3.12.0a3+-702a5bc-vs-3.11.0.md) |  |
 | [2022-12-24](bm-20221224-3.12.0a3+-b9aa14a) | python | main | 3.12.0a3+ | b9aa14a | [1.30x faster](bm-20221224-3.12.0a3+-b9aa14a/bm-20221224-linux-x86_64-python-main-3.12.0a3+-b9aa14a-vs-3.10.4.md) | [1.03x faster](bm-20221224-3.12.0a3+-b9aa14a/bm-20221224-linux-x86_64-python-main-3.12.0a3+-b9aa14a-vs-3.11.0.md) |  |
+| [2022-12-31](bm-20221231-3.12.0a3+-1f6c87c) | python | main | 3.12.0a3+ | 1f6c87c | [1.30x faster](bm-20221231-3.12.0a3+-1f6c87c/bm-20221231-linux-x86_64-python-main-3.12.0a3+-1f6c87c-vs-3.10.4.md) | [1.03x faster](bm-20221231-3.12.0a3+-1f6c87c/bm-20221231-linux-x86_64-python-main-3.12.0a3+-1f6c87c-vs-3.11.0.md) |  |
 
 ## darwin arm64
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
