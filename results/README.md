@@ -4,6 +4,7 @@
 ## linux x86_64
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2022-12-21](bm-20221221-3.9.10-258cab1) | faster_cpython | nogil | 3.9.10 | 258cab1 | [1.00x faster](bm-20221221-3.9.10-258cab1/bm-20221221-linux-x86_64-faster_cpython-nogil-3.9.10-258cab1-vs-3.10.4.md) | [1.26x slower](bm-20221221-3.9.10-258cab1/bm-20221221-linux-x86_64-faster_cpython-nogil-3.9.10-258cab1-vs-3.11.0.md) |  |
 | [2022-03-23](bm-20220323-3.10.4-9d38120) | python | v3.10.4 | 3.10.4 | 9d38120 |  | [1.26x slower](bm-20220323-3.10.4-9d38120/bm-20220323-linux-x86_64-python-v3.10.4-3.10.4-9d38120-vs-3.11.0.md) |  |
 | [2022-12-06](bm-20221206-3.10.9-1dd9be6) | python | 1dd9be6584 | 3.10.9 | 1dd9be6 | [1.00x slower](bm-20221206-3.10.9-1dd9be6/bm-20221206-linux-x86_64-python-1dd9be6584413fbfa823-3.10.9-1dd9be6-vs-3.10.4.md) | [1.26x slower](bm-20221206-3.10.9-1dd9be6/bm-20221206-linux-x86_64-python-1dd9be6584413fbfa823-3.10.9-1dd9be6-vs-3.11.0.md) |  |
 | [2021-10-05](bm-20211005-3.11.0a1-7c12e48) | python | 7c12e4835e | 3.11.0a1 | 7c12e48 | [1.12x faster](bm-20211005-3.11.0a1-7c12e48/bm-20211005-linux-x86_64-python-7c12e4835ebe52287acd-3.11.0a1-7c12e48-vs-3.10.4.md) | [1.12x slower](bm-20211005-3.11.0a1-7c12e48/bm-20211005-linux-x86_64-python-7c12e4835ebe52287acd-3.11.0a1-7c12e48-vs-3.11.0.md) |  |
