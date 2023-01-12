@@ -8,17 +8,17 @@
 
 ## linux x86_64
 
-- [raw results](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d.json)
-- [table vs. 3.10.4](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d-vs-3.10.4.md)
-- [plot vs. 3.10.4](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d-vs-3.10.4.png)
-- [table vs. 3.11.0](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d-vs-3.11.0.md)
-- [plot vs. 3.11.0](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d-vs-3.11.0.png)
+- [raw results](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d.json)
+- [table vs. 3.10.4](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d-vs-3.10.4.md)
+- [plot vs. 3.10.4](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d-vs-3.10.4.png)
+- [table vs. 3.11.0](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d-vs-3.11.0.md)
+- [plot vs. 3.11.0](bm-20221121-linux-x86_64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d-vs-3.11.0.png)
 
 ## darwin arm64
 
-- [raw results](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d.json)
-- [table vs. 3.10.4](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d-vs-3.10.4.md)
-- [plot vs. 3.10.4](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d-vs-3.10.4.png)
-- [table vs. 3.11.0](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d-vs-3.11.0.md)
-- [plot vs. 3.11.0](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2+-cdde29d-vs-3.11.0.png)
+- [raw results](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d.json)
+- [table vs. 3.10.4](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d-vs-3.10.4.md)
+- [plot vs. 3.10.4](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d-vs-3.10.4.png)
+- [table vs. 3.11.0](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d-vs-3.11.0.md)
+- [plot vs. 3.11.0](bm-20221121-darwin-arm64-python-cdde29dde90947df9bac-3.12.0a2%2B-cdde29d-vs-3.11.0.png)
 
