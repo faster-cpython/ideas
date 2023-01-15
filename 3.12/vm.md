@@ -47,7 +47,8 @@ Note that some of these are raw arrays, whereas others are Python objects (typic
 ## Instruction dispatch
 
 The instruction decoding logic is supposed to be equivalent to the following.
-Note the special case for the ``EXTENDED_ARG`` opcode -- this is used (rarely) when the ``oparg`` value (most likely a jump offset) doesn't fit in 8 bits.
+Note the special case for the ``EXTENDED_ARG`` opcode --
+this is used (rarely) when the ``oparg`` value (e.g. a jump offset) doesn't fit in 8 bits.
 
 ```cc
 _Py_CODEUNIT next_instr = ...;
@@ -55,24 +56,29 @@ PyObject **stack_pointer = ...;
 
 for (;;) {
     _Py_CODEUNIT word = *next_instr++;
-    uint8_t opcode = _Py_OPCODE(word);  // First byte
-    uint32 oparg = _Py_OPARG(word);  // Second byte
+    uint8_t opcode = word.first_byte;
+    uint32 oparg = word.second_byte;  // Second byte
 
     while (opcode == EXTENDED_ARG) {
         word = *next_instr++;
-        oparg = _Py_OPCODE(word);
-        oparg = (oparg << 8) | _Py_OPARG(word);
+        oparg = word.first_byte;
+        oparg = (oparg << 8) | word.second_byte;
     }
 
     switch (opcode) {
+
         case NOP:
             break;
+
         case OP:
             ... // Code for OP
             break;
+
         ... // Etc.
+
         default:
             Py_FatalError("...");  // Does not return
+
     }
 }
 ```
@@ -82,24 +88,25 @@ for (;;) {
 A jump or branch simply adjusts ``next_instr``:
 
 ```cc
-case JUMP_BACKWARD:
-    next_instr -= oparg;
-    CHECK_EVAL_BREAKER();
-    break;
+        case JUMP_BACKWARD:
+            next_instr -= oparg;
+            CHECK_EVAL_BREAKER();
+            break;
 
-case JUMP_FORWARD:
-    next_instr += oparg;
-    break;
+        case JUMP_FORWARD:
+            next_instr += oparg;
+            break;
 
-case POP_JUMP_IF_TRUE:
-    PyObject *cond = POP();
-    jump = Py_IsTrue(cond);
-    Py_DECREF(cond);
-    if (jump) {
-        next_instr += oparg;
-    }
-    break;
-// Etc.
+        case POP_JUMP_IF_TRUE:
+            PyObject *cond = POP();
+            jump = Py_IsTrue(cond);
+            Py_DECREF(cond);
+            if (jump) {
+                next_instr += oparg;
+            }
+            break;
+
+        // Etc.
 ```
 
 There is no absolute jump instruction (the compiler uses a relative forward or backward jump).
@@ -111,11 +118,11 @@ The actual code uses a macro ``JUMPBY(n)`` defined as ``next_instr += (n)``.
 When an instruction has inline cache data, the following idiom is used (obscured by macros):
 
 ```cc
-case OP:
-    struct CacheForOp *cache = (struct CacheForOp *)next_instr;
-    ... // Code using cache
-    next_instr += sizeof(struct CacheForOp) / sizeof(_Py_CODEUNIT);
-    break;
+        case OP:
+            struct CacheForOp *cache = (struct CacheForOp *)next_instr;
+            ... // Code using cache
+            next_instr += sizeof(struct CacheForOp) / sizeof(_Py_CODEUNIT);
+            break;
 ```
 
 # Proposal: variable length instructions
@@ -135,14 +142,15 @@ The dispatch code would look like this:
 ```cc
 for (;;) {
     _Py_CODEUNIT word = *next_instr++;
-    uint8_t opcode = _Py_OPCODE(word);  // First byte
-    uint32 oparg1 = _Py_OPARG(word);  // Second byte
+    uint8_t opcode = word.first_byte;
+    uint32 oparg1 = word.second_byte;
     uint32 oparg2;
     uint32 oparg3;
     uint32 oparg4;
     uint32 oparg5;
 
     switch (opcode) {
+
         case NOP:
             break;
 
@@ -164,6 +172,7 @@ for (;;) {
             break;
 
         ...  // Etc.
+
     }
 }
 ```
@@ -172,61 +181,68 @@ A design detail is what to do if ``oparg2`` or ``oparg3`` needs to be extended.
 Because not all instructions use ``oparg2`` etc., we can't simply extend the
 ``EXTENDED_ARG`` scheme of the basic interpreter.
 
-One possibility would be to have instructions ``EXTENDED_ARG_2``, ``EXTENDED_ARG_3``, etc., defined as follows:
+One possibility would be to have an instructions ``EXTENDED_ARG_3``, itself having three arguments.
+It would do the same thing as ``EXTENDED_ARG``, first decoding its own three arguments,
+then decode the following instruction (which is also assumed to have three arguments), and then...
+It *switches* on that opcode and jumps into the implementation of that instruction *past* the argument decoding step.
 
 ```cc
 for (;;) {
     _Py_CODEUNIT word = *next_instr++;
-    uint8_t opcode = _Py_OPCODE(word);  // First byte
-    uint32 oparg1 = _Py_OPARG(word);  // Second byte
-    uint32 oparg2 = 0;
-    uint32 oparg3 = 0;
-    uint32 oparg4 = 0;
-    uint32 oparg5 = 0;
+    uint8_t opcode = word.first_byte;
+    uint32 oparg1 = word.second_byte;
+    uint32 oparg2;
+    uint32 oparg3;
+    uint32 oparg4;
+    uint32 oparg5;
 
-top:
     switch (oparg) {
-
-        case EXTENDED_ARG__1:
-            // This works the same as before
-            oparg1 = oparg1 << 8;
-            word = *next_instr++;
-            opcode = _Py_OPCODE(word);
-            oparg1 = (oparg1 << 8) | _Py_OPARG(word);
-            goto top;
-
-        case EXTENDED_ARG_2:
-            oparg2 = (oparg2 | oparg1) << 8;
-            break;
-
-        case EXTENDED_ARG_3:
-            oparg3 = (oparg3 | oparg1) << 8;
-            break;
-
-        ... // Likewise EXTENDED_ARG_4, 5
-
-        case OP_2_ARGS:
-            word = *next_instr++;
-            oparg2 = oparg2 | word.first_byte;
-            ... // Code using oparg1 and oparg2
-            oparg2 = 0;
-            break;
 
         case OP_3_ARGS:
             word = *next_instr++;
             oparg2 = oparg2 | word.first_byte;
             oparg3 = oparg3 | word.second_byte;
+        into_op_3_args:
             ... // Code using oparg1, oparg2 and oparg3
-            oparg2 = 0;
-            oparg3 = 0;
             break;
+
+        case EXTENDED_ARG_3:
+            // Decode second word of EXTENDED_ARG_3
+            word = *next_instr++;
+            oparg2 = word.first_byte;
+            oparg3 = word.second_byte;
+        into_extended_arg_3:
+            // Decode following 3-arg instruction
+            // First word
+            word = *next_instr++;
+            opcode = word.first_byte;
+            oparg1 = (oparg1 << 8) | word.second_byte;
+            // Second word
+            word = *next_instr++;
+            oparg2 = (oparg2 << 8) | word.first_byte;
+            oparg3 = (oparg3 << 8) | word.second_byte;
+            // Jump *into* the desired instruction,
+            // after the instruction decoding part
+            switch (oparg) {
+                case OP_3_args:
+                    goto into_op_3_args;
+                // A case for every 3-arg opcode
+                case EXTENDED_ARG_3:
+                    goto into_extended_arg_3;
+                default:
+                    Py_FatalError("...");
+            }
+
     }
 }
 ```
 
-Thus, instructions that use ``oparg2``, ``oparg3``, etc., are required to reset their argument to zero afterwards.
-This seems awkward, but our code generator can ensure that this happens.
-(It does require that the code generator controls all paths out of the instruction, including ``ERROR_IF()`` and ``DEOPT_IF()``.)
+The inner switch only contains cases for 2-arg and 3-arg opcodes.
+There should be a similar opcode ``EXTENDED_ARG_5`` which handles 4-arg and 5-arg opcodes.
+(For 2-arg and 4-arg opcodes, we waste some time setting ``oparg3`` or ``oparg5``,
+but this should not be a big deal as long as extended arguments are rare.)
+The original ``EXTENDED_ARG`` should still be retained for 1-arg opcodes.
+The code generator can conveniently generate the necessary labels and the switch.
 
 ### Example
 
@@ -234,15 +250,30 @@ Suppose we wanted to emit a ``BINARY_OP`` instruction with opargs ``1, 2, 1000, 
 We'd emit this sequence:
 
 ```
-EXTENDED_ARG_3  3
+EXTENDED_ARG_3  0, 0, 3
 BINARY_OP       1, 2, 232, 4
 ```
 
 And for ``BINARY_OP 100000, 2, 1000, 4`` we'd do:
 
 ```
-EXTENDED_ARG_1  1
-EXTENDED_ARG_1  134
-EXTENDED_ARG_3  3
+EXTENDED_ARG_3  1, 0, 0
+EXTENDED_ARG_3  134, 0, 3
 BINARY_OP       160, 2, 232, 4
+```
+
+Note that in this case, because ``BINARY_OP`` has _four_ arguments, we need to jump into the ``BINARY_OP`` implementation after the decoding of the second word of but before the decoding of the third and final word of the instruction.
+This means that the generated code for ``BINARY_OP`` would look like this:
+
+```cc
+        case BINARY_OP:
+            word = *next_instr++;
+            oparg2 = word.first_byte;
+            oparg3 = word.second_byte;
+        into_binary_op_3:  // Label for EXTENDED_ARG_3
+            word = *next_instr++;
+            oparg4 = word.first_byte;
+        into_binary_op_5:  // Label for EXTENDED_ARG_5
+            ... // Implementation of BINARY_OP
+            break;
 ```
