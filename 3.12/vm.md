@@ -262,7 +262,7 @@ EXTENDED_ARG_3  134, 0, 3
 BINARY_OP       160, 2, 232, 4
 ```
 
-Note that in this case, because ``BINARY_OP`` has _four_ arguments, we need to jump into the ``BINARY_OP`` implementation after the decoding of the second word of but before the decoding of the third and final word of the instruction.
+Note that in this case, because ``BINARY_OP`` has _four_ arguments, we need to jump into the ``BINARY_OP`` implementation after the decoding of the second word but before the decoding of the third and final word of the instruction.
 This means that the generated code for ``BINARY_OP`` would look like this:
 
 ```cc
