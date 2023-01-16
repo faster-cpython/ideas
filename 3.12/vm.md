@@ -200,8 +200,8 @@ for (;;) {
 
         case OP_3_ARGS:
             word = *next_instr++;
-            oparg2 = oparg2 | word.first_byte;
-            oparg3 = oparg3 | word.second_byte;
+            oparg2 = word.first_byte;
+            oparg3 = word.second_byte;
         into_op_3_args:
             ... // Code using oparg1, oparg2 and oparg3
             break;
