@@ -57,11 +57,11 @@ PyObject **stack_pointer = ...;
 for (;;) {
     _Py_CODEUNIT word = *next_instr++;
     uint8_t opcode = word.first_byte;
-    uint32 oparg = word.second_byte;  // Second byte
+    uint32_t oparg = word.second_byte;
 
     while (opcode == EXTENDED_ARG) {
         word = *next_instr++;
-        oparg = word.first_byte;
+        opcode = word.first_byte;
         oparg = (oparg << 8) | word.second_byte;
     }
 
