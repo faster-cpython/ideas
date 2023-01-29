@@ -54,6 +54,7 @@
 | [2023-01-19](bm-20230119-3.12.0a4+-8a2d4f4) | python | 8a2d4f4e8e | 3.12.0a4+ | 8a2d4f4 | [1.30x faster \*](bm-20230119-3.12.0a4+-8a2d4f4/bm-20230119-linux-x86_64-python-8a2d4f4e8eea86352de3-3.12.0a4+-8a2d4f4-vs-3.10.4.md) | [1.03x faster \*](bm-20230119-3.12.0a4+-8a2d4f4/bm-20230119-linux-x86_64-python-8a2d4f4e8eea86352de3-3.12.0a4+-8a2d4f4-vs-3.11.0.md) |  |
 | [2023-01-21](bm-20230121-3.12.0a4+-c1c5882) | python | main | 3.12.0a4+ | c1c5882 | [1.30x faster \*](bm-20230121-3.12.0a4+-c1c5882/bm-20230121-linux-x86_64-python-main-3.12.0a4+-c1c5882-vs-3.10.4.md) | [1.03x faster \*](bm-20230121-3.12.0a4+-c1c5882/bm-20230121-linux-x86_64-python-main-3.12.0a4+-c1c5882-vs-3.11.0.md) |  |
 | [2023-01-24](bm-20230124-3.12.0a4+-1a9d8c7) | python | 1a9d8c750b | 3.12.0a4+ | 1a9d8c7 | [1.30x faster \*](bm-20230124-3.12.0a4+-1a9d8c7/bm-20230124-linux-x86_64-python-1a9d8c750be83e6abb65-3.12.0a4+-1a9d8c7-vs-3.10.4.md) | [1.03x faster \*](bm-20230124-3.12.0a4+-1a9d8c7/bm-20230124-linux-x86_64-python-1a9d8c750be83e6abb65-3.12.0a4+-1a9d8c7-vs-3.11.0.md) |  |
+| [2023-01-28](bm-20230128-3.12.0a4+-666c084) | python | main | 3.12.0a4+ | 666c084 | [1.30x faster \*](bm-20230128-3.12.0a4+-666c084/bm-20230128-linux-x86_64-python-main-3.12.0a4+-666c084-vs-3.10.4.md) | [1.03x faster \*](bm-20230128-3.12.0a4+-666c084/bm-20230128-linux-x86_64-python-main-3.12.0a4+-666c084-vs-3.11.0.md) |  |
 
 ## darwin arm64
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
@@ -95,6 +96,7 @@
 | [2023-01-08](bm-20230108-3.12.0a3+-1dfe27a) | eduardo-elizondo | immortal_r | 3.12.0a3+ | 1dfe27a | [1.24x faster \*](bm-20230108-3.12.0a3+-1dfe27a/bm-20230108-darwin-arm64-eduardo%2delizondo-immortal_references-3.12.0a3+-1dfe27a-vs-3.10.4.md) | [1.02x faster \*](bm-20230108-3.12.0a3+-1dfe27a/bm-20230108-darwin-arm64-eduardo%2delizondo-immortal_references-3.12.0a3+-1dfe27a-vs-3.11.0.md) | [1.02x faster](bm-20230108-3.12.0a3+-1dfe27a/bm-20230108-darwin-arm64-eduardo%2delizondo-immortal_references-3.12.0a3+-1dfe27a-vs-base.md) |
 | [2023-01-14](bm-20230114-3.12.0a4+-206f05a) | python | main | 3.12.0a4+ | 206f05a | [1.22x faster \*](bm-20230114-3.12.0a4+-206f05a/bm-20230114-darwin-arm64-python-main-3.12.0a4+-206f05a-vs-3.10.4.md) | [1.00x faster \*](bm-20230114-3.12.0a4+-206f05a/bm-20230114-darwin-arm64-python-main-3.12.0a4+-206f05a-vs-3.11.0.md) |  |
 | [2023-01-21](bm-20230121-3.12.0a4+-c1c5882) | python | main | 3.12.0a4+ | c1c5882 | [1.22x faster \*](bm-20230121-3.12.0a4+-c1c5882/bm-20230121-darwin-arm64-python-main-3.12.0a4+-c1c5882-vs-3.10.4.md) | [1.00x faster \*](bm-20230121-3.12.0a4+-c1c5882/bm-20230121-darwin-arm64-python-main-3.12.0a4+-c1c5882-vs-3.11.0.md) |  |
+| [2023-01-28](bm-20230128-3.12.0a4+-666c084) | python | main | 3.12.0a4+ | 666c084 | [1.23x faster \*](bm-20230128-3.12.0a4+-666c084/bm-20230128-darwin-arm64-python-main-3.12.0a4+-666c084-vs-3.10.4.md) | [1.00x faster \*](bm-20230128-3.12.0a4+-666c084/bm-20230128-darwin-arm64-python-main-3.12.0a4+-666c084-vs-3.11.0.md) |  |
 
 
 <!-- END table -->
