@@ -6,6 +6,28 @@
 - commit hash: [c1c5882](https://github.com/python/cpython/commit/c1c5882)
 - commit date: 2023-01-21T21:44:41+00:00
 
+## darwin arm64
+
+- cpu model: missing
+- platform: macOS-12.6-arm64-arm-64bit
+- [raw results](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882.json)
+
+### vs. 3.10.4
+
+- 1.22x faster \*
+- missing benchmarks: aiohttp, flaskblogging, gunicorn, pylint, sqlalchemy_declarative, sqlalchemy_imperative
+- new benchmarks: asyncio_tcp, create_gc_cycles, dask, gc_traversal
+- [table](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882-vs-3.10.4.md)
+- [plot](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882-vs-3.10.4.png)
+
+### vs. 3.11.0
+
+- 1.00x faster \*
+- missing benchmarks: aiohttp, flaskblogging, gunicorn, pylint, sqlalchemy_declarative, sqlalchemy_imperative
+- new benchmarks: asyncio_tcp, create_gc_cycles, dask, gc_traversal
+- [table](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882-vs-3.11.0.md)
+- [plot](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882-vs-3.11.0.png)
+
 ## linux x86_64
 
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
@@ -29,26 +51,4 @@
 - new benchmarks: asyncio_tcp, create_gc_cycles, dask, djangocms, gc_traversal
 - [table](bm-20230121-linux-x86_64-python-main-3.12.0a4%2B-c1c5882-vs-3.11.0.md)
 - [plot](bm-20230121-linux-x86_64-python-main-3.12.0a4%2B-c1c5882-vs-3.11.0.png)
-
-## darwin arm64
-
-- cpu model: missing
-- platform: macOS-12.6-arm64-arm-64bit
-- [raw results](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882.json)
-
-### vs. 3.10.4
-
-- 1.22x faster \*
-- missing benchmarks: aiohttp, flaskblogging, gunicorn, pylint, sqlalchemy_declarative, sqlalchemy_imperative
-- new benchmarks: asyncio_tcp, create_gc_cycles, dask, gc_traversal
-- [table](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882-vs-3.10.4.md)
-- [plot](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882-vs-3.10.4.png)
-
-### vs. 3.11.0
-
-- 1.00x faster \*
-- missing benchmarks: aiohttp, flaskblogging, gunicorn, pylint, sqlalchemy_declarative, sqlalchemy_imperative
-- new benchmarks: asyncio_tcp, create_gc_cycles, dask, gc_traversal
-- [table](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882-vs-3.11.0.md)
-- [plot](bm-20230121-darwin-arm64-python-main-3.12.0a4%2B-c1c5882-vs-3.11.0.png)
 
