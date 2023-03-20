@@ -1,12 +1,12 @@
 # Results
 
 - fork: python
-- ref: main
 - version: 3.12.0a5+
 - commit hash: [d3ca042](https://github.com/python/cpython/commit/d3ca042)
 - commit date: 2023-03-06T22:56:19+09:00
+- ref: main
 
-## darwin arm64
+## darwin arm64 (darwin)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4333575608)
 - cpu model: missing

@@ -1,12 +1,12 @@
 # Results
 
 - fork: python
-- ref: 2b428a1faed88f148ede
 - version: 3.12.0a0
 - commit hash: [2b428a1](https://github.com/python/cpython/commit/2b428a1)
 - commit date: 2022-09-26T00:06:11-04:00
+- ref: 2b428a1faed88f148ede
 
-## darwin arm64
+## darwin arm64 (darwin)
 
 - cpu model: missing
 - platform: macOS-12.6-arm64-arm-64bit

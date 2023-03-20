@@ -1,12 +1,12 @@
 # Results
 
 - fork: python
-- ref: feec49c40736fc05626a
 - version: 3.12.0a5+
 - commit hash: [feec49c](https://github.com/python/cpython/commit/feec49c)
 - commit date: 2023-02-08T09:31:12+00:00
+- ref: feec49c40736fc05626a
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
 - platform: Linux-5.4.0-122-generic-x86_64-with-glibc2.31

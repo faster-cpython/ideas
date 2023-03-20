@@ -1,12 +1,12 @@
 # Results
 
 - fork: python
-- ref: main
 - version: 3.12.0a5+
 - commit hash: [eff9f43](https://github.com/python/cpython/commit/eff9f43)
 - commit date: 2023-03-04T13:39:52-08:00
+- ref: main
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4333575608)
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz

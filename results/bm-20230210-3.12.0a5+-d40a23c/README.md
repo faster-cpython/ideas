@@ -1,12 +1,12 @@
 # Results
 
 - fork: python
-- ref: d40a23c0a11060ba7fa0
 - version: 3.12.0a5+
 - commit hash: [d40a23c](https://github.com/python/cpython/commit/d40a23c)
 - commit date: 2023-02-10T08:25:02+01:00
+- ref: d40a23c0a11060ba7fa0
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
 - platform: Linux-5.4.0-122-generic-x86_64-with-glibc2.31

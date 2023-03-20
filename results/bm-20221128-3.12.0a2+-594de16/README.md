@@ -1,12 +1,12 @@
 # Results
 
 - fork: python
-- ref: 594de165bf2f21d6b28e
 - version: 3.12.0a2+
 - commit hash: [594de16](https://github.com/python/cpython/commit/594de16)
 - commit date: 2022-11-28T01:49:10-05:00
+- ref: 594de165bf2f21d6b28e
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
 - platform: Linux-5.4.0-122-generic-x86_64-with-glibc2.31
@@ -26,7 +26,7 @@
 - [table](bm-20221128-linux-x86_64-python-594de165bf2f21d6b28e-3.12.0a2%2B-594de16-vs-3.11.0.md)
 - [plot](bm-20221128-linux-x86_64-python-594de165bf2f21d6b28e-3.12.0a2%2B-594de16-vs-3.11.0.png)
 
-## darwin arm64
+## darwin arm64 (darwin)
 
 - cpu model: missing
 - platform: macOS-12.6-arm64-arm-64bit

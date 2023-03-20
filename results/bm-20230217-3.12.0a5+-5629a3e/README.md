@@ -1,13 +1,13 @@
 # Results
 
 - fork: faster-cpython
-- ref: pep_669_incremental
 - version: 3.12.0a5+
 - commit hash: [5629a3e](https://github.com/faster%2dcpython/cpython/commit/5629a3e)
 - commit date: 2023-02-17T16:01:37+00:00
 - commit merge base: [d9199175c7386a95aaac91822a2197b9365eb0e8](https://github.com/faster%2dcpython/cpython/commit/d9199175c7386a95aaac91822a2197b9365eb0e8)
+- ref: pep_669_incremental
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4205439451)
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz

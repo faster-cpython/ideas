@@ -1,13 +1,13 @@
 # Results
 
 - fork: ericsnowcurrently
-- ref: isolate_interned_dic
 - version: 3.12.0a5+
 - commit hash: [969caba](https://github.com/ericsnowcurrently/cpython/commit/969caba)
 - commit date: 2023-02-28T14:18:12-07:00
 - commit merge base: [880437d4ec65ef35d505eeaff9dad5c6654dbc1a](https://github.com/ericsnowcurrently/cpython/commit/880437d4ec65ef35d505eeaff9dad5c6654dbc1a)
+- ref: isolate_interned_dic
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4297757282)
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz

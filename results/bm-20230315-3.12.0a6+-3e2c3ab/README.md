@@ -1,13 +1,13 @@
 # Results
 
 - fork: faster-cpython
-- ref: allow_non_python_fra
 - version: 3.12.0a6+
 - commit hash: [3e2c3ab](https://github.com/faster%2dcpython/cpython/commit/3e2c3ab)
 - commit date: 2023-03-15T19:10:51+00:00
 - commit merge base: [b45d14b88611fefc6f054226d3e1117082d322c8](https://github.com/faster%2dcpython/cpython/commit/b45d14b88611fefc6f054226d3e1117082d322c8)
+- ref: allow_non_python_fra
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4436926255)
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz

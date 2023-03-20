@@ -1,13 +1,13 @@
 # Results
 
 - fork: brandtbucher
-- ref: load_attr_class_from
 - version: 3.12.0a4+
 - commit hash: [8b346a3](https://github.com/brandtbucher/cpython/commit/8b346a3)
 - commit date: 2023-01-16T13:41:45-08:00
 - commit merge base: [1a9d8c750be83e6abb65769d312361fe9742de02](https://github.com/brandtbucher/cpython/commit/1a9d8c750be83e6abb65769d312361fe9742de02)
+- ref: load_attr_class_from
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
 - platform: Linux-5.4.0-122-generic-x86_64-with-glibc2.31

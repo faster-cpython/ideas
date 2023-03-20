@@ -1,12 +1,12 @@
 # Results
 
 - fork: python
-- ref: dfb5d272e6b99c2c70c6
 - version: 3.12.0a0
 - commit hash: [dfb5d27](https://github.com/python/cpython/commit/dfb5d27)
 - commit date: 2022-10-24T05:58:27-07:00
+- ref: dfb5d272e6b99c2c70c6
 
-## darwin arm64
+## darwin arm64 (darwin)
 
 - cpu model: missing
 - platform: macOS-12.6-arm64-arm-64bit

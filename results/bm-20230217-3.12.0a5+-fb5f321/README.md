@@ -1,13 +1,13 @@
 # Results
 
 - fork: faster-cpython
-- ref: restrict_for_iter_sp
 - version: 3.12.0a5+
 - commit hash: [fb5f321](https://github.com/faster%2dcpython/cpython/commit/fb5f321)
 - commit date: 2023-02-17T10:13:31+00:00
 - commit merge base: [3c0a31cbfd1258bd96153a007dd44a96f2947dbf](https://github.com/faster%2dcpython/cpython/commit/3c0a31cbfd1258bd96153a007dd44a96f2947dbf)
+- ref: restrict_for_iter_sp
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4202754871)
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz

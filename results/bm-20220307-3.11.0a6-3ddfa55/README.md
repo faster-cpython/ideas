@@ -1,13 +1,12 @@
 # Results
 
 - fork: python
-- ref: main
 - version: 3.11.0a6
 - commit hash: [3ddfa55](https://github.com/python/cpython/commit/3ddfa55)
 - commit date: 2022-03-07T12:32:18+00:00
-- ref: 3ddfa55df48a67a5972f
+- ref: 3ddfa55df48a67a5972f, main
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
 - platform: Linux-5.4.0-91-generic-x86_64-with-glibc2.31
@@ -27,7 +26,7 @@
 - [table](bm-20220307-linux-x86_64-python-main-3.11.0a6-3ddfa55-vs-3.11.0.md)
 - [plot](bm-20220307-linux-x86_64-python-main-3.11.0a6-3ddfa55-vs-3.11.0.png)
 
-## darwin arm64
+## darwin arm64 (darwin)
 
 - cpu model: missing
 - platform: macOS-12.6-arm64-arm-64bit

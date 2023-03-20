@@ -1,13 +1,13 @@
 # Results
 
 - fork: carljm
-- ref: inlinecomp2
 - version: 3.12.0a5+
 - commit hash: [9f0fc5b](https://github.com/carljm/cpython/commit/9f0fc5b)
 - commit date: 2023-02-20T15:37:00-08:00
 - commit merge base: [022b44f2546c44183e4df7b67e3e64502fae9143](https://github.com/carljm/cpython/commit/022b44f2546c44183e4df7b67e3e64502fae9143)
+- ref: inlinecomp2
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4252076033)
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz

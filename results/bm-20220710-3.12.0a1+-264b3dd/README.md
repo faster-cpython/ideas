@@ -1,12 +1,12 @@
 # Results
 
 - fork: python
-- ref: main
 - version: 3.12.0a1+
 - commit hash: [264b3dd](https://github.com/python/cpython/commit/264b3dd)
 - commit date: 2022-07-10T00:22:23+00:00
+- ref: main
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
 - platform: Linux-5.4.0-91-generic-x86_64-with-glibc2.31

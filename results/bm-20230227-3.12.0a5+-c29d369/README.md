@@ -1,13 +1,13 @@
 # Results
 
 - fork: faster-cpython
-- ref: check_refcnt_in_bina
 - version: 3.12.0a5+
 - commit hash: [c29d369](https://github.com/faster%2dcpython/cpython/commit/c29d369)
 - commit date: 2023-02-27T12:43:09+00:00
 - commit merge base: [e3c3f9fec099fe78d2f98912be337d632f6fcdd1](https://github.com/faster%2dcpython/cpython/commit/e3c3f9fec099fe78d2f98912be337d632f6fcdd1)
+- ref: check_refcnt_in_bina
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4282488993)
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz

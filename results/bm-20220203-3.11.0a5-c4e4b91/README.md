@@ -1,13 +1,12 @@
 # Results
 
 - fork: python
-- ref: main
 - version: 3.11.0a5
 - commit hash: [c4e4b91](https://github.com/python/cpython/commit/c4e4b91)
 - commit date: 2022-02-03T18:37:08+00:00
-- ref: c4e4b91557f18f881f39
+- ref: c4e4b91557f18f881f39, main
 
-## linux x86_64
+## linux x86_64 (linux)
 
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
 - platform: Linux-5.4.0-91-generic-x86_64-with-glibc2.31
@@ -27,7 +26,7 @@
 - [table](bm-20220203-linux-x86_64-python-main-3.11.0a5-c4e4b91-vs-3.11.0.md)
 - [plot](bm-20220203-linux-x86_64-python-main-3.11.0a5-c4e4b91-vs-3.11.0.png)
 
-## darwin arm64
+## darwin arm64 (darwin)
 
 - cpu model: missing
 - platform: macOS-12.6-arm64-arm-64bit
