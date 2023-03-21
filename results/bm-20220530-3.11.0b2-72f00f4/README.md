@@ -27,6 +27,13 @@
 - [table](bm-20220530-linux-x86_64-python-main-3.11.0b2-72f00f4-vs-3.11.0.md)
 - [plot](bm-20220530-linux-x86_64-python-main-3.11.0b2-72f00f4-vs-3.11.0.png)
 
+## windows amd64 (pythonperf1)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4483411222)
+- cpu model: missing
+- platform: Windows-10-10.0.22000-SP0
+- [raw results](bm-20220530-pythonperf1-amd64-python-72f00f420afaba3bc873-3.11.0b2-72f00f4.json)
+
 ## darwin arm64 (darwin)
 
 - cpu model: missing
@@ -37,13 +44,9 @@
 
 - 1.21x faster
 - missing benchmarks: coverage, flaskblogging
-- [table](bm-20220530-darwin-arm64-python-72f00f420afaba3bc873-3.11.0b2-72f00f4-vs-3.10.4.md)
-- [plot](bm-20220530-darwin-arm64-python-72f00f420afaba3bc873-3.11.0b2-72f00f4-vs-3.10.4.png)
 
 ### vs. 3.11.0
 
 - 1.01x slower
 - missing benchmarks: coverage, flaskblogging
-- [table](bm-20220530-darwin-arm64-python-72f00f420afaba3bc873-3.11.0b2-72f00f4-vs-3.11.0.md)
-- [plot](bm-20220530-darwin-arm64-python-72f00f420afaba3bc873-3.11.0b2-72f00f4-vs-3.11.0.png)
 
