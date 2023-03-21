@@ -93,6 +93,11 @@
 | [2022-03-23](bm-20220323-3.10.4-9d38120) | python | v3.10.4 | 3.10.4 | 9d38120 |  | [1.26x slower](bm-20220323-3.10.4-9d38120/bm-20220323-linux-x86_64-python-v3.10.4-3.10.4-9d38120-vs-3.11.0.md) |  |
 | [2022-12-21](bm-20221221-3.9.10-258cab1) | faster_cpython | nogil | 3.9.10 | 258cab1 | [1.00x faster](bm-20221221-3.9.10-258cab1/bm-20221221-linux-x86_64-faster_cpython-nogil-3.9.10-258cab1-vs-3.10.4.md) | [1.26x slower](bm-20221221-3.9.10-258cab1/bm-20221221-linux-x86_64-faster_cpython-nogil-3.9.10-258cab1-vs-3.11.0.md) |  |
 
+## windows amd64 (pythonperf1)
+| date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
+| --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2022-05-06](bm-20220506-3.11.0b1-8d32a5c) | python | 8d32a5c8c4 | 3.11.0b1 | 8d32a5c |  |  |  |
+
 ## darwin arm64 (darwin)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
