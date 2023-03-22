@@ -16,8 +16,6 @@
 
 - 1.15x faster
 - missing benchmarks: aiohttp, mypy
-- [table](bm-20211105-linux-x86_64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.10.4.md)
-- [plot](bm-20211105-linux-x86_64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.10.4.png)
 
 ### vs. 3.11.0
 
@@ -25,6 +23,20 @@
 - missing benchmarks: aiohttp, mypy
 - [table](bm-20211105-linux-x86_64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.11.0.md)
 - [plot](bm-20211105-linux-x86_64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.11.0.png)
+
+## windows amd64 (pythonperf1)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4491158300)
+- cpu model: missing
+- platform: Windows-10-10.0.22000
+- [raw results](bm-20211105-pythonperf1-amd64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b.json)
+
+### vs. 3.11.0
+
+- 1.08x slower
+- missing benchmarks: aiohttp, mypy2
+- [table](bm-20211105-pythonperf1-amd64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.11.0.md)
+- [plot](bm-20211105-pythonperf1-amd64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.11.0.png)
 
 ## darwin arm64 (darwin)
 
