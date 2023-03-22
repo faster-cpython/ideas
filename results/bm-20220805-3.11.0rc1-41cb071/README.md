@@ -33,6 +33,12 @@
 - platform: Windows-10-10.0.22000-SP0
 - [raw results](bm-20220805-pythonperf1-amd64-python-41cb07120b7792eac641-3.11.0rc1-41cb071.json)
 
+### vs. 3.10.4
+
+- 1.11x faster
+- [table](bm-20220805-pythonperf1-amd64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.10.4.md)
+- [plot](bm-20220805-pythonperf1-amd64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.10.4.png)
+
 ### vs. 3.11.0
 
 - 1.01x faster
@@ -49,6 +55,8 @@
 
 - 1.23x faster
 - missing benchmarks: coverage
+- [table](bm-20220805-darwin-arm64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.10.4.md)
+- [plot](bm-20220805-darwin-arm64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.10.4.png)
 
 ### vs. 3.11.0
 

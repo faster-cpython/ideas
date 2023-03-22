@@ -31,6 +31,12 @@
 - platform: Windows-10-10.0.22000-SP0
 - [raw results](bm-20221206-pythonperf1-amd64-python-a7a450f84a0874216031-3.11.1-a7a450f.json)
 
+### vs. 3.10.4
+
+- 1.10x faster
+- [table](bm-20221206-pythonperf1-amd64-python-a7a450f84a0874216031-3.11.1-a7a450f-vs-3.10.4.md)
+- [plot](bm-20221206-pythonperf1-amd64-python-a7a450f84a0874216031-3.11.1-a7a450f-vs-3.10.4.png)
+
 ### vs. 3.11.0
 
 - 1.00x slower

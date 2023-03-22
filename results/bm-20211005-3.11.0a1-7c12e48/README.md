@@ -33,6 +33,13 @@
 - platform: Windows-10-10.0.22000-SP0
 - [raw results](bm-20211005-pythonperf1-amd64-python-7c12e4835ebe52287acd-3.11.0a1-7c12e48.json)
 
+### vs. 3.10.4
+
+- 1.01x faster
+- missing benchmarks: aiohttp, mypy2
+- [table](bm-20211005-pythonperf1-amd64-python-7c12e4835ebe52287acd-3.11.0a1-7c12e48-vs-3.10.4.md)
+- [plot](bm-20211005-pythonperf1-amd64-python-7c12e4835ebe52287acd-3.11.0a1-7c12e48-vs-3.10.4.png)
+
 ### vs. 3.11.0
 
 - 1.09x slower

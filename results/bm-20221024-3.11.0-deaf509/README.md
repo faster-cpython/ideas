@@ -25,6 +25,12 @@
 - platform: Windows-10-10.0.22000-SP0
 - [raw results](bm-20221024-pythonperf1-amd64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json)
 
+### vs. 3.10.4
+
+- 1.11x faster
+- [table](bm-20221024-pythonperf1-amd64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509-vs-3.10.4.md)
+- [plot](bm-20221024-pythonperf1-amd64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509-vs-3.10.4.png)
+
 ## darwin arm64 (darwin)
 
 - cpu model: missing

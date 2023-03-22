@@ -34,6 +34,13 @@
 - platform: Windows-10-10.0.22000-SP0
 - [raw results](bm-20220506-pythonperf1-amd64-python-8d32a5c8c4e9c90b0a21-3.11.0b1-8d32a5c.json)
 
+### vs. 3.10.4
+
+- 1.09x faster
+- missing benchmarks: sqlalchemy_declarative, sqlalchemy_imperative
+- [table](bm-20220506-pythonperf1-amd64-python-8d32a5c8c4e9c90b0a21-3.11.0b1-8d32a5c-vs-3.10.4.md)
+- [plot](bm-20220506-pythonperf1-amd64-python-8d32a5c8c4e9c90b0a21-3.11.0b1-8d32a5c-vs-3.10.4.png)
+
 ### vs. 3.11.0
 
 - 1.01x slower
