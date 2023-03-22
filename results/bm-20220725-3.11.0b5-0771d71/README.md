@@ -26,6 +26,13 @@
 - [table](bm-20220725-linux-x86_64-python-0771d71eea30316020a8-3.11.0b5-0771d71-vs-3.11.0.md)
 - [plot](bm-20220725-linux-x86_64-python-0771d71eea30316020a8-3.11.0b5-0771d71-vs-3.11.0.png)
 
+## windows amd64 (pythonperf1)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4483411382)
+- cpu model: missing
+- platform: Windows-10-10.0.22000-SP0
+- [raw results](bm-20220725-pythonperf1-amd64-python-0771d71eea30316020a8-3.11.0b5-0771d71.json)
+
 ## darwin arm64 (darwin)
 
 - cpu model: missing
