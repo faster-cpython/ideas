@@ -18,6 +18,13 @@
 - [table](bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509-vs-3.10.4.md)
 - [plot](bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509-vs-3.10.4.png)
 
+## windows amd64 (pythonperf1)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4483411576)
+- cpu model: missing
+- platform: Windows-10-10.0.22000-SP0
+- [raw results](bm-20221024-pythonperf1-amd64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json)
+
 ## darwin arm64 (darwin)
 
 - cpu model: missing

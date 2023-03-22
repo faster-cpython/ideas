@@ -21,6 +21,8 @@
 
 - 1.00x slower
 - missing benchmarks: coverage
+- [table](bm-20220911-linux-x86_64-python-ed7c3ff15680c1939fad-3.11.0rc2-ed7c3ff-vs-3.11.0.md)
+- [plot](bm-20220911-linux-x86_64-python-ed7c3ff15680c1939fad-3.11.0rc2-ed7c3ff-vs-3.11.0.png)
 
 ## windows amd64 (pythonperf1)
 
@@ -28,6 +30,12 @@
 - cpu model: missing
 - platform: Windows-10-10.0.22000-SP0
 - [raw results](bm-20220911-pythonperf1-amd64-python-ed7c3ff15680c1939fad-3.11.0rc2-ed7c3ff.json)
+
+### vs. 3.11.0
+
+- 1.01x faster
+- [table](bm-20220911-pythonperf1-amd64-python-ed7c3ff15680c1939fad-3.11.0rc2-ed7c3ff-vs-3.11.0.md)
+- [plot](bm-20220911-pythonperf1-amd64-python-ed7c3ff15680c1939fad-3.11.0rc2-ed7c3ff-vs-3.11.0.png)
 
 ## darwin arm64 (darwin)
 
@@ -44,4 +52,6 @@
 
 - 1.00x faster
 - missing benchmarks: coverage
+- [table](bm-20220911-darwin-arm64-python-ed7c3ff15680c1939fad-3.11.0rc2-ed7c3ff-vs-3.11.0.md)
+- [plot](bm-20220911-darwin-arm64-python-ed7c3ff15680c1939fad-3.11.0rc2-ed7c3ff-vs-3.11.0.png)
 
