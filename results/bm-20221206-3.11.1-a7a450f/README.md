@@ -24,6 +24,19 @@
 - [table](bm-20221206-linux-x86_64-python-a7a450f84a0874216031-3.11.1-a7a450f-vs-3.11.0.md)
 - [plot](bm-20221206-linux-x86_64-python-a7a450f84a0874216031-3.11.1-a7a450f-vs-3.11.0.png)
 
+## windows amd64 (pythonperf1)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4483411626)
+- cpu model: missing
+- platform: Windows-10-10.0.22000-SP0
+- [raw results](bm-20221206-pythonperf1-amd64-python-a7a450f84a0874216031-3.11.1-a7a450f.json)
+
+### vs. 3.11.0
+
+- 1.00x slower
+- [table](bm-20221206-pythonperf1-amd64-python-a7a450f84a0874216031-3.11.1-a7a450f-vs-3.11.0.md)
+- [plot](bm-20221206-pythonperf1-amd64-python-a7a450f84a0874216031-3.11.1-a7a450f-vs-3.11.0.png)
+
 ## darwin arm64 (darwin)
 
 - cpu model: missing

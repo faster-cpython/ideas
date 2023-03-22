@@ -29,6 +29,7 @@ Some links to presentations and other preliminary documentation:
 ## windows amd64 (pythonperf1)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2022-12-06](results/bm-20221206-3.11.1-a7a450f) | python | a7a450f84a | 3.11.1 | a7a450f |  | [1.00x slower](results/bm-20221206-3.11.1-a7a450f/bm-20221206-pythonperf1-amd64-python-a7a450f84a0874216031-3.11.1-a7a450f-vs-3.11.0.md) |  |
 | [2022-10-24](results/bm-20221024-3.11.0-deaf509) | python | deaf509e8f | 3.11.0 | deaf509 |  |  |  |
 | [2022-09-11](results/bm-20220911-3.11.0rc2-ed7c3ff) | python | ed7c3ff156 | 3.11.0rc2 | ed7c3ff |  | [1.01x faster](results/bm-20220911-3.11.0rc2-ed7c3ff/bm-20220911-pythonperf1-amd64-python-ed7c3ff15680c1939fad-3.11.0rc2-ed7c3ff-vs-3.11.0.md) |  |
 | [2022-08-05](results/bm-20220805-3.11.0rc1-41cb071) | python | 41cb07120b | 3.11.0rc1 | 41cb071 |  | [1.01x faster](results/bm-20220805-3.11.0rc1-41cb071/bm-20220805-pythonperf1-amd64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.11.0.md) |  |
