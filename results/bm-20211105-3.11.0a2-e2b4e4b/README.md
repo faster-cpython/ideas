@@ -49,21 +49,24 @@
 
 ## darwin arm64 (darwin)
 
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4494503166)
 - cpu model: missing
-- platform: macOS-12.6-arm64-arm-64bit
+- platform: macOS-13.2.1-arm64-arm-64bit
 - [raw results](bm-20211105-darwin-arm64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b.json)
 
 ### vs. 3.10.4
 
-- 1.15x faster
-- missing benchmarks: aiohttp, mypy, sqlalchemy_declarative, sqlalchemy_imperative
+- 1.15x faster \*
+- missing benchmarks: aiohttp, mypy
+- new benchmarks: comprehensions, create_gc_cycles, dask, gc_traversal
 - [table](bm-20211105-darwin-arm64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.10.4.md)
 - [plot](bm-20211105-darwin-arm64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.10.4.png)
 
 ### vs. 3.11.0
 
-- 1.05x slower
-- missing benchmarks: aiohttp, mypy, sqlalchemy_declarative, sqlalchemy_imperative
+- 1.05x slower \*
+- missing benchmarks: aiohttp, mypy
+- new benchmarks: comprehensions, create_gc_cycles, dask, gc_traversal
 - [table](bm-20211105-darwin-arm64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.11.0.md)
 - [plot](bm-20211105-darwin-arm64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.11.0.png)
 
