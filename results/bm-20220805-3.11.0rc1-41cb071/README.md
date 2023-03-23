@@ -47,21 +47,24 @@
 
 ## darwin arm64 (darwin)
 
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4494504059)
 - cpu model: missing
-- platform: macOS-12.6-arm64-arm-64bit
+- platform: macOS-13.2.1-arm64-arm-64bit
 - [raw results](bm-20220805-darwin-arm64-python-41cb07120b7792eac641-3.11.0rc1-41cb071.json)
 
 ### vs. 3.10.4
 
-- 1.23x faster
-- missing benchmarks: coverage
+- 1.23x faster \*
+- missing benchmarks: coverage, mypy
+- new benchmarks: asyncio_tcp, comprehensions, create_gc_cycles, dask, gc_traversal, mypy2
 - [table](bm-20220805-darwin-arm64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.10.4.md)
 - [plot](bm-20220805-darwin-arm64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.10.4.png)
 
 ### vs. 3.11.0
 
-- 1.01x faster
-- missing benchmarks: coverage
+- 1.01x faster \*
+- missing benchmarks: coverage, mypy
+- new benchmarks: asyncio_tcp, comprehensions, create_gc_cycles, dask, gc_traversal, mypy2
 - [table](bm-20220805-darwin-arm64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.11.0.md)
 - [plot](bm-20220805-darwin-arm64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.11.0.png)
 
