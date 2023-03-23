@@ -28,22 +28,23 @@
 
 ## darwin arm64 (darwin)
 
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4494504591)
 - cpu model: missing
-- platform: macOS-12.6-arm64-arm-64bit
+- platform: macOS-13.2.1-arm64-arm-64bit
 - [raw results](bm-20221205-darwin-arm64-python-e3a3863cb9561705d3dd-3.12.0a2%2B-e3a3863.json)
 
 ### vs. 3.10.4
 
-- 1.18x faster
-- missing benchmarks: aiohttp, flaskblogging, gunicorn, pylint, sqlalchemy_declarative, sqlalchemy_imperative
+- 1.18x faster \*
+- missing benchmarks: aiohttp, flaskblogging, gunicorn, mypy, pylint, sqlalchemy_declarative, sqlalchemy_imperative
+- new benchmarks: asyncio_tcp, comprehensions, create_gc_cycles, dask, gc_traversal, mypy2
 - [table](bm-20221205-darwin-arm64-python-e3a3863cb9561705d3dd-3.12.0a2%2B-e3a3863-vs-3.10.4.md)
 - [plot](bm-20221205-darwin-arm64-python-e3a3863cb9561705d3dd-3.12.0a2%2B-e3a3863-vs-3.10.4.png)
 
 ### vs. 3.11.0
 
-- 1.04x slower \*
-- missing benchmarks: aiohttp, asyncio_tcp, comprehensions, create_gc_cycles, dask, flaskblogging, gc_traversal, gunicorn, mypy2, pylint, sqlalchemy_declarative, sqlalchemy_imperative
-- new benchmarks: mypy
+- 1.04x slower
+- missing benchmarks: aiohttp, flaskblogging, gunicorn, pylint, sqlalchemy_declarative, sqlalchemy_imperative
 - [table](bm-20221205-darwin-arm64-python-e3a3863cb9561705d3dd-3.12.0a2%2B-e3a3863-vs-3.11.0.md)
 - [plot](bm-20221205-darwin-arm64-python-e3a3863cb9561705d3dd-3.12.0a2%2B-e3a3863-vs-3.11.0.png)
 
