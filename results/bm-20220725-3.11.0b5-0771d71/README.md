@@ -62,9 +62,8 @@
 
 ### vs. 3.11.0
 
-- 1.01x faster \*
-- missing benchmarks: coverage, mypy
-- new benchmarks: asyncio_tcp, comprehensions, create_gc_cycles, dask, gc_traversal, mypy2
+- 1.01x faster
+- missing benchmarks: coverage
 - [table](bm-20220725-darwin-arm64-python-0771d71eea30316020a8-3.11.0b5-0771d71-vs-3.11.0.md)
 - [plot](bm-20220725-darwin-arm64-python-0771d71eea30316020a8-3.11.0b5-0771d71-vs-3.11.0.png)
 

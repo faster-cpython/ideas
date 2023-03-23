@@ -64,9 +64,8 @@
 
 ### vs. 3.11.0
 
-- 1.05x slower \*
-- missing benchmarks: aiohttp, mypy
-- new benchmarks: comprehensions, create_gc_cycles, dask, gc_traversal
+- 1.05x slower
+- missing benchmarks: aiohttp, asyncio_tcp, mypy2
 - [table](bm-20211105-darwin-arm64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.11.0.md)
 - [plot](bm-20211105-darwin-arm64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.11.0.png)
 

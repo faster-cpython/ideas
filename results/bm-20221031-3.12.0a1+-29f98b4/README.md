@@ -21,8 +21,9 @@
 
 ### vs. 3.11.0
 
-- 1.02x slower
-- missing benchmarks: aiohttp, flaskblogging, gunicorn, sqlalchemy_declarative, sqlalchemy_imperative
+- 1.02x slower \*
+- missing benchmarks: aiohttp, asyncio_tcp, comprehensions, create_gc_cycles, dask, flaskblogging, gc_traversal, gunicorn, mypy2, sqlalchemy_declarative, sqlalchemy_imperative
+- new benchmarks: mypy
 - [table](bm-20221031-darwin-arm64-python-29f98b46b77ee528477b-3.12.0a1%2B-29f98b4-vs-3.11.0.md)
 - [plot](bm-20221031-darwin-arm64-python-29f98b46b77ee528477b-3.12.0a1%2B-29f98b4-vs-3.11.0.png)
 

@@ -43,9 +43,8 @@
 
 ### vs. 3.11.0
 
-- 1.04x slower \*
-- missing benchmarks: mypy
-- new benchmarks: asyncio_tcp, comprehensions, create_gc_cycles, dask, gc_traversal
+- 1.04x slower
+- missing benchmarks: mypy2
 - [table](bm-20220307-darwin-arm64-python-3ddfa55df48a67a5972f-3.11.0a6-3ddfa55-vs-3.11.0.md)
 - [plot](bm-20220307-darwin-arm64-python-3ddfa55df48a67a5972f-3.11.0a6-3ddfa55-vs-3.11.0.png)
 
