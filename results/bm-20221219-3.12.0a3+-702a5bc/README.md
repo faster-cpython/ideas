@@ -26,3 +26,25 @@
 - [table](bm-20221219-linux-x86_64-python-702a5bc4637c82dc011e-3.12.0a3%2B-702a5bc-vs-3.11.0.md)
 - [plot](bm-20221219-linux-x86_64-python-702a5bc4637c82dc011e-3.12.0a3%2B-702a5bc-vs-3.11.0.png)
 
+## darwin arm64 (darwin)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4494504978)
+- cpu model: missing
+- platform: macOS-13.2.1-arm64-arm-64bit
+- [raw results](bm-20221219-darwin-arm64-python-702a5bc4637c82dc011e-3.12.0a3%2B-702a5bc.json)
+
+### vs. 3.10.4
+
+- 1.23x faster \*
+- missing benchmarks: aiohttp, flaskblogging, gunicorn, mypy, pylint, sqlalchemy_declarative, sqlalchemy_imperative, tornado_http
+- new benchmarks: asyncio_tcp, comprehensions, create_gc_cycles, dask, gc_traversal, mypy2
+- [table](bm-20221219-darwin-arm64-python-702a5bc4637c82dc011e-3.12.0a3%2B-702a5bc-vs-3.10.4.md)
+- [plot](bm-20221219-darwin-arm64-python-702a5bc4637c82dc011e-3.12.0a3%2B-702a5bc-vs-3.10.4.png)
+
+### vs. 3.11.0
+
+- 1.02x faster
+- missing benchmarks: aiohttp, flaskblogging, gunicorn, pylint, sqlalchemy_declarative, sqlalchemy_imperative, tornado_http
+- [table](bm-20221219-darwin-arm64-python-702a5bc4637c82dc011e-3.12.0a3%2B-702a5bc-vs-3.11.0.md)
+- [plot](bm-20221219-darwin-arm64-python-702a5bc4637c82dc011e-3.12.0a3%2B-702a5bc-vs-3.11.0.png)
+
