@@ -59,7 +59,9 @@
 
 ### vs. base
 
-- 1.02x faster
+- 1.02x faster \*
+- missing benchmarks: 🔴 comprehensions, mypy2
+- new benchmarks: mypy
 - [table](bm-20230108-darwin-arm64-eduardo%252delizondo-immortal_references-3.12.0a3%2B-1dfe27a-vs-base.md)
 - [plot](bm-20230108-darwin-arm64-eduardo%252delizondo-immortal_references-3.12.0a3%2B-1dfe27a-vs-base.png)
 
