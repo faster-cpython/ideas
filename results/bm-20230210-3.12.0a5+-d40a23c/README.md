@@ -15,8 +15,7 @@
 ### vs. 3.10.4
 
 - 1.29x faster \*
-- missing benchmarks: flaskblogging, mypy, pylint
-- new benchmarks: asyncio_tcp, create_gc_cycles, djangocms, gc_traversal, mypy2
+- missing benchmarks: comprehensions, dask, flaskblogging, pylint
 - [table](bm-20230210-linux-x86_64-python-d40a23c0a11060ba7fa0-3.12.0a5%2B-d40a23c-vs-3.10.4.md)
 - [plot](bm-20230210-linux-x86_64-python-d40a23c0a11060ba7fa0-3.12.0a5%2B-d40a23c-vs-3.10.4.png)
 

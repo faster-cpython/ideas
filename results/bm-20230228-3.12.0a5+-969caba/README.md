@@ -16,9 +16,8 @@
 
 ### vs. 3.10.4
 
-- 1.30x faster \*
-- missing benchmarks: flaskblogging, mypy, pylint
-- new benchmarks: asyncio_tcp, comprehensions, create_gc_cycles, dask, djangocms, gc_traversal, mypy2
+- 1.30x faster
+- missing benchmarks: flaskblogging, pylint
 - [table](bm-20230228-linux-x86_64-ericsnowcurrently-isolate_interned_dic-3.12.0a5%2B-969caba-vs-3.10.4.md)
 - [plot](bm-20230228-linux-x86_64-ericsnowcurrently-isolate_interned_dic-3.12.0a5%2B-969caba-vs-3.10.4.png)
 

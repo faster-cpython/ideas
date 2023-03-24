@@ -17,8 +17,7 @@
 ### vs. 3.10.4
 
 - 1.30x faster \*
-- missing benchmarks: flaskblogging, mypy, pylint
-- new benchmarks: asyncio_tcp, create_gc_cycles, dask, djangocms, gc_traversal, mypy2
+- missing benchmarks: comprehensions, flaskblogging, pylint
 - [table](bm-20230217-linux-x86_64-faster%252dcpython-restrict_for_iter_sp-3.12.0a5%2B-fb5f321-vs-3.10.4.md)
 - [plot](bm-20230217-linux-x86_64-faster%252dcpython-restrict_for_iter_sp-3.12.0a5%2B-fb5f321-vs-3.10.4.png)
 
