@@ -29,6 +29,7 @@ Some links to presentations and other preliminary documentation:
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
 | [2021-12-08](results/bm-20211208-3.11.0a3-2e91dba) | python | 2e91dba437 | 3.11.0a3 | 2e91dba | [1.14x faster](results/bm-20211208-3.11.0a3-2e91dba/bm-20211208-pythonperf2-x86_64-python-2e91dba437fe5c56c6f8-3.11.0a3-2e91dba-vs-3.10.4.md) | [1.10x slower](results/bm-20211208-3.11.0a3-2e91dba/bm-20211208-pythonperf2-x86_64-python-2e91dba437fe5c56c6f8-3.11.0a3-2e91dba-vs-3.11.0.md) |  |
+| [2021-11-05](results/bm-20211105-3.11.0a2-e2b4e4b) | python | e2b4e4bab9 | 3.11.0a2 | e2b4e4b | [1.12x faster](results/bm-20211105-3.11.0a2-e2b4e4b/bm-20211105-pythonperf2-x86_64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.10.4.md) | [1.12x slower](results/bm-20211105-3.11.0a2-e2b4e4b/bm-20211105-pythonperf2-x86_64-python-e2b4e4bab90b69fbd361-3.11.0a2-e2b4e4b-vs-3.11.0.md) |  |
 | [2021-10-05](results/bm-20211005-3.11.0a1-7c12e48) | python | 7c12e4835e | 3.11.0a1 | 7c12e48 | [1.09x faster](results/bm-20211005-3.11.0a1-7c12e48/bm-20211005-pythonperf2-x86_64-python-7c12e4835ebe52287acd-3.11.0a1-7c12e48-vs-3.10.4.md) | [1.16x slower](results/bm-20211005-3.11.0a1-7c12e48/bm-20211005-pythonperf2-x86_64-python-7c12e4835ebe52287acd-3.11.0a1-7c12e48-vs-3.11.0.md) |  |
 
 ## windows amd64 (pythonperf1)
