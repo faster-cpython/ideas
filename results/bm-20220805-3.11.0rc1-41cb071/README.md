@@ -22,8 +22,9 @@
 
 ### vs. 3.11.0
 
-- 1.00x faster
-- missing benchmarks: coverage
+- 1.00x faster \*
+- missing benchmarks: asyncio_tcp, comprehensions, coverage, create_gc_cycles, dask, djangocms, gc_traversal, mypy2
+- new benchmarks: mypy
 - [table](bm-20220805-linux-x86_64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.11.0.md)
 - [plot](bm-20220805-linux-x86_64-python-41cb07120b7792eac641-3.11.0rc1-41cb071-vs-3.11.0.png)
 

@@ -23,9 +23,8 @@
 
 ### vs. 3.11.0
 
-- 1.04x faster \*
-- missing benchmarks: flaskblogging, mypy, pylint, tornado_http
-- new benchmarks: asyncio_tcp, comprehensions, create_gc_cycles, dask, djangocms, gc_traversal, mypy2
+- 1.04x faster
+- missing benchmarks: flaskblogging, pylint, tornado_http
 - [table](bm-20230320-linux-x86_64-itamaro-eager_tasks_factory-3.12.0a6%2B-bcf40dc-vs-3.11.0.md)
 - [plot](bm-20230320-linux-x86_64-itamaro-eager_tasks_factory-3.12.0a6%2B-bcf40dc-vs-3.11.0.png)
 

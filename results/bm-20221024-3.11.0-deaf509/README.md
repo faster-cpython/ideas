@@ -4,21 +4,20 @@
 - version: 3.11.0
 - commit hash: [deaf509](https://github.com/python/cpython/commit/deaf509)
 - commit date: 2022-10-24T18:35:39+01:00
-- ref: deaf509e8fc6e0363bd6, v3.11.0
+- ref: deaf509e8fc6e0363bd6
 
 ## linux x86_64 (linux)
 
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4511521725)
 - cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
 - platform: Linux-5.4.0-122-generic-x86_64-with-glibc2.31
-- [raw results](bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509.json)
+- [raw results](bm-20221024-linux-x86_64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509.json)
 
 ### vs. 3.10.4
 
-- 1.26x faster \*
-- missing benchmarks: asyncio_tcp, comprehensions, create_gc_cycles, dask, djangocms, gc_traversal, mypy2
-- new benchmarks: mypy
-- [table](bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509-vs-3.10.4.md)
-- [plot](bm-20221024-linux-x86_64-python-v3.11.0-3.11.0-deaf509-vs-3.10.4.png)
+- 1.25x faster
+- [table](bm-20221024-linux-x86_64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509-vs-3.10.4.md)
+- [plot](bm-20221024-linux-x86_64-python-deaf509e8fc6e0363bd6-3.11.0-deaf509-vs-3.10.4.png)
 
 ## windows amd64 (pythonperf1)
 

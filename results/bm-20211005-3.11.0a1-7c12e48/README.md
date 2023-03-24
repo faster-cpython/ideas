@@ -21,8 +21,8 @@
 
 ### vs. 3.11.0
 
-- 1.12x slower
-- missing benchmarks: aiohttp, mypy, sqlalchemy_declarative, sqlalchemy_imperative
+- 1.12x slower \*
+- missing benchmarks: aiohttp, asyncio_tcp, comprehensions, create_gc_cycles, dask, djangocms, gc_traversal, mypy2, sqlalchemy_declarative, sqlalchemy_imperative
 - [table](bm-20211005-linux-x86_64-python-7c12e4835ebe52287acd-3.11.0a1-7c12e48-vs-3.11.0.md)
 - [plot](bm-20211005-linux-x86_64-python-7c12e4835ebe52287acd-3.11.0a1-7c12e48-vs-3.11.0.png)
 
