@@ -28,6 +28,13 @@
 - [table](bm-20220725-linux-x86_64-python-0771d71eea30316020a8-3.11.0b5-0771d71-vs-3.11.0.md)
 - [plot](bm-20220725-linux-x86_64-python-0771d71eea30316020a8-3.11.0b5-0771d71-vs-3.11.0.png)
 
+## linux x86_64 (pythonperf2)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4513536218)
+- cpu model: 12th Gen Intel(R) Core(TM) i9-12900
+- platform: Linux-5.15.0-67-generic-x86_64-with-glibc2.35
+- [raw results](bm-20220725-pythonperf2-x86_64-python-0771d71eea30316020a8-3.11.0b5-0771d71.json)
+
 ## windows amd64 (pythonperf1)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4483411382)
