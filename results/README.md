@@ -96,6 +96,7 @@
 ## linux x86_64 (pythonperf2)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2022-12-26](bm-20221226-3.12.0a3%2B-ad3c99e) | python | ad3c99e521 | 3.12.0a3+ | ad3c99e |  | [1.03x faster](bm-20221226-3.12.0a3%2B-ad3c99e/bm-20221226-pythonperf2-x86_64-python-ad3c99e521151680afc6-3.12.0a3%2B-ad3c99e-vs-3.11.0.md) |  |
 | [2022-12-19](bm-20221219-3.12.0a3%2B-702a5bc) | python | 702a5bc463 | 3.12.0a3+ | 702a5bc |  | [1.02x faster](bm-20221219-3.12.0a3%2B-702a5bc/bm-20221219-pythonperf2-x86_64-python-702a5bc4637c82dc011e-3.12.0a3%2B-702a5bc-vs-3.11.0.md) |  |
 | [2022-12-11](bm-20221211-3.12.0a3%2B-70be5e4) | python | 70be5e42f6 | 3.12.0a3+ | 70be5e4 |  | [1.02x faster](bm-20221211-3.12.0a3%2B-70be5e4/bm-20221211-pythonperf2-x86_64-python-70be5e42f6e288de32e0-3.12.0a3%2B-70be5e4-vs-3.11.0.md) |  |
 | [2022-12-05](bm-20221205-3.12.0a2%2B-e3a3863) | python | e3a3863cb9 | 3.12.0a2+ | e3a3863 |  | [1.02x faster](bm-20221205-3.12.0a2%2B-e3a3863/bm-20221205-pythonperf2-x86_64-python-e3a3863cb9561705d3dd-3.12.0a2%2B-e3a3863-vs-3.11.0.md) |  |
