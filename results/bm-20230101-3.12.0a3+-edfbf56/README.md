@@ -6,6 +6,20 @@
 - commit date: 2023-01-01T19:14:18-08:00
 - ref: edfbf56f4ca6588dfd20
 
+## linux x86_64 (pythonperf2)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4513537508)
+- cpu model: 12th Gen Intel(R) Core(TM) i9-12900
+- platform: Linux-5.15.0-67-generic-x86_64-with-glibc2.35
+- [raw results](bm-20230101-pythonperf2-x86_64-python-edfbf56f4ca6588dfd20-3.12.0a3%2B-edfbf56.json)
+
+### vs. 3.11.0
+
+- 1.04x faster
+- missing benchmarks: aiohttp, flaskblogging, gunicorn, pylint, sqlalchemy_declarative, sqlalchemy_imperative, tornado_http
+- [table](bm-20230101-pythonperf2-x86_64-python-edfbf56f4ca6588dfd20-3.12.0a3%2B-edfbf56-vs-3.11.0.md)
+- [plot](bm-20230101-pythonperf2-x86_64-python-edfbf56f4ca6588dfd20-3.12.0a3%2B-edfbf56-vs-3.11.0.png)
+
 ## darwin arm64 (darwin)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4494505090)
