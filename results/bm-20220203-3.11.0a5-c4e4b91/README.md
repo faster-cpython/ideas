@@ -33,6 +33,13 @@
 - platform: Linux-5.15.0-67-generic-x86_64-with-glibc2.35
 - [raw results](bm-20220203-pythonperf2-x86_64-python-c4e4b91557f18f881f39-3.11.0a5-c4e4b91.json)
 
+### vs. 3.11.0
+
+- 1.06x slower
+- missing benchmarks: mypy2, pylint
+- [table](bm-20220203-pythonperf2-x86_64-python-c4e4b91557f18f881f39-3.11.0a5-c4e4b91-vs-3.11.0.md)
+- [plot](bm-20220203-pythonperf2-x86_64-python-c4e4b91557f18f881f39-3.11.0a5-c4e4b91-vs-3.11.0.png)
+
 ## darwin arm64 (darwin)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4494503386)

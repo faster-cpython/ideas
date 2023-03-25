@@ -34,6 +34,13 @@
 - platform: Linux-5.15.0-67-generic-x86_64-with-glibc2.35
 - [raw results](bm-20220405-pythonperf2-x86_64-python-2e49bd06c5ffab7d1540-3.11.0a7-2e49bd0.json)
 
+### vs. 3.11.0
+
+- 1.02x slower
+- missing benchmarks: coverage
+- [table](bm-20220405-pythonperf2-x86_64-python-2e49bd06c5ffab7d1540-3.11.0a7-2e49bd0-vs-3.11.0.md)
+- [plot](bm-20220405-pythonperf2-x86_64-python-2e49bd06c5ffab7d1540-3.11.0a7-2e49bd0-vs-3.11.0.png)
+
 ## darwin arm64 (darwin)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4494503549)

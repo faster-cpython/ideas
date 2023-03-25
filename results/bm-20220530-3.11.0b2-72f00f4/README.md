@@ -34,6 +34,13 @@
 - platform: Linux-5.15.0-67-generic-x86_64-with-glibc2.35
 - [raw results](bm-20220530-pythonperf2-x86_64-python-72f00f420afaba3bc873-3.11.0b2-72f00f4.json)
 
+### vs. 3.11.0
+
+- 1.00x faster
+- missing benchmarks: coverage, flaskblogging
+- [table](bm-20220530-pythonperf2-x86_64-python-72f00f420afaba3bc873-3.11.0b2-72f00f4-vs-3.11.0.md)
+- [plot](bm-20220530-pythonperf2-x86_64-python-72f00f420afaba3bc873-3.11.0b2-72f00f4-vs-3.11.0.png)
+
 ## windows amd64 (pythonperf1)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4483411222)
