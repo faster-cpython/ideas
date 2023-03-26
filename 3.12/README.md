@@ -12,7 +12,7 @@ Author: Mark Shannon
 
 ### This means that we want:
 
-* C code to consist of builtin functions that are well typed and don't call back in Python (much).
+* C code to consist of builtin functions that are well typed and don't call back into Python (much).
 * Everything else in bytecode (99.9% Python, but we might need a few key trampolines in hand written bytecode).
 * To be able to execute Python code faster.
 * To remove incidental overhead due to poor memory layout, reference counting and cycle GC.
@@ -21,7 +21,7 @@ Author: Mark Shannon
 
 This is the most important part of a fast VM, and the most complex (unless we want a fully concurrent, parallel cycle GC).
 Ultimately we will need a JIT compiler, but it is clear from the relatively poor performance of Jython and IronPython that simply compiling to machine code is not magic pixie dust.
-Remembering that not doing something at all is always preferable to doing it faster, we want to optimize by removing overheads, including type-checks, boxing and unboxing, reference counting operations, object allocation.
+Remembering that not doing something at all is always preferable to doing it faster, we want to optimize by removing overheads, including type-checks, boxing and unboxing, reference counting operations, and object allocation.
 
 ### Region selection
 
@@ -37,11 +37,11 @@ Linear trace are much simpler to optimize; all instructions dominate the latter 
 #### Trace selection
 
 There are two main approaches to tracing in the literature and in industry.
-* Long traces: Traces cover a whole loop, or large number of instructions, as used in PyPy, luajit and tracemonkey.
+* Long traces: Traces cover a whole loop, or large number of instructions, as used in PyPy, luajit, and tracemonkey.
 * Short traces: Tracelets, or single BB traces, as used in HHVM or YJIT.
 
 Long traces have the advantage that larger regions enable better optimization, and may include a loop which allows loop optimizations.
-Short traces fail to complete much less often, an do not need a custom tracing interpreter.
+Short traces fail to complete much less often, and do not need a custom tracing interpreter.
 
 We are greedy and want the advantages of both!
 We will use the mechanisms for creating short traces, but the type information gathered by the adaptive interpreter will allow us
@@ -59,7 +59,7 @@ There are three key optimization phases needed to execute traces as fast as poss
 
 The best data we have for the relative and combined effectiveness of these approaches is from my PhD thesis.
 
-The VM used (HotPy) was quite different from CPython, and there were no optimization other than trace-based ones, so the numbers should not be considered to be indicative of speedups we might achieve.
+The VM used (HotPy) was quite different from CPython, and there were no optimizations other than trace-based ones, so the numbers should not be considered to be indicative of speedups we might achieve.
 However, they do show how the optimizations interact.
 
 Each number shows the relative speedup from adding one or more phases, relative to the base interpreter.
@@ -84,10 +84,10 @@ A few things to note:
 
 ## Better calling convention(s)
 
-Cffi and argument clinic take a typed description of the arguments to a function and a low-level implementation that does no dispatch, typechecking or unboxing.
+Cffi and argument clinic take a typed description of the arguments to a function and a low-level implementation that does no dispatch, typechecking, or unboxing.
 Ultimately we want to be able to call directly into these functions from JIT compiled code.
 With that ultimate goal in mind, we also want an intermediate calling convention suitable for calling from a specializing interpreter.
-Nicknamed "hasty call" as nod to "fast call", this calling convention would leave parsing and re-ordering the arguments to the caller,
+Nicknamed "hasty call" as a nod to "fast call", this calling convention would leave parsing and re-ordering the arguments to the caller,
 but handle unboxing and type-checking in the callee.
 
 For example, consider a function wih the signature `foo(a:int, b:int, *, c:Any=None)->None`
@@ -97,7 +97,7 @@ The "hasty call" signature would be `PyObject *foo_hasty(PyObject args[3])`
 It will be up to the caller to reorder arguments and fill in defaults, so that if we call `foo(b=1, a=0)`
 the VM would swap `a` and `b` and push `None`, before calling the C function `foo_hasty`.
 
-It will be up to the tooling, whether cffi, argument clinic or something else, to create `foo_hasty`, which in this case would look something like:
+It will be up to the tooling, whether cffi, argument clinic, or something else, to create `foo_hasty`, which in this case would look something like:
 ```C
 PyObject *foo_hasty(PyObject args[3]) {
     PyObject *a_obj = args[0];
