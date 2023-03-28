@@ -27,6 +27,20 @@
 - [table](bm-20221206-linux-x86_64-python-b6bd7ffcbc1ffaa68e34-3.12.0a3-b6bd7ff-vs-3.11.0.md)
 - [plot](bm-20221206-linux-x86_64-python-b6bd7ffcbc1ffaa68e34-3.12.0a3-b6bd7ff-vs-3.11.0.png)
 
+## linux x86_64 (pythonperf2)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4546461274)
+- cpu model: 12th Gen Intel(R) Core(TM) i9-12900
+- platform: Linux-5.15.0-67-generic-x86_64-with-glibc2.35
+- [raw results](bm-20221206-pythonperf2-x86_64-python-b6bd7ffcbc1ffaa68e34-3.12.0a3-b6bd7ff.json)
+
+### vs. 3.11.0
+
+- 1.01x faster
+- missing benchmarks: aiohttp, flaskblogging, gunicorn, pylint, sqlalchemy_declarative, sqlalchemy_imperative, tornado_http
+- [table](bm-20221206-pythonperf2-x86_64-python-b6bd7ffcbc1ffaa68e34-3.12.0a3-b6bd7ff-vs-3.11.0.md)
+- [plot](bm-20221206-pythonperf2-x86_64-python-b6bd7ffcbc1ffaa68e34-3.12.0a3-b6bd7ff-vs-3.11.0.png)
+
 ## windows amd64 (pythonperf1)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4511434658)
