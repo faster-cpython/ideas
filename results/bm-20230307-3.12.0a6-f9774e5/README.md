@@ -6,6 +6,27 @@
 - commit date: 2023-03-07T22:48:18+01:00
 - ref: f9774e57d84162ff0cba
 
+## linux x86_64 (linux)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4546447152)
+- cpu model: Intel(R) Xeon(R) W-2255 CPU @ 3.70GHz
+- platform: Linux-5.4.0-122-generic-x86_64-with-glibc2.31
+- [raw results](bm-20230307-linux-x86_64-python-f9774e57d84162ff0cba-3.12.0a6-f9774e5.json)
+
+### vs. 3.10.4
+
+- 1.29x faster
+- missing benchmarks: flaskblogging, pylint
+- [table](bm-20230307-linux-x86_64-python-f9774e57d84162ff0cba-3.12.0a6-f9774e5-vs-3.10.4.md)
+- [plot](bm-20230307-linux-x86_64-python-f9774e57d84162ff0cba-3.12.0a6-f9774e5-vs-3.10.4.png)
+
+### vs. 3.11.0
+
+- 1.03x faster
+- missing benchmarks: flaskblogging, pylint
+- [table](bm-20230307-linux-x86_64-python-f9774e57d84162ff0cba-3.12.0a6-f9774e5-vs-3.11.0.md)
+- [plot](bm-20230307-linux-x86_64-python-f9774e57d84162ff0cba-3.12.0a6-f9774e5-vs-3.11.0.png)
+
 ## linux x86_64 (pythonperf2)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4546461484)
