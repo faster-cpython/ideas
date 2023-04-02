@@ -4,6 +4,7 @@
 ## linux x86_64 (linux)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2023-04-01](bm-20230401-3.12.0a6%2B-06249ec) | python | main | 3.12.0a6+ | 06249ec | [1.29x faster](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-linux-x86_64-python-main-3.12.0a6%2B-06249ec-vs-3.10.4.md) | [1.03x faster](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-linux-x86_64-python-main-3.12.0a6%2B-06249ec-vs-3.11.0.md) |  |
 | [2023-03-26](bm-20230326-3.12.0a6%2B-2cdc518) | python | 2cdc5189a6 | 3.12.0a6+ | 2cdc518 | [1.30x faster](bm-20230326-3.12.0a6%2B-2cdc518/bm-20230326-linux-x86_64-python-2cdc5189a6bc3157fddd-3.12.0a6%2B-2cdc518-vs-3.10.4.md) | [1.03x faster](bm-20230326-3.12.0a6%2B-2cdc518/bm-20230326-linux-x86_64-python-2cdc5189a6bc3157fddd-3.12.0a6%2B-2cdc518-vs-3.11.0.md) |  |
 | [2023-03-25](bm-20230325-3.12.0a6%2B-662c16c) | faster-cpython | pep_669 | 3.12.0a6+ | 662c16c | [1.32x faster](bm-20230325-3.12.0a6%2B-662c16c/bm-20230325-linux-x86_64-faster%252dcpython-pep_669-3.12.0a6%2B-662c16c-vs-3.10.4.md) | [1.05x faster](bm-20230325-3.12.0a6%2B-662c16c/bm-20230325-linux-x86_64-faster%252dcpython-pep_669-3.12.0a6%2B-662c16c-vs-3.11.0.md) | [1.02x faster](bm-20230325-3.12.0a6%2B-662c16c/bm-20230325-linux-x86_64-faster%252dcpython-pep_669-3.12.0a6%2B-662c16c-vs-base.md) |
 | [2023-03-25](bm-20230325-3.12.0a6%2B-30a306c) | python | main | 3.12.0a6+ | 30a306c | [1.30x faster](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-linux-x86_64-python-main-3.12.0a6%2B-30a306c-vs-3.10.4.md) | [1.03x faster](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-linux-x86_64-python-main-3.12.0a6%2B-30a306c-vs-3.11.0.md) |  |
@@ -105,6 +106,7 @@
 ## linux x86_64 (pythonperf2)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2023-04-01](bm-20230401-3.12.0a6%2B-06249ec) | python | main | 3.12.0a6+ | 06249ec |  | [1.02x faster](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-pythonperf2-x86_64-python-main-3.12.0a6%2B-06249ec-vs-3.11.0.md) |  |
 | [2023-03-25](bm-20230325-3.12.0a6%2B-30a306c) | python | main | 3.12.0a6+ | 30a306c |  | [1.03x faster](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-pythonperf2-x86_64-python-main-3.12.0a6%2B-30a306c-vs-3.11.0.md) |  |
 | [2023-03-06](bm-20230306-3.12.0a5%2B-f533f21) | python | f533f216e6 | 3.12.0a5+ | f533f21 |  | [1.03x faster](bm-20230306-3.12.0a5%2B-f533f21/bm-20230306-pythonperf2-x86_64-python-f533f216e6aaba3f3663-3.12.0a5%2B-f533f21-vs-3.11.0.md) |  |
 | [2023-02-26](bm-20230226-3.12.0a5%2B-f3cb15c) | python | f3cb15c88a | 3.12.0a5+ | f3cb15c |  | [1.03x faster](bm-20230226-3.12.0a5%2B-f3cb15c/bm-20230226-pythonperf2-x86_64-python-f3cb15c88afa2e87067d-3.12.0a5%2B-f3cb15c-vs-3.11.0.md) |  |
@@ -150,6 +152,7 @@
 ## windows amd64 (pythonperf1)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2023-04-01](bm-20230401-3.12.0a6%2B-06249ec) | python | main | 3.12.0a6+ | 06249ec | [1.19x faster](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-pythonperf1-amd64-python-main-3.12.0a6%2B-06249ec-vs-3.10.4.md) | [1.07x faster](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-pythonperf1-amd64-python-main-3.12.0a6%2B-06249ec-vs-3.11.0.md) |  |
 | [2023-03-25](bm-20230325-3.12.0a6%2B-30a306c) | python | main | 3.12.0a6+ | 30a306c | [1.21x faster](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-pythonperf1-amd64-python-main-3.12.0a6%2B-30a306c-vs-3.10.4.md) | [1.09x faster](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-pythonperf1-amd64-python-main-3.12.0a6%2B-30a306c-vs-3.11.0.md) |  |
 | [2022-11-11](bm-20221111-3.12.0a1%2B-3dd6ee2) | python | 3dd6ee2c00 | 3.12.0a1+ | 3dd6ee2 | [1.16x faster](bm-20221111-3.12.0a1%2B-3dd6ee2/bm-20221111-pythonperf1-amd64-python-3dd6ee2c0022cb49e5cb-3.12.0a1%2B-3dd6ee2-vs-3.10.4.md) | [1.05x faster](bm-20221111-3.12.0a1%2B-3dd6ee2/bm-20221111-pythonperf1-amd64-python-3dd6ee2c0022cb49e5cb-3.12.0a1%2B-3dd6ee2-vs-3.11.0.md) |  |
 | [2022-11-09](bm-20221109-3.12.0a1%2B-c03e05c) | python | c03e05c2e7 | 3.12.0a1+ | c03e05c | [1.09x faster](bm-20221109-3.12.0a1%2B-c03e05c/bm-20221109-pythonperf1-amd64-python-c03e05c2e72f3ea5e797-3.12.0a1%2B-c03e05c-vs-3.10.4.md) | [1.01x slower](bm-20221109-3.12.0a1%2B-c03e05c/bm-20221109-pythonperf1-amd64-python-c03e05c2e72f3ea5e797-3.12.0a1%2B-c03e05c-vs-3.11.0.md) |  |
@@ -179,6 +182,7 @@
 ## darwin arm64 (darwin)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2023-04-01](bm-20230401-3.12.0a6%2B-06249ec) | python | main | 3.12.0a6+ | 06249ec | [1.19x faster \*](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-darwin-arm64-python-main-3.12.0a6%2B-06249ec-vs-3.10.4.md) | [1.01x slower](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-darwin-arm64-python-main-3.12.0a6%2B-06249ec-vs-3.11.0.md) |  |
 | [2023-03-25](bm-20230325-3.12.0a6%2B-30a306c) | python | main | 3.12.0a6+ | 30a306c | [1.19x faster \*](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-darwin-arm64-python-main-3.12.0a6%2B-30a306c-vs-3.10.4.md) | [1.02x slower](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-darwin-arm64-python-main-3.12.0a6%2B-30a306c-vs-3.11.0.md) |  |
 | [2023-03-18](bm-20230318-3.12.0a6%2B-3adb23a) | python | main | 3.12.0a6+ | 3adb23a | [1.20x faster \*](bm-20230318-3.12.0a6%2B-3adb23a/bm-20230318-darwin-arm64-python-main-3.12.0a6%2B-3adb23a-vs-3.10.4.md) | [1.02x slower](bm-20230318-3.12.0a6%2B-3adb23a/bm-20230318-darwin-arm64-python-main-3.12.0a6%2B-3adb23a-vs-3.11.0.md) |  |
 | [2023-03-11](bm-20230311-3.12.0a6%2B-bb396ee) | python | main | 3.12.0a6+ | bb396ee | [1.19x faster \*](bm-20230311-3.12.0a6%2B-bb396ee/bm-20230311-darwin-arm64-python-main-3.12.0a6%2B-bb396ee-vs-3.10.4.md) | [1.02x slower](bm-20230311-3.12.0a6%2B-bb396ee/bm-20230311-darwin-arm64-python-main-3.12.0a6%2B-bb396ee-vs-3.11.0.md) |  |
