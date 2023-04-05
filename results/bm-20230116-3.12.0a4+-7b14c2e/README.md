@@ -20,6 +20,27 @@
 - [table](bm-20230116-pythonperf2-x86_64-python-7b14c2ef194b6eed7967-3.12.0a4%2B-7b14c2e-vs-3.11.0.md)
 - [plot](bm-20230116-pythonperf2-x86_64-python-7b14c2ef194b6eed7967-3.12.0a4%2B-7b14c2e-vs-3.11.0.png)
 
+## windows amd64 (pythonperf1)
+
+- [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4610450768)
+- cpu model: missing
+- platform: Windows-11-10.0.22000-SP0
+- [raw results](bm-20230116-pythonperf1-amd64-python-7b14c2ef194b6eed7967-3.12.0a4%2B-7b14c2e.json)
+
+### vs. 3.10.4
+
+- 1.22x faster
+- missing benchmarks: aiohttp, flaskblogging, pylint, sqlalchemy_declarative, sqlalchemy_imperative
+- [table](bm-20230116-pythonperf1-amd64-python-7b14c2ef194b6eed7967-3.12.0a4%2B-7b14c2e-vs-3.10.4.md)
+- [plot](bm-20230116-pythonperf1-amd64-python-7b14c2ef194b6eed7967-3.12.0a4%2B-7b14c2e-vs-3.10.4.png)
+
+### vs. 3.11.0
+
+- 1.10x faster
+- missing benchmarks: aiohttp, flaskblogging, pylint, sqlalchemy_declarative, sqlalchemy_imperative
+- [table](bm-20230116-pythonperf1-amd64-python-7b14c2ef194b6eed7967-3.12.0a4%2B-7b14c2e-vs-3.11.0.md)
+- [plot](bm-20230116-pythonperf1-amd64-python-7b14c2ef194b6eed7967-3.12.0a4%2B-7b14c2e-vs-3.11.0.png)
+
 ## darwin arm64 (darwin)
 
 - [GitHub Action run](https://github.com/faster-cpython/benchmarking/actions/runs/4494505304)
