@@ -56,3 +56,9 @@
 - [table](bm-20230406-pythonperf1-amd64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-3.11.0.md)
 - [plot](bm-20230406-pythonperf1-amd64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-3.11.0.png)
 
+### vs. base
+
+- 1.20x slower
+- [table](bm-20230406-pythonperf1-amd64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-base.md)
+- [plot](bm-20230406-pythonperf1-amd64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-base.png)
+
