@@ -4,6 +4,7 @@
 ## linux x86_64 (linux)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2023-04-15](bm-20230415-3.12.0a7%2B-4fe1c4b) | python | main | 3.12.0a7+ | 4fe1c4b | [1.31x faster](bm-20230415-3.12.0a7%2B-4fe1c4b/bm-20230415-linux-x86_64-python-main-3.12.0a7%2B-4fe1c4b-vs-3.10.4.md) | [1.05x faster](bm-20230415-3.12.0a7%2B-4fe1c4b/bm-20230415-linux-x86_64-python-main-3.12.0a7%2B-4fe1c4b-vs-3.11.0.md) |  |
 | [2023-04-08](bm-20230408-3.12.0a7%2B-3516704) | python | main | 3.12.0a7+ | 3516704 | [1.31x faster](bm-20230408-3.12.0a7%2B-3516704/bm-20230408-linux-x86_64-python-main-3.12.0a7%2B-3516704-vs-3.10.4.md) | [1.04x faster](bm-20230408-3.12.0a7%2B-3516704/bm-20230408-linux-x86_64-python-main-3.12.0a7%2B-3516704-vs-3.11.0.md) |  |
 | [2023-04-06](bm-20230406-3.12.0a6%2B-030016a) | eduardo-elizondo | immortal_r | 3.12.0a6+ | 030016a | [1.22x faster](bm-20230406-3.12.0a6%2B-030016a/bm-20230406-linux-x86_64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-3.10.4.md) | [1.03x slower](bm-20230406-3.12.0a6%2B-030016a/bm-20230406-linux-x86_64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-3.11.0.md) | [1.06x slower](bm-20230406-3.12.0a6%2B-030016a/bm-20230406-linux-x86_64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-base.md) |
 | [2023-04-02](bm-20230402-3.12.0a6%2B-385b5d6) | python | 385b5d6e09 | 3.12.0a6+ | 385b5d6 | [1.30x faster](bm-20230402-3.12.0a6%2B-385b5d6/bm-20230402-linux-x86_64-python-385b5d6e091da454c3e0-3.12.0a6%2B-385b5d6-vs-3.10.4.md) | [1.03x faster](bm-20230402-3.12.0a6%2B-385b5d6/bm-20230402-linux-x86_64-python-385b5d6e091da454c3e0-3.12.0a6%2B-385b5d6-vs-3.11.0.md) |  |
@@ -110,6 +111,7 @@
 ## linux x86_64 (pythonperf2)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2023-04-15](bm-20230415-3.12.0a7%2B-4fe1c4b) | python | main | 3.12.0a7+ | 4fe1c4b |  | [1.04x faster](bm-20230415-3.12.0a7%2B-4fe1c4b/bm-20230415-pythonperf2-x86_64-python-main-3.12.0a7%2B-4fe1c4b-vs-3.11.0.md) |  |
 | [2023-04-08](bm-20230408-3.12.0a7%2B-3516704) | python | main | 3.12.0a7+ | 3516704 |  | [1.04x faster](bm-20230408-3.12.0a7%2B-3516704/bm-20230408-pythonperf2-x86_64-python-main-3.12.0a7%2B-3516704-vs-3.11.0.md) |  |
 | [2023-04-01](bm-20230401-3.12.0a6%2B-06249ec) | python | main | 3.12.0a6+ | 06249ec |  | [1.02x faster](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-pythonperf2-x86_64-python-main-3.12.0a6%2B-06249ec-vs-3.11.0.md) |  |
 | [2023-03-25](bm-20230325-3.12.0a6%2B-30a306c) | python | main | 3.12.0a6+ | 30a306c |  | [1.03x faster](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-pythonperf2-x86_64-python-main-3.12.0a6%2B-30a306c-vs-3.11.0.md) |  |
@@ -158,6 +160,7 @@
 ## windows amd64 (pythonperf1)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2023-04-15](bm-20230415-3.12.0a7%2B-4fe1c4b) | python | main | 3.12.0a7+ | 4fe1c4b | [1.20x faster](bm-20230415-3.12.0a7%2B-4fe1c4b/bm-20230415-pythonperf1-amd64-python-main-3.12.0a7%2B-4fe1c4b-vs-3.10.4.md) | [1.09x faster](bm-20230415-3.12.0a7%2B-4fe1c4b/bm-20230415-pythonperf1-amd64-python-main-3.12.0a7%2B-4fe1c4b-vs-3.11.0.md) |  |
 | [2023-04-08](bm-20230408-3.12.0a7%2B-3516704) | python | main | 3.12.0a7+ | 3516704 | [1.20x faster](bm-20230408-3.12.0a7%2B-3516704/bm-20230408-pythonperf1-amd64-python-main-3.12.0a7%2B-3516704-vs-3.10.4.md) | [1.08x faster](bm-20230408-3.12.0a7%2B-3516704/bm-20230408-pythonperf1-amd64-python-main-3.12.0a7%2B-3516704-vs-3.11.0.md) |  |
 | [2023-04-06](bm-20230406-3.12.0a6%2B-030016a) | eduardo-elizondo | immortal_r | 3.12.0a6+ | 030016a | [1.02x faster](bm-20230406-3.12.0a6%2B-030016a/bm-20230406-pythonperf1-amd64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-3.10.4.md) | [1.09x slower](bm-20230406-3.12.0a6%2B-030016a/bm-20230406-pythonperf1-amd64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-3.11.0.md) | [1.20x slower](bm-20230406-3.12.0a6%2B-030016a/bm-20230406-pythonperf1-amd64-eduardo%252delizondo-immortal_references-3.12.0a6%2B-030016a-vs-base.md) |
 | [2023-04-02](bm-20230402-3.12.0a6%2B-385b5d6) | python | 385b5d6e09 | 3.12.0a6+ | 385b5d6 | [1.22x faster](bm-20230402-3.12.0a6%2B-385b5d6/bm-20230402-pythonperf1-amd64-python-385b5d6e091da454c3e0-3.12.0a6%2B-385b5d6-vs-3.10.4.md) | [1.10x faster](bm-20230402-3.12.0a6%2B-385b5d6/bm-20230402-pythonperf1-amd64-python-385b5d6e091da454c3e0-3.12.0a6%2B-385b5d6-vs-3.11.0.md) |  |
@@ -212,6 +215,7 @@
 ## darwin arm64 (darwin)
 | date | fork | ref | version | hash | vs. 3.10.4: | vs. 3.11.0: | vs. base: |
 | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| [2023-04-15](bm-20230415-3.12.0a7%2B-4fe1c4b) | python | main | 3.12.0a7+ | 4fe1c4b | [1.25x faster \*](bm-20230415-3.12.0a7%2B-4fe1c4b/bm-20230415-darwin-arm64-python-main-3.12.0a7%2B-4fe1c4b-vs-3.10.4.md) | [1.04x faster](bm-20230415-3.12.0a7%2B-4fe1c4b/bm-20230415-darwin-arm64-python-main-3.12.0a7%2B-4fe1c4b-vs-3.11.0.md) |  |
 | [2023-04-08](bm-20230408-3.12.0a7%2B-3516704) | python | main | 3.12.0a7+ | 3516704 | [1.20x faster \*](bm-20230408-3.12.0a7%2B-3516704/bm-20230408-darwin-arm64-python-main-3.12.0a7%2B-3516704-vs-3.10.4.md) | [1.01x slower](bm-20230408-3.12.0a7%2B-3516704/bm-20230408-darwin-arm64-python-main-3.12.0a7%2B-3516704-vs-3.11.0.md) |  |
 | [2023-04-01](bm-20230401-3.12.0a6%2B-06249ec) | python | main | 3.12.0a6+ | 06249ec | [1.19x faster \*](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-darwin-arm64-python-main-3.12.0a6%2B-06249ec-vs-3.10.4.md) | [1.01x slower](bm-20230401-3.12.0a6%2B-06249ec/bm-20230401-darwin-arm64-python-main-3.12.0a6%2B-06249ec-vs-3.11.0.md) |  |
 | [2023-03-25](bm-20230325-3.12.0a6%2B-30a306c) | python | main | 3.12.0a6+ | 30a306c | [1.19x faster \*](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-darwin-arm64-python-main-3.12.0a6%2B-30a306c-vs-3.10.4.md) | [1.02x slower](bm-20230325-3.12.0a6%2B-30a306c/bm-20230325-darwin-arm64-python-main-3.12.0a6%2B-30a306c-vs-3.11.0.md) |  |
