@@ -40290,6 +40290,7 @@
     "commit_fork": "faster-cpython",
     "commit_branch": "nogil-latest",
     "commit_date": "2023-04-16T13:41:10-07:00",
+"commit_merge_base": "3d5d3f7af6498effbc60a3db1d2b5f41ae6c0a75",
     "benchmark_hash": "3b20e5",
     "publish": true,
     "github_action_url": "https://github.com/faster-cpython/benchmarking/actions/runs/4744088784"
