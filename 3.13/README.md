@@ -7,14 +7,14 @@ Author: Mark Shannon
 The plan for 3.13 is similar to early plans for 3.12.
 [3.12 plan](../3.12/README.md)
 
-The big difference is that we now done the various pieces of foundational work that needed to be done:
+The big difference is that we have now finished the foundational work that we need:
 * PEP 669 is implemented.
 * The bytecode compiler is a much better state.
 * The interpreter generator is working
 * Experiments on the register machine are complete
 * We have a viable apporach to create a low-overhead maintainable machine code generator
 
-We can now work on the tier 2 optimizer chain unimpeded.
+We can work on the tier 2 optimizer chain unimpeded.
 
 We plan two main pieces of work for 3.13:
 * The tier 2 optimizer
