@@ -37,6 +37,8 @@ The workplan is roughly as follows:
 
 Our goal for 3.13 is to reduce the time spent in the interpreter by at least 50%.
 
+[Detailed plan][tier2_plan.md]
+
 ### Better memory management
 
 The [profiling data](https://github.com/faster-cpython/benchmarking/blob/main/profiling/profiling.png) shows that quite a large amount of time spent is spent in memory management and cycle GC. That fraction will only get larger as we speed up the rest of the VM.
