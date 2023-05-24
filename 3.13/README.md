@@ -54,6 +54,8 @@ The main chunks of remaining work are:
 * Improve the build-time component to lower its maintenance cost.
   * This includes, for example, reusing existing components for parsing object files, rather than writing our own.
 * Improve the integration of copy-and-patch into CPython's build system.
+* Improve the quality of the generated code.
+  * There are many unimplemented ideas from the paper here, including pinning locals or stack items in registers across calls, "burning in" constants, and more.
 * (When components are ready above)
   * Use the superblocks created by the new optimizer/executor API
   * Port to use the Tier 2 interpreter
