@@ -14,10 +14,9 @@ The big difference is that we have now finished the foundational work that we ne
 * Experiments on the register machine are complete.
 * We have a viable approach to create a low-overhead maintainable machine code generator, based on [copy-and-patch](https://fredrikbk.com/publications/copy-and-patch.pdf).
 
-We plan four parallelizable pieces of work for 3.13:
+We plan three parallelizable pieces of work for 3.13:
 
 * The tier 2 optimizer
-* Copy-and-patch machine code generator
 * Enabling subinterpreters from Python code ([PEP 554](https://peps.python.org/pep-0554/)).
 * Memory management
 
@@ -34,33 +33,14 @@ The workplan is roughly as follows:
   * Enhance the superblock creation code
   * Implement the specializer
   * Implement the partial evaluator
+  * Implement the copy-and-patch machine code generator
+    * Build-time integration
+    * Generation of tier 2 code
 
 Our goal for 3.13 is to reduce the time spent in the interpreter by at least 50%.
 
 [Detailed plan](https://github.com/faster-cpython/ideas/issues/587).
-
-### Copy-and-patch machine code generator
-
-This work is expected to reduce the interpretive overhead of the tier 2
-interpreter above, but much of it can proceed in parallel with that work.
-
-Unlike other JITs, copy-and-patch combines a fairly complex build-time system to
-create templates, with a very simple run-time component to build machine code
-from those templates. We have already developed a working prototype for
-CPython's existing Tier 1 interpreter, and the next step is to get it
-production-ready for use with the Tier 2 interpreter described above.
-
-The main chunks of remaining work are:
-* Improve the build-time component to lower its maintenance cost.
-  * This includes, for example, reusing existing components for parsing object files, rather than writing our own.
-* Improve the integration of copy-and-patch into CPython's build system.
-* Improve the quality of the generated code.
-  * There are many unimplemented ideas from the paper here, including pinning locals or stack items in registers across calls, "burning in" constants, and more.
-* (When components are ready above)
-  * Use the superblocks created by the new optimizer/executor API
-  * Port to use the Tier 2 interpreter
-
-[Detailed plan](https://github.com/faster-cpython/ideas/issues/588).
+[Detailed plan for copy-and-patch](https://github.com/faster-cpython/ideas/issues/588).
 
 ### Enabling subinterpreters from Python
 
@@ -75,6 +55,7 @@ A draft [PEP 554](https://peps.python.org/pep-0554/) already exists for this wor
 The [profiling data](https://github.com/faster-cpython/benchmarking/blob/main/profiling/profiling.png) shows that quite a large amount of time spent is spent in memory management and cycle GC. That fraction will only get larger as we speed up the rest of the VM.
 
 Unlike the tasks above, we are less certain about the appropriate solutions, so some more research and experimentation is required first.
+We plan to do this as a side project based on what we learn from the Tier 2 work above.
 
 We want to:
 * Do fewer allocations by improving data structures<sup>*</sup>
