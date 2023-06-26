@@ -52,7 +52,7 @@ A draft [PEP 554](https://peps.python.org/pep-0554/) already exists for this wor
 
 ### Better memory management
 
-The [profiling data](https://github.com/faster-cpython/benchmarking/blob/main/profiling/profiling.png) shows that quite a large amount of time spent is spent in memory management and cycle GC. That fraction will only get larger as we speed up the rest of the VM.
+The [profiling data](https://github.com/faster-cpython/benchmarking-public/blob/main/profiling/profiling.png) shows that quite a large amount of time spent is spent in memory management and cycle GC. That fraction will only get larger as we speed up the rest of the VM.
 
 Unlike the tasks above, we are less certain about the appropriate solutions, so some more research and experimentation is required first.
 We plan to do this as a side project based on what we learn from the Tier 2 work above.
