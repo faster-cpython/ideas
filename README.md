@@ -14,4 +14,4 @@ Some links to presentations and other preliminary documentation:
 
 ## Published Results
 
-Benchmarking results are published to the [benchmarking-public repo](https://github.com/faster-cpython/benchmarking-public).
+Benchmarking and pystats results are published to the [benchmarking-public repo](https://github.com/faster-cpython/benchmarking-public).
