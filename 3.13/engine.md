@@ -107,10 +107,11 @@ in the future.
 
 ### Making "hot" exits fast
 
-In order to make hot exits fast, we want to implement them as a single, unconditional jump.
-In the tier 2 interpreter, that will be implemented by setting the IP to the first
+In order to make hot exits fast, we want to implement them as a single, unconditional jump,
+with the minimum bookkeeping to maintain refcounts.
+In the tier 2 interpreter, the jump will be implemented by setting the IP to the first
 instruction of the target executor.
-In the JIT, it will be implemented as a tail call to the function pointer of the target executor.
+In the JIT, the jump will be implemented as a tail call to the function pointer of the target executor.
 
 ### Making "cold" exits small
 
@@ -142,15 +143,15 @@ when creating the executor. The entries in this table are described below.
 
 ### Fixed number of exit objects
 
-Since the vast majority of exits will not need patching, we do not want to pass the offset,
-so we need to store the offset in the executor.
+Since the vast majority of exits will not need to be modified (only those that get hot),
+we do not want to pass the offset of the exit, so we need to store the offset in the executor.
 
 Since there is a fixed number of micro-ops allowed in a superblock (currently 512), we have an upper
 bound on the offset. We will preallocate one exit object per possible offset.
 
 ### Exit data
 
-* The offset/location of the pointer: Implicit if we embed the exit pointer in the exit data
+* The offset/location of the exit pointer: Not needed if the exit pointer is stored in the exit data.
 * The target: Has a maximum value of about 10**9, so store as a `uint32_t`
 * Any relevant known type information: Format TBD.
   We don't need to decide on the format of this data for now.
@@ -170,15 +171,16 @@ times over prolonged execution.
 
 There are three ways we can store counters:
 1. Store a counter for each exit in the superblock.
-2. Have one exit per counter, and change the exit object to change the counter.
-3. Store the counters in a global (per-interpreter) table.
+2. Have one exit per possible value of the counter, and change the exit object to change the counter.
+3. Store the counters in a global (per-interpreter) table. LuaJIT does something like this (but with a very small table).
 <!-- Prevent 1 below being numbered as 4 -->
 1. is simple and deterministic.
 2. either prevents mapping the exits to offsets, or will require many thousands
    of exit objects (number_of_offsets * max_counter_value)
 3. will require hashing the executor and offset, and thus be non-determinstic due to collisions.
-   Allows us to decay the counter to distinguish between hot counters and long-lived "cool" counters.
-   LuaJIT does something like this (but with a very small table).
+   Allows us to decay the counter to distinguish between hot counters and long-lived "cool" counters,
+   by halving all the counters every tick. Where a tick might be 1ms, or might vary depending on memory consumption.
+   
 
 We should probably start with option 1, with the intention of 
 implementing option 3 later.
@@ -196,9 +198,6 @@ with `EXIT_IF` and `UNLIKELY_EXIT_IF`.
 For efficiency reasons, all exits in the same micro op will use the same exit object and data.
 For simplicity, we will also require that no micro op contains both
 an `EXIT_IF` and an `UNLIKELY_EXIT_IF`.
-
-We also need to make sure that tier1 never enters an invalid executor, but 
-we should be doing that anyway.
 
 Since `UNLIKELY_EXIT_IF` has no attached exit/executor it is compact;
 it only needs two bytes to store the target.
@@ -223,7 +222,8 @@ This means that when we invalidate an executor, we need to modify that executor 
 it immediately drops into tier 1 upon being executed. Since tier 1 will never enter an invalid
 executor, we are thus guaranteed not to execute an invalid executor.
 In the tier 2 interpreter, we change the first instruction to `EXIT_TRACE`.
-In the JIT, we will need to change the function pointer to point to a function that returns to tier 1.
+In the JIT, we will need to change the function pointer to point to a function that returns
+to tier 1.
 
 ### The mechanics of transferring execution between executors
 
@@ -238,10 +238,10 @@ and skip the incref/decref.
 #### JIT compiler
 
 To transfer control between executors, we make a jump, implemented as an indirect
- tail-call in the
-generated stencil.
+tail-call in the generated stencil.
 
-The generated code must decref the old executor, as we cannot decref the old executor when still executing it, meaning we must pass the old executor as an argument in the tail call.
+The generated code must decref the old executor, as we cannot decref the old executor when still
+executing it, meaning we must pass the old executor as an argument in the tail call.
 
 
 #### Interpreter 
