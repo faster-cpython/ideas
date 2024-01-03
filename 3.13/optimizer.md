@@ -129,7 +129,7 @@ The key part is that type and constant propagation is done automatically,
 without having to handwrite these deductive rules ourselves. Types are
 expressed as part of the interpreter DSL:
 
-```C
+```c
 // Typed inputs mean the inputs are these types after the operation.
 guard op(_GUARD_BOTH_INT, (left: ~(PYINT_TYPE), right: ~(PYINT_TYPE) -- left, right)) {
     DEOPT_IF(!PyLong_CheckExact(left));
