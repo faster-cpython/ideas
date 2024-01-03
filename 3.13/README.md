@@ -39,8 +39,11 @@ The workplan is roughly as follows:
 
 Our goal for 3.13 is to reduce the time spent in the interpreter by at least 50%.
 
-[Detailed plan](https://github.com/faster-cpython/ideas/issues/587).
+[Issue](https://github.com/faster-cpython/ideas/issues/587).
+[Execution engine](./engine.md).
 [Detailed plan for copy-and-patch](https://github.com/faster-cpython/ideas/issues/588).
+
+
 
 ### Enabling subinterpreters from Python
 
