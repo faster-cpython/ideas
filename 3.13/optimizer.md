@@ -130,13 +130,13 @@ without having to handwrite these deductive rules ourselves. Types are
 expressed as part of the interpreter DSL:
 
 ```C
-# Typed inputs mean the inputs are these types after the operation.
+// Typed inputs mean the inputs are these types after the operation.
 guard op(_GUARD_BOTH_INT, (left: ~(PYINT_TYPE), right: ~(PYINT_TYPE) -- left, right)) {
     DEOPT_IF(!PyLong_CheckExact(left));
     DEOPT_IF(!PyLong_CheckExact(right));
 }
 
-# Typed outputs means the types are these types after the operation.
+// Typed outputs means the types are these types after the operation.
 pure op(_BINARY_OP_ADD_INT, (left, right -- res: ~(PYINT_TYPE))) {
     STAT_INC(BINARY_OP, hit);
     res = _PyLong_Add((PyLongObject *)left, (PyLongObject *)right);
