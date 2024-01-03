@@ -71,12 +71,12 @@ we can find ourselves in an infinite loop.
 
 There are two possible approaches to avoiding this:
 1. We track which executors might not make
-progress and are careful about which executors we linked together, or
+progress and are careful about which executors are linked together, or
 2. We require all executors to make progress.
 
 1 has many edge cases which makes it hard to reason about and get correct.
 
-2 is simpler, but may be a bit slower as we may need to pessimize the first instruction.
+2 is simpler, but may be a bit slower as we may need to [pessimize the first instruction](#guaranteeing-progress-within-an-executor).
 
 We will use approach 2. It is much easier to reason about and should be almost as fast.
 
@@ -86,14 +86,14 @@ to another can be implemented by a single jump/tail-call.
 ### Inter-superblock optimization
 
 Some superblocks can be quite short, but form a larger region of hot code, that 
-we want to optimize. In order to do that we want to propogate type information
+we want to optimize. In order to do that we want to propagate type information
 and representation changes across edges, which means storing that information
 on exits when they are cold. Since most exits will remain cold, we need to 
 store this information in a compact form.
 
 ### Making "hot" exits fast and "cold" exits small
 
-In order to make hot exits fast, we them to be as simple as possible,
+In order to make hot exits fast, we need them to be as simple as possible,
 passing as little information as possible.
 
 We also want to make cold exits as small as possible, but cold exits
@@ -101,7 +101,7 @@ may become hot exits, so we need them both to use the same interface.
 
 ## The implementation
 
-This section describes one possible implemnentation. The initial implementation
+This section describes one possible implementation. The initial implementation
 will not support inter-superblock optimization, but we should plan to support it
 in the future.
 
@@ -145,8 +145,8 @@ when creating the executor. The entries in this table are described below.
 Since the vast majority of exits will not need patching, we do not want to pass the offset,
 so we need to store the offset in the executor.
 
-Since there is a fixed number of micro-ops allowed in a superblock, we have an uppper
-bound on the offset. We will-preallocate one exit object per possible offset.
+Since there is a fixed number of micro-ops allowed in a superblock (currently 512), we have an upper
+bound on the offset. We will preallocate one exit object per possible offset.
 
 ### Exit data
 
@@ -214,7 +214,7 @@ but it can do an `UNLIKELY_EXIT_IF` since `UNLIKELY_EXIT_IF` always drops to tie
 
 This means that the micro ops for the first tier 1 instruction in an executor
 cannot contain an `EXIT_IF`. In practice this means that before translating
-to micro-ops, the first instruction must be coverted to its unspecialized form.
+to micro-ops, the first instruction must be converted to its unspecialized form.
 
 ### Exiting to invalid executors
 
@@ -237,7 +237,7 @@ and skip the incref/decref.
 
 #### JIT compiler
 
-To tranfer control between executors, we make a jump, implemented as an indirect
+To transfer control between executors, we make a jump, implemented as an indirect
  tail-call in the
 generated stencil.
 
@@ -246,7 +246,7 @@ The generated code must decref the old executor, as we cannot decref the old exe
 
 #### Interpreter 
 
-We can do the three steps (incref, update current exexutor, decref) before entering the new executor, since the we don't need to worrying about freeing code that we are running.
+We can do the three steps (incref, update current executor, decref) before entering the new executor, since then we don't need to worry about freeing code that we are running.
 Entering the new executor is simple: set the 
 instruction pointer to the first instruction of the new executor.
 
@@ -257,7 +257,7 @@ implementation with JIT compiler ready in good time for 3.13.
 
 ### Specialization across executors
 
-For this we will need to record know type information at exits, to avoid redundant checks,
+For this we will need to record known type information at exits, to avoid redundant checks,
 and to allow us to create multiple specialized executors for the same tier 1 instructions.
 
 ### Representation changes across executors
@@ -266,5 +266,5 @@ By tracking representation changes across executors, we can avoid the overhead o
 the canonical representation on exits.
 For example, if a value is represented by an unboxed float, it is expensive to box, then unbox it
 across an exit.
-This optimiztion has the potential to be a significant performance win
+This optimization has the potential to be a significant performance win
 *and* to consume a lot of memory, so we need to design our data structures carefully.
