@@ -253,7 +253,24 @@ all function frame require for object creation.
 
 This is not to be confused with scalar replacement.
 
-### [Tentative] Common Subexpression Elimination
+### Value numbering
+
+To remove redundant operations on things that are functionally equivalent,
+we should implement symbolic terms via value numbering. For example, in
+the following code:
+```
+x = y
+# This has _GUARD_BOTH_INT
+y + y
+# should no longer have _GUARD_BOTH_INT
+x + x
+```
+
+We want the second guard to be eliminated. The analyzer should see
+that they are the same values.
+
+
+### [Tentative] Common subexpression elimination
 
 We will factor our common expressions by hash-consing the symbolic term
 nodes.
@@ -267,5 +284,6 @@ from a bump allocator. So there will be a fixed memory cost associated
 with that part. Representing frames and the interpreter state during
 analsysis has variable cost depending on the number of frames
 represented.
+
 
 Code generation just uses a simple fixed length array.
