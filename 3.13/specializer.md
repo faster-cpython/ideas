@@ -1,4 +1,4 @@
-# Tier 2 Specializer
+# Tier 2 Optimizer
 
 Author: Ken Jin, with implementation help by Jules Poon.
 
