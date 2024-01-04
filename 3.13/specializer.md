@@ -130,12 +130,12 @@ without having to handwrite these deductive rules ourselves. Types are
 expressed as part of the interpreter DSL:
 
 ```
-// Typed inputs mean the inputs are these types after the operation.
-guard op(_GUARD_BOTH_INT, (left: ~(PYINT_TYPE), right: ~(PYINT_TYPE) -- left, right)) {
-}
-
 // Typed outputs means the types are these types after the operation.
 pure op(_BINARY_OP_ADD_INT, (left, right -- res: ~(PYINT_TYPE))) {
+}
+
+// Typed output with auxillary type informatino (type_version)
+guard op(_GUARD_TYPE_VERSION, (type_version/2, owner -- owner: ~(GUARD_TYPE_VERSION_TYPE + type_version))) {
 }
 ```
 
