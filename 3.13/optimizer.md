@@ -58,7 +58,7 @@ is state guards like checks for PEP 523.
 ### Intermediate Representation (IR)
 
 The intended intermediate representation is a hybrid of assignments,
-plain instructions, and symbolic terms . That is, for the
+plain instructions, and symbolic terms. That is, for the
 following Python code:
 
 ```python
@@ -129,20 +129,13 @@ The key part is that type and constant propagation is done automatically,
 without having to handwrite these deductive rules ourselves. Types are
 expressed as part of the interpreter DSL:
 
-```c
+```
 // Typed inputs mean the inputs are these types after the operation.
 guard op(_GUARD_BOTH_INT, (left: ~(PYINT_TYPE), right: ~(PYINT_TYPE) -- left, right)) {
-    DEOPT_IF(!PyLong_CheckExact(left));
-    DEOPT_IF(!PyLong_CheckExact(right));
 }
 
 // Typed outputs means the types are these types after the operation.
 pure op(_BINARY_OP_ADD_INT, (left, right -- res: ~(PYINT_TYPE))) {
-    STAT_INC(BINARY_OP, hit);
-    res = _PyLong_Add((PyLongObject *)left, (PyLongObject *)right);
-    _Py_DECREF_SPECIALIZED(right, (destructor)PyObject_Free);
-    _Py_DECREF_SPECIALIZED(left, (destructor)PyObject_Free);
-    ERROR_IF(res == NULL, error);
 }
 ```
 
