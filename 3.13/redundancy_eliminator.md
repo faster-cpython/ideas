@@ -17,7 +17,21 @@ Python program state, represented by `PyObject *`, the abstract interpreter
 shall be an interpretation over Python symbolic information state,
 represented by `_Py_UOpsSymType *`.
 
+The abstract interepeter has the equivalent constructs of the
+CPython interpreter to represent state. It has symbolic
+local and symbolic frames, This allows it to emulate CPython
+runtime state accurately.
+
+Executing "steps" in the abstract interpreter is thus the same as
+doing the same in CPython -- by interpreting bytecode instructions.
+The abstract interpreter thus executes a bytecode, update its
+symbolic state, and repeats until it reaches a terminator (the end
+of the trace).
+
 ### Lattice
+
+**Note: if you are uninterested in the theory behind data-flow analysis,\
+please skip this section.**
 
 The states of information in such an abstract interpretation can be
 represented by a [lattice](https://en.wikipedia.org/wiki/Lattice_(order))
@@ -40,31 +54,29 @@ flowchart BT
   
 ```
 
-This example is intentionally contrived. Real Python runtime information
+Real Python runtime information
 may contain more complex types, constants, and unions of types.
 
-Each `_Py_UOpsSymType` thus captures all the information associated
+Each `_Py_UOpsSymType` captures all the information associated
 with a variable at any point in the lattice.
 
-### Abstract DSL Generator
+### Abstract DSL
 
-A DSL that overrides the original cases in `Python/bytecodes.c` is used.
+A extra specification that overrides the original cases in
+`Python/bytecodes.c` is used.
 This generates an abstract interpreter that operates on these symbolic values.
-Where there is no overidden case, the generator falls back to a generic
+Where there is no overridden case, the generator falls back to a generic
 version where all output stack values are unknown symbolic values.
-For example:
 
 ```
 // Python/bytecodes.c
-pure op(OP, (arg1 -- out)) {
-    spam();
+op(OP, (arg1 -- out: &PyLong_Type)) {
+    eggs();
 }
 ```
 ```
 // Python/tier2_redundancy_eliminator_bytecodes.c
-pure op(OP, (arg1 -- out: &PYFLOAT_TYPE)) {
-    spam();
-}
+// Nothing to see here :).
 ```
 ```
 // Python/abstract_interp_cases.c.h
@@ -72,10 +84,36 @@ case OP: {
     _Py_UOpsSymType *out;
     out = sym_init_unknown(ctx);
     if (out == NULL) goto error;
-
-    sym_set_type(out, PYLONG_TYPE, 0);
     stack_pointer[0] = out;
     stack_pointer += 1;
+    break;
+}
+```
+
+Where this is an overridden case, all information from the overridder
+takes precedence. For example:
+
+```
+// Python/bytecodes.c
+op(OP, (arg1 -- out: &PyLong_Type)) {
+    eggs();
+}
+```
+```
+// Python/tier2_redundancy_eliminator_bytecodes.c
+op(OP, (arg1 -- out: &PyFloat_Type)) {
+    spam();
+}
+```
+```
+// Python/abstract_interp_cases.c.h
+case OP: {
+    _Py_UOpsSymType *arg1;
+    _Py_UOpsSymType *out;
+    arg1 = stack_pointer[-1];
+    spam();
+    sym_set_type(out, &PyFloat_Type, 0);
+    stack_pointer[-1] = out;
     break;
 }
 ```
