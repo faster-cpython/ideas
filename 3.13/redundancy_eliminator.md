@@ -9,22 +9,22 @@ the tier 2 optimizer.
 
 ## Abstract Interpretation of Uops
 
-To analyze the uops, [abstract interpretation](https://en.wikipedia.org/wiki/Abstract_interpretation)
-shall be used.
+To analyze the uops, we use
+[abstract interpretation](https://en.wikipedia.org/wiki/Abstract_interpretation).
 
 Just like the CPython interpreter is an interpretation over
 Python program state, represented by `PyObject *`, the abstract interpreter
 shall be an interpretation over Python symbolic information state,
 represented by `_Py_UOpsSymType *`.
 
-The abstract interepeter has the equivalent constructs of the
+The abstract interpreter has the equivalent constructs of the
 CPython interpreter to represent state. It has symbolic
-local and symbolic frames, This allows it to emulate CPython
+local and symbolic frames. This allows it to emulate CPython
 runtime state accurately.
 
-Executing "steps" in the abstract interpreter is thus the same as
+Executing "steps" in the abstract interpreter is thus similar to
 doing the same in CPython -- by interpreting bytecode instructions.
-The abstract interpreter thus executes a bytecode, update its
+The abstract interpreter thus "executes" a bytecode, update its
 symbolic state, and repeats until it reaches a terminator (the end
 of the trace).
 
@@ -58,7 +58,8 @@ Real Python runtime information
 may contain more complex types, constants, and unions of types.
 
 Each `_Py_UOpsSymType` captures all the information associated
-with a variable at any point in the lattice.
+with a variable at any point in the lattice. For example, it contains
+type information stored as a bitmask, and constant values.
 
 For more information regarding lattices in compiler theory,
 Page 27 onwards of this presentation provides a gentle introduction
@@ -90,8 +91,7 @@ case OP: {
     _Py_UOpsSymType *out;
     out = sym_init_unknown(ctx);
     if (out == NULL) goto error;
-    stack_pointer[0] = out;
-    stack_pointer += 1;
+    stack_pointer[-1] = out;
     break;
 }
 ```
@@ -102,13 +102,13 @@ takes precedence. For example:
 ```
 // Python/bytecodes.c
 op(OP, (arg1 -- out)) {
-    eggs();
+    out = eggs(arg1);
 }
 ```
 ```
 // Python/tier2_redundancy_eliminator_bytecodes.c
 op(OP, (arg1 -- out)) {
-    spam();
+    out = spam(arg1);
 }
 ```
 ```
@@ -117,7 +117,7 @@ case OP: {
     _Py_UOpsSymType *arg1;
     _Py_UOpsSymType *out;
     arg1 = stack_pointer[-1];
-    spam();
+    out = spam(arg1);
     stack_pointer[-1] = out;
     break;
 }
