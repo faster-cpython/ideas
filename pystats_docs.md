@@ -48,7 +48,7 @@ TBD
   frames than it pushes.
 - Trace too long: A potential trace is abandoned because it is longer than the buffer.
 - Trace too short: A potential trace is abandoned because it is too short.
-- Inner loop found: A potential trace is abandoned because it has an inner loop.
+- Inner loop found: A potential trace is truncated because it has an inner loop.
 - Recursive call: A potential trace is abandoned because is has a recursive
   call.
 - Low confidence: A potential trace is abandoned because the likelihood of the
