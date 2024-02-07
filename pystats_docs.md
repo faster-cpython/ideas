@@ -4,7 +4,7 @@ This describes the meaning of the various sections and fields in the pystats out
 
 ## Execution counts
 
-This is the counts of how many times each Tier 1 instruction is executed.
+This is the count of how many times each Tier 1 instruction is executed.
 
 The "miss ratio" column shows the percentage of times the instruction executed that it deoptimized.
 
