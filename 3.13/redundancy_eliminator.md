@@ -60,6 +60,12 @@ may contain more complex types, constants, and unions of types.
 Each `_Py_UOpsSymType` captures all the information associated
 with a variable at any point in the lattice.
 
+For more information regarding lattices in compiler theory,
+Page 27 onwards of this presentation provides a gentle introduction
+https://ilyasergey.net/CS4212/_static/lectures/PLDI-Week-12-dataflow.pdf
+Credits to the courses UPenn Compilers (CIS 341) and NUS Compiler
+Design (CS4212).
+
 ### Abstract DSL
 
 A extra specification that overrides the original cases in
@@ -70,7 +76,7 @@ version where all output stack values are unknown symbolic values.
 
 ```
 // Python/bytecodes.c
-op(OP, (arg1 -- out: &PyLong_Type)) {
+op(OP, (arg1 -- out)) {
     eggs();
 }
 ```
@@ -95,13 +101,13 @@ takes precedence. For example:
 
 ```
 // Python/bytecodes.c
-op(OP, (arg1 -- out: &PyLong_Type)) {
+op(OP, (arg1 -- out)) {
     eggs();
 }
 ```
 ```
 // Python/tier2_redundancy_eliminator_bytecodes.c
-op(OP, (arg1 -- out: &PyFloat_Type)) {
+op(OP, (arg1 -- out)) {
     spam();
 }
 ```
@@ -112,13 +118,9 @@ case OP: {
     _Py_UOpsSymType *out;
     arg1 = stack_pointer[-1];
     spam();
-    sym_set_type(out, &PyFloat_Type, 0);
     stack_pointer[-1] = out;
     break;
 }
 ```
-
-Note the use of the type annotation in the DSL. It is used to automatically
-set the symbolic type of a value.
 
 
