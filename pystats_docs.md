@@ -38,15 +38,15 @@ TBD
 
 ## Optimization (Tier 2) stats
 
-- Optimization attempts: The number of times a trace is found, and attempt is
-  made to optimize and run it in Tier 2. From the JUMP_BACKWARD instruction when
-  the counter reaches `optimizer_backedge_threshold`.
+- Optimization attempts: The number of times a potential trace is identified.
+  Specifically, occurs in the JUMP_BACKWARD instruction when the counter reaches
+  `optimizer_backedge_threshold`.
 - Traces created: The number of traces that were successfully created.
-- Trace stack overflow: A potential trace is abandoned because it would require
+- Trace stack overflow: A potential trace is truncated because it would require
   more than 5 stack frames.
 - Trace stack underflow: A potential trace is abandoned because it pops more
   frames than it pushes.
-- Trace too long: A potential trace is abandoned because it is too long.
+- Trace too long: A potential trace is abandoned because it is longer than the buffer.
 - Trace too short: A potential trace is abandoned because it is too short.
 - Inner loop found: A potential trace is abandoned because it has an inner loop.
 - Recursive call: A potential trace is abandoned because is has a recursive
@@ -69,7 +69,7 @@ The number of times each uop was executed.
 
 ### Unsupported opcodes
 
-The number of times an unsupported opcode caused a potential trace to be abandoned.
+The number of times an unsupported opcode caused a potential trace to be truncated.
 
 ## Rare events
 
