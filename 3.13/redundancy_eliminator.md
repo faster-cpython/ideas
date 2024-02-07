@@ -46,7 +46,7 @@ y = 2.0
 :
 
 ```mermaid
-flowchart BT
+flowchart TD
     A("`Bottom, ie. x: *?*, y: *?*`") --> B("`x: *int*, y: *?*`")
     A --> C("`x: *?*, y: *float*`")
     B --> D("`Top, x: *int*, y: *float*`")
