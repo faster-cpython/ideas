@@ -67,6 +67,25 @@ https://ilyasergey.net/CS4212/_static/lectures/PLDI-Week-12-dataflow.pdf
 Credits to the courses UPenn Compilers (CIS 341) and NUS Compiler
 Design (CS4212).
 
+The hiearchy of types in the type system can also be represented
+by a lattice. Roughly, it looks like this:
+
+```mermaid
+graph TD;
+    nn["not NULL"];
+    b("bottom(unknown)")
+    others(["others"])
+    NULL["NULL"]
+    b-->NULL;
+    b-->nn;
+    nn-->others;
+    others-->top;
+    NULL-->top;
+
+```
+
+The `others` corresponds to CPython's own type system.
+
 ### Abstract DSL
 
 A extra specification that overrides the original cases in
