@@ -46,7 +46,7 @@ y = 2.0
 :
 
 ```mermaid
-flowchart TD
+flowchart BT
     A("`Bottom, ie. x: *?*, y: *?*`") --> B("`x: *int*, y: *?*`")
     A --> C("`x: *?*, y: *float*`")
     B --> D("`Top, x: *int*, y: *float*`")
@@ -71,17 +71,29 @@ The hiearchy of types in the type system can also be represented
 by a lattice. Roughly, it looks like this:
 
 ```mermaid
-graph TD;
-    nn["not NULL"];
-    b("bottom(unknown)")
-    others(["others"])
-    NULL["NULL"]
+graph BT;
+    t("True");
+    f("False");
+    bl("bool");
+    nnull(not NULL);
+    nnone(not None);
+    ot(other types);
+    oc(other constants);
+    b("bottom(unknown)");
     b-->NULL;
-    b-->nn;
-    nn-->others;
-    others-->top;
+    b-->nnull;
+    nnull-->nnone;
+    nnull-->None;
+    nnone-->ot;
+    nnone-->bl;
+    ot-->oc;
+    oc-->top;
+    None-->top;
     NULL-->top;
-
+    bl-->t;
+    bl-->f;
+    t-->top;
+    f-->top;
 ```
 
 The `others` corresponds to CPython's own type system.
