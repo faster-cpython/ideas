@@ -101,11 +101,12 @@ for brevity and clarity we have omitted them.
 
 Edges in the lattice represent a
 [partial order](https://en.wikipedia.org/wiki/Partially_ordered_set).
-For example, `bool <: True`, where `<:` is the partial order relation,
+For example, `bool <: True`, where `<:` is the subtype relation,
 because `True` is a subtype of `bool`. The subtype relation is reflexive,
-antisymmetric, and transitive.
+antisymmetric, and transitive, and is thus a partial order relation.
 
-The [least upper bound](https://www.infinitelymore.xyz/p/lattices) of any pair `{a, b}` in the lattice, ie the *join* of `{a, b}`, represents
+The [least upper bound](https://www.infinitelymore.xyz/p/lattices)
+of any pair `{a, b}` in the lattice, ie the *join* of `{a, b}`, represents
 the the lowest common subtype of both `a` and `b`. In this case,
 the lowest common subtype of any two types,
 assuming `a != b`, is `top`. This means we can never reach
