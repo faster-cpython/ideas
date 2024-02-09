@@ -72,31 +72,30 @@ by a lattice. Roughly, it looks like this:
 
 ```mermaid
 graph BT;
-    t("True");
+    true("True");
     f("False");
     bl("bool");
     nnull(not NULL);
     nnone(not None);
-    ot(other types);
-    oc(other constants);
+    t(other types);
+    c(other constants);
     b("bottom(unknown)");
-    b-->NULL;
-    b-->nnull;
-    nnull-->nnone;
-    nnull-->None;
-    nnone-->ot;
-    nnone-->bl;
-    ot-->oc;
-    oc-->top;
-    None-->top;
-    NULL-->top;
-    bl-->t;
-    bl-->f;
-    t-->top;
-    f-->top;
+    b---NULL;
+    b---nnull;
+    nnull---nnone;
+    nnull---None;
+    nnone---t;
+    nnone---bl;
+    t---c;
+    c---top;
+    None---top;
+    NULL---top;
+    bl---true;
+    bl---f;
+    true---top;
+    f---top;
 ```
 
-The `others` corresponds to CPython's own type system.
 
 ### Abstract DSL
 
