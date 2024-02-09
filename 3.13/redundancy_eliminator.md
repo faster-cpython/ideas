@@ -96,6 +96,8 @@ graph BT;
     f---top;
 ```
 
+Note: there should bedges going from each type to every other type, but
+for brevity and clarity we have omitted them.
 
 ### Abstract DSL
 
