@@ -59,7 +59,7 @@ may contain more complex types, constants, and unions of types.
 
 Each `_Py_UOpsSymType` captures all the information associated
 with a variable at any point in the lattice. For example, it contains
-type information stored as a bitmask, and constant values.
+type information stored as `PyTypeObject *`, and constant values.
 
 For more information regarding lattices in compiler theory,
 Page 27 onwards of this presentation provides a gentle introduction
