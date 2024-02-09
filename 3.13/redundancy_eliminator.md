@@ -116,9 +116,9 @@ how can something be a subtype of `int`, `float`, `str`, `bool`, etc.
 all at the same time!)
 
 The greatest lower bound of any pair `{a, b}` in the lattice, ie the
-*meet* of `{a, b}`, represents the greatest common supertype of `{a, b}`.
-For example, the greatest common supertype of `True` and `False` is
-`bool`. The greatest common supertype of `bool` and `other types` is
+*meet* of `{a, b}`, represents the lowest common supertype of `{a, b}`.
+For example, the lowest common supertype of `True` and `False` is
+`bool`. The lowest common supertype of `bool` and `other types` is
 `not None`, and so on. The *meet* represents a loss of specificity.
 
 
