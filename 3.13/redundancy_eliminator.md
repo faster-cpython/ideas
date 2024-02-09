@@ -72,32 +72,54 @@ by a lattice. Roughly, it looks like this:
 
 ```mermaid
 graph BT;
-    true("True");
+    t("True");
     f("False");
     bl("bool");
     nnull(not NULL);
     nnone(not None);
-    t(other types);
-    c(other constants);
+    ot(other types);
+    oc(other constants);
     b("bottom(unknown)");
-    b---NULL;
-    b---nnull;
-    nnull---nnone;
-    nnull---None;
-    nnone---t;
-    nnone---bl;
-    t---c;
-    c---top;
-    None---top;
-    NULL---top;
-    bl---true;
-    bl---f;
-    true---top;
-    f---top;
+    b-->NULL;
+    b-->nnull;
+    nnull-->nnone;
+    nnull-->None;
+    nnone-->ot;
+    nnone-->bl;
+    ot-->oc;
+    oc-->top;
+    None-->top;
+    NULL-->top;
+    bl-->t;
+    bl-->f;
+    t-->top;
+    f-->top;
 ```
 
-Note: there should bedges going from each type to every other type, but
+Note: there should be edges going from each type to `top`, but
 for brevity and clarity we have omitted them.
+
+Edges in the lattice represent a
+[partial order](https://en.wikipedia.org/wiki/Partially_ordered_set).
+For example, `bool <: True`, where `<:` is the partial order relation,
+because `True` is a subtype of `bool`. The subtype relation is reflexive,
+antisymmetric, and transitive.
+
+The [least upper bound](https://www.infinitelymore.xyz/p/lattices) of any pair `{a, b}` in the lattice, ie the *join* of `{a, b}`, represents
+the the lowest common subtype of both `a` and `b`. In this case,
+the lowest common subtype of any two types,
+assuming `a != b`, is `top`. This means we can never reach
+`top`, as that is a contradiction -- there is no type
+in CPython that represents the subtype of all types. (Think:
+how can something be a subtype of `int`, `float`, `str`, `bool`, etc.
+all at the same time!)
+
+The greatest lower bound of any pair `{a, b}` in the lattice, ie the
+*meet* of `{a, b}`, represents the greatest common supertype of `{a, b}`.
+For example, the greatest common supertype of `True` and `False` is
+`bool`. The greatest common supertype of `bool` and `other types` is
+`not None`, and so on. The *meet* represents a loss of specificity.
+
 
 ### Abstract DSL
 
