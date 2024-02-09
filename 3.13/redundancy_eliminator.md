@@ -100,10 +100,11 @@ Note: there should be edges going from each type to `top`, but
 for brevity and clarity we have omitted them.
 
 Edges in the lattice represent a
-[partial order](https://en.wikipedia.org/wiki/Partially_ordered_set).
-For example, `bool <: True`, where `<:` is the subtype relation,
-because `True` is a subtype of `bool`. The subtype relation is reflexive,
-antisymmetric, and transitive, and is thus a partial order relation.
+[partial order relation](https://en.wikipedia.org/wiki/Partially_ordered_set).
+For example, `bool <: True`, where `<:` is the supertype relation,
+because `bool` is the supertype of `True`. The supertype relation is
+reflexive, antisymmetric, and transitive, and is thus a partial
+order relation.
 
 The [least upper bound](https://www.infinitelymore.xyz/p/lattices)
 of any pair `{a, b}` in the lattice, ie the *join* of `{a, b}`, represents
@@ -116,7 +117,8 @@ how can something be a subtype of `int`, `float`, `str`, `bool`, etc.
 all at the same time!)
 
 The greatest lower bound of any pair `{a, b}` in the lattice, ie the
-*meet* of `{a, b}`, represents the lowest common supertype of `{a, b}`.
+*meet* of `{a, b}`, represents the lowest common supertype of `{a, b}`,
+where `a != b`.
 For example, the lowest common supertype of `True` and `False` is
 `bool`. The lowest common supertype of `bool` and `other types` is
 `not None`, and so on. The *meet* represents a loss of specificity.
