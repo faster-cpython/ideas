@@ -47,9 +47,9 @@ y = 2.0
 
 ```mermaid
 flowchart BT
-    A("`Bottom, ie. x: *?*, y: *?*`") --> B("`x: *int*, y: *?*`")
-    A --> C("`x: *?*, y: *float*`")
-    B --> D("`Top, x: *int*, y: *float*`")
+    A(Bottom, ie. empty) --> B(x: int)
+    A --> C(y: float)
+    B --> D(Top, x: int, y: float)
     C --> D
   
 ```
