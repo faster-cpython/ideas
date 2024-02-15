@@ -6,7 +6,7 @@ This describes the meaning of the various sections and fields in the pystats out
 
 This is the count of how many times each Tier 1 instruction is executed.
 
-The "miss ratio" column shows the percentage of times when instruction executed that it deoptimized. In this case the base unspecialized instruction is not counted.
+The "miss ratio" column shows the percentage of times when instruction executed that it deoptimized. In this case the base unspecialized instruction is not counted. The deoptimization event is counted separately (see below).
 
 ## Pair counts
 
