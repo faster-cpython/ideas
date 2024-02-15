@@ -6,35 +6,90 @@ This describes the meaning of the various sections and fields in the pystats out
 
 This is the count of how many times each Tier 1 instruction is executed.
 
-The "miss ratio" column shows the percentage of times the instruction executed that it deoptimized.
+The "miss ratio" column shows the percentage of times when instruction executed that it deoptimized. In this case the base unspecialized instruction is not counted.
 
 ## Pair counts
 
 Shows the Top 100 most frequently occurring pairs of instructions as executed.
 
+Pairs of specialized operations that deoptimize and are then followed by the corresponding unspecialized instruction are not counted as pairs.
+
 ## Predecessor / Successor pairs
 
 Shows the top 5 instructions that are executed before and after each instruction.
 
+This does not include the unspecialized instructions that occur after a specialized instruction deoptimizes.
+
 ## Specialization stats
 
-TBD
+For each bytecode, the following tables are present:
+
+### Kind
+
+- deferred: Lists the number of "deferred" (i.e. not specialized) instructions
+  executed
+- hit: specialized instructions that complete
+- misses: specialized instructions that deopt
+
+### Unnamed
+
+- Success: Number of specialization attempts that were successful
+- Failure: Number of specialization attempts that failed for some reason
+
+### Failure kind
+
+Numbers for the various kinds of specialization failures.
+The total should add up to the "Failure" entry in the above table.
 
 ## Specialization effectiveness
 
-TBD
+### Specialization effectiveness
+
+All entries are execution counts. Should add up to the total number of Tier 1
+instructions executed.
+
+- Basic: Instructions that are not and cannot be specialized, e.g. `LOAD_FAST`.
+- Not specialized: Instructions could be specialized but aren't, e.g.
+  `LOAD_ATTR`, `BINARY_SLICE`.
+- Specialized hits: Specialized instructions, e.g. `LOAD_ATTR_MODULE` that
+  complete
+- Specialized misses: Specialized instructions, e.g. `LOAD_ATTR_MODULE` that
+  deopt
+
+### Deferred by instruction
+
+Breakdown of deferred (not specialized) instruction counts by family.
+
+### Misses by instruction
+
+Breakdown of misses (specialized deopts) instruction counts by family.
 
 ## Call stats
 
-TBD
+This is shows what fraction of calls to Python functions are inlined (i.e. not
+having a call at the C level) and for those that are not, where the call comes
+from. The various categories overlap.
+
+Also includes count of frame objects created.
 
 ## Object stats
 
-TBD
+Grab bag of stats about objects:
+
+"Allocations" means "allocations that are not from a freelist". Total
+allocations = "Allocations from freelist" + "Allocations"
+
+"New values" is the number of values array created for objects with managed
+dicts.
+
+The cache hit/miss numbers are for the MRO cache, split into dunder and other
+names.
 
 ## GC stats
 
-TBD
+Garbage collection stats by generation.
+
+Collected/visits gives some measure of efficiency.
 
 ## Optimization (Tier 2) stats
 
@@ -73,9 +128,9 @@ The number of times an unsupported opcode caused a potential trace to be truncat
 
 ## Rare events
 
-- set_class : Setting an object's class, `obj.__class__ = ...`
-- set_bases: Setting the bases of a class, `cls.__bases__ = ...`
-- set_eval_frame_func: Setting the PEP 523 frame eval function,
+- set class: Setting an object's class, `obj.__class__ = ...`
+- set bases: Setting the bases of a class, `cls.__bases__ = ...`
+- set eval frame func: Setting the PEP 523 frame eval function,
   `_PyInterpreterState_SetFrameEvalFunc()`
-- builtin_dict: Modifying the builtins, `__builtins__.__dict__[var] = ...`
-- func_modification: Modifying a function, e.g. `func.__defaults__ = ...`, etc.
+- builtin dict: Modifying the builtins, `__builtins__.__dict__[var] = ...`
+- func modification: Modifying a function, e.g. `func.__defaults__ = ...`, etc.
