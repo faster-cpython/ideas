@@ -132,17 +132,17 @@ This generates an abstract interpreter that operates on these symbolic values.
 Where there is no overridden case, the generator falls back to a generic
 version where all output stack values are unknown symbolic values.
 
-```
+```c
 // Python/bytecodes.c
 op(OP, (arg1 -- out)) {
     eggs();
 }
 ```
-```
+```c
 // Python/tier2_redundancy_eliminator_bytecodes.c
 // Nothing to see here :).
 ```
-```
+```c
 // Python/abstract_interp_cases.c.h
 case OP: {
     _Py_UOpsSymType *out;
@@ -156,19 +156,19 @@ case OP: {
 Where this is an overridden case, all information from the overridder
 takes precedence. For example:
 
-```
+```c
 // Python/bytecodes.c
 op(OP, (arg1 -- out)) {
     out = eggs(arg1);
 }
 ```
-```
+```c
 // Python/tier2_redundancy_eliminator_bytecodes.c
 op(OP, (arg1 -- out)) {
     out = spam(arg1);
 }
 ```
-```
+```c
 // Python/abstract_interp_cases.c.h
 case OP: {
     _Py_UOpsSymType *arg1;
