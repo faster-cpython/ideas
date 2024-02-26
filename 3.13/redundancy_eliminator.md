@@ -123,8 +123,9 @@ For example, the nearest common supertype of `True` and `False is `bool`.
 The nearest common supertype of `bool` and `other types` is `not None`,
 and so on. The *meet* represents a loss of specificity.
 
-###
-Abstract DSL  A extra specification that overrides the original cases
+### Abstract DSL 
+
+An extra specification that overrides the original cases
  in
  Python/bytecodes.c` is used
   This generates an abstract interpreter that operates
