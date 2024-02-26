@@ -47,7 +47,7 @@ y = 2.0
 
 ```mermaid
 flowchart BT
-    A(Bottom, ie. empty) --> B(x: int)
+    A(Bottom, i.e. empty) --> B(x: int)
     A --> C(y: float)
     B --> D(Top, x: int, y: float)
     C --> D
@@ -67,11 +67,11 @@ https://ilyasergey.net/CS4212/_static/lectures/PLDI-Week-12-dataflow.pdf
 Credits to the courses UPenn Compilers (CIS 341) and NUS Compiler
 Design (CS4212).
 
-The hiearchy of types in the type system can also be represented
-by a lattice. Roughly, it looks like this:
+The hiearchy of types in the type system can be represented
+by a bounded partial order. Roughly, it looks like this:
 
 ```mermaid
-graph BT;
+graph TB;
     t("True");
     f("False");
     bl("bool");
@@ -79,27 +79,28 @@ graph BT;
     nnone(not None);
     ot(other types);
     oc(other constants);
-    b("bottom(unknown)");
-    b-->NULL;
-    b-->nnull;
+    top("top (unknown)");
+    bottom("bottom (contradiction)")
+    top-->NULL;
+    top-->nnull;
     nnull-->nnone;
     nnull-->None;
     nnone-->ot;
     nnone-->bl;
     ot-->oc;
-    oc-->top;
-    None-->top;
-    NULL-->top;
+    oc-->bottom;
+    None-->bottom;
+    NULL-->bottom;
     bl-->t;
     bl-->f;
-    t-->top;
-    f-->top;
+    t-->bottom;
+    f-->bottom;
 ```
 
-Note: there should be edges going from each type to `top`, but
+Note: there should be edges going from each type to `bottom`, but
 for brevity and clarity we have omitted them.
 
-Edges in the lattice represent a
+Edges in the graph represent a
 [partial order relation](https://en.wikipedia.org/wiki/Partially_ordered_set).
 For example, `bool <: True`, where `<:` is the supertype relation,
 because `bool` is the supertype of `True`. The supertype relation is
@@ -107,29 +108,28 @@ reflexive, antisymmetric, and transitive, and is thus a partial
 order relation.
 
 The [least upper bound](https://www.infinitelymore.xyz/p/lattices)
-of any pair `{a, b}` in the lattice, ie the *join* of `{a, b}`, represents
-the the lowest common subtype of both `a` and `b`. In this case,
-the lowest common subtype of any two types,
-assuming `a != b`, is `top`. This means we can never reach
-`top`, as that is a contradiction -- there is no type
-in CPython that represents the subtype of all types. (Think:
-how can something be a subtype of `int`, `float`, `str`, `bool`, etc.
-all at the same time!)
+of any pair `(a, b)` in the partial order, i.e., the *join* of `(a, b)`,
+represents the the nearest common subtype of both `a` and `b`.
+In this case, the nearest common subtype of any two types,
+assuming neither is a subtype of the other, is `bottom`.
+This means we can never reach `bottom`, as that is a contradiction --
+there is no type in CPython that represents the subtype of all types.
+(Think: how can something be a subtype of `int` and `str` at the same time!)
 
-The greatest lower bound of any pair `{a, b}` in the lattice, ie the
-*meet* of `{a, b}`, represents the lowest common supertype of `{a, b}`,
-where `a != b`.
-For example, the lowest common supertype of `True` and `False` is
-`bool`. The lowest common supertype of `bool` and `other types` is
-`not None`, and so on. The *meet* represents a loss of specificity.
+The greatest lower bound of any pair `(a, b)` in the graph,
+i.e., the *meet* of `(a, b)`,
+represents the nearest common supertype of `(a, b)`, where `a != b`.
+For example, the nearest common supertype of `True` and `False is `bool`.
+The nearest common supertype of `bool` and `other types` is `not None`,
+and so on. The *meet* represents a loss of specificity.
 
-
-### Abstract DSL
-
-A extra specification that overrides the original cases in
-`Python/bytecodes.c` is used.
-This generates an abstract interpreter that operates on these symbolic values.
-Where there is no overridden case, the generator falls back to a generic
+###
+Abstract DSL  A extra specification that overrides the original cases
+ in
+ Python/bytecodes.c` is used
+  This generates an abstract interpreter that operates
+ on these symbolic values.
+ here there is no overridden case, the generator falls back to a generic
 version where all output stack values are unknown symbolic values.
 
 ```c
