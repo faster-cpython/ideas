@@ -122,6 +122,10 @@ There are histograms for:
 
 The number of times each uop was executed.
 
+### Uop pair counts
+
+The number of times each uop each other uop.
+
 ### Unsupported opcodes
 
 The number of times an unsupported opcode caused a potential trace to be truncated.
