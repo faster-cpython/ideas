@@ -59,6 +59,10 @@ reference. The old reference remains unchanged
 
 CLOSE is roughly equivalent to `Py_DECREF`. It destroys a reference.
 
+An implementation PR is at https://github.com/python/cpython/pull/118450.
+It implements the foundations, without any of the debugging guarantees
+yet.
+
 ## Definition in Operational Semantics
 We define two initial mappings:
 
