@@ -1,59 +1,65 @@
 # StackRef Semantics
-Author: Ken Jin
 
 This is the formal definition for live and dead references
 (expressed in operational semantics).
 
 We define two initial sets:
+
 $$
-\color{blue} live_{PyStackRef} \color{black}
-= \{l \; \lvert \; type(l) = PyStackRef \}
-\\
-\color{red} dead_{PyObject} \color{black}
-= \{l \; \lvert \; type(l) = PyObject * \}
+\begin{align}
+    & \color{blue} live_{\text{PyStackRef}} \color{black}
+    & = \\{l  \mid  type(l) = \text{PyStackRef} \\}
+    \\
+    & \color{red} dead_{\text{PyObject}} \color{black}
+    & = \\{l  \mid  type(l) = \text{PyObject *} \\}
+\end{align}
 $$
 
 The program state is defined as the two-tuple:
+
 $$
-(\color{blue} live_{PyStackRef} \color{black},
-\; \color{red} dead_{PyObject} \color{black} )
+(\color{blue} live_{\text{PyStackRef}} \color{black},
+ \color{red} dead_{\text{PyObject}} \color{black} )
 $$
 
 All operations are defined as operations on this two-tuple.
 
 $$
-borrow(A):
-(\color{blue} live_{PyStackRef} \color{black},
-\; \color{red} dead_{PyObject} \color{black} )
+\begin{align}
+& borrow(A):
+(\color{blue} live_{\text{PyStackRef}} \color{black},
+\color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{PyStackRef} \color{black},
-    \; \color{red} dead_{PyObject} \color{black} )
+    (\color{blue} live_{\text{PyStackRef}} \color{black},
+    \color{red} dead_{\text{PyObject}} \color{black} )
 \\
-steal(A)\{PyObject\;to\;StackRef\}:
-(\color{blue} live_{PyStackRef} \color{black},
-\; \color{red} dead_{PyObject} \color{black} )
+& steal(A)[\text{PyStackRef} \hookrightarrow \text{PyObject}]:
+(\color{blue} live_{\text{PyStackRef}} \color{black},
+\color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{PyStackRef} - \{A\} \color{black},
-    \; \color{red} dead_{PyObject} - \{A\} \color{black} )
+    (\color{blue} live_{\text{PyStackRef}} \color{black} - A,
+    \color{red} dead_{\text{PyObject}} \color{black} - A)
 \\
-steal(A)\{StackRef\;to\;PyObject\}:
-(\color{blue} live_{PyStackRef} \color{black},
-\; \color{red} dead_{PyObject} \color{black} )
+& steal(A)[\text{PyObject} \hookrightarrow \text{PyStackRef}]:
+(\color{blue} live_{\text{PyStackRef}} \color{black},
+\color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{PyStackRef} + \{A\} \color{black},
-    \; \color{red} dead_{PyObject} + \{A\} \color{black} )
+    (\color{blue} live_{\text{PyStackRef}} \color{black} + A,
+    \color{red} dead_{\text{PyObject}} \color{black} + A)
 \\
-new(A)\{PyObject\;to\;StackRef\}:
-(\color{blue} live_{PyStackRef} \color{black},
-\; \color{red} dead_{PyObject} \color{black} )
+& new(A)[\text{PyStackRef} \hookrightarrow \text{PyObject}]:
+(\color{blue} live_{\text{PyStackRef}} \color{black},
+\color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{PyStackRef} + \{A\} \color{black},
-    \; \color{red} dead_{PyObject} \color{black} )
+    (\color{blue} live_{\text{PyStackRef}} \color{black},
+    \color{red} dead_{\text{PyObject}} \color{black} - A)
 \\
-new(A)\{StackRef\;to\;PyObject\}:
-(\color{blue} live_{PyStackRef} \color{black},
-\; \color{red} dead_{PyObject} \color{black} )
+& new(A)[\text{PyObject} \hookrightarrow \text{PyStackRef}]:
+(\color{blue} live_{\text{PyStackRef}} \color{black},
+\color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{PyStackRef} \color{black},
-    \; \color{red} dead_{PyObject} - \{A\} \color{black} )       
+    (\color{blue} live_{\text{PyStackRef}} \color{black} + A,
+    \color{red} dead_{\text{PyObject}} \color{black})
+\\
+\end{align}
 $$
