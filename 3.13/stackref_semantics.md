@@ -41,10 +41,13 @@ vice versa:
 Borrow means that the reference is converted without any change in ownership.
 This is discouraged because it makes verification much harder. It also makes
 unboxed integers harder in the future.
+
 Steal means that ownership is transferred to something else. The total
 number of references to the object stays the same.
+
 New creates a new reference from the old reference. The old reference
 is still valid.
+
 With these 3 API, a strict stack discipline must be maintained. All
 _PyStackRef must be operated on by the new reference operations:
 
