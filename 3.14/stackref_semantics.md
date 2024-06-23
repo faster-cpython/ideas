@@ -126,6 +126,8 @@ $$
 \end{align}
 $$
 
+Additionally, these operations are used to manipulate handles:
+
 $$
 % Note: defined in a separate block because the first expression is too big for GH.
 \begin{align}
@@ -149,10 +151,10 @@ $$
 
 1. $Ref_O$ reads as "the object from reference Ref".
 2. $O_{Ref}$ reads as "the reference of the object O".
-3. The $set - A$ operation must deduct $1$ from the corresponding
-   $A$ in $set$.
-4. The $set + A$ operation should add $1$ to the corresponding $A$
-   in $set$.
+3. The $mapping - A$ operation must deduct $1$ from the corresponding
+   $A$ in $mapping$.
+4. The $mapping + A$ operation should add $1$ to the corresponding $A$
+   in $mapping$.
 
 ## Invariants (Detecting Unsoundness)
 
