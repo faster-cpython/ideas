@@ -6,7 +6,7 @@ Author: Ken Jin
 Due to PEP 703 (Making the Global Interpreter Lock Optional in CPython),
 tagged pointers will be introduced to CPython. Tagged pointers have in past attempts,
 been very hard to debug. From the author's own experience, there are the following
-sources of bugs:
+non-exhaustive sources of bugs:
 
 1. Casting to-and-from a tagged pointer directly.
 2. Untagging a tagged pointer, then operating on it directly.
@@ -204,10 +204,10 @@ Note: we can't fix most of the problems if borrow is used!
 We will only enforce invariants in debug builds. There will be no
 performance loss in release builds.
 
-1. On each frame push, we create 2 hashmaps to represent the mappings,
-   and an empty array to contain the mappings of handles to actual
-   $\text{PyObject}$.
-2. These data structures will be tied to frame state.
-3. Each $\text{Steal(Ref)}$ and
-   $\text{New(Ref)}$ will create a new handle.
-4. Each handle is just the index into the handle array.
+1. For each thread state, we create an array that contains the mappings
+   of references (handles) to actual $\text{PyObject}$.
+2. On each frame push, we note the current (most recent) reference ID.
+3. On frame pop, we note the current (most recent) reference ID. We
+   then scan all the reference IDs from obtained in step 2 to 3 to ensure
+   that there is only one live refrence ID at the point of exit.
+4. Each reference ID is just the index into the handle array.
