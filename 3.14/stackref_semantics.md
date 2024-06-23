@@ -126,7 +126,7 @@ $$
 \end{align}
 $$
 
-Additionally, these operations are used to manipulate handles:
+Additionally, these operations are used to manipulate references:
 
 $$
 % Note: defined in a separate block because the first expression is too big for GH.
