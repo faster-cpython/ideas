@@ -89,35 +89,40 @@ These are the operational semantics:
 $$
 \begin{align}
 & borrow(Ref)[\text{PyStackRef} \hookrightarrow \text{PyObject}]:
-(\color{blue} live_{\text{PyStackRef}} \color{black},
+\\
+&\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
 \color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
     (\color{blue} live_{\text{PyStackRef}} \color{black},
     \color{red} dead_{\text{PyObject}} \color{black} )
 \\
 & steal(Ref)[\text{PyStackRef} \hookrightarrow \text{PyObject}]:
-(\color{blue} live_{\text{PyStackRef}} \color{black},
+\\
+&\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
 \color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
     (\color{blue} live_{\text{PyStackRef}} \color{black} - Ref,
     \color{red} dead_{\text{PyObject}} \color{black} - Ref_O)
 \\
 & steal(O)[\text{PyObject} \hookrightarrow \text{PyStackRef}]:
-(\color{blue} live_{\text{PyStackRef}} \color{black},
+\\
+&\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
 \color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
     (\color{blue} live_{\text{PyStackRef}} \color{black} + O_{Ref},
     \color{red} dead_{\text{PyObject}} \color{black} + O)
 \\
 & new(Ref)[\text{PyStackRef} \hookrightarrow \text{PyObject}]:
-(\color{blue} live_{\text{PyStackRef}} \color{black},
+\\
+&\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
 \color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
     (\color{blue} live_{\text{PyStackRef}} \color{black},
     \color{red} dead_{\text{PyObject}} \color{black} - Ref_O)
 \\
 & new(O)[\text{PyObject} \hookrightarrow \text{PyStackRef}]:
-(\color{blue} live_{\text{PyStackRef}} \color{black},
+\\
+&\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
 \color{red} dead_{\text{PyObject}} \color{black} )
 \rightarrow
     (\color{blue} live_{\text{PyStackRef}} \color{black} + O_{Ref},
@@ -167,9 +172,44 @@ $$
    at the point of stealing, have exactly one stack ref available to steal.
 5. $steal(Ref)[\text{PyObject} \hookrightarrow \text{PyStackRef}]$ does
    not need to have exactly one `PyObject *` in the mapping, because of 2.
-6. The mapping for $\text{PyStackRef}$ can only map to 0 or 1.
-7. The mapping for $dead_{\text{PyObject}}$ can never map to a negative number.
+6. $borrow(Ref)[\text{PyStackRef} \hookrightarrow \text{PyObject}]$
+   requires the stackref to map to 1. Ie. the stackref entry cannot be 0.
+8. The mapping for $\text{PyStackRef}$ can only map to 0 or 1.
+9. The mapping for $dead_{\text{PyObject}}$ can never map to a negative number.
    
+## Examples
+
+### Forgot to close
+```C
+x = PyStackRef_DUP(stackref)
+// Error on frame pop, as live(PyStackRef) > 1
+```
+
+### Passed dead reference to something
+```
+PyStackRef_CLOSE(stackref)
+// Error!
+foo(PyStackRef_AsPyObjectBorrow(stackref))
+// borrow needs mapping to > 0.
+```
+
+```
+foo(PyStackRef_AsPyObjectSteal(stackref))
+// Error!
+bar(PyStackRef_AsPyObjectSteal(stackref))
+// steal needs mapping to 1.
+```
+
+### Steal instead of new / extra close
+```
+# This should be new, or there should be no decref_inputs after.
+steal_pyobject(PyStackRef_AsPyObjectSteal(stackref))
+// Error!
+DECREF_INPUTS()
+// close needs mapping to 1.
+```
+
+Note: we can't fix most of the problems if borrow is used!
 
 ## Implementation
 
