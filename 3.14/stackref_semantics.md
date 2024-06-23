@@ -64,26 +64,22 @@ It implements the foundations, without any of the debugging guarantees
 yet.
 
 ## Definition in Operational Semantics
-We define two initial mappings:
+We define initial mapping:
 
 $$
 \begin{align}
     & \color{blue} live_{\text{PyStackRef}} \color{black}
     & = \\{l \longmapsto \\{0, 1\\} \mid  type(l) = \text{PyStackRef} \\}
-    \\
-    & \color{red} dead_{\text{PyObject}} \color{black}
-    & = \\{l \longmapsto \mathbb{Z}^{0+} \mid  type(l) = \text{PyObject *} \\}
 \end{align}
 $$
 
-The program state is defined as the two-tuple:
+The program state is defined as:
 
 $$
-(\color{blue} live_{\text{PyStackRef}} \color{black},
- \color{red} dead_{\text{PyObject}} \color{black} )
+(\color{blue} live_{\text{PyStackRef}} \color{black} )
 $$
 
-All operations are defined as operations on this two-tuple.
+All operations are defined as operations on this state.
 These are the operational semantics:
 
 $$
@@ -91,42 +87,37 @@ $$
 & borrow(Ref)[\text{PyStackRef} \hookrightarrow \text{PyObject}]:
 \\
 &\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
-\color{red} dead_{\text{PyObject}} \color{black} )
+\color{red} live_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{\text{PyStackRef}} \color{black},
-    \color{red} dead_{\text{PyObject}} \color{black} )
+    (\color{blue} live_{\text{PyStackRef}} \color{black} )
 \\
 & steal(Ref)[\text{PyStackRef} \hookrightarrow \text{PyObject}]:
 \\
 &\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
-\color{red} dead_{\text{PyObject}} \color{black} )
+\color{red} live_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{\text{PyStackRef}} \color{black} - Ref,
-    \color{red} dead_{\text{PyObject}} \color{black} - Ref_O)
+    (\color{blue} live_{\text{PyStackRef}} \color{black} - Ref)
 \\
 & steal(O)[\text{PyObject} \hookrightarrow \text{PyStackRef}]:
 \\
 &\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
-\color{red} dead_{\text{PyObject}} \color{black} )
+\color{red} live_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{\text{PyStackRef}} \color{black} + O_{Ref},
-    \color{red} dead_{\text{PyObject}} \color{black} + O)
+    (\color{blue} live_{\text{PyStackRef}} \color{black} + O_{Ref})
 \\
 & new(Ref)[\text{PyStackRef} \hookrightarrow \text{PyObject}]:
 \\
 &\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
-\color{red} dead_{\text{PyObject}} \color{black} )
+\color{red} live_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{\text{PyStackRef}} \color{black},
-    \color{red} dead_{\text{PyObject}} \color{black} - Ref_O)
+    (\color{blue} live_{\text{PyStackRef}} \color{black})
 \\
 & new(O)[\text{PyObject} \hookrightarrow \text{PyStackRef}]:
 \\
 &\hspace{10em} (\color{blue} live_{\text{PyStackRef}} \color{black},
-\color{red} dead_{\text{PyObject}} \color{black} )
+\color{red} live_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{\text{PyStackRef}} \color{black} + O_{Ref},
-    \color{red} dead_{\text{PyObject}} \color{black})
+    (\color{blue} live_{\text{PyStackRef}} \color{black} + O_{Ref})
 \\
 \end{align}
 $$
@@ -138,27 +129,24 @@ $$
 \begin{align}
 & dup(Ref):
 (\color{blue} live_{\text{PyStackRef}} \color{black},
-\color{red} dead_{\text{PyObject}} \color{black} )
+\color{red} live_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{\text{PyStackRef}} \color{black} + Ref_{Ref},
-    \color{red} dead_{\text{PyObject}} \color{black})
+    (\color{blue} live_{\text{PyStackRef}} \color{black} + Ref_{Ref})
 \\
 & close(Ref):
 (\color{blue} live_{\text{PyStackRef}} \color{black},
-\color{red} dead_{\text{PyObject}} \color{black} )
+\color{red} live_{\text{PyObject}} \color{black} )
 \rightarrow
-    (\color{blue} live_{\text{PyStackRef}} \color{black} - Ref,
-    \color{red} dead_{\text{PyObject}} \color{black})
+    (\color{blue} live_{\text{PyStackRef}} \color{black} - Ref)
 \\
 \end{align}
 \\
 $$
 
-1. $Ref_O$ reads as "the object from reference Ref".
-2. $O_{Ref}$ reads as "the reference of the object O".
-3. The $mapping - A$ operation must deduct $1$ from the corresponding
+1. $O_{Ref}$ reads as "the reference of the object O".
+2. The $mapping - A$ operation must deduct $1$ from the corresponding
    $A$ in $mapping$.
-4. The $mapping + A$ operation should add $1$ to the corresponding $A$
+3. The $mapping + A$ operation should add $1$ to the corresponding $A$
    in $mapping$.
 
 ## Invariants (Detecting Unsoundness)
@@ -175,7 +163,7 @@ $$
 6. $borrow(Ref)[\text{PyStackRef} \hookrightarrow \text{PyObject}]$
    requires the stackref to map to 1. Ie. the stackref entry cannot be 0.
 8. The mapping for $\text{PyStackRef}$ can only map to 0 or 1.
-9. The mapping for $dead_{\text{PyObject}}$ can never map to a negative number.
+9. The mapping for $live_{\text{PyObject}}$ can never map to a negative number.
    
 ## Examples
 
