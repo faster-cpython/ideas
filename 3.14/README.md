@@ -51,7 +51,7 @@ However, some important libraries, e.g., Numpy, could benefit from participating
 
 ## Developer documentation
 
-Producing developer documentation on CPython implementation, including the changes in recent years by this team.
+Produce developer documentation on CPython implementation, including the changes in recent years by this team.
 
 ## Possible future work for 3.15
 
