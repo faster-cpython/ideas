@@ -69,4 +69,7 @@
 * An Executable Semantics for Faster Development of Optimizing Python Compilers.
   By Olivier Melançon, Marc Feeley, and Manuel Serrano.
   https://www.iro.umontreal.ca/~feeley/papers/MelanconFeeleySerranoSLE23.pdf
-  
+
+* Vmgen—a generator of efficient virtual machine interpreters
+  By M. Anton Ertl, David Gregg, Andreas Krall, Bernd Paysan
+  https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.434
