@@ -14,6 +14,14 @@
   By Haoran Xu and Fredrik Kjolstad.
   https://arxiv.org/pdf/2011.13127
 
+* PHP RFC: JIT
+  By Dmitry Stogov and Zeev Suraski.
+  https://wiki.php.net/rfc/jit
+
+* IR JIT Framework a base for the next generation JIT for PHP
+  By Dmitry Stogov
+  Note: PHP JIT has both tracing and function-based architectures.
+  https://www.researchgate.net/publication/374470404_IR_JIT_Framework_a_base_for_the_next_generation_JIT_for_PHP
 
 ## Trace-like Architectures
 
@@ -73,3 +81,6 @@
 * Vmgen—a generator of efficient virtual machine interpreters
   By M. Anton Ertl, David Gregg, Andreas Krall, Bernd Paysan
   https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.434
+
+* PHP RFC: A new JIT implementation based on IR Framework
+  https://wiki.php.net/rfc/jit-ir
