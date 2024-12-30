@@ -68,6 +68,10 @@
   By Qiang Zhang, Lei Xu, Baowen Xu.
   https://doi.org/10.1002/spe.3267
 
+* Quantifying the interpretation overhead of Python.
+  By Qiang Zhang, Lei Xu, Xiangyu Zhang, Baowen Xu.
+  https://www.sciencedirect.com/science/article/abs/pii/S0167642321001520
+
 * Python Interpreter Performance Deconstructed.
   By Gergö Barany.
   https://www.complang.tuwien.ac.at/gergo/papers/dyla14.pdf
