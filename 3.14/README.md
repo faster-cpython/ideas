@@ -23,17 +23,11 @@ For these references we can either:
 * Omit the reference count altogether. This might only happen in the JIT.
 * Replace expensive memory operations with cheap ALU operations, by storing the count for the reference in the reference and not the object.
 
-### Better cycle collector (experiment)
+### Tail-calling interpreter
 
-With improved reference counting, there are a number of reference count operations that don't change the counter.
-We can take advantage of that to move a bit of work into decrementing reference counts to mark possible roots of cycles.
-When doing cycle GC, we only need to look at these objects, not all objects, when searching for a cycle.
+Rather than using a classic switch statement or computed gotos for the main interpreter loop, tail call between functions implementing each bytecode.  This shows a significant speedup between 10% and 40% depending on the benchmark.
 
-### Moving some code from C to Python
-
-There are a number of small built-in functions, such as `any`, `all`, and `enumerate`, that are implemented in C.
-These functions are an obstacle to optimization as execution flows from Python to C and then back to Python.
-By rewriting these functions in Python, the optimizer can see across the function call boundary, so they can be better optimized.
+This approach currently only works with Clang 19.  We hope to find a way to make this work in more places through some combination of improving other compilers, compiling only parts of CPython with Clang 19, and/or moving platforms to use Clang 19 by default.  This is mainly ecosystem / community work.
 
 ### Extensible optimizations for arithmetic operations and subscripting
 
@@ -65,3 +59,17 @@ There is a sizeable cost in new APIs and code changes, though.
 
 Tagged integers will require new internal APIs to pass opaque references, so we might as well add a new, consistent API modeled on [HPy](https://hpyproject.org/).
 We will use this internally to start with, but we expect tools like [Cython](https://cython.org/) and [Pybind11](https://github.com/pybind/pybind11) will want to use it to avoid the overhead of going through the `PyObject *` based API.
+
+### Moving some code from C to Python
+
+There are a number of small built-in functions, such as `any`, `all`, and `enumerate`, that are implemented in C.
+These functions are an obstacle to optimization as execution flows from Python to C and then back to Python.
+By rewriting these functions in Python, the optimizer can see across the function call boundary, so they can be better optimized.
+
+(Deferred to 3.15 because it will have more impact when more optimizations are implemented)
+
+### Better cycle collector (experiment)
+
+With improved reference counting, there are a number of reference count operations that don't change the counter.
+We can take advantage of that to move a bit of work into decrementing reference counts to mark possible roots of cycles.
+When doing cycle GC, we only need to look at these objects, not all objects, when searching for a cycle.
