@@ -38,10 +38,22 @@ However, some important libraries, e.g., Numpy, could benefit from participating
 
 ## Subinterpreters
 
-* Implement an interpreter pool executor, analogous to the existing thread pool and process pool executors, to allow the use of subinterpreters with a familiar paradigm.
-* Get PEP734 accepted for 3.14, so the [Python API for subinterpreters](https://pypi.org/project/interpreters-pep-734/) will ship in the standard library.
-* Performance improvements for subinterpreters.
-* HOWTO document for concurrency, including subinterpreters.
+* [ ] Get PEP734 accepted for 3.14, so the [Python API for subinterpreters](https://pypi.org/project/interpreters-pep-734/) will ship in the standard library.  (**This is mostly just waiting on steering council.**)
+* [X] Implement an interpreter pool executor, analogous to the existing thread pool and process pool executors, to allow the use of subinterpreters with a familiar paradigm.
+* [ ] HOWTO document for concurrency, including subinterpreters.  (Ideally, I'll hand most of the work off to other people.)
+* [ ] HOWTO document for subinterpreters specifically.
+* [ ] Write a new PEP about "sharing" protocol (i.e. `tp_xid`).
+
+I'd also like to see performance improvements for subinterpreters (e.g. startup speed, memory usage), but there might not be enough time for anything meaningful in 3.14.
+
+## Other Runtime Improvements
+
+* [ ] Split up PyThreadState.
+* [ ] Introduce runtime lifecycle phases.
+* [ ] Freeze/restore runtime init memory, for faster startup.
+* [ ] Support fast finalization by skipping all cleanup except resouce-based finalizers.  (First, analyze and decide if worth it.)
+
+Realistically, it would be hard to fit much of that work into the 3.14 timeframe, but we'll do as much as we can and roll the rest into 3.15 plans.
 
 ## Developer documentation
 
