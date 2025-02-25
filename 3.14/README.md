@@ -2,6 +2,10 @@
 
 ## Performance
 
+### Top-of-stack caching
+
+Store the top-of-stack in a local variable to avoid unnecessary indirect reads and writes to the stack.
+
 ### The Just-In-Time (JIT) compiler
 
 > NOTE: We now use the term "The JIT" to refer to both the (a) Tier 2 micro-opcodes and optimizer and (b) machine code generator.
@@ -12,6 +16,7 @@
 * Improved quality of the final generated code
 * Improved optimization before final generation of code:
   * Enhanced type-based redundancy elimination
+  * Top-of-stack caching
   * Partial-evaluation
 * Increase the percentage of bytecodes that are executed in the JIT
 
