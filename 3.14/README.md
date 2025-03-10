@@ -30,7 +30,7 @@ For these references we can either:
 
 ### Tail-calling interpreter
 
-Rather than using a classic switch statement or computed gotos for the main interpreter loop, tail call between functions implementing each bytecode.  This shows a significant speedup between 10% and 40% depending on the benchmark.
+Rather than using a classic switch statement or computed gotos for the main interpreter loop, tail call between functions implementing each bytecode.  This shows a speedup of 1-5% geometric mean on various platforms.
 
 This approach currently only works with Clang 19.  We hope to find a way to make this work in more places through some combination of improving other compilers, compiling only parts of CPython with Clang 19, and/or moving platforms to use Clang 19 by default.  This is mainly ecosystem / community work.
 
