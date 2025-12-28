@@ -18,7 +18,7 @@ communications with Ned Deily suggest that the tail calling-interpreter
 should be distributed by default in macOS binaries.
 
 On Windows, the tail-calling interpreter provides a 15-20% speedup on pyperformance (depending on processor) for Visual Studio 18.
-On a AMD Ryzen 5800X measured
+On a AMD Ryzen 7 5800X measured
 machine by Chris Eibl, the [results](https://gist.github.com/chris-eibl/fade55faaad97e2cd12f5587ac1f4aa0) show a range of -11--55% speedups on
 the individual benchmarks.
 
